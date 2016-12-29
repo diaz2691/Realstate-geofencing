@@ -24,7 +24,7 @@ else {
     
     $_SESSION['username']  = $result['username'];
     //$_SESSION['adminName'] = $result['firstName'] . " " . $result['lastName'];
-    if($result['userId'] == 1){
+    if($result['userType'] == 1){
     	header("Location: Agent/AgentProfile.html");
     }
     
