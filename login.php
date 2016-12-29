@@ -17,7 +17,7 @@ $stmt->execute($namedParameters);
 $result = $stmt->fetch(); //We are expecting one record
 
 if (empty($result)) {
-     header("Location: index.php?error=WRONG USERNAME OR PASSWORD");
+     header("Location: index.html?error=WRONG USERNAME OR PASSWORD");
 }
 
 else {
