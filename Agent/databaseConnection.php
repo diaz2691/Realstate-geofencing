@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <!--<?php
 function getConnection() {
     //database login credentials
@@ -34,8 +36,6 @@ function sendQuery($sql, $namedParameters){
 ?>
 
 -->
-<!DOCTYPE html>
-<html>
     <body>
 
         <h1>Your information has been added.</h1>
