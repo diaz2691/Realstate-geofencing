@@ -4,8 +4,8 @@ require 'databaseConnection.php';
 
 $dbConn = getConnection();
 
-$firstName = $_GET['username'];
-$lastName = $_GET['password'];
+$firstName = $_GET['firstName'];
+$lastName = $_GET['lastName'];
 $email = $_GET['email'];
 $phone = $_GET['phone'];
 
