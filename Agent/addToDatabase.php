@@ -32,8 +32,8 @@ $stmt->execute($namedParameters);
     $_SESSION['adminName'] = $result['firstName'] . " " . $result['lastName'];
     $_SESSION['userId'] = $result['userId'];
     header("Location: quiz.php");
-    */
-}
+    
+}*/
 
 
 
