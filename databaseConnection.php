@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<!--<?php
+<?php
 function getConnection() {
     //database login credentials
 	$host = "localhost";
@@ -34,13 +32,3 @@ function sendQuery($sql, $namedParameters){
         }
 }
 ?>
-
--->
-    <body>
-
-        <h1>Your information has been added.</h1>
-
-        <p>Thank you!</p>
-
-    </body>
-</html>
