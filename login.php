@@ -28,6 +28,10 @@ else {
     if($result['userType'] == 1){
     	header("Location: Agent/AgentProfile.html");
 	}
+
+	else if($result['userType'] == 0){
+		header("Location: Admin/AdminProfile.html");
+	}
     
 }
 
