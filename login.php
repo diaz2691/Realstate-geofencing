@@ -7,7 +7,7 @@ $dbConn = getConnection();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM usersInfo WHERE username = :username AND password = :password";
+$sql = "SELECT * FROM UsersInfo WHERE username = :username AND password = :password";
 $namedParameters = array();
 $namedParameters[':username'] = $username;
 $namedParameters[':password'] = $password;
@@ -24,10 +24,10 @@ else {
     
     $_SESSION['username']  = $result['username'];
     //$_SESSION['adminName'] = $result['firstName'] . " " . $result['lastName'];
+    //$_SESSION['userId'] = $result['userId'];
     if($result['userType'] == 1){
     	header("Location: Agent/AgentProfile.html");
-    }
-    
+	}
     
 }
 
