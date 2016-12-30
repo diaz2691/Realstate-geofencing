@@ -64,14 +64,17 @@
                 
                 $.ajax({
                     type: "POST",
-                    url: "submitHomeInfo.php",
-                    data: {studentid: studentid,
-                          title: title,
-                          grade: grade,
-                          possiblepoints: possiblepoints,
-                          feedback: feedback}
+                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
+                    data: {address: address,
+                          city: city,
+                          state: state,
+                          zip: zip,
+                          bedrooms: bedrooms,
+                        bathrooms: bathrooms,
+                        price: price,
+                        userId: userId}
                 }); 
-                window.location.href = "viewGrades.php";
+                window.location.href = "AgentProfile.php";
             });      
         </script>
         
