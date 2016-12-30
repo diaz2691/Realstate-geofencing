@@ -69,9 +69,8 @@ To change this template use Tools | Templates.
         <br/>
         <br/><h2 id="header2">Agents &#x2713</h2>
 
-        <form action="addHouse.php">
-            <input type="hidden" name="houseId" />    
-            <input type="submit" value="Add New House" name="addForm"/>
+        <form action="addAgent.php">  
+            <input type="submit" value="Add New Agent" name="addForm"/>
         </form>  
         
         <table class="tftable" border="1">
@@ -89,7 +88,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . $result['Username'] . "</td>";
+                echo "<td>" . $result['username'] . "</td>";
                 echo "<td>" . htmlspecialchars($result['firstName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['lastName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
