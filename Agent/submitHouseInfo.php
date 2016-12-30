@@ -20,5 +20,5 @@
           $namedParameters[":price"] = $_POST['price'];     
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters);
-          header("Location: AgentProfile.php");
+          //header("Location: AgentProfile.php");
 ?>
