@@ -14,10 +14,10 @@
 <head>
     <title>Add New Agent Information</title>
     <meta charset = "utf-8"/>
-    <link rel="stylesheet" type="text/css" href="css/navStyles.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/navStyles.css">
     <link type="text/css" rel="stylesheet" href="css/mainHeaderStyles.css">
     <link type="text/css" rel="stylesheet" href="css/enterAssignmentsStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/backgroundStyles.css">
+    <link type="text/css" rel="stylesheet" href="css/backgroundStyles.css">-->
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
 
 </head>
