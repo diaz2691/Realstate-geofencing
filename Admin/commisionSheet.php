@@ -1,20 +1,30 @@
 <?php
 
 require('fpdf/fpdf.php');
-
-
-
-
-$the_content = "Ut sagittis erat vitae nunc viverra, ut bibendum dui sodales./n In fermentum, augue vel vestibulum porttitor, lectus ipsum faucibus justo, tincidunt luctus velit odio quis orci. ";
-
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Times');
 
-//specify width and height of the cell Multicell(width, height, string)
 
-$pdf->Cell(0,10,'                                      Remax ',0,1);
-$pdf->Cell(0,10,'check ',0,1);
+$pdf->Cell(0,10,'Re/MAX Property Experts Commission Breakdown                                                                      Check # ',0,1);
+$pdf->Cell(0,10,'Date ',0,1);
+$pdf->Cell(0,10,'Settlement Date ',0,1);
+$pdf->Cell(0,10,'Agent ',0,1);
+$pdf->Cell(0,10,'Clients ',0,1);
+$pdf->Cell(0,10,'Property Address ',0,1);
+$pdf->Cell(0,10,' ',0,1);
+$pdf->Cell(0,10,'Gross Commission ',0,1);
+$pdf->Cell(0,10,'Broker Fee ',0,1);
+$pdf->Cell(0,10,'Subtatal ',0,1);
+$pdf->Cell(0,10,'Transaction Coordinator ',0,1);
+$pdf->Cell(0,10,'TC. Tech Fee ',0,1);
+$pdf->Cell(0,10,'E&O Insurance ',0,1);
+$pdf->Cell(0,10,'Remax ',0,1);
+$pdf->Cell(0,10,' ',0,1);
+$pdf->Cell(0,10,'Agent Net Commission ',0,1);
+$pdf->Cell(0,10,'                                                                                                Have READ & APPROVED this Commission Worksheet ',0,1);
+$pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
+$pdf->Cell(0,10,'                                                                                       Ending Gross Commission ',0,1);
 
 $pdf->Output();
 ?>
