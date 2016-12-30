@@ -46,6 +46,8 @@
                 Price: <input type="text" name="price"><br />
                 <input type="hidden" name="userId" value="<?=$_SESSION['userId']?>"> 
                 <input id="enterHouse" type="button" value="Enter" >  
+                <?php echo $_SESSION['userId'];
+                ?>
                 
             </div>
         </div>
