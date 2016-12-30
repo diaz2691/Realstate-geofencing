@@ -64,6 +64,13 @@
                 var price = $("#price").val();
                 var userId = $("#userId").val();               
                 alert(address);
+                alert(city);
+                alert(state);
+                alert(zip);
+                alert(bedrooms);
+                alert(bathrooms);
+                alert(price);
+                alert(userId);
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
