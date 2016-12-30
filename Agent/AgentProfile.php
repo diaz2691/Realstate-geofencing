@@ -8,15 +8,10 @@
     } 
 
     if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-        $sql = "DELETE FROM grades 
-                 WHERE assignmentid = '".$_GET['assignmentid']."'";    
-        $result = pg_query($sql); 
-        if (!$result) { 
-            $errormessage = pg_last_error(); 
-            echo "Error with query: " . $errormessage; 
-            exit(); 
-        } 
-        //pg_close(); 
+        $sql = "DELETE FROM HouseInfo 
+                 WHERE houseId = '".$_GET['houseId']."'";
+        $stmt = $dbConn -> prepare($sql);
+        $stmt->execute();
 
     }
  ?>
@@ -103,7 +98,7 @@ To change this template use Tools | Templates.
            <td>
                      <form action="viewVisitors.php">
                          <input type="hidden" name="assignmentid" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="Update" name="updateForm"/>
+                         <input type="submit" value="View" name="ViewForm"/>
                      </form>   
                 </td> 
 
