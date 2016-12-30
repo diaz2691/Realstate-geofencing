@@ -9,7 +9,7 @@ $the_content = "Ut sagittis erat vitae nunc viverra, ut bibendum dui sodales./n 
 
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Arial',11);
+$pdf->SetFont('Times');
 
 //specify width and height of the cell Multicell(width, height, string)
 
