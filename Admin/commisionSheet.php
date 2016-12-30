@@ -9,12 +9,12 @@ $the_content = "Ut sagittis erat vitae nunc viverra, ut bibendum dui sodales./n 
 
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
+$pdf->SetFont('Arial',' ',11);
 
 //specify width and height of the cell Multicell(width, height, string)
 
 $pdf->Cell(0,10,'Remax ',0,1);
-$pdf->Cell(0,10,'ceck ',0,1);
+$pdf->Cell(0,10,'check ',0,1);
 
 $pdf->Output();
 ?>
