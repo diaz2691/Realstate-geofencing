@@ -5,7 +5,7 @@
 
     $sql = "INSERT INTO HouseInfo
                  (userId, address, city, state, zip, bedrooms, bathrooms, price)
-                 VALUES (userId, address, city, state, zip, bedrooms, bathrooms, price)";
+                 VALUES (:userId, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
           $namedParameters = array();
           $namedParameters[":userId"] = $_POST['userId'];
           $namedParameters[":address"] = $_POST['address'];
@@ -17,5 +17,5 @@
           $namedParameters[":price"] = $_POST['price'];     
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters);
-          header("Location: AgentProfile.php");
+          //header("Location: AgentProfile.php");
 ?>
