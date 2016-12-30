@@ -4,8 +4,8 @@
     $dbConn = getConnection();
 
     $sql = "INSERT INTO UsersInfo
-                 (username, password, firstName, lastName, email, phone, license)
-                 VALUES (:username, :password, :firstName, :lastName, :email, :phone, :license)";
+                 (userType, username, password, firstName, lastName, email, phone, license)
+                 VALUES (1, :username, :password, :firstName, :lastName, :email, :phone, :license)";
           $namedParameters = array();
           $namedParameters[":username"] = $_POST['username'];
           $namedParameters[":password"] = $_POST['password'];
