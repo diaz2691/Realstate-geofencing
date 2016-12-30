@@ -14,5 +14,7 @@ $pdf->SetFont('Arial','B',16);
 //specify width and height of the cell Multicell(width, height, string)
 $pdf->Multicell(190,10,$the_content); 
 
+for($i=1;$i<=40;$i++)
+    $pdf->Cell(0,10,'Printing line number '.$i,0,1);
 $pdf->Output();
 ?>
