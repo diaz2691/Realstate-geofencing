@@ -22,7 +22,9 @@ $pdf->Cell(0,10,'E&O Insurance ',0,1);
 $pdf->Cell(0,10,'Remax ',0,1);
 $pdf->Cell(0,10,' ',0,1);
 $pdf->Cell(0,10,'Agent Net Commission ',0,1);
+$pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'                                                                                                Have READ & APPROVED this Commission Worksheet ',0,1);
+$pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 $pdf->Cell(0,10,'                                                                                       Ending Gross Commission ',0,1);
 
