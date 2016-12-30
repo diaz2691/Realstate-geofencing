@@ -37,14 +37,14 @@
         <div id="enterHouseDiv" > <br/>
             <div id="innerDiv">
 
-                Address: <input type="text" name="address"> <br />
-                City: <input type="text" name="city"><br />
-                State: <input type="text" name="state"><br />
-                Zip: <input type="text" name="zip"><br />
-                Bedrooms: <input type="text" name="bedrooms"><br />
-                Bathrooms: <input type="text" name="bathrooms"><br />
-                Price: <input type="text" name="price"><br />
-                <input type="hidden" name="userId" value="<?=$_SESSION['userId']?>"> 
+                Address: <input type="text" id="address"> <br />
+                City: <input type="text" id="city"><br />
+                State: <input type="text" id="state"><br />
+                Zip: <input type="text" id="zip"><br />
+                Bedrooms: <input type="text" id="bedrooms"><br />
+                Bathrooms: <input type="text" id="bathrooms"><br />
+                Price: <input type="text" id="price"><br />
+                <input type="hidden" name="userId" id="<?=$_SESSION['userId']?>"> 
                 <input id="enterHouse" type="button" value="Enter" >  
                 <?php echo $_SESSION['userId'];
                 ?>
