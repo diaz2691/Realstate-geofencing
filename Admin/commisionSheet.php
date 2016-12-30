@@ -13,7 +13,7 @@ $pdf->SetFont('Times');
 
 //specify width and height of the cell Multicell(width, height, string)
 
-$pdf->Cell(0,10,'Remax ',0,1);
+$pdf->Cell(0,10,'                                      Remax ',0,1);
 $pdf->Cell(0,10,'check ',0,1);
 
 $pdf->Output();
