@@ -4,7 +4,7 @@
     $dbConn = getConnection();
 
     if(!isset($_SESSION['userId'])) {
-	    header("Location: userLogin.php?error=wrong username or password");
+        header("Location: ../index.html?error=wrong username or password");
     } 
 
     if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button

@@ -67,23 +67,17 @@ To change this template use Tools | Templates.
         ?>
         
         <br/>
-        <br/><h2 id="header2">Visitors &#x2713</h2>
-
-        <form action="addHouse.php">
-            <input type="hidden" name="houseId" />    
-            <input type="submit" value="Add New House" name="addForm"/>
-        </form>  
+        <br/><h2 id="header2">Visitors &#x2713</h2> 
         
         <table class="tftable" border="1">
        
         <tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Edit</th><th>Delete</th></tr>    
             
             <?php
-
             $dbConn = getConnection();
             $sql = "SELECT * FROM BuyerInfo WHERE houseId = :houseId";
             $namedParameters = array();
-            $namedParameters[':houseId'] = $_SESSION['houseId'];
+            $namedParameters[':houseId'] = $_GET['houseId'];
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
             //$stmt->execute();
