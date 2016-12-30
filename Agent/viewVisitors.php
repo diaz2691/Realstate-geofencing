@@ -9,7 +9,7 @@
 
     if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
         $sql = "DELETE FROM BuyerInfo 
-                 WHERE buyerId = '".$_GET['buyerId']."'";
+                 WHERE buyerID = '".$_GET['buyerID']."'";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
 
@@ -97,13 +97,13 @@ To change this template use Tools | Templates.
 
              <td>
                      <form action="editBuyerInfo.php">
-                         <input type="hidden" name="buyerId" value="<?=$result['buyerId']?>" />    
+                         <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
                          <input type="submit" value="Edit" name="editForm"/>
                      </form>   
                 </td> 
                 <td>
                      <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
-                         <input type="hidden" name="buyerId" value="<?=$result['buyerId']?>" />    
+                         <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
                          <input type="submit" value="Delete" name="deleteForm"/>
                      </form>   
                 </td>
