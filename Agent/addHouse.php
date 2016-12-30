@@ -64,7 +64,7 @@
                 
                 $.ajax({
                     type: "POST",
-                    url: "submitHomeInfo.php",
+                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
                     data: {studentid: studentid,
                           title: title,
                           grade: grade,
