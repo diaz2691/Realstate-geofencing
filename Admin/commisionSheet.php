@@ -3,8 +3,8 @@
 require('fpdf/fpdf.php');
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Times');
-
+$pdf->SetFont('Times','I');
+$pdf->SetFontSize(10)
 
 $pdf->Cell(0,10,'Re/MAX Property Experts Commission Breakdown                                                                      Check # ',0,1);
 $pdf->Cell(0,10,'Date ',0,1);
