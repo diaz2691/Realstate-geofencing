@@ -24,7 +24,7 @@ $pdf->Cell(0,10,' ',0,1);
 $pdf->Cell(0,10,'Agent Net Commission ',0,1);
 $pdf->Cell(0,10,'',0,1);
 $pdf->SetFont('Times','BI',14);
-$pdf->Cell(0,10,'                                                                       Have READ & APPROVED this Commission Worksheet ',0,1);
+$pdf->Cell(0,10,'                                                                   Have READ & APPROVED this Commission Worksheet ',0,1);
 $pdf->SetFontSize(10);
 $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
