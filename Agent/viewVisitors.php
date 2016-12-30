@@ -8,8 +8,8 @@
     } 
 
     if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-        $sql = "DELETE FROM HouseInfo 
-                 WHERE houseId = '".$_GET['houseId']."'";
+        $sql = "DELETE FROM BuyerInfo 
+                 WHERE buyerId = '".$_GET['buyerId']."'";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
 
