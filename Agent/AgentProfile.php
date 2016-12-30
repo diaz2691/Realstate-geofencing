@@ -67,8 +67,8 @@ To change this template use Tools | Templates.
         </div>
         <!-- Navigation Bar-->
         <?php
-            require("../navigationBar.php");
-            generateTeacherNav();
+            //require("../navigationBar.php");
+            //generateTeacherNav();
         ?>
         
         <br/>
@@ -88,8 +88,7 @@ To change this template use Tools | Templates.
             $stmt->execute($namedParameters);
             //$stmt->execute();
             $results = $stmt->fetchAll();
-            print_r($results);
-
+            
             foreach($results as $result){
                 echo "<tr>";
                 echo "<td>" . $result['address'] . "</td>";
