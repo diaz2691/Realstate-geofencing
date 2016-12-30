@@ -4,7 +4,7 @@
     $dbConn = getConnection();
 
     if(!isset($_SESSION['userId'])) {
-	    header("Location: userLogin.php?error=wrong username or password");
+	    header("Location: ../index.html?error=wrong username or password");
     } 
 
     if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
@@ -24,7 +24,7 @@ To change this template use Tools | Templates.
 <html>
     
 <head>
-    <title>Agent Profile</title>
+    <title>Visitors</title>
     
     <script>
         
@@ -67,7 +67,7 @@ To change this template use Tools | Templates.
         ?>
         
         <br/>
-        <br/><h2 id="header2">Houses &#x2713</h2>
+        <br/><h2 id="header2">Visitors &#x2713</h2>
 
         <form action="addHouse.php">
             <input type="hidden" name="houseId" />    
@@ -76,14 +76,14 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Edit</th><th>Delete</th></tr>    
             
             <?php
 
             $dbConn = getConnection();
-            $sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
+            $sql = "SELECT * FROM BuyerInfo WHERE houseId = :houseId";
             $namedParameters = array();
-            $namedParameters[':userId'] = $_SESSION['userId'];
+            $namedParameters[':houseId'] = $_SESSION['houseId'];
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
             //$stmt->execute();
@@ -91,37 +91,25 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . $result['address'] . "</td>";
-                echo "<td>" . $result['city'] . "</td>";
-                echo "<td>" . htmlspecialchars($result['state']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['zip']) . "</td>";
+                echo "<td>" . $result['firstName'] . "</td>";
+                echo "<td>" . $result['lastName'] . "</td>";
+                echo "<td>" . htmlspecialchars($result['email']) . "</td>";
+                echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bedrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['price']) . "</td>";
 
              ?>  
-           <td>
-
-                     <form action="BuyerForm.php">
-                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="Open Form" name="VisitorForm"/>
-                     </form> 
-
-                     <form action="viewVisitors.php">
-                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="View" name="ViewForm"/>
-                     </form>   
-                </td> 
 
              <td>
-                     <form action="editHouseInfo.php">
-                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
+                     <form action="editBuyerInfo.php">
+                         <input type="hidden" name="buyerId" value="<?=$result['buyerId']?>" />    
                          <input type="submit" value="Edit" name="editForm"/>
                      </form>   
                 </td> 
                 <td>
-                     <form onsubmit="return confirmDelete('<?=$result['address']?>')">
-                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
+                     <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
+                         <input type="hidden" name="buyerId" value="<?=$result['buyerId']?>" />    
                          <input type="submit" value="Delete" name="deleteForm"/>
                      </form>   
                 </td>
