@@ -109,7 +109,7 @@ To change this template use Tools | Templates.
                      </form>   
                 </td> 
                 <td>
-                     <form onsubmit="return confirmDelete('<?=$result['houseId']?>')">
+                     <form onsubmit="return confirmDelete('<?=$result['address']?>')">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
                          <input type="submit" value="Delete" name="deleteForm"/>
                      </form>   
