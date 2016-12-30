@@ -30,7 +30,7 @@ else {
 	}
 
 	else if($result['userType'] == 0){
-		header("Location: Admin/AdminProfile.html");
+		header("Location: Admin/AdminProfile.php");
 	}
     
 }
