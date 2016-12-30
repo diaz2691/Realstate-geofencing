@@ -65,13 +65,16 @@
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
-                    data: {studentid: studentid,
-                          title: title,
-                          grade: grade,
-                          possiblepoints: possiblepoints,
-                          feedback: feedback}
+                    data: {address: address,
+                          city: city,
+                          state: state,
+                          zip: zip,
+                          bedrooms: bedrooms,
+                        bathrooms: bathrooms,
+                        price: price,
+                        userId: userId}
                 }); 
-                window.location.href = "viewGrades.php";
+                window.location.href = "AgentProfile.php";
             });      
         </script>
         
