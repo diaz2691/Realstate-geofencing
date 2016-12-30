@@ -22,11 +22,11 @@ if (empty($result)) {
 
 else {
     
-    $_SESSION['username']  = $result['username'];
+    $_SESSION['userId']  = $result['userId'];
     //$_SESSION['adminName'] = $result['firstName'] . " " . $result['lastName'];
     //$_SESSION['userId'] = $result['userId'];
     if($result['userType'] == 1){
-    	header("Location: Agent/AgentProfile.html");
+    	header("Location: Agent/AgentProfile.php");
 	}
 
 	else if($result['userType'] == 0){
