@@ -68,6 +68,11 @@ To change this template use Tools | Templates.
         
         <br/>
         <br/><h2 id="header2">Houses &#x2713</h2>
+
+        <form action="addHouse.php">
+            <input type="hidden" name="houseId" />    
+            <input type="submit" value="Add New House" name="addForm"/>
+        </form>  
         
         <table class="tftable" border="1">
        
