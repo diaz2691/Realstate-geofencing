@@ -13,7 +13,8 @@ $pdf->SetFont('Arial','B',16);
 
 //specify width and height of the cell Multicell(width, height, string)
 
-for($i=1;$i<=10;$i++)
-    $pdf->Cell(0,10,'Printing line number '.$i,0,1);
+$pdf->Cell(0,10,'Remax ',0,1);
+$pdf->Cell(0,10,'ceck ',0,1);
+
 $pdf->Output();
 ?>
