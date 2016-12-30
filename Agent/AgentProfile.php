@@ -67,7 +67,7 @@ To change this template use Tools | Templates.
         </div>
         <!-- Navigation Bar-->
         <?php
-            require("teacherNav.php");
+            require("navigationBar.php");
             generateTeacherNav();
         ?>
         
