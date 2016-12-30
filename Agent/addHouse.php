@@ -44,7 +44,7 @@
                 Bedrooms: <input type="text" id="bedrooms"><br />
                 Bathrooms: <input type="text" id="bathrooms"><br />
                 Price: <input type="text" id="price"><br />
-                <input type="hidden" name="userId" id="<?=$_SESSION['userId']?>"> 
+                <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
                 <input id="enterHouse" type="button" value="Enter" >  
                 <?php echo $_SESSION['userId'];
                 ?>
