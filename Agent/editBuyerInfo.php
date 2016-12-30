@@ -10,8 +10,8 @@
 
     if (isset($_GET['buyerID'])){
 
-         $houseId = $_GET['buyerID'];
-         
+         $buyerID = $_GET['buyerID'];
+        
          $sql = "SELECT * FROM BuyerInfo WHERE buyerID = '".$buyerID."'"; // need to get assignmentId instead of the one for testing purposes
          $stmt = $dbConn -> prepare($sql);
          $stmt->execute();
