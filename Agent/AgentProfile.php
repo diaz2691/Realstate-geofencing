@@ -103,9 +103,9 @@ To change this template use Tools | Templates.
                 </td> 
 
              <td>
-                     <form action="updateHouse.php">
+                     <form action="editHouseInfo.php">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="Update" name="updateForm"/>
+                         <input type="submit" value="Edit" name="editForm"/>
                      </form>   
                 </td> 
                 <td>
