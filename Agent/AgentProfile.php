@@ -94,7 +94,7 @@ To change this template use Tools | Templates.
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
             //$stmt->execute();
-            $results = $stmt->fetch();
+            $results = $stmt->fetchAll();
             print_r($results);
 
             foreach($results as $result){
