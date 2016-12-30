@@ -67,8 +67,8 @@ To change this template use Tools | Templates.
         </div>
         <!-- Navigation Bar-->
         <?php
-            require("navigationBar.php");
-            generateTeacherNav();
+            //require("navigationBar.php");
+            //generateTeacherNav();
         ?>
         
         <br/>
@@ -87,8 +87,8 @@ To change this template use Tools | Templates.
              //$gradeTotal = 0;
              //$possiblePointsTotal = 0;
 
-             $dbConn = getConnection();
-             $sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
+            $dbConn = getConnection();
+            $sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
