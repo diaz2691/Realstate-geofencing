@@ -72,7 +72,7 @@
                         phone: phone,
                         license: license}
                 }); 
-                //window.location.href = "AgentProfile.php";
+                window.location.href = "viewAgents.php";
             });      
         </script>
         
