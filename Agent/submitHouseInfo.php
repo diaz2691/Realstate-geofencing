@@ -3,6 +3,9 @@
     require('../databaseConnection.php');
     $dbConn = getConnection();
 
+    $message = "wrong answer";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+
     $sql = "INSERT INTO HouseInfo
                  (userId, address, city, state, zip, bedrooms, bathrooms, price)
                  VALUES (:userId, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
@@ -17,5 +20,5 @@
           $namedParameters[":price"] = $_POST['price'];     
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters);
-          //header("Location: AgentProfile.php");
+          header("Location: AgentProfile.php");
 ?>
