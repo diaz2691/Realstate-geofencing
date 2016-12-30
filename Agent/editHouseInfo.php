@@ -86,7 +86,7 @@
         Bedrooms: <input type="text" name="bedrooms" value="<?=$bedrooms?>"><br />
         Bathrooms: <input type="text" name="bathrooms" value="<?=$bathrooms?>"><br />
         Price: <input type="text" name="price" value="<?=$price?>"><br />
-        <input type="hidden" name="assignmentid" value="<?=$assignmentid?>"> 
+        <input type="hidden" name="houseId" value="<?=$houseId?>"> 
 <br/>
         <input id="button" type="submit" name="editForm" value="Edit!">
     
