@@ -88,7 +88,7 @@ To change this template use Tools | Templates.
             $stmt->execute($namedParameters);
             //$stmt->execute();
             $results = $stmt->fetchAll();
-            
+
             foreach($results as $result){
                 echo "<tr>";
                 echo "<td>" . $result['address'] . "</td>";
@@ -99,15 +99,23 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['price']) . "</td>";
 
-             ?>  <td>
-                     <form action="updateGrades.php">
-                         <input type="hidden" name="assignmentid" value="<?=$grade['assignmentid']?>" />    
+             ?>  
+           <td>
+                     <form action="viewVisitors.php">
+                         <input type="hidden" name="assignmentid" value="<?=$result['houseId']?>" />    
+                         <input type="submit" value="Update" name="updateForm"/>
+                     </form>   
+                </td> 
+
+             <td>
+                     <form action="updateHouse.php">
+                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
                          <input type="submit" value="Update" name="updateForm"/>
                      </form>   
                 </td> 
                 <td>
-                     <form onsubmit="return confirmDelete('<?=$grade['assignmentid']?>')">
-                         <input type="hidden" name="assignmentid" value="<?=$grade['assignmentid']?>" />    
+                     <form onsubmit="return confirmDelete('<?=$result['houseId']?>')">
+                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
                          <input type="submit" value="Delete" name="deleteForm"/>
                      </form>   
                 </td>
