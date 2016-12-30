@@ -63,7 +63,7 @@
                 var bathrooms = $("#bathrooms").val();
                 var price = $("#price").val();
                 var userId = $("#userId").val();               
-                
+                window.print(address);
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
