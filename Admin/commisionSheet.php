@@ -1,11 +1,11 @@
 <?php
-<<<<<<< HEAD
-require('fpdf/fpdf.php');
-=======
-require('fpdf.php');
->>>>>>> AgentAddHouse
 
-$the_content = "Ut sagittis erat vitae nunc viverra, ut bibendum dui sodales. In fermentum, augue vel vestibulum porttitor, lectus ipsum faucibus justo, tincidunt luctus velit odio quis orci. ";
+require('fpdf/fpdf.php');
+
+
+
+
+$the_content = "Ut sagittis erat vitae nunc viverra, ut bibendum dui sodales./n In fermentum, augue vel vestibulum porttitor, lectus ipsum faucibus justo, tincidunt luctus velit odio quis orci. ";
 
 $pdf = new FPDF();
 $pdf->AddPage();
