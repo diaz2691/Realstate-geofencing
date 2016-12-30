@@ -44,7 +44,7 @@
                 Bedrooms: <input type="text" id="bedrooms"><br />
                 Bathrooms: <input type="text" id="bathrooms"><br />
                 Price: <input type="text" id="price"><br />
-                <input type="hidden" name="userId" id="<?=$_SESSION['userId']?>"> 
+                <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
                 <input id="enterHouse" type="button" value="Enter" >  
                 <?php echo $_SESSION['userId'];
                 ?>
@@ -64,6 +64,13 @@
                 var price = $("#price").val();
                 var userId = $("#userId").val();               
                 alert(address);
+                alert(city);
+                alert(state);
+                alert(zip);
+                alert(bedrooms);
+                alert(bathrooms);
+                alert(price);
+                alert(userId);
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
