@@ -75,7 +75,7 @@
                         price: price,
                         userId: userId}
                 }); 
-                window.location.href = "AgentProfile.php";
+                //window.location.href = "AgentProfile.php";
             });      
         </script>
         

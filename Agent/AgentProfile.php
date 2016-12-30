@@ -101,8 +101,14 @@ To change this template use Tools | Templates.
 
              ?>  
            <td>
+
+                     <form action="BuyerForm.php">
+                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
+                         <input type="submit" value="Open Form" name="VisitorForm"/>
+                     </form> 
+
                      <form action="viewVisitors.php">
-                         <input type="hidden" name="assignmentid" value="<?=$result['houseId']?>" />    
+                         <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
                          <input type="submit" value="View" name="ViewForm"/>
                      </form>   
                 </td> 

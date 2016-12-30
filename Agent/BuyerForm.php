@@ -1,3 +1,15 @@
+<?php
+    require("../databaseConnection.php");  
+    session_start();
+    $dbConn = getConnection();
+
+    if(!isset($_SESSION['userId'])) {
+      header("Location: userLogin.php?error=wrong username or password");
+    } 
+
+    $houseId = $_GET['houseId'];
+ ?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +58,7 @@
     <header>
     </header>
 
-    <form action="addToDatabase.php" method="get">
+    <form action="addToDatabase.php" method="post">
     <table>
         <tr>
             <td colspan="2"><img align="bottom" alt="Interesting Image" border="0" class="simage float_center" height="151" src="https://d1yoaun8syyxxt.cloudfront.net/dh307-4c1ce6ae-ef18-4d63-ae22-952804c98fc4-v2" style="margin-left: 0px; margin-right: 0px;" title="Interesting Image" width="385" />
@@ -62,8 +74,19 @@
           <td>Email *</td>       <td><input type="email" name="email" /> <br /></td>
         </tr>
         <tr>
-          <td>Phone 1</td>       <td><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
+          <td>Phone</td>       <td><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
         </tr>
+        <tr>
+          <td>Bedrooms</td>       <td><input type = "text" name="bedrooms" /> </td> <br />
+        </tr>
+        <tr>
+          <td>Bathrooms</td>       <td><input type = "text" name="bathrooms" /> </td> <br />
+        </tr>
+        <tr>
+          <td>Price</td>       <td><input type = "text" name="price" /> </td> <br />
+        </tr>
+        <input type="hidden" name="houseId" value="<?=$houseId?>"> 
+
         <tr>
             <td>
                 <input type="submit" value="Submit" />
