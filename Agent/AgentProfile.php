@@ -95,7 +95,7 @@ To change this template use Tools | Templates.
             $stmt->execute($namedParameters);
             //$stmt->execute();
             $results = $stmt->fetch();
-            print_r($results)
+            print_r($results);
 
             foreach($results as $result){
                 echo "<tr>";
