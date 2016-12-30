@@ -67,8 +67,8 @@ To change this template use Tools | Templates.
         </div>
         <!-- Navigation Bar-->
         <?php
-            //require("navigationBar.php");
-            //generateTeacherNav();
+            require("../navigationBar.php");
+            generateTeacherNav();
         ?>
         
         <br/>
@@ -76,16 +76,9 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
             
             <?php
-             //$studentid = 1; // 1 FOR TESTING PURPOSES! 
-             // NEED TO GET PERCENTAGE, LETTER GRADE
-             //$grades = getGrades($studentid);
-             //
-                
-             //$gradeTotal = 0;
-             //$possiblePointsTotal = 0;
 
             $dbConn = getConnection();
             $sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
@@ -123,13 +116,7 @@ To change this template use Tools | Templates.
 
              <?php    
                } //closes foreach
-             ?>            
-            
-           
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td><b>Earned Points</b></td><td><b>Possible Total Points</b></td><td><b>Class Average</b></td><td><b>Letter Grade</b></td><td></td><td></td></tr>
-
-        <tr><td></td><td></td><td></td><td><?=$gradeTotal?></td><td><?=$possiblePointsTotal?></td><td><?=$classAverage?>%</td><td><?=$letter?></td><td></td><td></td></tr>
+             ?>         
         </table>
     <br/><br/><br/><br/><br/><br/>
     </body>
