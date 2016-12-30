@@ -66,7 +66,7 @@
                 
                 $.ajax({
                     type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/sumbitHouseInfo.php",
+                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
                     data: {address: address,
                           city: city,
                           state: state,
