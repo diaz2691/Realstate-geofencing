@@ -37,7 +37,7 @@
                                     <a href="commisionSheet.php" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Forms</a>
                                 </li>
                                 <li><a action="commisionSheet.php">Open PDF</a></li>
-                                <li><a href="#">Add New</a></li>
+                                <li><a href="commisionSheet.php">Add New</a></li>
                             </ul>
                         </li>
                         <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agents <span class="caret"></span></a>
