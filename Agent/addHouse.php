@@ -24,7 +24,7 @@
             require("agentNav.php");
         ?>  
         
-            <div id="form">
+            <div class="form">
                 <h1>Enter House Information</h1>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
