@@ -48,6 +48,7 @@ To change this template use Tools | Templates.
               border: 0;
               box-sizing: border-box;
               font-size: 14px;
+              text-align:center;
             }
         </style>
     
