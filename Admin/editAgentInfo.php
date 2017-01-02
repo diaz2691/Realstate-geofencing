@@ -67,9 +67,9 @@
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
 
 </head>
-    <body>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <h1 id="mainHeader">Visitors Information</h1>    
+        <?php
+            require("adminNav.php");
+        ?> 
     <h1>Edit Record</h1>
         <div id="formDiv">
             
