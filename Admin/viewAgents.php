@@ -41,6 +41,9 @@ To change this template use Tools | Templates.
         </script>
 
         <style type="text/css">
+              form {
+                text-align:center;
+              }
               .option {
               font-family: "Roboto", sans-serif;
               outline: 0;
