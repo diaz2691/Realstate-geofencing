@@ -24,7 +24,6 @@
         <?php
             require("adminNav.php");
         ?> 
-        <h1 id="enterAgentHeader">Enter Agent Information</h1>
         <div id="enterAgentDiv" >
             <div class="form">
 
@@ -35,7 +34,7 @@
                 Email: <input type="text" id="email"><br />
                 Phone: <input type="text" id="phone"><br />
                 License: <input type="text" id="license"><br /> 
-                <input id="enterAgentInfo" type="button" value="enter" id="button">  
+                <input type="button" value="enter" id="button">  
                 
             </div>
         </div>
