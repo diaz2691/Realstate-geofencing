@@ -5,20 +5,21 @@ To change this template use Tools | Templates.
 <html><html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="login.css">
     <title></title>
 </head>
 <body>
     <h1> Login Screen </h1>
-    
-    <form action="login.php" method="post">
-        
-        Username: <input type="text" name="username"> <br />
-        Password: <input type="password" name="password"> <br />
-        <input type="submit" value="Login!" name="loginForm" />
-        (jose/secret) Admin <br /> 
-        (brayanne/secret) AGENT
-        
-    </form>
+    <div class="login-page">
+        <div class="form">
+            <form action="login.php" method="post" class="login-form">
+                <input type="text" name="username" placeholder="username"/>
+                <input type="password" name="password" placeholder="password"/>
+                <input type="submit" value="login" name="loginForm" />
+                (jose/secret) Admin <br /> 
+                (brayanne/secret) AGENT
+                
+            </form>
     
     <h3 style="color:red">
     <?php
