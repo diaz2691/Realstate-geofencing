@@ -64,6 +64,7 @@
     <title>Update Visitor</title>
     <meta charset = "utf-8"/>
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
 
 </head>
         <!-- Navigation Bar -->
