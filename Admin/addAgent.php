@@ -13,9 +13,14 @@
 <html>
 <head>
     <title>Add New Agent Information</title>
-    <meta charset = "utf-8"/>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
+    <meta charset = "utf-8"/><!--
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> importing jQuery library-->
     <link type="text/css" rel="stylesheet" href="editAgentInfo.css">
+    <style type="text/css">
+        .form{
+            padding-top: 20cm;
+        }
+    </style>
 
 </head>
     <body>
@@ -24,7 +29,6 @@
         <?php
             require("adminNav.php");
         ?> 
-        <div id="enterAgentDiv" >
             <div class="form">
 
                 <input type="text" id="username" placeholder="username"> <br />
@@ -36,8 +40,7 @@
                 <input type="text" id="license" placeholder="license"><br /> 
                 <input type="button" value="enter" id="button">  
                 
-            </div>
-        </div>
+            </div>x
         
         <script>
 
