@@ -48,7 +48,7 @@
                         </li>
                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Houses <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">View Houses</a></li>
+                                <li><a href="viewHouses.php">View Houses</a></li>
                             </ul>
                         </li>
                     </ul>
