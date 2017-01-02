@@ -44,11 +44,8 @@ To change this template use Tools | Templates.
               .option {
               font-family: "Roboto", sans-serif;
               outline: 0;
-              background: #f2f2f2;
-              width: 100%;
+              background: "green";
               border: 0;
-              margin: 0 0 15px;
-              padding: 15px;
               box-sizing: border-box;
               font-size: 14px;
             }
