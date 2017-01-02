@@ -27,13 +27,13 @@
         <div id="enterAgentDiv" >
             <div class="form">
 
-                Username: <input type="text" id="username"> <br />
-                Temporary Password: <input type="text" id="password"><br />
-                First Name: <input type="text" id="firstName"><br />
-                LastName: <input type="text" id="lastName"><br />
-                Email: <input type="text" id="email"><br />
-                Phone: <input type="text" id="phone"><br />
-                License: <input type="text" id="license"><br /> 
+                <input type="text" id="username" placeholder="username"> <br />
+                <input type="text" id="password" placeholder="temporary password"><br />
+                <input type="text" id="firstName" placeholder="first name"><br />
+                <input type="text" id="lastName" placeholder="last name"><br />
+                <input type="text" id="email" placeholder="email"><br />
+                <input type="text" id="phone" placeholder="phone"><br />
+                <input type="text" id="license" placeholder="license"><br /> 
                 <input type="button" value="enter" id="button">  
                 
             </div>
