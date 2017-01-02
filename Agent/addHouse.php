@@ -35,7 +35,6 @@
                 <input type="text" id="price" placeholder="price"><br />
                 <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
                 <input id="button" type="button" value="Enter" > 
-                ?>
                 
         </div>
         

@@ -63,34 +63,31 @@
 <head>
     <title>Update Assignment</title>
     <meta charset = "utf-8"/>
-    <link rel="stylesheet" type="text/css" href="css/navStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/mainHeaderStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/updateAssignmentStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/backgroundStyles.css">
+    <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
 
 </head>
     <body>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <h1 id="mainHeader">House Information</h1>    
-    <h1>Edit Record</h1>
-        <div id="formDiv">
-            
-      <br/> 
-    <form method="post">
+        <!-- Navigation Bar -->
+        <?php
+            require("agentNav.php");
+        ?>
+      <div class="form">
+        <h1>Edit Record</h1>
+        <form method="post">
 
-        Address: <input type="text" name="address" value="<?=$address?>"> <br />
-        City: <input type="text" name="city" value="<?=$city?>"><br />
-        State: <input type="text" name="state" value="<?=$state?>"><br />
-        Zip: <input type="text" name="zip" value="<?=$zip?>"><br />
-        Bedrooms: <input type="text" name="bedrooms" value="<?=$bedrooms?>"><br />
-        Bathrooms: <input type="text" name="bathrooms" value="<?=$bathrooms?>"><br />
-        Price: <input type="text" name="price" value="<?=$price?>"><br />
-        <input type="hidden" name="houseId" value="<?=$houseId?>"> 
-<br/>
-        <input id="button" type="submit" name="editForm" value="Edit!">
-    
-    </form>
+            Address: <input type="text" name="address" value="<?=$address?>"> <br />
+            City: <input type="text" name="city" value="<?=$city?>"><br />
+            State: <input type="text" name="state" value="<?=$state?>"><br />
+            Zip: <input type="text" name="zip" value="<?=$zip?>"><br />
+            Bedrooms: <input type="text" name="bedrooms" value="<?=$bedrooms?>"><br />
+            Bathrooms: <input type="text" name="bathrooms" value="<?=$bathrooms?>"><br />
+            Price: <input type="text" name="price" value="<?=$price?>"><br />
+            <input type="hidden" name="houseId" value="<?=$houseId?>"> 
+            <br/>
+            <input id="button" type="submit" name="editForm" value="Edit">
+        
+        </form>
             
         </div>         
         
