@@ -39,6 +39,20 @@ To change this template use Tools | Templates.
             }
         
         </script>
+
+        <style type="text/css">
+              .option {
+              font-family: "Roboto", sans-serif;
+              outline: 0;
+              background: #f2f2f2;
+              width: 100%;
+              border: 0;
+              margin: 0 0 15px;
+              padding: 15px;
+              box-sizing: border-box;
+              font-size: 14px;
+            }
+        </style>
     
     <meta charset = "utf-8"/>
     <!--<link rel="stylesheet" type="text/css" href="css/navStyles.css">
@@ -94,13 +108,13 @@ To change this template use Tools | Templates.
              <td>
                      <form action="editAgentInfo.php">
                          <input type="hidden" name="userId" value="<?=$result['userId']?>" />    
-                         <input type="submit" value="Edit" name="editForm"/>
+                         <input class="option" type="submit" value="Edit" name="editForm"/>
                      </form>   
                 </td> 
                 <td>
                      <form onsubmit="return confirmDelete('<?=$result['username']?>')">
                          <input type="hidden" name="userId" value="<?=$result['userId']?>" />    
-                         <input type="submit" value="Delete" name="deleteForm"/>
+                         <input class="option" type="submit" value="Delete" name="deleteForm"/>
                      </form>   
                 </td>
                </tr>
