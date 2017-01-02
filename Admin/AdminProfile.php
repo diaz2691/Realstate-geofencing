@@ -10,13 +10,18 @@
  
 <!DOCTYPE html>
 <html>
+    <head>
+        <script src="adminNav.js">
+            $(function(){
+              $("#includedContent").load("adminNav.php"); 
+            });
+        </script>
+        <link rel="stylesheet" type="text/css" href="adminNav.css">
+    </head>
 	<body>
-
+        <div id="includedContent"></div>
 		<h1>Admin Profile</h1>
         <!-- Navigation Bar -->
-        <?php
-            require("adminNav.php");
-        ?>
 
 		 <form action="commisionSheet.php">   
             <input type="submit" value="Commission Sheet" name="CommissionForm"/>
