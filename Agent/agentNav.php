@@ -9,8 +9,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="adminNav.css">
-        <script src="adminNav.js"></script>
+        <link rel="stylesheet" type="text/css" href="agentNav.css">
     </head>
     <body> 
 

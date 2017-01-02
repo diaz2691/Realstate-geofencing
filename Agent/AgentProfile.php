@@ -47,6 +47,23 @@ To change this template use Tools | Templates.
     .tftable tr {background-color:#2f2f2f;}
     .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}
     .tftable tr:hover {background-color:#171515;}
+
+               /* .tableHeader {
+                    text-align:center;
+                }*/
+
+              .tableButtons {
+                text-align:center;
+              }
+              .option {
+              font-family: "Roboto", sans-serif;
+              outline: 0;
+              background: "green";
+              border: 0;
+              box-sizing: border-box;
+              font-size: 14px;
+              text-align:center;
+            }
     </style>
 </head>
     
@@ -55,7 +72,6 @@ To change this template use Tools | Templates.
         <!-- Navigation Bar -->
         <?php
             require("agentNav.php");
-        ?>  //generateTeacherNav();
         ?>
         
         <br/>
@@ -96,25 +112,25 @@ To change this template use Tools | Templates.
 
                      <form action="BuyerForm.php">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="Open Form" name="VisitorForm"/>
+                         <input class="option" type="submit" value="Open Form" name="VisitorForm"/>
                      </form> 
 
                      <form action="viewVisitors.php">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="View" name="ViewForm"/>
+                         <input class="option" type="submit" value="View" name="ViewForm"/>
                      </form>   
                 </td> 
 
              <td>
                      <form action="editHouseInfo.php">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="Edit" name="editForm"/>
+                         <input class="option" type="submit" value="Edit" name="editForm"/>
                      </form>   
                 </td> 
                 <td>
                      <form onsubmit="return confirmDelete('<?=$result['address']?>')">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
-                         <input type="submit" value="Delete" name="deleteForm"/>
+                         <input class="option" type="submit" value="Delete" name="deleteForm"/>
                      </form>   
                 </td>
                </tr>
