@@ -56,15 +56,9 @@ To change this template use Tools | Templates.
     
 
     <body>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <div id="header">
-            <br/><h1 id="mainHeader">Admin Profile</h1><br/>
-        </div>
-        <!-- Navigation Bar-->
         <?php
-            //require("../navigationBar.php");
-            //generateTeacherNav();
-        ?>
+            require("adminNav.php");
+        ?> 
         
         <br/>
         <br/><h2 id="header2">Agents &#x2713</h2>

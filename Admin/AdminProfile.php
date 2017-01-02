@@ -18,8 +18,6 @@
         <script src="adminNav.js"></script>-->
     </head>
 	<body>
-
-		<h1>Admin Profile</h1>
         <!-- Navigation Bar -->
         <?php
             require("adminNav.php");
