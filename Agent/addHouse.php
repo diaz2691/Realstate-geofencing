@@ -14,47 +14,35 @@
 <head>
     <title>Add New House Information</title>
     <meta charset = "utf-8"/>
-    <link rel="stylesheet" type="text/css" href="css/navStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/mainHeaderStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/enterAssignmentsStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/backgroundStyles.css">
+    <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
 
 </head>
     <body>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><h1 id="mainHeader">Add New House Information</h1><br/>
-        
-        <!-- Navigation Bar -->
+                <!-- Navigation Bar -->
         <?php
-            //require("teacherNav.php");
-            //generateTeacherNav();
-        ?>
-        <!---------------------->
+            require("agentNav.php");
+        ?>  
         
-        <br/><br/><br/>
-        <h1 id="enterHouseHeader">Enter House Information</h1>
-        <div id="enterHouseDiv" > <br/>
-            <div id="innerDiv">
-
-                Address: <input type="text" id="address"> <br />
-                City: <input type="text" id="city"><br />
-                State: <input type="text" id="state"><br />
-                Zip: <input type="text" id="zip"><br />
-                Bedrooms: <input type="text" id="bedrooms"><br />
-                Bathrooms: <input type="text" id="bathrooms"><br />
-                Price: <input type="text" id="price"><br />
+            <div id="form">
+                <h1>Enter House Information</h1>
+                <input type="text" id="address" placeholder="address"> <br />
+                <input type="text" id="city" placeholder="city"><br />
+                <input type="text" id="state" placeholder="state"><br />
+                <input type="text" id="zip" placeholder="zip"><br />
+                <input type="text" id="bedrooms" placeholder="bedrooms"><br />
+                <input type="text" id="bathrooms" placeholder="bathrooms"><br />
+                <input type="text" id="price" placeholder="price"><br />
                 <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
-                <input id="enterHouse" type="button" value="Enter" >  
+                <input id="button" type="button" value="Enter" >  
                 <?php echo $_SESSION['userId'];
                 ?>
                 
-            </div>
         </div>
         
         <script>
 
-            $("#enterHouse").click( function(event){
+            $("#button").click( function(event){
                 var address = $("#address").val();
                 var city = $("#city").val();
                 var state = $("#state").val();
