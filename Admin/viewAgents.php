@@ -45,7 +45,7 @@ To change this template use Tools | Templates.
                     text-align:center;
                 }*/
 
-              form {
+              .tableButtons {
                 text-align:center;
               }
               .option {
@@ -111,13 +111,13 @@ To change this template use Tools | Templates.
              ?> 
 
              <td>
-                     <form action="editAgentInfo.php">
+                     <form class="tableButtons" action="editAgentInfo.php">
                          <input type="hidden" name="userId" value="<?=$result['userId']?>" />    
                          <input class="option" type="submit" value="Edit" name="editForm"/>
                      </form>   
                 </td> 
                 <td>
-                     <form onsubmit="return confirmDelete('<?=$result['username']?>')">
+                     <form class="tableButtons" onsubmit="return confirmDelete('<?=$result['username']?>')">
                          <input type="hidden" name="userId" value="<?=$result['userId']?>" />    
                          <input class="option" type="submit" value="Delete" name="deleteForm"/>
                      </form>   
