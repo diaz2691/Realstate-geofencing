@@ -1,7 +1,7 @@
 <?php
     session_start();
     require('../databaseConnection.php');
-    require_once '../twilio-php-master/Twilio/autoload.php';
+    require('../twilio-php-master/Twilio/autoload.php');
     use Twilio\Rest\Client;
     $dbConn = getConnection();
 
