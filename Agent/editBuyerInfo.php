@@ -75,15 +75,15 @@
         <h1>Edit Record</h1>
         <form method="post">
 
-            First Name: <input type="text" name="firstName" value="<?=$firstName?>"> <br />
-            Last Name: <input type="text" name="lastName" value="<?=$lastName?>"><br />
-            Email: <input type="text" name="email" value="<?=$email?>"><br />
-            Phone: <input type="text" name="phone" value="<?=$phone?>"><br />
-            Bedrooms: <input type="text" name="bedrooms" value="<?=$bedrooms?>"><br />
-            Bathrooms: <input type="text" name="bathrooms" value="<?=$bathrooms?>"><br />
-            Price: <input type="text" name="price" value="<?=$price?>"><br />
+            <b>First Name</b> <input type="text" name="firstName" value="<?=$firstName?>"> <br />
+            <b>Last Name</b> <input type="text" name="lastName" value="<?=$lastName?>"><br />
+            <b>Email</b> <input type="text" name="email" value="<?=$email?>"><br />
+            <b>Phone</b> <input type="text" name="phone" value="<?=$phone?>"><br />
+            <b>Bedrooms</b> <input type="text" name="bedrooms" value="<?=$bedrooms?>"><br />
+            <b>Bathrooms</b> <input type="text" name="bathrooms" value="<?=$bathrooms?>"><br />
+            <b>Price</b> <input type="text" name="price" value="<?=$price?>"><br />
             <input type="hidden" name="buyerID" value="<?=$buyerID?>"> <br/>
-            <input id="button" type="submit" name="editForm" value="Edit!">
+            <input id="button" type="submit" name="editForm" value="Edit">
         
         </form>
             
