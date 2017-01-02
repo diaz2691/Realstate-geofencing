@@ -42,7 +42,7 @@
                         </li>
                         <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agents <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">View Agents</a></li>
+                                <li><a href="viewAgents.php">View Agents</a></li>
                                 <li><a href="#">Add New</a></li>
                             </ul>
                         </li>
