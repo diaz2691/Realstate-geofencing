@@ -11,11 +11,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="javascript/jquery-1.3.2.min.js">
+        <script src="//code.jquery.com/jquery-1.3.2.min.js">
             $(function(){
               $("#includedContent").load("adminNav.php"); 
             });
         </script>
+        <script src="adminNav.js"></script>
         <link rel="stylesheet" type="text/css" href="adminNav.css">
     </head>
 	<body>
