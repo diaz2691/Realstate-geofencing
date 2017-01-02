@@ -41,13 +41,7 @@ To change this template use Tools | Templates.
         </script>
     
     <meta charset = "utf-8"/>
-    <style type="text/css">
-    .tftable {font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}
-    .tftable th {font-size:12px;background-color:#9b9b9b;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}
-    .tftable tr {background-color:#d8d8d8;}
-    .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767; color:#9b9b9b;}
-    .tftable tr:hover {background-color:#9b9b9b;}
-
+ <style type="text/css">
                /* .tableHeader {
                     text-align:center;
                 }*/
@@ -63,7 +57,13 @@ To change this template use Tools | Templates.
               box-sizing: border-box;
               font-size: 14px;
               text-align:center;
+              background-color:#c68c53
             }
+            .tftable {font-size:14px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}
+            .tftable th {font-size:14px;background-color:#c68c53;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}
+            .tftable tr {background-color:#d2a679;}
+            .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}
+            .tftable tr:hover {background-color:#c68c53;}
     </style>
 </head>
     
