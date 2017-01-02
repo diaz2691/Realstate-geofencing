@@ -60,7 +60,7 @@ To change this template use Tools | Templates.
         <?php
             require("agentNav.php");
         ?> 
-        <br/><h2 id="header2">Visitors &#x2713</h2> 
+        <br/><br/><h2 id="header2">Visitors &#x2713</h2> 
         
         <table class="tftable" border="1">
        
