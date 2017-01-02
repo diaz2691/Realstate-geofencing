@@ -78,7 +78,7 @@
                 Phone: <input type="text" name="phone" value="<?=$phone?>"><br />
                 License: <input type="text" name="license" value="<?=$license?>"><br />
                 <input type="hidden" name="userId" value="<?=$userId?>"> 
-                <input ype="submit" name="editForm" value="edit" id="button">
+                <input type="submit" name="editForm" value="edit" id="button">
         
             </form>
             

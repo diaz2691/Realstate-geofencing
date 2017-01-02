@@ -24,30 +24,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Administrator</a>
+                    <a class="navbar-brand" href="#">Agent</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#" class="">Home</a></li>
                         <li class=" dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Commission Form<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitors<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Forms</a>
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Visitors</a>
                                 </li>
-                                <li><a href="commisionSheet.php">Open PDF</a></li>
                                 <li><a href="#">Add New</a></li>
                             </ul>
                         </li>
-                        <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agents <span class="caret"></span></a>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Houses <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="viewAgents.php">View Agents</a></li>
+                                <li><a href="viewAgents.php">View Houses</a></li>
                                 <li><a href="#">Add New</a></li>
-                            </ul>
-                        </li>
-                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Houses <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">View Houses</a></li>
                             </ul>
                         </li>
                     </ul>
