@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="adminNav.js">
+        <script type="text/javascript" src="javascript/jquery-1.3.2.min.js">
             $(function(){
               $("#includedContent").load("adminNav.php"); 
             });
