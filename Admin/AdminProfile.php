@@ -13,6 +13,10 @@
 	<body>
 
 		<h1>Admin Profile</h1>
+        <!-- Navigation Bar -->
+        <?php
+            require("adminNav.php");
+        ?>
 
 		 <form action="commisionSheet.php">   
             <input type="submit" value="Commission Sheet" name="CommissionForm"/>
