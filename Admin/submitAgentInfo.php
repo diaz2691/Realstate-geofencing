@@ -10,10 +10,13 @@
     $twilio_phone_number = "+18315851661";
 
     $client = new Client($account_sid, $auth_token);
-    $client->account->messages->create(array(
+    $client->account->messages->create(
+    $_POST['phone'],
+    array(
     "From" => $twilio_phone_number,
-    "To" => "phone",
-    "Body" => "Your password is " . $_POST['password']));
+    "Body" => "Your password is " . $_POST['password'],
+    )
+    );
 
     $sql = "INSERT INTO UsersInfo
                  (userType, username, password, firstName, lastName, email, phone, license)
