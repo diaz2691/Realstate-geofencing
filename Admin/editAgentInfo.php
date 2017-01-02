@@ -58,12 +58,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Update Visitor</title>
+    <title>Edit Agent Information</title>
     <meta charset = "utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/navStyles.css">
     <link type="text/css" rel="stylesheet" href="css/mainHeaderStyles.css">
     <link type="text/css" rel="stylesheet" href="css/updateAssignmentStyles.css">
-    <link type="text/css" rel="stylesheet" href="css/backgroundStyles.css">
+    <link type="text/css" rel="stylesheet" href="../login.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
 
 </head>
@@ -71,22 +71,19 @@
             require("adminNav.php");
         ?> 
     <h1>Edit Record</h1>
-        <div id="formDiv">
-            
-      <br/> 
-    <form method="post">
+        <div class="form">
+            <form method="post">
 
-        Username: <input type="text" name="username" value="<?=$username?>"> <br />
-        First Name: <input type="text" name="firstName" value="<?=$firstName?>"><br />
-        Last Name: <input type="text" name="lastName" value="<?=$lastName?>"><br />
-        Email: <input type="text" name="email" value="<?=$email?>"><br />
-        Phone: <input type="text" name="phone" value="<?=$phone?>"><br />
-        License: <input type="text" name="license" value="<?=$license?>"><br />
-        <input type="hidden" name="userId" value="<?=$userId?>"> 
-<br/>
-        <input id="button" type="submit" name="editForm" value="Edit!">
-    
-    </form>
+                Username: <input type="text" name="username" value="<?=$username?>"> <br />
+                First Name: <input type="text" name="firstName" value="<?=$firstName?>"><br />
+                Last Name: <input type="text" name="lastName" value="<?=$lastName?>"><br />
+                Email: <input type="text" name="email" value="<?=$email?>"><br />
+                Phone: <input type="text" name="phone" value="<?=$phone?>"><br />
+                License: <input type="text" name="license" value="<?=$license?>"><br />
+                <input type="hidden" name="userId" value="<?=$userId?>"> 
+                <input id="button" type="submit" name="editForm" value="edit" id="button">
+        
+            </form>
             
         </div>         
         
