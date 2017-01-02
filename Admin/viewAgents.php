@@ -41,6 +41,10 @@ To change this template use Tools | Templates.
         </script>
 
         <style type="text/css">
+                .tableHeader {
+                    text-align:center;
+                }
+
               form {
                 text-align:center;
               }
@@ -84,7 +88,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>License</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Update</th><th class="tableHeader">Delete</th></tr>    
             
             <?php
 
