@@ -41,9 +41,9 @@ To change this template use Tools | Templates.
         </script>
 
         <style type="text/css">
-                .tableHeader {
+               /* .tableHeader {
                     text-align:center;
-                }
+                }*/
 
               form {
                 text-align:center;
