@@ -46,7 +46,7 @@
         <script>
 
 
-            $("#enterAgentInfo").click( function(event){
+            $("#button").click( function(event){
                 var username = $("#username").val();
                 var password = $("#password").val();
                 var firstName = $("#firstName").val();
