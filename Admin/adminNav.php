@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<link rel="stylesheet" type="text/css" href="adminNav.css">
-        <script src="adminNav.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="adminNav.css">
+        <script src="adminNav.js"></script>
     </head>
     <body> 
 
