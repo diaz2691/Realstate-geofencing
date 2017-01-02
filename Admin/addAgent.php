@@ -30,6 +30,7 @@
             require("adminNav.php");
         ?> 
             <div class="form">
+                <h1>Enter Agent Information</h1>
 
                 <input type="text" id="username" placeholder="username"> <br />
                 <input type="text" id="password" placeholder="temporary password"><br />
