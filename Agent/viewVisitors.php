@@ -56,17 +56,10 @@ To change this template use Tools | Templates.
     
 
     <body>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <div id="header">
-            <br/><h1 id="mainHeader">Agent Profile</h1><br/>
-        </div>
-        <!-- Navigation Bar-->
+                        <!-- Navigation Bar -->
         <?php
-            //require("../navigationBar.php");
-            //generateTeacherNav();
-        ?>
-        
-        <br/>
+            require("agentNav.php");
+        ?> 
         <br/><h2 id="header2">Visitors &#x2713</h2> 
         
         <table class="tftable" border="1">
