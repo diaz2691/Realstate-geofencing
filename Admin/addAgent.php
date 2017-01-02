@@ -18,7 +18,7 @@
     <link type="text/css" rel="stylesheet" href="editAgentInfo.css">
     <style type="text/css">
         .form{
-            padding-top: 20cm;
+            padding-top: 5cm;
         }
     </style>
 
