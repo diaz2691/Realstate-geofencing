@@ -36,7 +36,7 @@
                                 <li class=" dropdown">
                                     <a href="commisionSheet.php" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Open PDF</a>
                                 </li>
-                                <li><a href="#">View Forms</a></li>
+                                <li><a href="commisionSheet.php">View Forms</a></li>
                                 <li><a href="#">Add New</a></li>
                             </ul>
                         </li>
