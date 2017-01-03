@@ -92,7 +92,7 @@ To change this template use Tools | Templates.
             $stmt->execute();
             //$stmt->execute();
             $results = $stmt->fetchAll();
-
+            $agentNum = 0;
             foreach($results as $result){
                 echo "<tr>";
                 echo "<td>" . $result['username'] . "</td>";
@@ -101,7 +101,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['license']) . "</td>";
-                echo "<td><a href=commisionSheet.php>" . htmlspecialchars("Commission Sheet ") . "</a></td>";
+                echo "<td><a href=commisionSheet.php?agentNum=" . $agentNum . ">" . htmlspecialchars("Commission Sheet ") . "</a></td>";
 
              ?> 
 
