@@ -5,9 +5,7 @@
 
 require('fpdf/fpdf.php');
 
- if(isset($_GET["agentNum"]))
-    {
-
+ 
         $data = $_GET["agentNum"];
 
         if($data == 0)
@@ -46,7 +44,7 @@ require('fpdf/fpdf.php');
             $pdf->Output();
         }
 
-    }
+    
 else{
 
 $pdf = new FPDF();
