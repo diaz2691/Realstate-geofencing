@@ -39,6 +39,8 @@ require('fpdf/fpdf.php');
             $pdf->Cell(0,10,'',0,1);
             $pdf->Cell(0,10,'',0,1);
             $pdf->Cell(0,10,'',0,1);
+            $pdf->Cell(0,10,'',0,1);
+            $pdf->Cell(0,10,'',0,1);
             $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 
             $pdf->Output();
@@ -72,6 +74,8 @@ $pdf->Cell(0,10,'',0,1);
 $pdf->SetFont('Times','BI',14);
 $pdf->Cell(0,10,'                                                               Have READ & APPROVED this Commission Worksheet ',0,1);
 $pdf->SetFontSize(10);
+$pdf->Cell(0,10,'',0,1);
+$pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
