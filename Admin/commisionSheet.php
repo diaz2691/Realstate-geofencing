@@ -10,7 +10,7 @@ require('fpdf/fpdf.php');
 
         $data = $_GET["agentNum"];
 
-        if($data == "1")
+        if($data == 0)
         {
             $pdf = new FPDF();
             $pdf->AddPage();
