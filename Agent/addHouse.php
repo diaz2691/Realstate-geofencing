@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
     <style type="text/css">
-        .form select option{
+        .form select {
           font-family: "Roboto", sans-serif;
           outline: 0;
           background: #f2f2f2;
@@ -40,10 +40,10 @@
         
             <div class="form">
                 <h1>Enter House Information</h1>
-                <select >
-                  <option value=1>Active</option>
-                  <option value=2>Pending</option>
-                  <option value=3>Sold</option>
+                <select type="text" id="condition">
+                  <option value=1>active</option>
+                  <option value=2>pending</option>
+                  <option value=3>sold</option>
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
@@ -60,6 +60,7 @@
         <script>
 
             $("#button").click( function(event){
+                var condition = $("#condition").val();
                 var address = $("#address").val();
                 var city = $("#city").val();
                 var state = $("#state").val();
@@ -71,7 +72,8 @@
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
-                    data: {address: address,
+                    data: {condition: condition,
+                          address: address,
                           city: city,
                           state: state,
                           zip: zip,

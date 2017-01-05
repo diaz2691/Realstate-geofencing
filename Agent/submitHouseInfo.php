@@ -7,10 +7,11 @@
     echo "<script type='text/javascript'>alert('$message');</script>";
 
     $sql = "INSERT INTO HouseInfo
-                 (userId, address, city, state, zip, bedrooms, bathrooms, price)
-                 VALUES (:userId, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
+                 (userId, condition, address, city, state, zip, bedrooms, bathrooms, price)
+                 VALUES (:userId, :condition, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
           $namedParameters = array();
           $namedParameters[":userId"] = $_POST['userId'];
+          $namedParameters[":condition"] = $_POST['condition'];
           $namedParameters[":address"] = $_POST['address'];
           $namedParameters[":city"] = $_POST['city'];
           $namedParameters[":state"] = $_POST['state'];     
