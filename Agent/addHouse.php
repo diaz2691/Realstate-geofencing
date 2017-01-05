@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
     <style type="text/css">
-        .form select {
+        .form select option{
           font-family: "Roboto", sans-serif;
           outline: 0;
           background: #f2f2f2;
