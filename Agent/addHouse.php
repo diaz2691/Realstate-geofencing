@@ -41,9 +41,9 @@
             <div class="form">
                 <h1>Enter House Information</h1>
                 <select id="condition">
-                  <option value=1>active</option>
-                  <option value=2>pending</option>
-                  <option value=3>sold</option>
+                  <option value="1">active</option>
+                  <option value="2">pending</option>
+                  <option value="3">sold</option>
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
