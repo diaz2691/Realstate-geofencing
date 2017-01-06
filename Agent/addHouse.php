@@ -61,6 +61,7 @@
 
             $("#button").click( function(event){
                 var condition = $("#condition").val();
+                alrt(condition);
                 var address = $("#address").val();
                 var city = $("#city").val();
                 var state = $("#state").val();
@@ -71,7 +72,7 @@
                 var userId = $("#userId").val();  
                 $.ajax({
                     type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
+                    url: "whttp://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
                     data: {condition: condition,
                           address: address,
                           city: city,
@@ -82,7 +83,7 @@
                         price: price,
                         userId: userId}
                 }); 
-                window.location.href = "AgentProfile.php";
+                //window.location.href = "AgentProfile.php";
             });      
         </script>
         
