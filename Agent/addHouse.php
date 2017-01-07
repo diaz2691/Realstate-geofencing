@@ -38,7 +38,7 @@
             require("agentNav.php");
         ?>  
         
-            <div class="form">
+            <div type="text" class="form">
                 <h1>Enter House Information</h1>
                 <select id="condition">
                   <option value="1">active</option>
