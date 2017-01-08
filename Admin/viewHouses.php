@@ -89,7 +89,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Date Added<span class="arrow-down"></th><th>Address<span class="arrow-down"></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
+        <tr><th>Date Added<span class="caret"></th><th>Address<span class="arrow-down"></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
