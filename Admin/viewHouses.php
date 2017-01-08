@@ -85,7 +85,7 @@ To change this template use Tools | Templates.
 
             $dbConn = getConnection();
             $sql = "SELECT * FROM HouseInfo
-                   ORDER BY address";
+                   ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
