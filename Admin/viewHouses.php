@@ -84,7 +84,8 @@ To change this template use Tools | Templates.
             <?php
 
             $dbConn = getConnection();
-            $sql = "SELECT * FROM HouseInfo";
+            $sql = "SELECT * FROM HouseInfo
+                   ORDER BY address";
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
