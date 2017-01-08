@@ -79,7 +79,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
+        <tr><th>Date Added</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
@@ -95,6 +95,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
+                echo "<td>" . htmlspecialchars($result['dateTime']) . "</td>";
                 echo "<td>" . $result['address'] . "</td>";
                 echo "<td>" . $result['city'] . "</td>";
                 echo "<td>" . htmlspecialchars($result['state']) . "</td>";
@@ -110,6 +111,5 @@ To change this template use Tools | Templates.
                } //closes foreach
              ?>         
         </table>
-    <br/><br/><br/><br/><br/><br/>
     </body>
 </html>
