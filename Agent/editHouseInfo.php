@@ -50,7 +50,7 @@
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters);
           echo "Record has been updated!";
-             header("Location: AgentProfile.php");
+             header("Location: AgentHome.php");
          }
 
 
