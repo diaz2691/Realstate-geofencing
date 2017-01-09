@@ -14,6 +14,14 @@
         $stmt->execute();
 
     }
+    
+    $sortByDate = true;
+    if (isset ($_GET['sortType'])){  
+        if($_GET['sortType'] == "address"){
+            $sortByDate = false;
+        }
+
+    }
  ?>
 
         
@@ -84,7 +92,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="viewHouses.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
             
             <?php
 
