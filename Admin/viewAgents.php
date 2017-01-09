@@ -87,6 +87,8 @@ To change this template use Tools | Templates.
             <?php
             function getHouseCount($id){
                 $sql = "SELECT COUNT(*) FROM HouseInfo WHERE userId = $id";
+                //$message = "wrong answer";
+                echo "<script type='text/javascript'>alert('$sql');</script>";
                 $stmt = $dbConn -> prepare($sql);
                 $stmt->execute();
                 //$stmt->execute();
