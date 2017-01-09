@@ -6,6 +6,12 @@
     if(!isset($_SESSION['userId'])) {
         header("Location: ../index.html?error=wrong username or password");
     } 
+
+    $sql = "SELECT * FROM commInfo ";
+    $stmt = $dbConn -> prepare($sql);
+    $stmt->execute();
+    //$stmt->execute();
+    $results = $stmt->fetchAll();
  ?>
 
 
@@ -32,7 +38,7 @@
             <div class="form">
                 <h1>Enter Commission Information</h1>
 
-               <!--  <input type="text" id="username" placeholder="username"> <br />
+               <!--  
                 <input type="text" id="password" placeholder="temporary password"><br />
                 <input type="text" id="firstName" placeholder="first name"><br />
                 <input type="text" id="lastName" placeholder="last name"><br />
@@ -41,6 +47,27 @@
                 <input type="text" id="license" placeholder="license"><br /> 
                 <input type="button" value="enter" id="button">  
                 -->
+                <select id="agentName">
+                    <?php
+                    $license = "";
+                    foreach($results as $result){
+                        echo "<option value='". $result['firstName'] . " " . $result['lastName'] . "'>". $result['firstName'] . " " . $result['lastName'] . "</option>";
+                    }
+                    foreach($results as $result){
+                        if($result['firstName'] . " " . $result['lastName'] == echo "document.getElementById('agentName').value;")
+                        {
+                            $license = $result['license'];
+                            break;
+                        }
+
+                    }
+                    <br />
+                    echo "<input type='text' value=". $license . " readonly>";
+
+
+                    ?>
+                </select>
+                
             </div>x
         
         <script>
