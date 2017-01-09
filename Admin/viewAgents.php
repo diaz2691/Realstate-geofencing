@@ -87,15 +87,13 @@ To change this template use Tools | Templates.
             <?php
             /////////TRYING TO FIX THIS
             function getHouseCount($id){
-                $sqls = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id"; 
-                //$namedParameter = array();
-                //$namedParameter[':id'] = $id;
-                //$stmts = $dbConn -> prepare($sqls);
-                //$stmts->execute($namedParameter);              
+                $sqls = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id";
+                $stmts = $dbConn -> prepare($sqls);
+                $stmts->execute();              
                 //echo "<script type='text/javascript'>alert('lol');</script>";
 
-                //$counter = $stmts->fetch();
-                return $sqls;
+                $counter = $stmts->fetch();
+                return $counter['houseCount'];
             }
 
             $dbConn = getConnection();
