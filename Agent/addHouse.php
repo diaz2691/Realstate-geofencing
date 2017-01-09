@@ -60,7 +60,7 @@
         <script>
 
             $("#button").click( function(event){
-                var condition = $("#condition").val();
+                var condition = $("#condition :selected").text();
                 var address = $("#address").val();
                 var city = $("#city").val();
                 var state = $("#state").val();
