@@ -52,14 +52,14 @@
                     <?php
                         $license = "";
                         foreach($results as $result){
-                            echo "<option value='". $result['license']." '>". $result['firstName'] . " " . $result['lastName'] . "</option>";
+                            echo "<option value='". $result['license']."'>". $result['firstName'] . " " . $result['lastName'] . "</option>";
                         }
 
 
                         
 
                         echo "<br />";
-                        echo "<input type='text' value="" id='agentLicense' readonly>";
+                        echo "<input type='text' value='' id='agentLicense' readonly>";
                     ?>
                 </select>
                 
