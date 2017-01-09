@@ -59,7 +59,10 @@
                         
 
                         echo "<br />";
-                        echo "<input type='text' value='' id='agentLicense' readonly>";
+                        echo "License: <input type='text' value='' id='agentLicense' readonly> <br />";
+                        echo "Date: <input type='date' id='date' value='2014-02-09'> <br/>" ;
+                        echo "Settlement date: <input type='date' id='settlementDate' value='2014-02-09'> <br/>" ;
+                        echo "<input type='text' name='commission'><br>";
                     ?>
                 </select>
                 
