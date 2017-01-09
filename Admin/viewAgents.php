@@ -86,7 +86,7 @@ To change this template use Tools | Templates.
             
             <?php
             function getHouseCount($id){
-                $sql = "SELECT count(houseId) FROM HouseInfo WHERE userId = $id";
+                $sql = "SELECT COUNT(*) FROM HouseInfo WHERE userId = $id";
                 $stmt = $dbConn -> prepare($sql);
                 $stmt->execute();
                 //$stmt->execute();
