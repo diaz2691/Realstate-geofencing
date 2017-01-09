@@ -85,10 +85,12 @@ To change this template use Tools | Templates.
         <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Houses Worked</th><th class="tableHeader">Commission Sheet</th><th class ="tableheader">Update</th><th class="tableHeader">Delete</th></tr>    
             
             <?php
-            function getHouseCount($id){
-                $sql = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id";
+            function getHouseCount($userId){
+                $sql = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = :userId"; 
+                $namedParameters = array();
+                $namedParameters[':userId'] = $userId;
                 $stmt = $dbConn -> prepare($sql);
-                $stmt->execute();                
+                $stmt->execute($namedParameters);              
                 echo "<script type='text/javascript'>alert('lol');</script>";
 
                 $results = $stmt->fetch();
