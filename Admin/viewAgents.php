@@ -85,9 +85,20 @@ To change this template use Tools | Templates.
         <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Houses Worked</th><th class="tableHeader">Commission Sheet</th><th class ="tableheader">Update</th><th class="tableHeader">Delete</th></tr>    
             
             <?php
+            function getHouseCount($userId){
+                $sql = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = :userId"; 
+                $namedParameters = array();
+                $namedParameters[':userId'] = $userId;
+                $stmt = $dbConn -> prepare($sql);
+                $stmt->execute($namedParameters);              
+                echo "<script type='text/javascript'>alert('lol');</script>";
+
+                $counter = $stmt->fetch();
+                return $counter;
+            }
 
             $dbConn = getConnection();
-            $sql = "SELECT COUNT(houseId) as houseCount, firstName, lastName, email, phone, license, userId FROM UsersInfo, HouseInfo WHERE userType = 1 AND UsersInfo.userId = HouseInfo.userId";
+            $sql = "SELECT * FROM UsersInfo WHERE userType = 1";
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute();
             //$stmt->execute();
@@ -101,7 +112,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['license']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['houseCount']) . "</td>";
+                echo "<td>" . htmlspecialchars(getHouseCount($result['userId'])) . "</td>";
                 echo "<td><a href=commisionSheet.php?agentNum=" . $agentNum . ">" . htmlspecialchars("Commission Sheet ") . "</a></td>";
                 $agentNum++;
              ?> 
