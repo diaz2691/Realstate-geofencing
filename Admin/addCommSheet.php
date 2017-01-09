@@ -50,18 +50,16 @@
                 -->
                 <select id="agentName" onchange="getLicense()">
                     <?php
-                    $license = "";
-                    foreach($results as $result){
-                        echo "<option value='". $result['license']." '>". $result['firstName'] . " " . $result['lastName'] . "</option>";
-                    }
+                        $license = "";
+                        foreach($results as $result){
+                            echo "<option value='". $result['license']." '>". $result['firstName'] . " " . $result['lastName'] . "</option>";
+                        }
 
 
-                    
+                        
 
-                    echo "<br />";
-                    echo "<input type='text' value="" id='agentLicense readonly>";
-
-
+                        echo "<br />";
+                        echo "<input type='text' value="" id='agentLicense' readonly>";
                     ?>
                 </select>
                 
@@ -98,7 +96,7 @@
             function getLicense()
             {
                 var x = document.getElementById("agentName").value;
-                document.getElementById("agentLicense").innerHTML = x; 
+                document.getElementById("agentLicense").value = x; 
 
             }
 
