@@ -74,7 +74,11 @@ To change this template use Tools | Templates.
             require("adminNav.php");
         ?> 
         <br/><br/><h2 id="header2">Commission Sheets &#x2713</h2> 
-        
+
+        <form action="addCommSheet.php">  
+            <input type="submit" value="Add New Commission Sheet" name="addForm"/>
+        </form>  
+
         <table class="tftable" border="1">
        
       <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>Edit</th><th>Delete</th></tr>    
