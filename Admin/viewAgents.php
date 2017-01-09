@@ -88,10 +88,10 @@ To change this template use Tools | Templates.
             function getHouseCount($id){
                 $sql = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id";
                 $stmt = $dbConn -> prepare($sql);
-                $stmt->execute();
-                //$stmt->execute();
-                $results = mysql_result($stmt->fetch(), 0);
+                $stmt->execute();                
                 echo "<script type='text/javascript'>alert('lol');</script>";
+
+                $results = $stmt->fetch();
                 return $results;
             }
 
