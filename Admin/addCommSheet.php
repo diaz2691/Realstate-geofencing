@@ -52,10 +52,10 @@
                     <?php
                     $license = "";
                     foreach($results as $result){
-                        echo "<option value='". $result['firstName'] . " " . $result['lastName'] . "'>". $result['firstName'] . " " . $result['lastName'] . "</option>";
+                        echo "<option value='". $result['firstName'].$result['lastName'] . "'>". $result['firstName'] . " " . $result['lastName'] . "</option>";
                     }
                     foreach($results as $result){
-                        if($result['firstName'] . " " . $result['lastName'] == echo "document.getElementById('agentName').value;")
+                        if($result['firstName'].$result['lastName'] == echo "document.getElementById('agentName').value";)
                         {
                             $license = $result['license'];
                             break;
