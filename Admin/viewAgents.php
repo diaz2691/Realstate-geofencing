@@ -90,7 +90,7 @@ To change this template use Tools | Templates.
                 $stmt = $dbConn -> prepare($sql);
                 $stmt->execute();
                 //$stmt->execute();
-                $results = $stmt->fetch();
+                $results = mysql_result($stmt->fetch(), 0);
                 echo "<script type='text/javascript'>alert('lol');</script>";
                 return $results;
             }
