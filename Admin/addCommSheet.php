@@ -62,7 +62,7 @@
                         }
 
                     }
-                    <br />
+                    echo "<br />";
                     echo "<input type='text' value=". $license . " readonly>";
 
 
