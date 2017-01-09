@@ -82,9 +82,17 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Update</th><th class ="tableheader">Commission Sheet</th><th class="tableHeader">Delete</th></tr>    
+        <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Houses Worked</th><th class="tableHeader">Commission Sheet</th><th class ="tableheader">Update</th><th class="tableHeader">Delete</th></tr>    
             
             <?php
+            function getHouseCount($id){
+                $sql = "SELECT count(houseId) FROM HouseInfo WHERE userId = $id";
+                $stmt = $dbConn -> prepare($sql);
+                $stmt->execute();
+                //$stmt->execute();
+                $results = $stmt->fetch();
+                return $results;
+            }
 
             $dbConn = getConnection();
             $sql = "SELECT * FROM UsersInfo WHERE userType = 1";
@@ -101,6 +109,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['license']) . "</td>";
+                echo "<td>" . htmlspecialchars(getHouseCount($result['userId'])) . "</td>";
                 echo "<td><a href=commisionSheet.php?agentNum=" . $agentNum . ">" . htmlspecialchars("Commission Sheet ") . "</a></td>";
                 $agentNum++;
              ?> 
