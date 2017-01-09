@@ -113,6 +113,7 @@ To change this template use Tools | Templates.
                         FROM HouseInfo
                         WHERE userId = :userId
                         ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
+                      }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
