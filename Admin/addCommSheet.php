@@ -45,8 +45,9 @@
                 <input type="text" id="email" placeholder="email"><br />
                 <input type="text" id="phone" placeholder="phone"><br />
                 <input type="text" id="license" placeholder="license"><br /> 
-                <input type="button" value="enter" id="button">  
                 -->
+                <input type="button" value="enter" id="button">  
+                
                 <select id="agentName">
                     <?php
                     $license = "";
@@ -68,7 +69,7 @@
                     ?>
                 </select>
                 
-            </div>x
+            </div>
         
         <script>
 
