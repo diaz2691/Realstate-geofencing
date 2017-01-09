@@ -61,6 +61,7 @@
 
             $("#button").click( function(event){
                 var condition = $("#condition :selected").text();
+                alert(condition);
                 var address = $("#address").val();
                 var city = $("#city").val();
                 var state = $("#state").val();
