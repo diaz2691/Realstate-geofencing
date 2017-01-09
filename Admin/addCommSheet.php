@@ -54,14 +54,7 @@
                     foreach($results as $result){
                         echo "<option value='". $result['firstName'].$result['lastName'] . "'>". $result['firstName'] . " " . $result['lastName'] . "</option>";
                     }
-                    foreach($results as $result){
-                        if($result['firstName'].$result['lastName'] == echo "document.getElementById('agentName').value";)
-                        {
-                            $license = $result['license'];
-                            break;
-                        }
-
-                    }
+                    
                     echo "<br />";
                     echo "<input type='text' value=". $license . " readonly>";
 
