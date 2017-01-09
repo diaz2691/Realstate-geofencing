@@ -104,11 +104,11 @@ To change this template use Tools | Templates.
 
             $dbConn = getConnection();
             //$sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
-            /*$sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price 
-                    FROM HouseInfo
-                    where userId = :userId
-                    ORDER BY dateTimes ASC";
-            if($sortByDate == false){*/
+            $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
+                        FROM HouseInfo
+                        WHERE userId = :userId
+                        ORDER BY dateTimes ASC";
+            if($sortByDate == false){
                 $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
