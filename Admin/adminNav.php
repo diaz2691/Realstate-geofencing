@@ -30,10 +30,9 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#" class="">Home</a></li>
-                        <li class=" dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Commission Form<span class="caret"></span></a>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Commission Form<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class=" dropdown">
+                                <li>
                                     <a href="viewCommissionSheet.php" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Commission Sheets</a>
                                 </li>
                                 <li>
