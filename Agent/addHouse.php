@@ -60,6 +60,7 @@
         <script>
 
             $("#button").click( function(event){
+                alert("Hello World");
                 var condition = $("#condition :selected").text();
                 alert(condition);
                 var address = $("#address").val();
