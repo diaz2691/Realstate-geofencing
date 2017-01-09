@@ -68,6 +68,7 @@ To change this template use Tools | Templates.
             th a {
                 display: block;
                 text-decoration: none !important;
+                color: inherit;
             }
     </style>
 </head>
