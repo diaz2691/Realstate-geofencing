@@ -85,16 +85,16 @@ To change this template use Tools | Templates.
         <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Houses Worked</th><th class="tableHeader">Commission Sheet</th><th class ="tableheader">Update</th><th class="tableHeader">Delete</th></tr>    
             
             <?php
+            /////////TRYING TO FIX THIS
             function getHouseCount($id){
-                $sqls = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = :id"; 
-                $namedParameter = array();
-                $namedParameter[':id'] = $id;
+                $dbConn = getConnection();
+                $sqls = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id";
                 $stmts = $dbConn -> prepare($sqls);
-                $stmts->execute($namedParameter);              
-                echo "<script type='text/javascript'>alert('lol');</script>";
+                $stmts->execute();              
+                //echo "<script type='text/javascript'>alert('lol');</script>";
 
                 $counter = $stmts->fetch();
-                return $counter;
+                return $counter['houseCount'];
             }
 
             $dbConn = getConnection();
@@ -112,7 +112,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['license']) . "</td>";
-                echo "<td>" . htmlspecialchars(getHouseCount($result['userId'])) . "</td>";
+                echo "<td>" . getHouseCount($result['userId']) . "</td>";
                 echo "<td><a href=commisionSheet.php?agentNum=" . $agentNum . ">" . htmlspecialchars("Commission Sheet ") . "</a></td>";
                 $agentNum++;
              ?> 
