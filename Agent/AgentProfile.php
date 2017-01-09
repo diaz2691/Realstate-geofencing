@@ -103,8 +103,8 @@ To change this template use Tools | Templates.
             <?php
 
             $dbConn = getConnection();
-
-            $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price 
+            $sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
+            /*$sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price 
                     FROM HouseInfo
                     where userId = :userId
                     ORDER BY dateTimes ASC";
@@ -112,7 +112,7 @@ To change this template use Tools | Templates.
                 $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
-                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";*/
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
