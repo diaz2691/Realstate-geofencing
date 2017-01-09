@@ -33,7 +33,7 @@
                         <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Commission Form<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="viewCommissionSheet.php" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Commission Sheets</a>
+                                    <a href="viewCommissionSheet.php">View Commission Sheets</a>
                                 </li>
                                 <li>
                                     <a href="viewCommissionSheet.php">Add New</a>
