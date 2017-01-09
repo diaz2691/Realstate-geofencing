@@ -91,7 +91,7 @@ To change this template use Tools | Templates.
                 $stmt->execute();
                 //$stmt->execute();
                 $results = $stmt->fetch();
-                echo "<script type='text/javascript'>alert('$results');</script>";
+                echo "<script type='text/javascript'>alert('lol');</script>";
                 return $results;
             }
 
