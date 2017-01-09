@@ -72,6 +72,12 @@ To change this template use Tools | Templates.
             .tftable tr {background-color:#d2a679;}
             .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}
             .tftable tr:hover {background-color:#c68c53;}
+
+            th a {
+                display: block;
+                text-decoration: none !important;
+                color: inherit;
+            }
     </style>
 </head>
     
@@ -97,7 +103,16 @@ To change this template use Tools | Templates.
             <?php
 
             $dbConn = getConnection();
-            $sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
+
+            $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price 
+                    FROM HouseInfo
+                    where userId = :userId
+                    ORDER BY dateTimes ASC";
+            if($sortByDate == false){
+                $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
+                        FROM HouseInfo
+                        WHERE userId = :userId
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
@@ -107,6 +122,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
+                echo "<td>" . $result['dateTimes'] . "</td>";
                 echo "<td>" . $result['address'] . "</td>";
                 echo "<td>" . $result['city'] . "</td>";
                 echo "<td>" . htmlspecialchars($result['state']) . "</td>";
