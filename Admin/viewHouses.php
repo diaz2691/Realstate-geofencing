@@ -88,17 +88,23 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="viewHouses.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
+        <tr><th>Agent</th><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="viewHouses.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
             $dbConn = getConnection();
 
-            $sql = "SELECT * FROM HouseInfo
-                    ORDER BY dateTime ASC";
+            $sql = "SELECT date(dateTimes), address, city, state, zip, bedrooms,
+                        bathrooms, price, firstName, lastName 
+                    FROM HouseInfo, UsersInfo
+                    where houseInfo.userId = UsersInfo.userId
+                    ORDER BY dateTimes ASC";
             if($sortByDate == false){
-                $sql = "SELECT * FROM HouseInfo 
-                ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
+                $sql = "SELECT date(dateTimes), address, city, state, zip, bedrooms,
+                            bathrooms, price, firstName, lastName
+                        FROM HouseInfo, UsersInfo
+                        WHERE  houseInfo.userId = UsersInfo.userId
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
             }
 
             $namedParameters = array();
@@ -110,7 +116,8 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . htmlspecialchars($result['dateTime']) . "</td>";
+                echo "<td>" . htmlspecialchars($result['firstName'] . " " . $result['lastName']) . "</td>";
+                echo "<td>" . htmlspecialchars($result['dateTimes']) . "</td>";
                 echo "<td>" . $result['address'] . "</td>";
                 echo "<td>" . $result['city'] . "</td>";
                 echo "<td>" . htmlspecialchars($result['state']) . "</td>";
