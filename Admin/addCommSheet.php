@@ -7,7 +7,7 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    $sql = "SELECT * FROM commInfo ";
+    $sql = "SELECT * FROM UsersInfo ";
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute();
     //$stmt->execute();
@@ -45,18 +45,21 @@
                 <input type="text" id="email" placeholder="email"><br />
                 <input type="text" id="phone" placeholder="phone"><br />
                 <input type="text" id="license" placeholder="license"><br /> 
-                -->
-                <input type="button" value="enter" id="button">  
                 
-                <select id="agentName">
+                <input type="button" value="enter" id="button">  
+                -->
+                <select id="agentName" onchange="getLicense()">
                     <?php
                     $license = "";
                     foreach($results as $result){
-                        echo "<option value='". $result['firstName'].$result['lastName'] . "'>". $result['firstName'] . " " . $result['lastName'] . "</option>";
+                        echo "<option value='". $result['license'." '>". $result['firstName'] . " " . $result['lastName'] . "</option>";
                     }
+
+
                     
+
                     echo "<br />";
-                    echo "<input type='text' value=". $license . " readonly>";
+                    echo "<input type='text' value="" id='agentLicense readonly>";
 
 
                     ?>
@@ -90,8 +93,28 @@
                     }
                 }); 
                 window.location.href = "viewAgents.php";
-            });      
+            }); 
+
+            function getLicense()
+            {
+                var x = document.getElementById("agentName").value;
+                document.getElementById("agentLicense").innerHTML = x;
+                }); 
+
+            }
+
         </script>
         
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
