@@ -86,12 +86,12 @@ To change this template use Tools | Templates.
             
             <?php
             function getHouseCount($id){
-                $sql = "SELECT COUNT(*) FROM HouseInfo WHERE userId = $id";
+                $sql = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id";
                 $stmt = $dbConn -> prepare($sql);
                 $stmt->execute();
                 //$stmt->execute();
                 $results = $stmt->fetch();
-                echo "<script type='text/javascript'>alert('$results');</script>";
+                echo "<script type='text/javascript'>alert('$results["."'houseCount'"."]');</script>";
                 return $results;
             }
 
