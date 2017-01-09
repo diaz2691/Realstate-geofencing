@@ -9,7 +9,6 @@
 
     $sortByDate = true;
     if (isset ($_GET['sortType'])){  
-        echo "HELLO WORLD";
         if($_GET['sortType'] == "address"){
             $sortByDate = false;
         }
@@ -97,13 +96,13 @@ To change this template use Tools | Templates.
             $sql = "SELECT date(dateTimes), address, city, state, zip, bedrooms,
                         bathrooms, price, firstName, lastName 
                     FROM HouseInfo, UsersInfo
-                    where houseInfo.userId = UsersInfo.userId
+                    where HouseInfo.userId = UsersInfo.userId
                     ORDER BY dateTimes ASC";
             if($sortByDate == false){
                 $sql = "SELECT date(dateTimes), address, city, state, zip, bedrooms,
                             bathrooms, price, firstName, lastName
                         FROM HouseInfo, UsersInfo
-                        WHERE  houseInfo.userId = UsersInfo.userId
+                        WHERE  HouseInfo.userId = UsersInfo.userId
                         ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
             }
 
