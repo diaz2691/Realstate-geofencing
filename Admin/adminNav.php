@@ -36,7 +36,7 @@
                                     <a href="viewCommissionSheet.php" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Commission Sheets</a>
                                 </li>
                                 <li>
-                                    <a href="#">Add New</a>
+                                    <a href="viewCommissionSheet.php">Add New</a>
                                 </li>
                             </ul>
                         </li>
