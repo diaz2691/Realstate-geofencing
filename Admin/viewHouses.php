@@ -7,14 +7,6 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-        $sql = "DELETE FROM HouseInfo 
-                 WHERE houseId = '".$_GET['houseId']."'";
-        $stmt = $dbConn -> prepare($sql);
-        $stmt->execute();
-
-    }
-
     $sortByDate = true;
     if (isset ($_GET['sortType'])){  
         echo "HELLO WORLD";
@@ -104,7 +96,7 @@ To change this template use Tools | Templates.
 
             $sql = "SELECT * FROM HouseInfo
                     ORDER BY dateTime ASC";
-            if(sortByDate == false){
+            if($sortByDate == false){
                 $sql = "SELECT * FROM HouseInfo 
                 ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
             }
