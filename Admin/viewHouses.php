@@ -95,13 +95,19 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="#" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
+        <tr><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="viewHouses.php?sortType=addres" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
             $dbConn = getConnection();
+
             $sql = "SELECT * FROM HouseInfo
-                   ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
+                    ORDER BY dateTime ASC";
+            if(sortByDate == false){
+                $sql = "SELECT * FROM HouseInfo 
+                ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
+            }
+
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
