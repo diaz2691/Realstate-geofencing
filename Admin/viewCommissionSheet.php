@@ -71,7 +71,7 @@ To change this template use Tools | Templates.
     <body>
                         <!-- Navigation Bar -->
         <?php
-            require("agentNav.php");
+            require("adminNav.php");
         ?> 
         <br/><br/><h2 id="header2">Visitors &#x2713</h2> 
         
