@@ -67,6 +67,7 @@ To change this template use Tools | Templates.
 
             th a {
                 display: block;
+                text-decoration: none !important;
             }
     </style>
 </head>
