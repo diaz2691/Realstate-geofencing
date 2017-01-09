@@ -64,6 +64,10 @@ To change this template use Tools | Templates.
             .tftable tr {background-color:#d2a679;}
             .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}
             .tftable tr:hover {background-color:#c68c53;}
+
+            th a {
+                display: block;
+            }
     </style>
 </head>
     
@@ -79,7 +83,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th class="active"><a href="#" >Date Added<span class="caret"></a></th><th>Address<span class="caret"></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
+        <tr><th><a href="#" >Date Added<span class="caret"></a></th><th>Address<span class="caret"></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
