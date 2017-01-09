@@ -17,6 +17,7 @@
 
     $sortByDate = true;
     if (isset ($_GET['sortType'])){  
+        echo "HELLO WORLD";
         if($_GET['sortType'] == "address"){
             $sortByDate = false;
         }
