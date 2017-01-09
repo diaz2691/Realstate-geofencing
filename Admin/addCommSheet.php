@@ -98,8 +98,7 @@
             function getLicense()
             {
                 var x = document.getElementById("agentName").value;
-                document.getElementById("agentLicense").innerHTML = x;
-                }); 
+                document.getElementById("agentLicense").innerHTML = x; 
 
             }
 
