@@ -112,10 +112,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['license']) . "</td>";
-                echo "<td>";
-                print "<pre>";
-                print_r(getHouseCount($result['userId']));
-                print "</pre>" . "</td>";
+                echo "<td>" . getHouseCount($result['userId']) . "</td>";
                 echo "<td><a href=commisionSheet.php?agentNum=" . $agentNum . ">" . htmlspecialchars("Commission Sheet ") . "</a></td>";
                 $agentNum++;
              ?> 
