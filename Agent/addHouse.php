@@ -40,7 +40,7 @@
         
             <div type="text" class="form">
                 <h1>Enter House Information</h1>
-                <select id="condition">
+                <select id="status">
                 <option value="active" selected>active</option>
                   <option value="pending">pending</option>
                   <option value="sold">sold</option>
@@ -60,8 +60,7 @@
         <script>
 
             $("#button").click( function(event){
-                var condition = $("#condition :selected").text();
-                alert(condition);
+                var status = $("#status :selected").text();
                 var address = $("#address").val();
                 var city = $("#city").val();
                 var state = $("#state").val();
@@ -73,7 +72,7 @@
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
-                    data: {condition: condition,
+                    data: {status: status,
                           address: address,
                           city: city,
                           state: state,
