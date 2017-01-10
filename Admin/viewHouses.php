@@ -85,19 +85,19 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Agent</th><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="viewHouses.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
+        <tr><th>Agent</th><th>Status</th><th><a href="viewHouses.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="viewHouses.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
             $dbConn = getConnection();
 
-            $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms,
+            $sql = "SELECT status, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms,
                         bathrooms, price, firstName, lastName 
                     FROM HouseInfo, UsersInfo
                     where HouseInfo.userId = UsersInfo.userId
                     ORDER BY dateTimes ASC";
             if($sortByDate == false){
-                $sql = "SELECT date(dateTimes) as dateTimes, address, city, state, zip, bedrooms,
+                $sql = "SELECT status, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms,
                             bathrooms, price, firstName, lastName
                         FROM HouseInfo, UsersInfo
                         WHERE  HouseInfo.userId = UsersInfo.userId
@@ -113,6 +113,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
+                echo "<td>" . htmlspecialchars($result['status']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['firstName'] . " " . $result['lastName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['dateTimes']) . "</td>";
                 echo "<td>" . $result['address'] . "</td>";
