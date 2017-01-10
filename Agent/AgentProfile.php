@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="profileStyles.css">
         <style type="text/css">
           figure {
+            display:block;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 70px;
 
           }
         </style>
