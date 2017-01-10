@@ -7,7 +7,7 @@
     
     
     
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="profileStyles.css">
 
     
     
@@ -19,13 +19,14 @@
     
 <figure class="snip0057 red">
   <figcaption>
-    <h2>Victoria <span>Pena</span></h2>
-    <p>A voice crackles in Calvin's radio: "Enemy fighters at two o'clock!" "Roger. What should I do until then?"</p>
+    <h2>Brayanne <span>Reyes Ron</span></h2>
+    <p>I am an agent with much experience in the field of selling homes. It is my passion to work with buyers and ultimately selling them their dream home.</p>
     <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
   </figcaption>
   <div class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sample4"/></div>
-  <div class="position">Illustrator</div>
+  <div class="position">Agent</div>
 </figure>
+<!--
 <figure class="snip0057 blue">
   <figcaption>
     <h2>Tiffany <span>Case</span></h2>
@@ -35,6 +36,7 @@
   <div class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg" alt="sample3"/></div>
   <div class="position">Software Engineer</div>
 </figure>
+-->
     
     
     
