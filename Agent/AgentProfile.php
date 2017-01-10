@@ -8,8 +8,11 @@
     
     
         <link rel="stylesheet" href="profileStyles.css">
-
-    
+        <style type="text/css">
+          figure {
+            text-align: center;
+          }
+        </style>
     
     
   </head>
@@ -23,7 +26,7 @@
     <p>I am an agent with much experience in the field of selling homes. It is my passion to work with buyers and ultimately selling them their dream home.</p>
     <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
   </figcaption>
-  <div class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sample4"/></div>
+  <div class="image"><img src="http://mvptitle.com/blog/wp-content/uploads/2014/01/home_seller.jpg" alt="sample4"/></div>
   <div class="position">Agent</div>
 </figure>
 <!--
