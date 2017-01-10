@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>#0057 - Profile card with image, caption & icons</title>
+    <title>Agent Profile</title>
     
     
     
@@ -11,6 +11,8 @@
         <style type="text/css">
           figure {
             text-align: center;
+            padding-top: 50px;
+
           }
         </style>
     
