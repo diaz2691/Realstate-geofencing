@@ -113,8 +113,8 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . htmlspecialchars($result['status']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['firstName'] . " " . $result['lastName']) . "</td>";
+                echo "<td>" . htmlspecialchars($result['status']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['dateTimes']) . "</td>";
                 echo "<td>" . $result['address'] . "</td>";
                 echo "<td>" . $result['city'] . "</td>";
