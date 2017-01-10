@@ -20,7 +20,7 @@
   <body>
         <!-- Navigation Bar -->
         <?php
-            require("adminNav.php");
+            require("agentNav.php");
         ?>
     
         <figure class="snip0057 red">
