@@ -104,22 +104,40 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Status</th><th><a href=<?php echo "AgentHome.php?sortType=date&changeOrder=" . $ascending ; ?> >Date Added<span class="caret"></a></th><th><a href="AgentHome.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th>Status</th><th><a href=<?php echo "AgentHome.php?sortType=date&changeOrder=" . $ascending ; ?> >Date Added<span class="caret"></a></th><th><a href=<?php echo "AgentHome.php?sortType=address&changeOrder=" . $ascending ; ?> >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
             
             <?php
 
             $dbConn = getConnection();
             //$sql = "SELECT * FROM HouseInfo WHERE userId = :userId";
-            $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
+            if($sortByDate){
+                if($ascending){
+                    $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
+                        FROM HouseInfo
+                        WHERE userId = :userId
+                        ORDER BY dateTimes ASC";
+                }
+                else{
+                   $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
                         ORDER BY dateTimes DESC";
-            if($sortByDate == false){
-                $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
+                }
+            }
+            else{
+                if($ascending){
+                    $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
-                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
-                      }
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) ASC";
+                    }
+                else{
+                    $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
+                        FROM HouseInfo
+                        WHERE userId = :userId
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
+                }
+            }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
