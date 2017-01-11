@@ -25,7 +25,6 @@
     if(isset ($_GET['changeOrder'])){
         if($_GET['changeOrder']){
             $ascending = false;
-            echo "<script type='text/javascript'>alert('$ascending');</script>";
         }
     }
  ?>
