@@ -77,9 +77,10 @@
         ?>
       <div class="form">
         <h1>Edit Record</h1>
-        <br />
+
         <form method="post">
-          Status: <select name="status">
+          Status: <br />
+          <select name="status">
                 <option value="active" <?php if($status == "active"){echo "selected";}?> >active</option>
                 <option value="pending" <?php if($status == "pending"){echo "selected";}?> >pending</option>
                 <option value="sold" <?php if($status == "sold"){echo "selected";}?> >sold</option>
