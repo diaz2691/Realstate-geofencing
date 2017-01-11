@@ -107,12 +107,12 @@ To change this template use Tools | Templates.
             $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
-                        ORDER BY dateTimes ASC";
+                        ORDER BY dateTimes DESC";
             if($sortByDate == false){
                 $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
-                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) ASC";
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address)))";
                       }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
