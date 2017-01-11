@@ -17,6 +17,7 @@
          $stmt->execute();
          $results = $stmt->fetchAll();
          foreach($results as $result) { 
+                $address = htmlspecialchars($result['status']);
                 $address = htmlspecialchars($result['address']);
                 $city = htmlspecialchars($result['city']);
                 $state = htmlspecialchars($result['state']);
@@ -30,7 +31,8 @@
 
      if (isset($_POST['editForm'])) {  //the update form has been submitted
          $sql = "UPDATE HouseInfo
-                 SET address = :address,
+                 SET status = :status,
+                        address = :address,
                         city = :city,
                         state = :state,
                         zip = :zip,
@@ -39,6 +41,7 @@
                         price = :price
                  WHERE houseId = :houseId";
           $namedParameters = array();
+          $namedParameters[":status"] = $_POST['status'];
           $namedParameters[":address"] = $_POST['address'];
           $namedParameters[":city"] = $_POST['city'];
           $namedParameters[":state"] = $_POST['state'];     
@@ -75,7 +78,11 @@
       <div class="form">
         <h1>Edit Record</h1>
         <form method="post">
-
+          Status: <select name="status">
+                <option value="active" <?php if($status == "active"){echo "selected";}?> >active</option>
+                <option value="pending" <?php if($status == "pending"){echo "selected";}?> >pending</option>
+                <option value="sold" <?php if($status == "sold"){echo "selected";}?> >sold</option>
+            </select>
             Address: <input type="text" name="address" value="<?=$address?>"> <br />
             City: <input type="text" name="city" value="<?=$city?>"><br />
             State: <input type="text" name="state" value="<?=$state?>"><br />

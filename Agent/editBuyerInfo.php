@@ -17,7 +17,6 @@
          $stmt->execute();
          $results = $stmt->fetchAll();
          foreach($results as $result) { 
-                $status = htmlspecialchars($result['status']);
                 $firstName = htmlspecialchars($result['firstName']);
                 $lastName = htmlspecialchars($result['lastName']);
                 $email = htmlspecialchars($result['email']);
@@ -31,8 +30,7 @@
 
      if (isset($_POST['editForm'])) {  //the update form has been submitted
          $sql = "UPDATE BuyerInfo
-                 SET status = :status,
-                        firstName = :firstName,
+                 SET firstName = :firstName,
                         lastName = :lastName,
                         email = :email,
                         phone = :phone,
@@ -41,7 +39,6 @@
                         price = :price
                  WHERE buyerID = :buyerID";
           $namedParameters = array();
-          $namedParameters[":status"] = $_POST['status'];
           $namedParameters[":firstName"] = $_POST['firstName'];
           $namedParameters[":lastName"] = $_POST['lastName'];
           $namedParameters[":email"] = $_POST['email'];     
@@ -77,12 +74,7 @@
     <div class="form">
         <h1>Edit Record</h1>
         <form method="post">
-            <b>/Status</b>
-            <select name="status">
-                <option value="active" <?php if($status == "active"){echo "selected";}?> >active</option>
-                <option value="pending" <?php if($status == "pending"){echo "selected";}?> >pending</option>
-                <option value="sold" <?php if($status == "sold"){echo "selected";}?> >sold</option>
-            </select>
+
             <b>First Name</b> <input type="text" name="firstName" value="<?=$firstName?>"> <br />
             <b>Last Name</b> <input type="text" name="lastName" value="<?=$lastName?>"><br />
             <b>Email</b> <input type="text" name="email" value="<?=$email?>"><br />
