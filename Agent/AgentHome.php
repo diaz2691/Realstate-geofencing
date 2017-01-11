@@ -16,11 +16,17 @@
     }
     
     $sortByDate = true;
+    $ascending = true;
     if (isset ($_GET['sortType'])){  
         if($_GET['sortType'] == "address"){
             $sortByDate = false;
         }
-
+    }
+    if(isset ($_GET['changeOrder'])){
+        if($_GET['changeOrder'] == "true"){
+            $ascending = false;
+            echo "<script type='text/javascript'>alert('$ascending');</script>";
+        }
     }
  ?>
 
@@ -98,7 +104,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Status</th><th><a href=AgentHome.php?sortType=date" >Date Added<span class="caret"></a></th><th><a href="AgentHome.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th>Status</th><th><a href=<?php echo "AgentHome.php?sortType=date&changeOrder=" . $ascending ; ?> >Date Added<span class="caret"></a></th><th><a href="AgentHome.php?sortType=address" >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
             
             <?php
 
