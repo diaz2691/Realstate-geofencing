@@ -17,7 +17,7 @@
          $stmt->execute();
          $results = $stmt->fetchAll();
          foreach($results as $result) { 
-                $address = htmlspecialchars($result['status']);
+                $status = htmlspecialchars($result['status']);
                 $address = htmlspecialchars($result['address']);
                 $city = htmlspecialchars($result['city']);
                 $state = htmlspecialchars($result['state']);
