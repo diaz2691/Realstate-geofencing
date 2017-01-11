@@ -112,7 +112,7 @@ To change this template use Tools | Templates.
                 $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId
-                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
+                        ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) ASC";
                       }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
