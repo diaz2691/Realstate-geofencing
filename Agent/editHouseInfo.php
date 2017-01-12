@@ -68,6 +68,21 @@
     <meta charset = "utf-8"/>
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
+    <style type="text/css">
+      }
+        .form select {
+          font-family: "Roboto", sans-serif;
+          outline: 0;
+          background: #f2f2f2;
+          width: 100%;
+          border: 0;
+          margin: 0 0 15px;
+          padding: 15px;
+          box-sizing: border-box;
+          font-size: 14px;
+          text-align: center;
+        }
+    </style>
 
 </head>
     <body>
@@ -79,8 +94,7 @@
         <h1>Edit Record</h1>
 
         <form method="post">
-          Status: <br />
-          <select name="status">
+          Status: <br /> <select name="status">
                 <option value="active" <?php if($status == "active"){echo "selected";}?> >active</option>
                 <option value="pending" <?php if($status == "pending"){echo "selected";}?> >pending</option>
                 <option value="sold" <?php if($status == "sold"){echo "selected";}?> >sold</option>
