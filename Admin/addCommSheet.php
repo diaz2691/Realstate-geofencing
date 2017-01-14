@@ -58,7 +58,7 @@ ini_set('display_errors', 1);
                 <input type="button" value="enter" id="button">  
                 -->
 
-                Agent's name:
+                Agent's name:<br/>
                 <select id="agentName" onchange="getLicense()">
                     <?php
                         $license = "";
