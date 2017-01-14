@@ -82,8 +82,10 @@ ini_set('display_errors', 1);
                             echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] . "</option>";
                         }
                         echo "</select>";
+
                     ?>
-                
+                    <br/>
+                    <input type="button" value="enter" id="button">
                 
             </div>
         
