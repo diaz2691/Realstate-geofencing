@@ -12,6 +12,12 @@
     $stmt->execute();
     //$stmt->execute();
     $results = $stmt->fetchAll();
+
+    $sql = "SELECT * FROM HouseInfo ";
+    $stmt = $dbConn -> prepare($sql);
+    $stmt->execute();
+    //$stmt->execute();
+    $houses = $stmt->fetchAll();
  ?>
 
 
@@ -62,7 +68,12 @@
                         echo "License: <input type='text' value='' id='agentLicense' readonly> <br />";
                         echo "Date: <input type='date' id='date' value='2014-02-09'> <br/>" ;
                         echo "Settlement date: <input type='date' id='settlementDate' value='2014-02-09'> <br/>" ;
-                        echo "<input type='text' name='commission'><br>";
+                        echo "Commission: <input type='text' name='commission'><br>";
+                        echo "Check Number: <input type='text' name='checkNum'><br>";
+
+                        foreach($houses as $house){                        
+                            echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] "</option>";
+                        }
                     ?>
                 </select>
                 
