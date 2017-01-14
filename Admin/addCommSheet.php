@@ -16,7 +16,6 @@
     $sqlHouse = "SELECT * FROM HouseInfo ";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
-    //$stmt->execute();
     $houses = $stmtHouse->fetchAll();
  ?>
 
