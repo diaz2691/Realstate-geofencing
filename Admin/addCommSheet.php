@@ -13,14 +13,11 @@ ini_set('display_errors', 1);
     $stmt->execute();
     //$stmt->execute();
 
-    $sqlHouse = "SELECT * FROM HouseInfo ";
-    $stmtHouse = $dbConn -> prepare($sqlHouse);
-    $stmtHouse->execute();
+    
 
 
     $results = $stmt->fetchAll();
 
-    $houses = $stmtHouse->fetchAll();
  ?>
 
 
@@ -73,6 +70,10 @@ ini_set('display_errors', 1);
                         echo "Settlement date: <input type='date' id='settlementDate' value='2014-02-09'> <br/>" ;
                         echo "Commission: <input type='text' name='commission'><br>";
                         echo "Check Number: <input type='text' name='checkNum'><br>";
+$sqlHouse = "SELECT * FROM HouseInfo ";
+    $stmtHouse = $dbConn -> prepare($sqlHouse);
+    $stmtHouse->execute();
+        $houses = $stmtHouse->fetchAll();
 
                         foreach($houses as $house){                        
                             echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] "</option>";
