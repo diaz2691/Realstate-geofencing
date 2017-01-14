@@ -76,7 +76,7 @@ ini_set('display_errors', 1);
                         echo "Commission: <input type='text' name='commission'><br>";
                         echo "Check Number: <input type='text' name='checkNum'><br>";
 
-                        echo "House Address:"
+                        echo "House Address:";
                         echo "<select id='houseId'>";
                         foreach($houses as $house){                        
                             echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] . "</option>";
