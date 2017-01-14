@@ -13,11 +13,11 @@
     //$stmt->execute();
     $results = $stmt->fetchAll();
 
-    $sql = "SELECT * FROM HouseInfo ";
-    $stmt = $dbConn -> prepare($sql);
-    $stmt->execute();
+    $sqlHouse = "SELECT * FROM HouseInfo ";
+    $stmtHouse = $dbConn -> prepare($sqlHouse);
+    $stmtHouse->execute();
     //$stmt->execute();
-    $houses = $stmt->fetchAll();
+    $houses = $stmtHouse->fetchAll();
  ?>
 
 
