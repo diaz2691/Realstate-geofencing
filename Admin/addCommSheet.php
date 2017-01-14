@@ -11,12 +11,15 @@
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute();
     //$stmt->execute();
+
+    $sqlHouse = "SELECT * FROM HouseInfo ";
+    $stmtHouse = $dbConn -> prepare($sqlHouse);
+    $stmtHouse->execute();
+
+
     $results = $stmt->fetchAll();
 
-    // $sqlHouse = "SELECT * FROM HouseInfo ";
-    // $stmtHouse = $dbConn -> prepare($sqlHouse);
-    // $stmtHouse->execute();
-    // $houses = $stmtHouse->fetchAll();
+    $houses = $stmtHouse->fetchAll();
  ?>
 
 
