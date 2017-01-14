@@ -13,10 +13,10 @@
     //$stmt->execute();
     $results = $stmt->fetchAll();
 
-    $sqlHouse = "SELECT * FROM HouseInfo ";
-    $stmtHouse = $dbConn -> prepare($sqlHouse);
-    $stmtHouse->execute();
-    $houses = $stmtHouse->fetchAll();
+    // $sqlHouse = "SELECT * FROM HouseInfo ";
+    // $stmtHouse = $dbConn -> prepare($sqlHouse);
+    // $stmtHouse->execute();
+    // $houses = $stmtHouse->fetchAll();
  ?>
 
 
@@ -70,9 +70,9 @@
                         echo "Commission: <input type='text' name='commission'><br>";
                         echo "Check Number: <input type='text' name='checkNum'><br>";
 
-                        foreach($houses as $house){                        
-                            echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] "</option>";
-                        }
+                        // foreach($houses as $house){                        
+                        //     echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] "</option>";
+                        // }
                     ?>
                 </select>
                 
