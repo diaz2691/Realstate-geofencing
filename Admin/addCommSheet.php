@@ -75,9 +75,9 @@ $sqlHouse = "SELECT * FROM HouseInfo ";
     $stmtHouse->execute();
         $houses = $stmtHouse->fetchAll();
 
-                        foreach($houses as $house){                        
-                            echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] "</option>";
-                        }
+                        // foreach($houses as $house){                        
+                        //     echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] "</option>";
+                        // }
                     ?>
                 </select>
                 
