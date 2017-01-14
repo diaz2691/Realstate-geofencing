@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
     $stmt->execute();
     //$stmt->execute();
 
-    $sqlHouse = "SELECT * FROM HouseInfo ";
+    $sqlHouse = "SELECT * FROM HouseInfo ORDER BY address";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
 
