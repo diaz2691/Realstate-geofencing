@@ -7,8 +7,8 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    $sql = "SELECT * FROM AgentInfo
-            WHERE userId = :userId";
+    $sql = "SELECT firstName, lastName, email, phone, license, agentBio, profilePicture FROM AgentInfo, UsersInfo
+            WHERE userId = :userId AND AgentInfo.userId = UsersInfo.userId";
            
     $namedParameters = array();
     $namedParameters[':userId'] = $_SESSION['userId'];
@@ -18,6 +18,12 @@
 
     foreach($results as $result){
         $agentBio = $result['agentBio'];
+        $profilePicture = $result['profilePicture'];
+        $firstName = $result['firstName'];
+        $lastName = $result['lastName'];
+        $email = $result['email'];
+        $phone = $result['phone'];
+        $license = $result['license'];
     } 
  ?>
 
@@ -49,7 +55,7 @@
     
         <figure class="snip0057 red">
           <figcaption>
-            <h2>Brayanne <span>Reyes Ron</span></h2>
+            <h2><?php echo $firstName ?> <span><?php echo $lastName ?> </span></h2>
             <p><?php echo $agentBio ?></p>
             <hr>
             <center><h3> Contact Information </h3></center>
