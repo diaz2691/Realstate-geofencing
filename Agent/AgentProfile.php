@@ -8,7 +8,7 @@
     } 
 
     $sql = "SELECT userId, firstName, lastName, email, phone, license, agentBio, profilePicture FROM AgentInfo 
-            FULL OUTER JOIN UsersInfo
+            JOIN UsersInfo
             ON AgentInfo.userId = UsersInfo.userId
             WHERE userId = :userId";
            
