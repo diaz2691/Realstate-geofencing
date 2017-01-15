@@ -1,3 +1,26 @@
+<?php
+    require("../databaseConnection.php");  
+    session_start();
+    $dbConn = getConnection();
+
+    if(!isset($_SESSION['userId'])) {
+        header("Location: ../index.html?error=wrong username or password");
+    } 
+
+    $sql = "SELECT * FROM AgentInfo
+            WHERE userId = :userId";
+           
+    $namedParameters = array();
+    $namedParameters[':userId'] = $_SESSION['userId'];
+    $stmt = $dbConn -> prepare($sql);
+    $stmt->execute($namedParameters);
+    $results = $stmt->fetchAll();
+
+    foreach($results as $result){
+        $agentBio = $result['agentBio'];
+    } 
+ ?>
+
 <!DOCTYPE html>
 <html >
   <head>
@@ -27,7 +50,7 @@
         <figure class="snip0057 red">
           <figcaption>
             <h2>Brayanne <span>Reyes Ron</span></h2>
-            <p>I am an agent with much experience in the field of selling homes. It is my passion to work with buyers and ultimately selling them their dream home.</p>
+            <p><?php echo $agentBio ?></p>
             <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
           </figcaption>
           <div class="image"><img src="http://mvptitle.com/blog/wp-content/uploads/2014/01/home_seller.jpg" alt="sample4"/></div>
