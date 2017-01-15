@@ -8,7 +8,7 @@
     } 
 
     $sql = "SELECT firstName, lastName, email, phone, license, agentBio, profilePicture FROM AgentInfo, UsersInfo
-            WHERE userId = :userId AND AgentInfo.userId = UsersInfo.userId";
+            WHERE userId = :userId ON AgentInfo.userId = UsersInfo.userId";
            
     $namedParameters = array();
     $namedParameters[':userId'] = $_SESSION['userId'];
