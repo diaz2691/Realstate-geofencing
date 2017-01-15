@@ -51,6 +51,8 @@
           <figcaption>
             <h2>Brayanne <span>Reyes Ron</span></h2>
             <p><?php echo $agentBio ?></p>
+            <hr>
+            <center><h3> Contact Information </h3></center>
             <a href="#"><i class="ion-ios-email"></i></a>
             <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
           </figcaption>
