@@ -51,6 +51,7 @@
           <figcaption>
             <h2>Brayanne <span>Reyes Ron</span></h2>
             <p><?php echo $agentBio ?></p>
+            <a href="#"><i class="ion-ios-email"></i></a>
             <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
           </figcaption>
           <div class="image"><img src="http://mvptitle.com/blog/wp-content/uploads/2014/01/home_seller.jpg" alt="sample4"/></div>
