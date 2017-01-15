@@ -7,10 +7,11 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    $sql = "SELECT userId, firstName, lastName, email, phone, license, agentBio, profilePicture FROM AgentInfo 
+    $sql = "SELECT firstName, lastName, email, phone, license, agentBio, profilePicture 
+            FROM AgentInfo 
             JOIN UsersInfo
             ON AgentInfo.userId = UsersInfo.userId
-            WHERE userId = :userId";
+            WHERE AgentInfo.userId = :userId";
            
     $namedParameters = array();
     $namedParameters[':userId'] = $_SESSION['userId'];
