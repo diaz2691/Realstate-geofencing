@@ -85,7 +85,6 @@ To change this template use Tools | Templates.
         <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Email</th><th class="tableHeader">Phone</th><th class="tableHeader">License</th><th class="tableHeader">Houses Worked</th><th class="tableHeader">Commission Sheet</th><th class ="tableheader">Update</th><th class="tableHeader">Delete</th></tr>    
             
             <?php
-            /////////TRYING TO FIX THIS
             function getHouseCount($id){
                 $dbConn = getConnection();
                 $sqls = "SELECT COUNT(*) as houseCount FROM HouseInfo WHERE userId = $id";
@@ -106,7 +105,10 @@ To change this template use Tools | Templates.
             $agentNum = 0;
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . $result['username'] . "</td>";
+                //echo "<td>" . $result['username'] . "</td>";
+                echo "<form action='AgentProfile.php' method='post'>
+                                  <button type='submit' name='userId' value='<?php echo " . $result['userId']  . "; ?>' class='btn-link'>". $result['username'] ."</button>
+                                </form>";
                 echo "<td>" . htmlspecialchars($result['firstName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['lastName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
