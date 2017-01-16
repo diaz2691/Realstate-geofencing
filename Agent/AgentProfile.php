@@ -54,7 +54,7 @@
             require("agentNav.php");
         ?>
     
-        <figure ><center>
+        <figure class="snip0057"><center>
           <figcaption>
             <h2><?php echo $firstName ?> <span><?php echo $lastName ?> </span></h2>
             <p>"<?php echo $agentBio ?>"</p>
