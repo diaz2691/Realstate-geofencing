@@ -1,15 +1,15 @@
 
-<?php
+<?php/*
     require("../databaseConnection.php");  
     include "AgentHome.php"
-    session_start();
+    //session_start();
     $dbConn = getConnection();
 
     if(!isset($_SESSION['userId'])) {
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    //$userId = $_SESSION['userId'];
+    //$userId = $_SESSION['userId'];*/
  ?>
 
 <!DOCTYPE html>
