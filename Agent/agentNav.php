@@ -1,8 +1,8 @@
 
 <?php
-    require("../databaseConnection.php");  
-    /*include "AgentHome.php"
-    //session_start();
+    //require("../databaseConnection.php");  
+    include "AgentHome.php";
+    /*//session_start();
     $dbConn = getConnection();
 
     if(!isset($_SESSION['userId'])) {
