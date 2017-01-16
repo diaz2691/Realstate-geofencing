@@ -1,7 +1,7 @@
 
 <?php
     require("../databaseConnection.php");  
-    include "AgentProfile.php"
+    include "AgentHome.php"
     session_start();
     $dbConn = getConnection();
 
@@ -9,7 +9,7 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    $username = $_SESSION['username'];
+    //$userId = $_SESSION['userId'];
  ?>
 
 <!DOCTYPE html>
