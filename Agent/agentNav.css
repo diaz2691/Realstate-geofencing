@@ -12,7 +12,7 @@ border: none;
   outline:none;
   background:none;
   cursor:pointer;
-  color: white;
+  color: "white";
   padding-left: 5px;
   font-family:inherit;
   font-size:inherit;
