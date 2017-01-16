@@ -1,7 +1,7 @@
 
-<?php/*
+<?php
     require("../databaseConnection.php");  
-    include "AgentHome.php"
+    /*include "AgentHome.php"
     //session_start();
     $dbConn = getConnection();
 
