@@ -55,7 +55,7 @@
         <figure ><center>
           <figcaption>
             <h2><?php echo $firstName ?> <span><?php echo $lastName ?> </span></h2>
-            <p><?php echo $agentBio ?></p>
+            <p>"<?php echo $agentBio ?>"</p>
             <hr>
             <h3> Contact Information </h3>
             <a href="#"><i class="ion-ios-email"></i></a>

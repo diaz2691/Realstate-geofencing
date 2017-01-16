@@ -1,3 +1,15 @@
+<?php
+    require("../databaseConnection.php");  
+    session_start();
+    $dbConn = getConnection();
+
+    if(!isset($_SESSION['userId'])) {
+        header("Location: ../index.html?error=wrong username or password");
+    } 
+
+    $username = $_SESSION['username'];
+ ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -46,10 +58,11 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as  <span class="caret"></span></a>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as <?php echo $username; ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Change Password</a></li>
                                 <li><a href="AgentProfile.php">My Profile</a></li>
+                                <li><a href="editAgentProfile.php">Edit Profile</a></li>
+                                <li><a href="changePassword.php">Change Password</a></li>
                             </ul>
                         </li>
                         <li class=""><a href="../logout.php">Logout</a></li>
