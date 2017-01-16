@@ -65,10 +65,9 @@
                             <ul class="dropdown-menu">
                                 <li>
                                 <form action="AgentProfile.php" method="post">
-                                  <button type="submit" name="userId" value="<?php echo $userId; ?>" class="btn-link"><?php echo $userId; ?></button>
+                                  <button type="submit" name="userId" value="<?php echo $userId; ?>" class="btn-link">My Profile</button>
                                 </form>
                                 </li>
-                                <li><a href="AgentProfile.php">My Profile</a></li>
                                 <li><a href="editAgentProfile.php">Edit Profile</a></li>
                                 <li><a href="changePassword.php">Change Password</a></li>
                             </ul>
