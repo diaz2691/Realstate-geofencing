@@ -1,9 +1,10 @@
 
 <?php
     //require("../databaseConnection.php");  
-    include 'AgentHome.php';
-    /*//session_start();
-    $dbConn = getConnection();
+    //include 'AgentProfile.php';
+    
+    session_start();
+    /*/$dbConn = getConnection();
 
     if(!isset($_SESSION['userId'])) {
         header("Location: ../index.html?error=wrong username or password");
