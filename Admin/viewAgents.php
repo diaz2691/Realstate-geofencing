@@ -106,9 +106,11 @@ To change this template use Tools | Templates.
             foreach($results as $result){
                 echo "<tr>";
                 //echo "<td>" . $result['username'] . "</td>";
-                echo "<td><form action='AgentProfile.php' method='post'>
-                                  <button type='submit' name='userId' value='<?php echo $result['userId']; ?>' class='btn-link'>". $result['username'] ."</button>
-                                </form></td>";
+                ?>
+                <td><form action='AgentProfile.php' method='post'>
+                    <button type='submit' name='userId' value='<?php echo $result['userId']; ?>' class='btn-link'> <?php echo $result['username']; ?></button>
+                </form></td>
+                <?php
                 echo "<td>" . htmlspecialchars($result['firstName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['lastName']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
