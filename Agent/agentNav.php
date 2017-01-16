@@ -48,6 +48,11 @@
                     <ul class="nav navbar-nav pull-right">
                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as  <span class="caret"></span></a>
                             <ul class="dropdown-menu">
+                                <li>
+                                <form action="AgentProfile.php" method="post">
+                                  <button type="submit" name="userId" value="your_value" class="btn-link">Go</button>
+                                </form>
+                                </li>
                                 <li><a href="AgentProfile.php">My Profile</a></li>
                                 <li><a href="editAgentProfile.php">Edit Profile</a></li>
                                 <li><a href="changePassword.php">Change Password</a></li>
