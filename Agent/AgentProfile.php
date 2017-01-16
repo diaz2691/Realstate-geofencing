@@ -35,7 +35,6 @@
   <head>
     <meta charset="UTF-8">
     <title>Agent Profile</title>
-        <link rel="stylesheet" href="profileStyles.css">
         <style type="text/css">
           figure {
             padding: 100px;
@@ -52,7 +51,7 @@
             require("agentNav.php");
         ?>
     
-        <figure class="snip0057 red">
+        <figure >
           <figcaption>
             <h2><?php echo $firstName ?> <span><?php echo $lastName ?> </span></h2>
             <p><?php echo $agentBio ?></p>
