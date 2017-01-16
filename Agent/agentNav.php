@@ -4,13 +4,13 @@
     //include 'AgentProfile.php';
     
     session_start();
-    /*/$dbConn = getConnection();
+    $dbConn = getConnection();
 
     if(!isset($_SESSION['userId'])) {
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    //$userId = $_SESSION['userId'];*/
+    $userId = $_SESSION['userId'];
  ?>
 
 <!DOCTYPE html>
