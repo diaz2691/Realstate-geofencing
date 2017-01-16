@@ -38,6 +38,7 @@
         <style type="text/css">
           figure {
             margin: auto;
+            padding-top: 100px;
 
           }
         </style>
