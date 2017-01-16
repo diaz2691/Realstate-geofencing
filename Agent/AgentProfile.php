@@ -33,6 +33,8 @@
 <!DOCTYPE html>
 <html >
   <head>
+    <link rel="stylesheet" type="text/css" href="profileStyles.css">
+
     <meta charset="UTF-8">
     <title>Agent Profile</title>
         <style type="text/css">
@@ -59,7 +61,7 @@
             <hr>
             <h3> Contact Information </h3>
             <h4> Phone Number - <?php echo $phone ?> </h4>
-            <h4> Email - <?php echo $phone ?> </h4>
+            <h4> Email - <?php echo $email ?> </h4>
             <h4> License Number - <?php echo $license ?> </h4>
             <a href="#"><i class="ion-ios-email"></i></a>
             <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
