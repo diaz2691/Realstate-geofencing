@@ -100,19 +100,6 @@ figure.snip0057 .position {
   color: #ffffff;
   background: #000000;
 }
-figure.snip0057.blue .position {
-  background: #20638f;
-}
-figure.snip0057.red .position {
-  background: #962d22;
-}
-figure.snip0057.yellow .position {
-  background: #bf6516;
-}
-figure.snip0057:hover figcaption,
-figure.snip0057.hover figcaption {
-  bottom: 40px;
-}
 figure.snip0057:hover .icons i,
 figure.snip0057.hover .icons i {
   opacity: 1;
