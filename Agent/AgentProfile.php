@@ -33,7 +33,7 @@
 <!DOCTYPE html>
 <html >
   <head>
-    <link rel="stylesheet" type="text/css" href="profileStyles.css">
+    <!--<link rel="stylesheet" type="text/css" href="profileStyles.css">-->
 
     <meta charset="UTF-8">
     <title>Agent Profile</title>
