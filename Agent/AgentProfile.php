@@ -58,6 +58,9 @@
             <p>"<?php echo $agentBio ?>"</p>
             <hr>
             <h3> Contact Information </h3>
+            <h2> Phone Number <?php echo $phone ?> </h2>
+            <h2> Email <?php echo $phone ?> </h2>
+            <h2> License Number <?php echo $license ?> </h2>
             <a href="#"><i class="ion-ios-email"></i></a>
             <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
           </figcaption>
