@@ -37,7 +37,7 @@
     <title>Agent Profile</title>
         <style type="text/css">
           figure {
-            padding: 100px;
+            margin: auto;
 
           }
         </style>
