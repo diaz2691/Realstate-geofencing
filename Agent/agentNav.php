@@ -65,7 +65,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                 <form action="AgentProfile.php" method="post">
-                                  <button type="submit" name="userId" value="your_value" class="btn-link">Go</button>
+                                  <button type="submit" name="userId" value="<?php echo $userId; ?>" class="btn-link">Go</button>
                                 </form>
                                 </li>
                                 <li><a href="AgentProfile.php">My Profile</a></li>

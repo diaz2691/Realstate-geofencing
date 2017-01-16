@@ -14,7 +14,7 @@
             WHERE AgentInfo.userId = :userId";
            
     $namedParameters = array();
-    $namedParameters[':userId'] = $_SESSION['userId'];
+    $namedParameters[':userId'] = $_POST['userId'];
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute($namedParameters);
     $results = $stmt->fetchAll();
