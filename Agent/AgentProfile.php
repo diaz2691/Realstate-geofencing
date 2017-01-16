@@ -38,7 +38,7 @@
         <link rel="stylesheet" href="profileStyles.css">
         <style type="text/css">
           figure {
-            margin: 0 auto;
+            padding: 500px;
 
           }
         </style>
