@@ -25,11 +25,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Administrator</a>
+                    <a class="navbar-brand" href="AdminProfile.php">Administrator</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#" class="">Home</a></li>
+                        <li class="active"><a href="AdminProfile.php" class="">Home</a></li>
                         <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Commission Form<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -56,7 +56,6 @@
                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as  <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Change Password</a></li>
-                                <li><a href="#">My Profile</a></li>
                             </ul>
                         </li>
                         <li class=""><a href="../logout.php">Logout</a></li>
