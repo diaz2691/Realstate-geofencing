@@ -1,4 +1,4 @@
-<?php
+<!--<?php
     require("databaseConnection.php");  
     session_start();
     $dbConn = getConnection();
@@ -7,7 +7,7 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    if(isset($_POST['oldPassword'])){
+    if(isset($_POST['oldPassword'])) {
         $sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
@@ -26,7 +26,6 @@
         header("Location: index.html");
     }
  ?>
-<!--
 To change this template use Tools | Templates.
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -46,7 +45,7 @@ To change this template use Tools | Templates.
     <div class="login-page">
         <h1> Change Password </h1>
         <div class="form">
-            <form action="changePassword.php" method="post" class="login-form">
+            <form action="" method="post" class="login-form">
                 <input type="text" name="oldPassword" placeholder="old password"/>
                 <input type="password" name="newPassword" placeholder="new password"/>
                 <input type="submit" value="login" name="loginForm" id="button"/>      
