@@ -60,7 +60,7 @@
                     <ul class="nav navbar-nav pull-right">
                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Change Password</a></li>
+                                <li><a href="../changePassword.php">Change Password</a></li>
                             </ul>
                         </li>
                         <li class=""><a href="../logout.php">Logout</a></li>

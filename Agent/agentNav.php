@@ -69,7 +69,7 @@
                                 </form>
                                 </li>
                                 <li><a href="editAgentProfile.php">Edit Profile</a></li>
-                                <li><a href="changePassword.php">Change Password</a></li>
+                                <li><a href="../changePassword.php">Change Password</a></li>
                             </ul>
                         </li>
                         <li class=""><a href="../logout.php">Logout</a></li>
