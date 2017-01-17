@@ -40,7 +40,7 @@ To change this template use Tools | Templates.
             font-family: "Roboto", sans-serif;
         }
     </style>
-    <title></title>
+    <title>Change Password</title>
 </head>
 <body>
     <div class="login-page">
@@ -51,20 +51,5 @@ To change this template use Tools | Templates.
                 <input type="password" name="newPassword" placeholder="new password"/>
                 <input type="submit" value="login" name="loginForm" id="button"/>      
             </form>
-    
-    <h3 style="color:red">
-    <?php
-  
-      if (isset($_GET['error'])) {
-          
-          echo $_GET['error'];
-          
-      }
-
-    ?>
-    </h3>
-
-
-
 </body>
 </html>
