@@ -74,14 +74,14 @@ To change this template use Tools | Templates.
         ?> 
         
         <br/>
-        <br/><h2 id="header2">Agents &#x2713</h2>
+        <br/>
 
         <form action="addAgent.php">  
             <input type="submit" value="Add New Agent" name="addForm"/>
         </form>  
         
         <table class="tftable" border="1">
-       
+            <h2 id="header2">Agents &#x2713</h2>
         <tr><th class="tableHeader">Username</th><th class="tableHeader">First Name</th><th class="tableHeader">Last Name</th><th class="tableHeader">Houses Worked</th><th class="tableHeader">Houses Sold</th><th class="tableHeader">Total Earnings</th></tr>    
             
             <?php
