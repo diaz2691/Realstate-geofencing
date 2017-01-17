@@ -18,7 +18,7 @@
                  SET password = :password
                  WHERE userId = :userId";
             $namedParameters = array();
-            $namedParameters[":password"] = $_POST['newPassword'];
+            $namedParameters[":password"] = $_POST['oldPassword'];
             $namedParameters[":userId"] = $_SESSION['userId'];     
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
@@ -44,12 +44,12 @@ To change this template use Tools | Templates.
 </head>
 <body>
     <div class="login-page">
-        <h1> Change Password </h1>
+        <h1> Login Screen </h1>
         <div class="form">
             <form action="login.php" method="post" class="login-form">
-                <input type="text" name="oldPassword" placeholder="old password"/>
-                <input type="password" name="newPassword" placeholder="new password"/>
-                <input type="submit" value="change" name="loginForm" id="button"/>      
+                <input type="text" name="username" placeholder="username"/>
+                <input type="password" name="password" placeholder="password"/>
+                <input type="submit" value="login" name="loginForm" id="button"/>      
             </form>
     
     <h3 style="color:red">
