@@ -75,10 +75,6 @@ To change this template use Tools | Templates.
         
         <br/>
         <br/>
-
-        <form action="addAgent.php">  
-            <input type="submit" value="Add New Agent" name="addForm"/>
-        </form>  
         
         <table class="tftable" border="1">
             <h2 id="header2">Agents &#x2713</h2>
