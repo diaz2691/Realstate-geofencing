@@ -87,7 +87,7 @@ To change this template use Tools | Templates.
                 $stmt = $dbConn -> prepare($sql);
                 $stmt->execute();
                 //$stmt->execute();
-                $results = $stmt->fetchAll();
+                $results = $stmt->fetch();
                 return $results['firstName'] . ' ' . $results['lastName'];
             }
 
