@@ -9,7 +9,7 @@
     } 
 
     if(isset($_POST['oldPassword'])) {
-        $sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
+        /*$sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
         //$stmt->execute();
@@ -24,7 +24,7 @@
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
         }
-        //header("Location: index.html");
+        header("Location: index.html");*/
     }
  ?>
 <!--
