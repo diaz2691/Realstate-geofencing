@@ -16,7 +16,7 @@
         $stmt->execute($namedParameters);
         $results = $stmt->fetch();
         echo $results['password'];
-        /*if($results['password'] == $_POST['oldPassword'] ){
+        if($results['password'] === $_POST['oldPassword'] ){
             $sql = "UPDATE BuyerInfo
                  SET password = :password
                  WHERE userId = :userId";
@@ -25,8 +25,8 @@
             $namedParameters[":userId"] = $_SESSION['userId'];     
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
-        }*/
-        //header("Location: index.html");
+        }
+        header("Location: index.html");
     }
  ?>
 <!--
