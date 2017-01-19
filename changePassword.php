@@ -48,25 +48,10 @@ To change this template use Tools | Templates.
     <div class="login-page">
         <h1> Change Password </h1>
         <div class="form">
-            <form action="login.php" method="post" class="login-form">
-                <input type="text" name="username" placeholder="username"/>
-                <input type="password" name="password" placeholder="password"/>
-                <input type="submit" value="login" name="loginForm" id="button"/>      
-            </form>
-    
-    <h3 style="color:red">
-    <?php
-  
-      if (isset($_GET['error'])) {
-          
-          echo $_GET['error'];
-          
-      }
-
-    ?>
-    </h3>
-
-
-
+            <form action="changePassword.php" method="post" class="login-form">
+                <input type="text" name="oldPassword" placeholder="old password"/>
+                <input type="password" name="newPassword" placeholder="new password"/>
+                <input type="submit" value="enter" name="loginForm" id="button"/>      
+            </form>]
 </body>
 </html>
