@@ -8,7 +8,7 @@
         header("Location: ../index.html?error=wrong username or password");
     } 
 
-    if(isset($_POST['oldPassword'])) {
+    /*if(isset($_POST['oldPassword'])) {
         $sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
@@ -25,7 +25,7 @@
             $stmt->execute($namedParameters);
         }
         header("Location: index.html");
-    }
+    }*/
  ?>
 <!--
 To change this template use Tools | Templates.
