@@ -26,7 +26,7 @@
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
         }*/
-        header("Location: index.html");
+        //header("Location: index.html");
     }
  ?>
 <!--
