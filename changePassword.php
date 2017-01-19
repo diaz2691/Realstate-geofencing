@@ -15,6 +15,7 @@
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute($namedParameters);
         $results = $stmt->fetch();
+        echo $results['password'];
         /*if($results['password'] == $_POST['oldPassword'] ){
             $sql = "UPDATE BuyerInfo
                  SET password = :password
@@ -49,7 +50,7 @@ To change this template use Tools | Templates.
         <h1> Change Password </h1>
         <div class="form">
             <form action="changePassword.php" method="post" class="login-form">
-                <input type="text" name="oldPassword" placeholder="old password"/>
+                <input type="password" name="oldPassword" placeholder="old password"/>
                 <input type="password" name="newPassword" placeholder="new password"/>
                 <input type="submit" value="enter" name="loginForm" id="button"/>      
             </form>
