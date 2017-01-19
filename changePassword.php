@@ -15,7 +15,7 @@
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute($namedParameters);
         $results = $stmt->fetch();
-        if($results['password'] == $_POST['oldPassword'] ){
+        /*if($results['password'] == $_POST['oldPassword'] ){
             $sql = "UPDATE BuyerInfo
                  SET password = :password
                  WHERE userId = :userId";
@@ -24,7 +24,7 @@
             $namedParameters[":userId"] = $_SESSION['userId'];     
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
-        }
+        }*/
         header("Location: index.html");
     }
  ?>
@@ -52,6 +52,6 @@ To change this template use Tools | Templates.
                 <input type="text" name="oldPassword" placeholder="old password"/>
                 <input type="password" name="newPassword" placeholder="new password"/>
                 <input type="submit" value="enter" name="loginForm" id="button"/>      
-            </form>]
+            </form>
 </body>
 </html>
