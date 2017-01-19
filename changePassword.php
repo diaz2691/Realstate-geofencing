@@ -9,12 +9,12 @@
     } 
 
     if(isset($_POST['oldPassword'])) {
-        /*$sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
+        $sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
         //$stmt->execute();
         $results = $stmt->fetch();
-        if($results['password'] == $_POST['oldPassword'] ){
+        /*if($results['password'] == $_POST['oldPassword'] ){
             $sql = "UPDATE BuyerInfo
                  SET password = :password
                  WHERE userId = :userId";
@@ -23,8 +23,8 @@
             $namedParameters[":userId"] = $_SESSION['userId'];     
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
-        }
-        header("Location: index.html");*/
+        }*/
+        header("Location: index.html");
     }
  ?>
 <!--
