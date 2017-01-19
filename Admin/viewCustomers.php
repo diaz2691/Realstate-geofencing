@@ -42,9 +42,16 @@ To change this template use Tools | Templates.
     
     <meta charset = "utf-8"/>
  <style type="text/css">
-               /* .tableHeader {
-                    text-align:center;
-                }*/
+    .input[type=text] {
+        width: 130px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+    /* When the input field gets focus, change its width to 100% */
+    input[type=text]:focus {
+        width: 100%;
+    }
 
               .tableButtons {
                 text-align:center;
@@ -74,7 +81,9 @@ To change this template use Tools | Templates.
             require("adminNav.php");
         ?> 
         <br/><br/><h2 id="header2">Customers &#x2713</h2> 
-        
+       
+        <input type="text" name="search" placeholder="Search..">
+
         <table class="tftable" border="1">
        
         <tr><th>Agent Name</th><th>Customer Name</th><th>Email</th><th>Phone</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
