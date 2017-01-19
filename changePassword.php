@@ -9,9 +9,11 @@
     } 
 
     if(isset($_POST['oldPassword'])) {
-        $sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
+        $sql = "SELECT password FROM UsersInfo where userId = :userId";
+        $namedParameters = array();
+        $namedParameters[":userId"] = $_SESSION['userId'];
         $stmt = $dbConn -> prepare($sql);
-        $stmt->execute();
+        $stmt->execute($namedParameters);
         //$stmt->execute();
         $results = $stmt->fetch();
         /*if($results['password'] == $_POST['oldPassword'] ){
