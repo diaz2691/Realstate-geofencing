@@ -43,7 +43,7 @@ To change this template use Tools | Templates.
     <meta charset = "utf-8"/>
  <style type="text/css">
     .input[type=text] {
-        width: 130px;
+        width: 140px;
         -webkit-transition: width 0.4s ease-in-out;
         transition: width 0.4s ease-in-out;
     }
