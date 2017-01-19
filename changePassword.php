@@ -1,4 +1,32 @@
+<?php
+//FIGURE OUT ERROR FOR CHANGING PASSWORD 
+    session_start();
+    require 'databaseConnection.php'; 
+    $dbConn = getConnection();
 
+    if(!isset($_SESSION['userId'])) {
+        header("Location: ../index.html?error=wrong username or password");
+    } 
+
+    if(isset($_POST['oldPassword'])) {
+        $sql = "SELECT password FROM UsersInfo where userId = $_SESSION['userId']";
+        $stmt = $dbConn -> prepare($sql);
+        $stmt->execute();
+        //$stmt->execute();
+        $results = $stmt->fetch();
+        if($results['password'] == $_POST['oldPassword'] ){
+            $sql = "UPDATE BuyerInfo
+                 SET password = :password
+                 WHERE userId = :userId";
+            $namedParameters = array();
+            $namedParameters[":password"] = $_POST['newPassword'];
+            $namedParameters[":userId"] = $_SESSION['userId'];     
+            $stmt = $dbConn -> prepare($sql);
+            $stmt->execute($namedParameters);
+        }
+        header("Location: index.html");
+    }
+ ?>
 <!--
 To change this template use Tools | Templates.
 -->
