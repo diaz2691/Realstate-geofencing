@@ -16,7 +16,7 @@
         $stmt->execute($namedParameters);
         $results = $stmt->fetch();
         if($results['password'] === $_POST['oldPassword'] ){
-            $sql = "UPDATE BuyerInfo
+            $sql = "UPDATE UsersInfo
                  SET password = :password
                  WHERE userId = :userId";
             $namedParameters = array();
