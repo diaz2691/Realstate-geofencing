@@ -15,7 +15,6 @@
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute($namedParameters);
         $results = $stmt->fetch();
-        echo $results['password'];
         if($results['password'] === $_POST['oldPassword'] ){
             $sql = "UPDATE BuyerInfo
                  SET password = :password
