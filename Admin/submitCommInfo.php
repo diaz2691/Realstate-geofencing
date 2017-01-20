@@ -6,15 +6,15 @@
     $license = $_POST['license'];
     $houseId = $_POST['houseId'];
 
-    $sql = "SELECT * FROM UsersInfo WHERE license = '"$license"'";
+    $sql = "SELECT * FROM UsersInfo WHERE license = $license";
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute();
 
-    $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = '"$houseId"'";
+    $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = $houseId";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
 
-    $sqlAgent = "SELECT * FROM commInfo ORDER BY date DESC LIMIT 1 WHERE license = '"$license"'";
+    $sqlAgent = "SELECT * FROM commInfo ORDER BY date DESC LIMIT 1 WHERE license = $license";
     $stmtAgent = $dbConn -> prepare($sqlHouse);
     $stmtAgent->execute();
 

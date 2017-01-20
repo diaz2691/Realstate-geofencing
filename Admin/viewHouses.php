@@ -24,12 +24,11 @@ To change this template use Tools | Templates.
 <html>
     
 <head>
-    <title>Agent Profile</title>
+    <title>Admin Profile</title>
     
     <script>
         
             function confirmDelete(record) {
-               // alert("hi"); // for testing
                var deleteRecord = confirm("Are you sure you want to delete " + record + "?");
                if(!deleteRecord){
                    return false
@@ -108,7 +107,6 @@ To change this template use Tools | Templates.
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute($namedParameters);
-            //$stmt->execute();
             $results = $stmt->fetchAll();
 
             foreach($results as $result){
