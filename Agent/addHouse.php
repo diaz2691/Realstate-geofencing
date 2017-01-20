@@ -28,7 +28,7 @@
                      $("#cities").html(data['results']);
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
-                     //alert(status);
+                     alert(status);
                 }
              });
          }
