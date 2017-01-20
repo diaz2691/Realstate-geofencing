@@ -137,7 +137,7 @@ ini_set('display_errors', 1);
                     },
                 });
                 window.location.href = "viewCommissionSheet.php";
-            }); 
+            } 
 
             function getLicense()
             {
