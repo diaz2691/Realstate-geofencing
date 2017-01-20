@@ -130,7 +130,7 @@ ini_set('display_errors', 1);
                     {
                         successmessage = 'Data was succesfully captured';
                         $("label#successmessage").text(successmessage);
-                    }
+                    },
                         error: function(data) {
                         successmessage = 'Error';
                         $("label#successmessage").text(successmessage);
@@ -150,14 +150,3 @@ ini_set('display_errors', 1);
         
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
