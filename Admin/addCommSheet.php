@@ -108,7 +108,7 @@ ini_set('display_errors', 1);
                 var checkNum = $("#checkNum").val();
                 var houseId = $("#houseId").val();
                 $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitCommInfo.php",
                     data: 
                     {

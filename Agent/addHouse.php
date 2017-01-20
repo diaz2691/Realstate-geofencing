@@ -47,6 +47,7 @@
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
+                City: <span id="cities"></span> <br />
                 <input type="text" id="state" placeholder="state"><br />
                 <input type="text" id="zip" placeholder="zip"><br />
                 <input type="text" id="bedrooms" placeholder="bedrooms"><br />
@@ -58,6 +59,22 @@
         </div>
         
         <script>
+
+      function getCity() {  
+      
+     $.ajax({
+            type: "get",
+            url: "http://maps.googleapis.com/maps/api/geocode/json",
+            dataType: "json",
+            data: {"address": $("#zip").val() },
+            success: function(data,status) {
+                 $("#cities").html(data['results']);
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                 //alert(status);
+            }
+         });
+     }
 
             $("#button").click( function(event){
                 var status = $("#status :selected").text();
