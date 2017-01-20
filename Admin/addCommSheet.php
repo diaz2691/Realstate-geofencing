@@ -135,7 +135,7 @@ ini_set('display_errors', 1);
                         successmessage = 'Error';
                         $("label#successmessage").text(successmessage);
                     },
-                }); 
+                
                 window.location.href = "viewCommissionSheet.php";
             }); 
 
