@@ -15,7 +15,49 @@
     <title>Add New House Information</title>
     <meta charset = "utf-8"/>
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script><!-- importing jQuery library-->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js">
+        function getCity() {  
+          
+         $.ajax({
+                type: "get",
+                url: "http://maps.googleapis.com/maps/api/geocode/json",
+                dataType: "json",
+                data: {"address": $("#zip").val() },
+                success: function(data,status) {
+                     $("#cities").html(data['results']);
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                     //alert(status);
+                }
+             });
+         }
+
+            $("#button").click( function(event){
+                var status = $("#status :selected").text();
+                var address = $("#address").val();
+                var city = $("#city").val();
+                var state = $("#state").val();
+                var zip = $("#zip").val();
+                var bedrooms = $("#bedrooms").val();
+                var bathrooms = $("#bathrooms").val();
+                var price = $("#price").val();
+                var userId = $("#userId").val();  
+                $.ajax({
+                    type: "POST",
+                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
+                    data: {status: status,
+                          address: address,
+                          city: city,
+                          state: state,
+                          zip: zip,
+                          bedrooms: bedrooms,
+                        bathrooms: bathrooms,
+                        price: price,
+                        userId: userId}
+                }); 
+                window.location.href = "AgentHome.php";
+            }); 
+    </script><!-- importing jQuery library-->
     <style type="text/css">
         .form select {
           font-family: "Roboto", sans-serif;
@@ -60,47 +102,12 @@
         
         <script>
 
-      function getCity() {  
-      
-     $.ajax({
-            type: "get",
-            url: "http://maps.googleapis.com/maps/api/geocode/json",
-            dataType: "json",
-            data: {"address": $("#zip").val() },
-            success: function(data,status) {
-                 $("#cities").html(data['results']);
-            },
-            complete: function(data,status) { //optional, used for debugging purposes
-                 //alert(status);
-            }
-         });
-     }
-
-            $("#button").click( function(event){
-                var status = $("#status :selected").text();
-                var address = $("#address").val();
-                var city = $("#city").val();
-                var state = $("#state").val();
-                var zip = $("#zip").val();
-                var bedrooms = $("#bedrooms").val();
-                var bathrooms = $("#bathrooms").val();
-                var price = $("#price").val();
-                var userId = $("#userId").val();  
-                $.ajax({
-                    type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
-                    data: {status: status,
-                          address: address,
-                          city: city,
-                          state: state,
-                          zip: zip,
-                          bedrooms: bedrooms,
-                        bathrooms: bathrooms,
-                        price: price,
-                        userId: userId}
-                }); 
-                window.location.href = "AgentHome.php";
-            });      
+          function getCity() {  
+          $("#zip").change(getCity);
+          $("#state").change(getCounties);
+          $("#username").change(checkUsername);
+          $("#password").change(checkPassword);
+          $("#phone").change(checkPhone);      
         </script>
         
     </body>
