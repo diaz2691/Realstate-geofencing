@@ -73,8 +73,8 @@ ini_set('display_errors', 1);
                         echo "License: <input type='text' value='' id='agentLicense' readonly> <br />";
                         echo "Date: <input type='date' id='date' value='2014-02-09'> <br/>" ;
                         echo "Settlement date: <input type='date' id='settlementDate' value='2014-02-09'> <br/>" ;
-                        echo "Commission: <input type='text' name='commission'><br>";
-                        echo "Check Number: <input type='text' name='checkNum'><br>";
+                        echo "Commission: <input type='text' id='commission' name='commission'><br>";
+                        echo "Check Number: <input type='text' id='checkNum' name='checkNum'><br>";
 
                         echo "House Address:";
                         echo "<select id='houseId'>";
@@ -101,9 +101,15 @@ ini_set('display_errors', 1);
                 // var email = $("#email").val();
                 // var phone = $("#phone").val();
                 // var license = $("#license").val();
+                var license = $("#agentLicense").val();
+                var date = $("#date").val();
+                var settlementDate = $("#settlementDate").val();
+                var commission = $("#commission").val();
+                var checkNum = $("#checkNum").val();
+                var houseId = $("#houseId").val();
                 $.ajax({
                     type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitAgentInfo.php",
+                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitCommInfo.php",
                     data: 
                     {
                         // username: username,
@@ -113,9 +119,15 @@ ini_set('display_errors', 1);
                         //   email: email,
                         // phone: phone,
                         // license: license
+                        license: license,
+                        date: date,
+                        settlementDate: settlementDate,
+                        commission: commission,
+                        checkNum: checkNum,
+                        houseId: houseId
                     }
                 }); 
-                window.location.href = "viewAgents.php";
+                window.location.href = "viewCommissionSheet.php";
             }); 
 
             function getLicense()
