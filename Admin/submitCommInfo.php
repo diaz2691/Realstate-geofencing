@@ -142,12 +142,12 @@
           $namedParameters[":state"] = $stmtHouse['state']; 
           $namedParameters[":zip"] = $stmtHouse['zip'];
 
-          $namedParameters[":TYGross"] =  ;   
-          $namedParameters[":FYGross"] = ;
+          $namedParameters[":TYGross"] =  $stmtAgent['TYGross'] + $_POST['commission'];   
+          $namedParameters[":FYGross"] = $stmtAgent['FYGross'] + ($_POST['commission'] - $brokerFee - 349);
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
-          $namedParameters[":brokerFee"] = ;
-          $namedParameters[":finalComm"] =  ;   
+          $namedParameters[":brokerFee"] = $brokerFee;
+          $namedParameters[":finalComm"] =  $_POST['commission'] - $brokerFee - 349;   
 
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters);
