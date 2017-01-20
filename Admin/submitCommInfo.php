@@ -125,7 +125,7 @@
 
 
      $sql = "INSERT INTO commInfo
-                  (houseId, license, firstName, lastName, date, settlementDate, checkNum,address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
+                  (houseId, license, firstName, lastName, date, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
                   VALUES (:houseId, :license, :firstName, :lastName, :date, :settlementDate, :checkNum, :address, :city, :state, :zip, :TYGross, :FYGross, :InitialGross, :brokerFee, :finalComm)";
            $namedParameters = array();
 

@@ -125,7 +125,16 @@ ini_set('display_errors', 1);
                         commission: commission,
                         checkNum: checkNum,
                         houseId: houseId
+                    },
+                    success: function(data) 
+                    {
+                        successmessage = 'Data was succesfully captured';
+                        $("label#successmessage").text(successmessage);
                     }
+                        error: function(data) {
+                        successmessage = 'Error';
+                        $("label#successmessage").text(successmessage);
+                    },
                 }); 
                 window.location.href = "viewCommissionSheet.php";
             }); 
