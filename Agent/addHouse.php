@@ -100,14 +100,8 @@
                 
         </div>
         
-        <script>
-
-          function getCity() {  
-          $("#zip").change(getCity);
-          $("#state").change(getCounties);
-          $("#username").change(checkUsername);
-          $("#password").change(checkPassword);
-          $("#phone").change(checkPhone);      
+        <script> 
+          $("#zip").change(getCity);     
         </script>
         
     </body>
