@@ -124,7 +124,8 @@ ini_set('display_errors', 1);
                         successmessage = 'Data was succesfully captured';
                         alert(successmessage);
                     },
-                    error: function(xhr, status, error) {
+                    error: function(xhr, status, error) 
+                    {
                         var err = eval("(" + xhr.responseText + ")");
                         alert(err.Message);
                     },
