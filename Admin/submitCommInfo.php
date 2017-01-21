@@ -9,17 +9,20 @@
     $sql = "SELECT * FROM UsersInfo WHERE license = $license";
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute();
+    $userResults = $stmt->fetch();
 
     $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = $houseId";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
+    $houseResults = $stmt->fetch();
 
     $sqlAgent = "SELECT * FROM commInfo ORDER BY date DESC LIMIT 1 WHERE license = $license";
     $stmtAgent = $dbConn -> prepare($sqlHouse);
     $stmtAgent->execute();
+    $commResults = $stmt->fetch();
 
-    $TYGross = $stmtAgent['TYGross'];
-    $FYGross = $stmtAgent['FYGross']; 
+    $TYGross = $commResults['TYGross'];
+    $FYGross = $commResults['FYGross']; 
     $commission = $_POST['commission'];
     $brokerFee = 0;
     $finalComm = 0;
@@ -131,31 +134,24 @@
 
           $namedParameters[":houseId"] = $houseId;
           $namedParameters[":license"] = $license;
-          $namedParameters[":firstName"] = $stmt['firstName'];
-          $namedParameters[":lastName"] = $stmt['lastName'];     
+          $namedParameters[":firstName"] = $userResults['firstName'];
+          $namedParameters[":lastName"] = $userResults['lastName'];     
           $namedParameters[":date"] = $_POST['date'];     
           $namedParameters[":settlementDate"] = $_POST['settlementDate'];     
           $namedParameters[":checkNum"] = $_POST['checkNum'];   
 
-          $namedParameters[":address"] = $stmtHouse['address'];     
-          $namedParameters[":city"] = $stmtHouse['city'];     
-          $namedParameters[":state"] = $stmtHouse['state']; 
-          $namedParameters[":zip"] = $stmtHouse['zip'];
+          $namedParameters[":address"] = $houseResults['address'];     
+          $namedParameters[":city"] = $houseResults['city'];     
+          $namedParameters[":state"] = $houseResults['state']; 
+          $namedParameters[":zip"] = $houseResults['zip'];
 
-          $namedParameters[":TYGross"] =  $stmtAgent['TYGross'] + $_POST['commission'];   
-          $namedParameters[":FYGross"] = $stmtAgent['FYGross'] + ($_POST['commission'] - $brokerFee - 349);
+          $namedParameters[":TYGross"] =  $commResults['TYGross'] + $_POST['commission'];   
+          $namedParameters[":FYGross"] = $commResults['FYGross'] + ($_POST['commission'] - $brokerFee - 349);
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
           $namedParameters[":brokerFee"] = $brokerFee;
           $namedParameters[":finalComm"] =  $_POST['commission'] - $brokerFee - 349;   
 
           $stmt = $dbConn -> prepare($sql);
-          $stmt->execute($namedParameters);
-    
-
-    
-
-  
-
-  
+          $stmt->execute($namedParameters); 
 ?>
