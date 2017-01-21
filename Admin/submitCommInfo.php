@@ -142,8 +142,8 @@
           $namedParameters[":license"] = $license;
           $namedParameters[":firstName"] = $userResults['firstName'];
           $namedParameters[":lastName"] = $userResults['lastName'];     
-          $namedParameters[":date"] = $_POST['date'];     
-          $namedParameters[":settlementDate"] = $_POST['settlementDate'];     
+          $namedParameters[":date"] = date("Y-m-d", $_POST['date']);     
+          $namedParameters[":settlementDate"] = date("Y-m-d", $_POST['settlementDate']);     
           $namedParameters[":checkNum"] = $_POST['checkNum'];   
 
           $namedParameters[":address"] = $houseResults['address'];     
