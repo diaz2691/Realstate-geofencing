@@ -6,23 +6,23 @@
     $license = $_POST['license'];
     $houseId = $_POST['houseId'];
 
-    // $sql = "SELECT * FROM UsersInfo WHERE license = $license";
-    // $stmt = $dbConn -> prepare($sql);
-    // $stmt->execute();
-    // $userResults = $stmt->fetch();
+    $sql = "SELECT * FROM UsersInfo WHERE license = $license";
+    $stmt = $dbConn -> prepare($sql);
+    $stmt->execute();
+    $userResults = $stmt->fetch();
 
-    // $message = "wrong answer";
-    // echo "<script type='text/javascript'>alert('$userResults');</script>";
+    $message = "wrong answer";
+    echo "<script type='text/javascript'>alert('$userResults');</script>";
 
-    // $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = '" . $houseId . "'";
-    // $stmtHouse = $dbConn -> prepare($sqlHouse);
-    // $stmtHouse->execute();
-    // $houseResults = $stmtHouse->fetch();
+    $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = '" . $houseId . "'";
+    $stmtHouse = $dbConn -> prepare($sqlHouse);
+    $stmtHouse->execute();
+    $houseResults = $stmtHouse->fetch();
 
-    // $sqlAgent = "SELECT * FROM commInfo  WHERE license = '" . $license . "' ORDER BY date DESC LIMIT 1";
-    // $stmtAgent = $dbConn -> prepare($sqlAgent);
-    // $stmtAgent->execute();
-    // $commResults = $stmtAgent->fetch();
+    $sqlAgent = "SELECT * FROM commInfo  WHERE license = '" . $license . "' ORDER BY date DESC LIMIT 1";
+    $stmtAgent = $dbConn -> prepare($sqlAgent);
+    $stmtAgent->execute();
+    $commResults = $stmtAgent->fetch();
 
     // if ($commResults->rowCount() > 0) 
     // {
