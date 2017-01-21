@@ -119,21 +119,17 @@ ini_set('display_errors', 1);
                         checkNum: checkNum,
                         houseId: houseId
                     },
-                    error: function(xhr, status, error) 
-                    {
-                        var err = eval("(" + xhr.responseText + ")");
-                        alert(err.Message);
-                    },
                     success: function(data, status) 
                     {
                         successmessage = 'Data was succesfully captured';
                         alert(successmessage);
                     },
 
-                    complete: function(data, status) {
-                        successmessage = 'Error';
-                        alert(successmessage);
-                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                    alert(jqXHR.status);
+                    alert(textStatus);
+                    alert(errorThrown);
+                    }
                 });
                 window.location.href = "viewCommissionSheet.php";
             }); 
