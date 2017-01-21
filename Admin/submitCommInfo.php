@@ -11,6 +11,9 @@
     $stmt->execute();
     $userResults = $stmt->fetch();
 
+    $message = "wrong answer";
+    echo "<script type='text/javascript'>alert('$userResults');</script>";
+
     $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = $houseId";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
