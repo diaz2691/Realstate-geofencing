@@ -17,12 +17,12 @@
     $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = $houseId";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
-    $houseResults = $stmt->fetch();
+    $houseResults = $stmtHouse->fetch();
 
     $sqlAgent = "SELECT * FROM commInfo  WHERE license = $license ORDER BY date DESC LIMIT 1";
     $stmtAgent = $dbConn -> prepare($sqlAgent);
     $stmtAgent->execute();
-    $commResults = $stmt->fetch();
+    $commResults = $stmtAgent->fetch();
 
     $TYGross = $commResults['TYGross'];
     $FYGross = $commResults['FYGross']; 
