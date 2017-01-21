@@ -1,4 +1,4 @@
-<?php
+<?php ( 
      session_start();
      require('../databaseConnection.php');
      $dbConn = getConnection();
@@ -148,12 +148,12 @@
           $namedParameters[":state"] = $houseResults['state']; 
           $namedParameters[":zip"] = $houseResults['zip'];
 
-          $namedParameters[":TYGross"] =  $commResults['TYGross'] + $_POST['commission'];   
-          $namedParameters[":FYGross"] = $commResults['FYGross'] + ($_POST['commission'] - $brokerFee - 349);
+          $namedParameters[":TYGross"] =  floatval($commResults['TYGross']) + floatval($_POST['commission']);   
+          $namedParameters[":FYGross"] = floatval($commResults['FYGross']) + floatval($_POST['commission']) - $brokerFee - 349;
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
           $namedParameters[":brokerFee"] = $brokerFee;
-          $namedParameters[":finalComm"] =  $_POST['commission'] - $brokerFee - 349;   
+          $namedParameters[":finalComm"] =  floatval($_POST['commission']) - $brokerFee - 349;   
 
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters); 
