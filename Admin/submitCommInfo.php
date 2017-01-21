@@ -14,12 +14,12 @@
     $message = "wrong answer";
     echo "<script type='text/javascript'>alert('$userResults');</script>";
 
-    $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = " . $houseId;
+    $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = '" . $houseId . "'";
     $stmtHouse = $dbConn -> prepare($sqlHouse);
     $stmtHouse->execute();
     $houseResults = $stmtHouse->fetch();
 
-    $sqlAgent = "SELECT * FROM commInfo  WHERE license = " . $license . " ORDER BY date DESC LIMIT 1";
+    $sqlAgent = "SELECT * FROM commInfo  WHERE license = '" . $license . "' ORDER BY date DESC LIMIT 1";
     $stmtAgent = $dbConn -> prepare($sqlAgent);
     $stmtAgent->execute();
     $commResults = $stmtAgent->fetch();
