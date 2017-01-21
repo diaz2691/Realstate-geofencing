@@ -125,6 +125,9 @@
       $brokerFee += $commission * .5;
     }
 
+    $message = "wrong answer";
+    echo "<script type='text/javascript'>alert('$userResults');</script>";
+
 
 
      $sql = "INSERT INTO commInfo
