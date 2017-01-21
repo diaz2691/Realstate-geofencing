@@ -122,12 +122,11 @@ ini_set('display_errors', 1);
                     success: function(data, status) 
                     {
                         successmessage = 'Data was succesfully captured';
-                        $("label#successmessage").text(successmessage);
+                        alert(successmessage);
                     },
                     complete: function(data, status) {
                         successmessage = 'Error';
-                        $("label#successmessage").text(successmessage);
-                        alert(status);
+                        alert(successmessage);
                     },
                 });
                 window.location.href = "viewCommissionSheet.php";
