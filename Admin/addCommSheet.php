@@ -141,7 +141,7 @@ ini_set('display_errors', 1);
                         $("label#successmessage").text(successmessage);
                     },
                 });
-                //window.location.href = "viewCommissionSheet.php";
+                window.location.href = "viewCommissionSheet.php";
             }); 
 
             function getLicense()
