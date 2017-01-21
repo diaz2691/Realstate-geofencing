@@ -16,7 +16,7 @@
     $stmtHouse->execute();
     $houseResults = $stmt->fetch();
 
-    $sqlAgent = "SELECT * FROM commInfo ORDER BY date DESC LIMIT 1 WHERE license = $license";
+    $sqlAgent = "SELECT * FROM commInfo  WHERE license = $license ORDER BY date DESC LIMIT 1";
     $stmtAgent = $dbConn -> prepare($sqlHouse);
     $stmtAgent->execute();
     $commResults = $stmt->fetch();
