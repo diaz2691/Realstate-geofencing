@@ -117,13 +117,6 @@ ini_set('display_errors', 1);
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitCommInfo.php",
                     data: 
                     {
-                        // username: username,
-                        //   password: password,
-                        //   firstName: firstName,
-                        //   lastName: lastName,
-                        //   email: email,
-                        // phone: phone,
-                        // license: license
                         license: license,
                         date: date,
                         settlementDate: settlementDate,
@@ -131,14 +124,15 @@ ini_set('display_errors', 1);
                         checkNum: checkNum,
                         houseId: houseId
                     },
-                    success: function(data) 
+                    success: function(data, status) 
                     {
                         successmessage = 'Data was succesfully captured';
                         $("label#successmessage").text(successmessage);
                     },
-                        error: function(data) {
+                    complete: function(data, status) {
                         successmessage = 'Error';
                         $("label#successmessage").text(successmessage);
+                        alert(status);
                     },
                 });
                 window.location.href = "viewCommissionSheet.php";
