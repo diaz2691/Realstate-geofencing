@@ -107,7 +107,11 @@ ini_set('display_errors', 1);
                 var commission = $("#commission").val();
                 var checkNum = $("#checkNum").val();
                 var houseId = $("#houseId").val();
-                alert(license);
+                alert(date);
+                alert(settlementDate);
+                alert(commission);
+                alert(checkNum);
+                alert(houseId);
                 $.ajax({
                     type: "POST",
                     url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitCommInfo.php",
