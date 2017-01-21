@@ -24,8 +24,17 @@
     $stmtAgent->execute();
     $commResults = $stmtAgent->fetch();
 
-    $TYGross = $commResults['TYGross'];
-    $FYGross = $commResults['FYGross']; 
+    if ($commResults->rowCount() > 0) 
+    {
+      $TYGross = $commResults['TYGross'];
+      $FYGross = $commResults['FYGross'];
+    } 
+    else 
+    {
+       $TYGross = 0;
+       $FYGross = 0;
+    }
+     
     $commission = $_POST['commission'];
     $brokerFee = 0;
     $finalComm = 0;
@@ -151,8 +160,8 @@
           $namedParameters[":state"] = $houseResults['state']; 
           $namedParameters[":zip"] = $houseResults['zip'];
 
-          $namedParameters[":TYGross"] =  floatval($commResults['TYGross']) + floatval($_POST['commission']);   
-          $namedParameters[":FYGross"] = floatval($commResults['FYGross']) + floatval($_POST['commission']) - $brokerFee - 349;
+          $namedParameters[":TYGross"] =  floatval($TYGross['TYGross']) + floatval($_POST['commission']);   
+          $namedParameters[":FYGross"] = floatval($FYGross['FYGross']) + floatval($_POST['commission']) - $brokerFee - 349;
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
           $namedParameters[":brokerFee"] = $brokerFee;
@@ -161,3 +170,16 @@
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters); 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
