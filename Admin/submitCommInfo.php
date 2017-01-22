@@ -29,11 +29,11 @@
       $TYGross = $commResults['TYGross'];
       $FYGross = $commResults['FYGross'];
     } 
-    // else 
-    // {
-    //    $TYGross = 0;
-    //    $FYGross = 0;
-    // }
+    else 
+    {
+       $TYGross = 0;
+       $FYGross = 0;
+    }
      
     $commission = $_POST['commission'];
     $brokerFee = 0;
@@ -138,14 +138,14 @@
     }
 
     $message = "wrong answer";
-    echo "<script type='text/javascript'>alert('$userResults');</script>";
+    //echo "<script type='text/javascript'>alert('$userResults');</script>";
 
 
 
-    //  $sql = "INSERT INTO commInfo
-    //               (houseId, license, firstName, lastName, date, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
-    //               VALUES (:houseId, :license, :firstName, :lastName, :date, :settlementDate, :checkNum, :address, :city, :state, :zip, :TYGross, :FYGross, :InitialGross, :brokerFee, :finalComm)";
-    //        $namedParameters = array();
+     $sql = "INSERT INTO commInfo
+                  (houseId, license, firstName, lastName, date, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
+                  VALUES (:houseId, :license, :firstName, :lastName, :date, :settlementDate, :checkNum, :address, :city, :state, :zip, :TYGross, :FYGross, :InitialGross, :brokerFee, :finalComm)";
+           $namedParameters = array();
 
     //       $namedParameters[":houseId"] = $houseId;
     //       $namedParameters[":license"] = $license;
