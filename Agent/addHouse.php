@@ -25,7 +25,7 @@
                 dataType: "json",
                 data: {"address": $("#zip").val() },
                 success: function(data,status) {
-                    alert(data.results.address_components.long_name);
+                    alert(data.results.formatted_address);
                      $("#city").html(data);
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
