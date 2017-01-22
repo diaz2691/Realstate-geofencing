@@ -28,7 +28,7 @@
                      $("#city").html(data);
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
-                     alert(data);
+                     alert(status);
                 }
              });
          }
