@@ -24,11 +24,11 @@
     $stmtAgent->execute();
     $commResults = $stmtAgent->fetch();
 
-    // if ($commResults->rowCount() > 0) 
-    // {
-    //   $TYGross = $commResults['TYGross'];
-    //   $FYGross = $commResults['FYGross'];
-    // } 
+    if ($commResults->rowCount() > 0) 
+    {
+      $TYGross = $commResults['TYGross'];
+      $FYGross = $commResults['FYGross'];
+    } 
     // else 
     // {
     //    $TYGross = 0;
