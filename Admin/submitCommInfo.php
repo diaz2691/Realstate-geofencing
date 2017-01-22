@@ -167,8 +167,8 @@
           $namedParameters[":brokerFee"] = $brokerFee;
           $namedParameters[":finalComm"] =  floatval($_POST['commission']) - $brokerFee - 349;   
 
-    //       $stmt = $dbConn -> prepare($sql);
-    //       $stmt->execute($namedParameters); 
+          $stmt = $dbConn -> prepare($sql);
+          $stmt->execute($namedParameters); 
 
 ?>
 
