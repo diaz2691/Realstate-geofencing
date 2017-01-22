@@ -147,25 +147,25 @@
                   VALUES (:houseId, :license, :firstName, :lastName, :date, :settlementDate, :checkNum, :address, :city, :state, :zip, :TYGross, :FYGross, :InitialGross, :brokerFee, :finalComm)";
            $namedParameters = array();
 
-    //       $namedParameters[":houseId"] = $houseId;
-    //       $namedParameters[":license"] = $license;
-    //       $namedParameters[":firstName"] = $userResults['firstName'];
-    //       $namedParameters[":lastName"] = $userResults['lastName'];     
-    //       $namedParameters[":date"] = $_POST['date'];     
-    //       $namedParameters[":settlementDate"] = $_POST['settlementDate'];     
-    //       $namedParameters[":checkNum"] = $_POST['checkNum'];   
+          $namedParameters[":houseId"] = $houseId;
+          $namedParameters[":license"] = $license;
+          $namedParameters[":firstName"] = $userResults['firstName'];
+          $namedParameters[":lastName"] = $userResults['lastName'];     
+          $namedParameters[":date"] = $_POST['date'];     
+          $namedParameters[":settlementDate"] = $_POST['settlementDate'];     
+          $namedParameters[":checkNum"] = $_POST['checkNum'];   
 
-    //       $namedParameters[":address"] = $houseResults['address'];     
-    //       $namedParameters[":city"] = $houseResults['city'];     
-    //       $namedParameters[":state"] = $houseResults['state']; 
-    //       $namedParameters[":zip"] = $houseResults['zip'];
+          $namedParameters[":address"] = $houseResults['address'];     
+          $namedParameters[":city"] = $houseResults['city'];     
+          $namedParameters[":state"] = $houseResults['state']; 
+          $namedParameters[":zip"] = $houseResults['zip'];
 
-    //       $namedParameters[":TYGross"] =  floatval($TYGross['TYGross']) + floatval($_POST['commission']);   
-    //       $namedParameters[":FYGross"] = floatval($FYGross['FYGross']) + floatval($_POST['commission']) - $brokerFee - 349;
+          $namedParameters[":TYGross"] =  floatval($TYGross['TYGross']) + floatval($_POST['commission']);   
+          $namedParameters[":FYGross"] = floatval($FYGross['FYGross']) + floatval($_POST['commission']) - $brokerFee - 349;
 
-    //       $namedParameters[":InitialGross"] =  $_POST['commission'];   
-    //       $namedParameters[":brokerFee"] = $brokerFee;
-    //       $namedParameters[":finalComm"] =  floatval($_POST['commission']) - $brokerFee - 349;   
+          $namedParameters[":InitialGross"] =  $_POST['commission'];   
+          $namedParameters[":brokerFee"] = $brokerFee;
+          $namedParameters[":finalComm"] =  floatval($_POST['commission']) - $brokerFee - 349;   
 
     //       $stmt = $dbConn -> prepare($sql);
     //       $stmt->execute($namedParameters); 
