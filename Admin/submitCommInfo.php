@@ -24,7 +24,7 @@
     $stmtAgent->execute();
     $commResults = $stmtAgent->fetch();
 
-    if ($commResults->rowCount() > 0) 
+    if (empty($commResults)) 
     {
       $TYGross = $commResults['TYGross'];
       $FYGross = $commResults['FYGross'];
