@@ -24,16 +24,16 @@
     $stmtAgent->execute();
     $commResults = $stmtAgent->fetch();
 
-    if ($commResults->rowCount() > 0) 
-    {
-      $TYGross = $commResults['TYGross'];
-      $FYGross = $commResults['FYGross'];
-    } 
-    else 
-    {
-       $TYGross = 0;
-       $FYGross = 0;
-    }
+    // if ($commResults->rowCount() > 0) 
+    // {
+    //   $TYGross = $commResults['TYGross'];
+    //   $FYGross = $commResults['FYGross'];
+    // } 
+    // else 
+    // {
+    //    $TYGross = 0;
+    //    $FYGross = 0;
+    // }
      
     $commission = $_POST['commission'];
     $brokerFee = 0;
