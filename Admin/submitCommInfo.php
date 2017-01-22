@@ -6,7 +6,7 @@
     $license = $_POST['license'];
     $houseId = $_POST['houseId'];
 
-    $sql = "SELECT * FROM UsersInfo WHERE license = $license";
+    $sql = "SELECT * FROM UsersInfo WHERE license = '".$license."'";
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute();
     $userResults = $stmt->fetch();
@@ -169,7 +169,7 @@
 
     //       $stmt = $dbConn -> prepare($sql);
     //       $stmt->execute($namedParameters); 
-    
+
 ?>
 
 
