@@ -102,7 +102,7 @@ To change this template use Tools | Templates.
              ?>   
              <td>
                <form action="commisionSheet.php">
-                   <input type="hidden" name="agentLicense" value="<?=$result['license']?>" />    
+                   <input type="hidden" name="commId" value="<?=$result['commId']?>" />    
                    <input class="option" type="submit" value="View" name="viewComissionSheet"/>
                </form>   
               </td> 
