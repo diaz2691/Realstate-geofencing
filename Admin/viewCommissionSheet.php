@@ -97,7 +97,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . $result['lastName'] . "</td>";
                 echo "<td>" . htmlspecialchars($result['address'])." ".$result['city'].", ".$result['state']." ".$result['zip']."</td>";
                 echo "<td>" . htmlspecialchars($result['date']) . "</td>";
-                echo "<td>" . htmlspecialchars(date("d-m-Y", $result['settlementDate'])) . "</td>";
+                echo "<td>" . htmlspecialchars(date_format( $result['settlementDate'],"d-m-Y")) . "</td>";
 
              ?>   
 
