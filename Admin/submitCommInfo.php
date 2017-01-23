@@ -28,9 +28,7 @@
       $TYGross = $commResults['TYGross'];
       $FYGross = $commResults['FYGross'];
     
-       
-    
-     
+ 
     $commission = $_POST['commission'];
     $brokerFee = 0;
     $finalComm = 0;
@@ -156,8 +154,8 @@
           $namedParameters[":state"] = $houseResults['state']; 
           $namedParameters[":zip"] = $houseResults['zip'];
 
-          $namedParameters[":TYGross"] =  floatval($TYGross['TYGross']) + floatval($_POST['commission']);   
-          $namedParameters[":FYGross"] = floatval($FYGross['FYGross']) + (floatval($_POST['commission']) - $brokerFee - 349);
+          $namedParameters[":TYGross"] =  $TYGross + $_POST['commission'];   
+          $namedParameters[":FYGross"] = $FYGross + (($_POST['commission'] - $brokerFee - 349);
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
           $namedParameters[":brokerFee"] = $brokerFee;
