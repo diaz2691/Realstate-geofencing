@@ -154,7 +154,7 @@
           $namedParameters[":state"] = $houseResults['state']; 
           $namedParameters[":zip"] = $houseResults['zip'];
 
-          $namedParameters[":TYGross"] =  $TYGross+ $_POST['commission'];   
+          $namedParameters[":TYGross"] =  $TYGross + $_POST['commission'];   
           $namedParameters[":FYGross"] = $FYGross + (($_POST['commission'] - $brokerFee - 349);
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
