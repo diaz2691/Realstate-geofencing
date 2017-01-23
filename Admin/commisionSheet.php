@@ -2,10 +2,10 @@
 
 require("../databaseConnection.php");
 session_start();
-$sqlAgent = "SELECT * FROM commInfo  WHERE commId = '" . $_GET['commId'] . "'";
-$stmtAgent = $dbConn -> prepare($sqlAgent);
-$stmtAgent->execute();
-$comm = $stmtAgent->fetch();
+// $sqlAgent = "SELECT * FROM commInfo  WHERE commId = '" . $_GET['commId'] . "'";
+// $stmtAgent = $dbConn -> prepare($sqlAgent);
+// $stmtAgent->execute();
+// $comm = $stmtAgent->fetch();
 
 
 
