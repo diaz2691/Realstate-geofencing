@@ -56,10 +56,10 @@
         $commission = $commission - $difference;
         if($commission > 0)
         {
-          $difference = 49999 - $commission;
-          if($difference <= 49999)
+          //$difference = 49999 - $commission;
+          if($commission <= 49999)
           {
-            $brokerFee += $difference * .15;
+            $brokerFee += $commission * .15;
           }
           else
           {
@@ -67,10 +67,10 @@
             $commission = $commission - 49999;
             if($commission > 0)
             {
-              $difference = 49999 - $commission;
-              if($difference <= 49999)
+              //$difference = 49999 - $commission;
+              if($commission <= 49999)
               {
-                $brokerFee += $difference * .10;
+                $brokerFee += $commission * .10;
               }
               else
               {
@@ -99,9 +99,9 @@
         $commission = $commission - $difference;
         if($commission > 0)
         {
-          if($difference <= 49999)
+          if($commission <= 49999)
           {
-            $brokerFee += $difference * .10;
+            $brokerFee += $commission * .10;
           }
           else
           {
@@ -161,7 +161,7 @@
           $namedParameters[":zip"] = $houseResults['zip'];
 
           $namedParameters[":TYGross"] =  floatval($TYGross['TYGross']) + floatval($_POST['commission']);   
-          $namedParameters[":FYGross"] = floatval($FYGross['FYGross']) + floatval($_POST['commission']) - $brokerFee - 349;
+          $namedParameters[":FYGross"] = floatval($FYGross['FYGross']) + (floatval($_POST['commission']) - $brokerFee - 349);
 
           $namedParameters[":InitialGross"] =  $_POST['commission'];   
           $namedParameters[":brokerFee"] = $brokerFee;
@@ -169,6 +169,12 @@
 
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters); 
+
+          //100,000
+          // 16,000
+          //  3,000
+          // 81,000 
+          // 80,651
 
 ?>
 
