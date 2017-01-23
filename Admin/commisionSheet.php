@@ -17,8 +17,7 @@ require('fpdf/fpdf.php');
  
         // $data = $_GET["agentNum"];
 
-        if($data == 0)
-        {
+       
             $pdf = new FPDF();
             $pdf->AddPage();
             $pdf->SetFont('Times','I');
@@ -53,7 +52,7 @@ require('fpdf/fpdf.php');
             $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 
             $pdf->Output();
-        }
+        
 
     
 // else{
