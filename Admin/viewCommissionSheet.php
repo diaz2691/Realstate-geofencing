@@ -81,7 +81,7 @@ To change this template use Tools | Templates.
 
         <table class="tftable" border="1">
        
-      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>Edit</th><th>Delete</th></tr>    
+      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Delete</th></tr>    
             
             <?php
             $dbConn = getConnection();
@@ -103,7 +103,7 @@ To change this template use Tools | Templates.
              <td>
                <form action="commissionSheet.php">
                    <input type="hidden" name="agentLicense" value="<?=$result['license']?>" />    
-                   <input class="option" type="submit" value="Edit" name="viewComissionSheet"/>
+                   <input class="option" type="submit" value="View" name="viewComissionSheet"/>
                </form>   
               </td> 
 
