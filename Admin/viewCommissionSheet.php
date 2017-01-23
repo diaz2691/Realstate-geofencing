@@ -100,19 +100,25 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['settlementDate']))) . "</td>";
 
              ?>   
+             <td>
+               <form action="commissionSheet.php">
+                   <input type="hidden" name="agentLicense" value="<?=$result['license']?>" />    
+                   <input class="option" type="submit" value="Edit" name="viewComissionSheet"/>
+               </form>   
+              </td> 
 
              <td>
-                     <form action="editBuyerInfo.php">
-                         <input type="hidden" name="buyerID" value="<?=$result['commId']?>" />    
-                         <input class="option" type="submit" value="Edit" name="editForm"/>
-                     </form>   
-                </td> 
-                <td>
-                      <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
-                         <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
-                         <input class="option" type="submit" value="Delete" name="deleteForm"/>
-                     </form>    
-                </td>
+               <form action="editBuyerInfo.php">
+                   <input type="hidden" name="buyerID" value="<?=$result['commId']?>" />    
+                   <input class="option" type="submit" value="Edit" name="editForm"/>
+                </form>   
+              </td> 
+              <td>
+                <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
+                   <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
+                   <input class="option" type="submit" value="Delete" name="deleteForm"/>
+                </form>    
+              </td>
                </tr>
 
              <?php    
