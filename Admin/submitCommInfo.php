@@ -28,8 +28,7 @@
       $TYGross = $commResults['TYGross'];
       $FYGross = $commResults['FYGross'];
     
-       $TYGross = 0;
-       $FYGross = 0;
+       
     
      
     $commission = $_POST['commission'];
