@@ -14,24 +14,24 @@
     $message = "wrong answer";
     //echo "<script type='text/javascript'>alert('$userResults');</script>";
 
-    $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = '" . $houseId . "'";
-    $stmtHouse = $dbConn -> prepare($sqlHouse);
-    $stmtHouse->execute();
-    $houseResults = $stmtHouse->fetch();
+    // $sqlHouse = "SELECT * FROM HouseInfo WHERE houseId = '" . $houseId . "'";
+    // $stmtHouse = $dbConn -> prepare($sqlHouse);
+    // $stmtHouse->execute();
+    // $houseResults = $stmtHouse->fetch();
 
-    // $sqlAgent = "SELECT * FROM commInfo  WHERE license = '" . $license . "' ORDER BY date DESC LIMIT 1";
-    // $stmtAgent = $dbConn -> prepare($sqlAgent);
-    // $stmtAgent->execute();
-    // $commResults = $stmtAgent->fetch();
+    $sqlAgent = "SELECT * FROM commInfo  WHERE license = '" . $license . "' ORDER BY date DESC LIMIT 1";
+    $stmtAgent = $dbConn -> prepare($sqlAgent);
+    $stmtAgent->execute();
+    $commResults = $stmtAgent->fetch();
 
     
-    //   $TYGross = $commResults['TYGross'];
-    //   $FYGross = $commResults['FYGross'];
+      $TYGross = $commResults['TYGross'];
+      $FYGross = $commResults['FYGross'];
     
  
-    // $commission = $_POST['commission'];
-    // $brokerFee = 0;
-    // $finalComm = 0;
+    $commission = $_POST['commission'];
+    $brokerFee = 0;
+    $finalComm = 0;
 
 
 
