@@ -1,0 +1,114 @@
+ <script type="text/javascript" src="../AdobeSignJsSdk/browser/vendor/superagent.min.js"></script>
+ <script type="text/javascript" src="../AdobeSignJsSdk/browser/vendor/validator.min.js"></script>
+
+ <script type="text/javascript" src="../AdobeSignJsSdk/dist/adobe-sign-sdk.js"></script>
+
+
+<script type="text/javascript">
+
+function SendAgreementUsingTransientDocument() {
+
+   /**
+    * Entry point for this sample client program.
+    */
+
+    var ACCESS_TOKEN = "YOUR_ACCESS_TOKEN";               //Access token to allow  the user to authorize API access  
+    var DIR_NAME = "SAMPLE_DIRECTORY";                    //Path structure of directory containing the file Sample.pdf
+    var FILE_NAME = "SAMPLE_PDF_FILE";                    //Name of the sample document to be used in creating a transient document.
+    var RECIPIENT_EMAIL = "RECIPIENT_EMAIL";              //Email id of recipient.
+    var RECIPIENT_SET_NAME = "SampleRecipientSetName";    //Name of recipient set  
+    var AGREEMENT_NAME = "SampleAgreementName";           //Name of agreement
+    var MIME_TYPE = "application/pdf";                    //Mime type for pdf files.
+
+    var accessTokenKey = "accessToken";
+    var mimeTypeKey = "mimeType";
+
+   //Create a new context.
+   var context = new AdobeSignSdk.Context();
+   var transientDocumentsApi = new AdobeSignSdk.TransientDocumentsApi(context);
+   var agreementsApi = new AdobeSignSdk.AgreementsApi(context);
+   var agreementsModel = AdobeSignSdk.AgreementsModel;
+
+   //Set header parameters
+   var headerParams = {};
+   headerParams[accessTokenKey] = ACCESS_TOKEN;
+
+   var file = document.getElementById('transientdocument').files[0];
+
+   //Make API call to create transient document.
+   transientDocumentsApi.createTransientDocument(headerParams,
+                                               FILE_NAME,
+                                            buffer,
+                                            opts)
+                        .then(function(transientDocumentResponse) {
+                            //Get the id of the transient document.
+                            var transientDocumentId = transientDocumentResponse.getTransientDocumentId();
+
+                            //Create file info object using transient document id
+                            var fileInfo = new agreementsModel.FileInfo();
+                            fileInfo.setTransientDocumentId(transientDocumentId);
+                            var fileInfos = [];
+                            fileInfos.push(fileInfo);
+
+                            //Set email id of recipient.`
+                            var recipientEmail = RECIPIENT_EMAIL;
+                            var recipientInfo = new agreementsModel.RecipientInfo();
+                            recipientInfo.setEmail(recipientEmail);
+
+                            //Create an array of recipients from list of email ids.
+                            var recipientSetMemberInfos = [];
+                            recipientSetMemberInfos.push(recipientInfo);
+
+                            //Create recipient set which will receive the agreement.
+                            var recipientSetInfo = new agreementsModel.RecipientSetInfo();
+                            recipientSetInfo.setRecipientSetMemberInfos(recipientSetMemberInfos);
+                            recipientSetInfo.setRecipientSetRole(agreementsModel.RecipientSetInfo.RecipientSetRoleEnum.SIGNER);
+                            recipientSetInfo.setRecipientSetName(RECIPIENT_SET_NAME);
+
+                            //Set recipient set infos
+                            var recipientSetInfos = [];
+                            recipientSetInfos.push(recipientSetInfo);
+
+                            //Create document creation info.
+                            var documentCreationInfo = new agreementsModel.DocumentCreationInfo();
+                            documentCreationInfo.setName(AGREEMENT_NAME);
+                            documentCreationInfo.setFileInfos(fileInfos);
+                            documentCreationInfo.setRecipientSetInfos(recipientSetInfos);
+                            documentCreationInfo.setSignatureType(agreementsModel.DocumentCreationInfo.SignatureTypeEnum.ESIGN);
+                            documentCreationInfo.setSignatureFlow(agreementsModel.DocumentCreationInfo.SignatureFlowEnum.SENDER_SIGNATURE_NOT_REQUIRED);
+
+                            //Create agreement creation info.
+                            var agreementCreationInfo = new agreementsModel.AgreementCreationInfo();
+                            agreementCreationInfo.setDocumentCreationInfo(documentCreationInfo);
+
+                             //Create agreement using the transient document.
+                            return agreementsApi.createAgreement(headerParams,
+                                                          agreementCreationInfo);
+                        })
+                       .then(function(agreementCreationResponse) {
+                        //Get agreement info using the agreement id.
+                        return agreementsApi.getAgreementInfo(headerParams,
+                                                           agreementCreationResponse.getAgreementId());
+                        })
+                       .then(function(agreementInfo) {
+                        //Display agreement details
+                        console.log("Agreement ID = " + agreementInfo.getAgreementId());
+                        console.log("Agreement Name = " + agreementInfo.getName());
+                        console.log("Agreement Status = " + agreementInfo.getStatus());
+                        })
+                        .catch(function(apiError) {
+                            console.log(apiError)
+                        });
+
+}
+</script>
+
+</head>
+
+<body>
+    Upload file to create Transient Document : <input type=file id="transientdocument"/>
+    <br/><br/>
+    <button onclick="SendAgreementUsingTransientDocument()">Run the Sample</button>
+    <br/><br/>
+</div>
+</body>
