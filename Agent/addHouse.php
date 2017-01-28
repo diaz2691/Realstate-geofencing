@@ -46,7 +46,7 @@
                 var userId = $("#userId").val();  
                 $.ajax({
                     type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Agent/submitHouseInfo.php",
+                    url: "http://52.11.24.75/Agent/submitHouseInfo.php",
                     data: {status: status,
                           address: address,
                           city: city,

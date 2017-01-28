@@ -56,7 +56,7 @@
                 var license = $("#license").val();
                 $.ajax({
                     type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitAgentInfo.php",
+                    url: "http://52.11.24.75/Admin/submitAgentInfo.php",
                     data: {username: username,
                           password: password,
                           firstName: firstName,
