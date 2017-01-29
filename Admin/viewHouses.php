@@ -39,7 +39,8 @@
  <style type="text/css">
                /* .tableHeader {
                     text-align:center;
-                }*/
+                }
+                */
 
               .tableButtons {
                 text-align:center;
