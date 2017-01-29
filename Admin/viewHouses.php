@@ -39,7 +39,8 @@
  <style type="text/css">
                /* .tableHeader {
                     text-align:center;
-                }*/
+                }
+                */
 
               .tableButtons {
                 text-align:center;
@@ -70,7 +71,7 @@
     
 
     <body>
-        <!-- Navigation Bar -->
+        <!-- Navigation Bar  -->
         <?php
             require("adminNav.php");
         ?>
