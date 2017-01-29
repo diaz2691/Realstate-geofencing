@@ -71,7 +71,7 @@
     
 
     <body>
-        <!-- Navigation Bar -->
+        <!-- Navigation Bar  -->
         <?php
             require("adminNav.php");
         ?>
