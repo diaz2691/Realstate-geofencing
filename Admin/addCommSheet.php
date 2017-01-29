@@ -109,7 +109,7 @@ ini_set('display_errors', 1);
                 var houseId = $("#houseId").val();
                 $.ajax({
                     type: "POST",
-                    url: "http://ec2-35-163-86-119.us-west-2.compute.amazonaws.com/Admin/submitCommInfo.php",
+                    url: "http://52.11.24.75/Admin/submitCommInfo.php",
                     data: 
                     {
                         license: license,
