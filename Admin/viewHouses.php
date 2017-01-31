@@ -40,6 +40,7 @@
                /* .tableHeader {
                     text-align:center;
                 }
+                
                 */
 
               .tableButtons {
