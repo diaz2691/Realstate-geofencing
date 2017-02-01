@@ -24,7 +24,7 @@
   var Config = {
 
     //Access token to allow  the user to authorize API access. It can be generated from  the link 'https://secure.echosign.com/public/static/oauthDoc.jsp'. It must have scopes required by the corresponding samples to grant the API different levels of access to data on behalf of the end user
-    "accessToken" : "",
+    "accessToken" : "3AAABLblqZhBAs4ZGWadPWtT9SBmfmYWRjUJ_0Cw43nL0W0BknzXa5o7pLOzAHHhmHYP1aNiwBYn2x7DjssCfnX4-S4pwmTVo",
 
     //First name of the user which will be passed while creating new user
     "userFirstName" : "Testing",
@@ -33,7 +33,7 @@
     "userLastName" : "User",
 
     //Email address of the user which will be used as a sample user while running samples
-    "userEmail" : "",
+    "userEmail" : "realgeo2016@gmail.com",
 
     //The userId or email of the user. If it is not specified, then the caller is inferred from the access token
     "xApiUser" : null,
