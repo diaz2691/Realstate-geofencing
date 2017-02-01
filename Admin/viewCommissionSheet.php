@@ -115,7 +115,7 @@ To change this template use Tools | Templates.
               </td> 
 
               <td>
-                   <input class="option" type="text" value="Send" name="Send" onClick="sendComm(<?=$result['commId']?>)"/>
+                   <input class="option" type="submit" value="Send" name="Send" onClick="sendComm(<?=$result['commId']?>)"/>
               </td>
 
               <td>
