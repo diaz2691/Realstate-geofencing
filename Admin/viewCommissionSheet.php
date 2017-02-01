@@ -81,7 +81,7 @@ To change this template use Tools | Templates.
 
         <table class="tftable" border="1">
        
-      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Delete</th></tr>    
+      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
             
             <?php
             $dbConn = getConnection();
@@ -101,18 +101,23 @@ To change this template use Tools | Templates.
 
              ?>   
              <td>
-               <form action="commisionSheet.php">
+                <form action="commisionSheet.php">
                    <input type="hidden" name="commId" value="<?=$result['commId']?>" />    
                    <input class="option" type="submit" value="View" name="viewComissionSheet"/>
-               </form>   
+                </form>   
               </td> 
 
              <td>
-               <form action="editBuyerInfo.php">
+                <form action="editCommInfo.php">
                    <input type="hidden" name="buyerID" value="<?=$result['commId']?>" />    
                    <input class="option" type="submit" value="Edit" name="editForm"/>
                 </form>   
               </td> 
+
+              <td>
+                   <input class="option" type="text" value="Send" name="Send" onClick="sendComm(<?=$result['commId']?>)"/>
+              </td>
+
               <td>
                 <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
                    <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
@@ -127,4 +132,12 @@ To change this template use Tools | Templates.
         </table>
     <br/><br/><br/><br/><br/><br/>
     </body>
+
+    <script>
+
+      function sendComm(commId)
+      {
+        alert(commId);
+      }
+    </script>
 </html>
