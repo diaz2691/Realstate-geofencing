@@ -1,21 +1,4 @@
-<?php
-    // require("../databaseConnection.php");  
-    // //require("../keys/refreshKeyAdobe.php");
-    // session_start();
-    // $dbConn = getConnection();
 
-    // if(!isset($_SESSION['userId'])) {
-	   //  header("Location: ../index.html?error=wrong username or password");
-    // } 
-
-    // if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-    //     $sql = "DELETE FROM commInfo 
-    //              WHERE commId = '".$_GET['commId']."'";
-    //     $stmt = $dbConn -> prepare($sql);
-    //     $stmt->execute();
-
-    // }
- ?>
 
         
         <!--
