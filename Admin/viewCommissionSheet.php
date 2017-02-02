@@ -128,7 +128,7 @@ To change this template use Tools | Templates.
                </tr>
 
              <?php    
-               } //closes foreach
+               //} //closes foreach
              ?>         
         </table>
     <br/><br/><br/><br/><br/><br/>
