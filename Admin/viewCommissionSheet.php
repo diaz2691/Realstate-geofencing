@@ -136,7 +136,7 @@ To change this template use Tools | Templates.
 
     <script>
 
-      var AT;
+      
       function sendComm(commId)
       {
         alert('<?php echo $cSe?>');
@@ -166,7 +166,7 @@ To change this template use Tools | Templates.
       }
     
       function check(at) 
-        {
+      {
           var call = new XMLHttpRequest();
 
           call.onreadystatechange = function()
@@ -179,10 +179,11 @@ To change this template use Tools | Templates.
           }
 
         xhr.open("GET", "https://api.na1.echosign.com:443/api/rest/v5/base_uris", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.setRequestHeader("Access-Token", at);
         xhr.send();
-        }
+
+      }
 
 
 
