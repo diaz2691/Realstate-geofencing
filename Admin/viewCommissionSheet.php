@@ -136,6 +136,7 @@ To change this template use Tools | Templates.
 
     <script>
 
+      var AT;
       function sendComm(commId)
       {
         alert('<?php echo $cSe?>');
@@ -149,7 +150,8 @@ To change this template use Tools | Templates.
            {
             var response = JSON.parse(xhr.responseText);
             alert(response.access_token);
-
+            
+            check(response.access_token);
            }
          
         }
@@ -163,14 +165,23 @@ To change this template use Tools | Templates.
         
       }
     
-      function processRequest(e) 
+      function check(at) 
         {
-          if (xhr.readyState == 4 && xhr.status == 200) 
+          var call = new XMLHttpRequest();
+
+          call.onreadystatechange = function()
           {
-            var response = JSON.parse(xhr.responseText);
-            alert(response);
+            if (call.readyState == 4 )//&& xhr.status == 200) 
+            {
+              var response = JSON.parse(xhr.responseText);
+              alert(response.api_access_point);
+            }
           }
-         
+
+        xhr.open("POST", "https://api.na1.echosign.com:443/api/rest/v5/base_uris", true);
+        //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Access-Token", at);
+        xhr.send();
         }
 
 
