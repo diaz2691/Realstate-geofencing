@@ -4,17 +4,17 @@
     session_start();
     $dbConn = getConnection();
 
-    if(!isset($_SESSION['userId'])) {
-	    header("Location: ../index.html?error=wrong username or password");
-    } 
+    // if(!isset($_SESSION['userId'])) {
+	   //  header("Location: ../index.html?error=wrong username or password");
+    // } 
 
-    if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-        $sql = "DELETE FROM commInfo 
-                 WHERE commId = '".$_GET['commId']."'";
-        $stmt = $dbConn -> prepare($sql);
-        $stmt->execute();
+    // if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
+    //     $sql = "DELETE FROM commInfo 
+    //              WHERE commId = '".$_GET['commId']."'";
+    //     $stmt = $dbConn -> prepare($sql);
+    //     $stmt->execute();
 
-    }
+    // }
  ?>
 
         
@@ -85,12 +85,12 @@ To change this template use Tools | Templates.
       <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
             
             <?php
-            $dbConn = getConnection();
-            $sql = "SELECT * FROM commInfo ";
-            $stmt = $dbConn -> prepare($sql);
-            $stmt->execute();
-            //$stmt->execute();
-            $results = $stmt->fetchAll();
+            // $dbConn = getConnection();
+            // $sql = "SELECT * FROM commInfo ";
+            // $stmt = $dbConn -> prepare($sql);
+            // $stmt->execute();
+            // //$stmt->execute();
+            // $results = $stmt->fetchAll();
 
             foreach($results as $result){
                 // echo "<tr>";
