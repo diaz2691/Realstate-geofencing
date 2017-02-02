@@ -29,15 +29,15 @@ To change this template use Tools | Templates.
     
     <script>
         
-            function confirmDelete(record) {
-               // alert("hi"); // for testing
-               var deleteRecord = confirm("Are you sure you want to delete " + record + "?");
-               if(!deleteRecord){
-                   return false
-               } else {
-                   return true;
-               }
-            }
+            // function confirmDelete(record) {
+            //    // alert("hi"); // for testing
+            //    var deleteRecord = confirm("Are you sure you want to delete " + record + "?");
+            //    if(!deleteRecord){
+            //        return false
+            //    } else {
+            //        return true;
+            //    }
+            // }
         
         </script>
     
@@ -136,27 +136,27 @@ To change this template use Tools | Templates.
 
     <script>
 
-      function sendComm(commId)
-      {
-        //alert('<?= echo $cSe ?>');
-        // var xhr = new XMLHttpRequest();
-        // xhr.open('POST', "http://api.echosign.com/oauth/token", true);
+      // function sendComm(commId)
+      // {
+      //   //alert('<?= echo $cSe ?>');
+      //   // var xhr = new XMLHttpRequest();
+      //   // xhr.open('POST', "http://api.echosign.com/oauth/token", true);
 
 
-        // xhr.send();
+      //   // xhr.send();
          
-        // xhr.onreadystatechange = processRequest;
+      //   // xhr.onreadystatechange = processRequest;
          
-        // function processRequest(e) 
-        // {
-        //   if (xhr.readyState == 4 && xhr.status == 200) 
-        //   {
-        //     var response = JSON.parse(xhr.responseText);
-        //     alert(response.ip);
-        //   }
+      //   // function processRequest(e) 
+      //   // {
+      //   //   if (xhr.readyState == 4 && xhr.status == 200) 
+      //   //   {
+      //   //     var response = JSON.parse(xhr.responseText);
+      //   //     alert(response.ip);
+      //   //   }
          
-        // }
-      }
+      //   // }
+      // }
     
 
 
