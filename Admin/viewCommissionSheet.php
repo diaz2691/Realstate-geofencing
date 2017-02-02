@@ -142,9 +142,16 @@ To change this template use Tools | Templates.
         var xhr = new XMLHttpRequest();
         xhr.open('POST', "http://api.echosign.com/oauth/token", true);
 
-        xhr.addEventListener("readystatechange", processRequest, false);
 
-        xhr.onreadystatechange = processRequest;
+        xhr.onreadystatechange = function () 
+        {
+          if (xhr.readyState == 4 && xhr.status == 200) 
+          {
+            var response = JSON.parse(xhr.responseText);
+            alert(response);
+          }
+         
+        }
 
         xhr.send();
          
