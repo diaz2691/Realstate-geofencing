@@ -1,8 +1,8 @@
 <?php
-    require("../databaseConnection.php");  
-    //require("../keys/refreshKeyAdobe.php");
-    session_start();
-    $dbConn = getConnection();
+    // require("../databaseConnection.php");  
+    // //require("../keys/refreshKeyAdobe.php");
+    // session_start();
+    // $dbConn = getConnection();
 
     // if(!isset($_SESSION['userId'])) {
 	   //  header("Location: ../index.html?error=wrong username or password");
