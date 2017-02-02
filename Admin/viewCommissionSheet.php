@@ -136,8 +136,8 @@ To change this template use Tools | Templates.
 
     <script>
 
-      function sendComm(commId)
-      {
+      // function sendComm(commId)
+      // {
         //alert('<?php echo $cSe');
         // var xhr = new XMLHttpRequest();
         // xhr.open('POST', "http://api.echosign.com/oauth/token", true);
@@ -156,7 +156,7 @@ To change this template use Tools | Templates.
         //   }
          
         // }
-      }
+      //}
     
 
 
