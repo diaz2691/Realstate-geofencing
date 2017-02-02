@@ -178,7 +178,7 @@ To change this template use Tools | Templates.
             }
           }
 
-        xhr.open("POST", "https://api.na1.echosign.com:443/api/rest/v5/base_uris", true);
+        xhr.open("GET", "https://api.na1.echosign.com:443/api/rest/v5/base_uris", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.setRequestHeader("Access-Token", at);
         xhr.send();
