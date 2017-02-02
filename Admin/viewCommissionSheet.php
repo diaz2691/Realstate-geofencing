@@ -140,7 +140,7 @@ To change this template use Tools | Templates.
       {
         alert('<?php echo $cSe?>');
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', "http://api.echosign.com/oauth/token", true);
+        xhr.open('POST', "http://api.echosign.com/oauth/token", false);
 
 
         xhr.onreadystatechange = function () 
