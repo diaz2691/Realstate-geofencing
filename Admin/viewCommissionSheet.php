@@ -154,7 +154,7 @@ To change this template use Tools | Templates.
          
         }
 
-        xhr.open("POST", "http://api.na1.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", true);
+        xhr.open("POST", "api.na1.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", true);
         xhr.send();
          
         //alert("hi");
