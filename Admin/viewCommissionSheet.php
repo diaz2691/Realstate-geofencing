@@ -1,6 +1,6 @@
 <?php
     require("../databaseConnection.php");  
-    require("../keys/refreshKeyAdobe.php");
+    //require("../keys/refreshKeyAdobe.php");
     session_start();
     $dbConn = getConnection();
 
