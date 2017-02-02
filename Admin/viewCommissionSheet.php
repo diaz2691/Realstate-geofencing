@@ -140,12 +140,12 @@ To change this template use Tools | Templates.
       {
         alert('<?php echo $cSe?>');
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', "http://api.echosign.com/oauth/token", false);
+        
 
 
         xhr.onreadystatechange = function () 
         {
-          if (xhr.readyState == 4 && xhr.status == 200) 
+          if (this.readyState == 4 && this.status == 200) 
           {
             var response = JSON.parse(xhr.responseText);
             alert(response);
@@ -153,9 +153,10 @@ To change this template use Tools | Templates.
          
         }
 
+        xhr.open("POST", "http://api.echosign.com/oauth/token", true);
         xhr.send();
          
-        alert("hi");
+        //alert("hi");
          
         
       }
