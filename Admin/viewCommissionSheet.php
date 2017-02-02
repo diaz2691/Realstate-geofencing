@@ -1,5 +1,6 @@
 <?php
     require("../databaseConnection.php");  
+    //require("../keys/refreshKeyAdobe.php");
     session_start();
     $dbConn = getConnection();
 
@@ -137,7 +138,7 @@ To change this template use Tools | Templates.
 
       function sendComm(commId)
       {
-        //alert('<?php echo $cSe');
+        //alert('<?= echo $cSe ?>');
         // var xhr = new XMLHttpRequest();
         // xhr.open('POST', "http://api.echosign.com/oauth/token", true);
 
