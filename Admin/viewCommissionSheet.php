@@ -155,7 +155,7 @@ To change this template use Tools | Templates.
 
         xhr.send();
          
-        
+        alert("hi");
          
         
       }
