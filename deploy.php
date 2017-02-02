@@ -10,9 +10,6 @@
   $commands = array(
     'echo $PWD',
     'whoami',
-    'git add .',
-    'git commit -m "config git ignore"',
-    'git push',
     'git pull',
     'git status',
   );
