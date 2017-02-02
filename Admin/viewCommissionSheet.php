@@ -136,28 +136,6 @@ To change this template use Tools | Templates.
 
     <script>
 
-      // function sendComm(commId)
-      // {
-        //alert('<?php echo $cSe');
-        // var xhr = new XMLHttpRequest();
-        // xhr.open('POST', "http://api.echosign.com/oauth/token", true);
-
-
-        // xhr.send();
-         
-        // xhr.onreadystatechange = processRequest;
-         
-        // function processRequest(e) 
-        // {
-        //   if (xhr.readyState == 4 && xhr.status == 200) 
-        //   {
-        //     var response = JSON.parse(xhr.responseText);
-        //     alert(response.ip);
-        //   }
-         
-        // }
-      //}
-    
 
 
 
