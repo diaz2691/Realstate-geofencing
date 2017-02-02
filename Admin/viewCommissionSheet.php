@@ -141,7 +141,8 @@ To change this template use Tools | Templates.
         alert('<?php echo $cSe?>');
         var xhr = new XMLHttpRequest();
         xhr.open('POST', "http://api.echosign.com/oauth/token", true);
-
+        
+        xhr.addEventListener("readystatechange", processRequest, false);
 
         xhr.send();
          
