@@ -148,7 +148,10 @@ To change this template use Tools | Templates.
          
         xhr.onreadystatechange = processRequest;
          
-        function processRequest(e) 
+        
+      }
+    
+      function processRequest(e) 
         {
           if (xhr.readyState == 4 && xhr.status == 200) 
           {
@@ -157,9 +160,6 @@ To change this template use Tools | Templates.
           }
          
         }
-      }
-    
-
 
 
 
