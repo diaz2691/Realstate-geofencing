@@ -173,7 +173,7 @@ To change this template use Tools | Templates.
           {
             if (call.readyState == 4 )//&& xhr.status == 200) 
             {
-              var response = JSON.parse(xhr.responseText);
+              var response = JSON.parse(call.responseText);
               alert(response.api_access_point);
             }
           }
