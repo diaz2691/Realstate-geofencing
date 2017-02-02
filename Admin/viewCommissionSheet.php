@@ -71,67 +71,7 @@ To change this template use Tools | Templates.
 
     <body>
                         <!-- Navigation Bar -->
-        <?php
-            require("adminNav.php");
-        ?> 
-        <br/><br/><h2 id="header2">Commission Sheets &#x2713</h2> 
-
-        <form action="addCommSheet.php">  
-            <input type="submit" value="Add New Commission Sheet" name="addForm"/>
-        </form>  
-
-        <table class="tftable" border="1">
-       
-      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
-            
-            <?php
-            // $dbConn = getConnection();
-            // $sql = "SELECT * FROM commInfo ";
-            // $stmt = $dbConn -> prepare($sql);
-            // $stmt->execute();
-            // //$stmt->execute();
-            // $results = $stmt->fetchAll();
-
-            foreach($results as $result){
-                // echo "<tr>";
-                // echo "<td>" . $result['firstName'] . "</td>";
-                // echo "<td>" . $result['lastName'] . "</td>";
-                // echo "<td>" . htmlspecialchars($result['address'])." ".$result['city'].", ".$result['state']." ".$result['zip']."</td>";
-                // echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['date']))) . "</td>";
-                // echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['settlementDate']))) . "</td>";
-
-             ?>   
-             <td>
-                <form action="commisionSheet.php">
-                   <input type="hidden" name="commId" value="<?=$result['commId']?>" />    
-                   <input class="option" type="submit" value="View" name="viewComissionSheet"/>
-                </form>   
-              </td> 
-
-             <td>
-                <form action="editCommInfo.php">
-                   <input type="hidden" name="buyerID" value="<?=$result['commId']?>" />    
-                   <input class="option" type="submit" value="Edit" name="editForm"/>
-                </form>   
-              </td> 
-
-              <td>
-                   <input class="option" type="submit" value="Send" name="Send" onClick="sendComm(<?=$result['commId']?>)"/>
-              </td>
-
-              <td>
-                <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
-                   <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
-                   <input class="option" type="submit" value="Delete" name="deleteForm"/>
-                </form>    
-              </td>
-               </tr>
-
-             <?php    
-               } //closes foreach
-             ?>         
-        </table>
-    <br/><br/><br/><br/><br/><br/>
+        
     </body>
 
    
