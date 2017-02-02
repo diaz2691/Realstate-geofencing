@@ -1,4 +1,21 @@
+<?php
+    // require("../databaseConnection.php");  
+    // //require("../keys/refreshKeyAdobe.php");
+    // session_start();
+    // $dbConn = getConnection();
 
+    // if(!isset($_SESSION['userId'])) {
+	   //  header("Location: ../index.html?error=wrong username or password");
+    // } 
+
+    // if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
+    //     $sql = "DELETE FROM commInfo 
+    //              WHERE commId = '".$_GET['commId']."'";
+    //     $stmt = $dbConn -> prepare($sql);
+    //     $stmt->execute();
+
+    // }
+ ?>
 
         
         <!--
@@ -10,7 +27,19 @@ To change this template use Tools | Templates.
 <head>
     <title>Commission Sheet</title>
     
-    
+    <script>
+        
+            // function confirmDelete(record) {
+            //    // alert("hi"); // for testing
+            //    var deleteRecord = confirm("Are you sure you want to delete " + record + "?");
+            //    if(!deleteRecord){
+            //        return false
+            //    } else {
+            //        return true;
+            //    }
+            // }
+        
+        </script>
     
     <meta charset = "utf-8"/>
  <style type="text/css">
@@ -55,7 +84,23 @@ To change this template use Tools | Templates.
        
       <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
             
-             
+            <?php
+            // $dbConn = getConnection();
+            // $sql = "SELECT * FROM commInfo ";
+            // $stmt = $dbConn -> prepare($sql);
+            // $stmt->execute();
+            // //$stmt->execute();
+            // $results = $stmt->fetchAll();
+
+            // foreach($results as $result){
+            //     echo "<tr>";
+            //     echo "<td>" . $result['firstName'] . "</td>";
+            //     echo "<td>" . $result['lastName'] . "</td>";
+            //     echo "<td>" . htmlspecialchars($result['address'])." ".$result['city'].", ".$result['state']." ".$result['zip']."</td>";
+            //     echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['date']))) . "</td>";
+            //     echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['settlementDate']))) . "</td>";
+
+             ?>   
              <td>
                 <form action="commisionSheet.php">
                    <input type="hidden" name="commId" value="<?=$result['commId']?>" />    
@@ -82,12 +127,37 @@ To change this template use Tools | Templates.
               </td>
                </tr>
 
-                   
+             <?php    
+               //} //closes foreach
+             ?>         
         </table>
     <br/><br/><br/><br/><br/><br/>
     </body>
 
-   
+    <script>
+
+      // function sendComm(commId)
+      // {
+        //alert('<?php echo $cSe');
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('POST', "http://api.echosign.com/oauth/token", true);
+
+
+        // xhr.send();
+         
+        // xhr.onreadystatechange = processRequest;
+         
+        // function processRequest(e) 
+        // {
+        //   if (xhr.readyState == 4 && xhr.status == 200) 
+        //   {
+        //     var response = JSON.parse(xhr.responseText);
+        //     alert(response.ip);
+        //   }
+         
+        // }
+      //}
+    
 
 
 
