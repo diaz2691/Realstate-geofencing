@@ -148,12 +148,13 @@ To change this template use Tools | Templates.
            if (this.readyState == 4) // && this.status == 401) 
            {
             var response = JSON.parse(xhr.responseText);
-            alert(response.error_description);
+            alert(response.access_token);
+
            }
          
         }
 
-        xhr.open("POST", "http://api.echosign.com/oauth/token", true);
+        xhr.open("POST", "http://api.na1.echosign.com/oauth/refresh?refresh_token='<?php$rToken?>'+client_id='<?php$cId?>'+client_secret='<?php$cSe?>'+grant_type=refresh_token", true);
         xhr.send();
          
         //alert("hi");
