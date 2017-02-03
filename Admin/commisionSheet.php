@@ -59,6 +59,6 @@ $file = $pdf->Output("S", "CommSheet.pdf");
 
 
 
-echo $pdf;    
+echo $pdf->Output();    
 
 ?>
