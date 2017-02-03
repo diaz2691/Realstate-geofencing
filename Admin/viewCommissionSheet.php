@@ -139,6 +139,20 @@ To change this template use Tools | Templates.
       {
         var token = refreshToken();
 
+        var pdf = new XMLHttpRequest();
+        pdf.onreadystatechange = function()
+        {
+          if (this.readyState == 4) // && this.status == 401) 
+           {
+            var response = JSON.parse(pdf.responseText);
+            alert(response);
+            
+           return ;
+           }
+        }
+        xhr.open("GET", "commisionSheet.php", true);
+        xhr.setRequestHeader("Content-Type", "multipart/form-data");
+        xhr.send();
         // var data = new FormData();
         // data.append("File", "guide.pdf");
         // data.append("File-Name", "guide");
