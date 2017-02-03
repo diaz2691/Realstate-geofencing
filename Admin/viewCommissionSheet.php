@@ -145,7 +145,9 @@ To change this template use Tools | Templates.
           if (this.readyState == 4) // && this.status == 401) 
            {
             var response = pdf.responseText;
-            alert(response);
+            var file = window.URL.createObjectURL(this.response);
+
+            alert(file);
             
            return ;
            }
