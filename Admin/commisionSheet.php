@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: application/pdf');
 require("../databaseConnection.php");
 session_start();
 $dbConn = getConnection();
