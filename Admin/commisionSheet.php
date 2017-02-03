@@ -54,10 +54,6 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 $pdf->Output();
 
-$file = $pdf->Output("S", "CommSheet.pdf");
 
-
-
-echo $pdf->Output();    
 
 ?>
