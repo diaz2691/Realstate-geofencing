@@ -53,11 +53,12 @@ $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 
-$pdf->Output();
-        
+$pdf->Output("S", "CommSheet.pdf");
 
-$json = json_encode($pdf);
+$file = $pdf->Output();
 
-echo $json;    
+
+
+echo $file;    
 
 ?>
