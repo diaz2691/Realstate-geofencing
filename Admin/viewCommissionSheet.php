@@ -150,9 +150,9 @@ To change this template use Tools | Templates.
            return ;
            }
         }
-        xhr.open("GET", "commisionSheet.php", true);
-        xhr.setRequestHeader("Content-Type", "multipart/form-data");
-        xhr.send();
+        pdf.open("GET", "commisionSheet.php", true);
+        pdf.setRequestHeader("Content-Type", "multipart/form-data");
+        pdf.send();
         // var data = new FormData();
         // data.append("File", "guide.pdf");
         // data.append("File-Name", "guide");
