@@ -135,15 +135,32 @@ To change this template use Tools | Templates.
     </body>
 
     <script>
-
-      
       function sendComm(commId)
       {
-        alert('<?php echo $cSe?>');
+        var token = refreshToken();
+
+        // var data = new FormData();
+        // data.append("File", "guide.pdf");
+        // data.append("File-Name", "guide");
+
+        // var xhr = new XMLHttpRequest();
+        // xhr.withCredentials = true;
+
+        // xhr.addEventListener("readystatechange", function () {
+        //   if (this.readyState === 4) {
+        //     console.log(this.responseText);
+        //   }
+        // });
+
+        // xhr.open("POST", "https://api.na1.echosign.com/api/rest/v5/transientDocuments");
+        // xhr.setRequestHeader("access-token", token);
+
+        // xhr.send(data);
+      }
+      
+      function refreshToken()
+      {
         var xhr = new XMLHttpRequest();
-        
-
-
         xhr.onreadystatechange = function () 
         {
            if (this.readyState == 4) // && this.status == 401) 
@@ -151,7 +168,7 @@ To change this template use Tools | Templates.
             var response = JSON.parse(xhr.responseText);
            // alert(response.access_token);
             
-            check(response.access_token);
+           return response.access_token;
            }
          
         }
@@ -165,25 +182,7 @@ To change this template use Tools | Templates.
         
       }
     
-      function check(at) 
-      {
-          var call = new XMLHttpRequest();
-
-          call.onreadystatechange = function()
-          {
-            if (call.readyState == 4 )//&& xhr.status == 200) 
-            {
-              var response = JSON.parse(call.responseText);
-              alert(response.api_access_point);
-            }
-          }
-
-        call.open("GET", "https://api.na1.echosign.com:443/api/rest/v5/base_uris", true);
-        //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        call.setRequestHeader("Access-Token", at);
-        call.send();
-
-      }
+      
 
 
 
