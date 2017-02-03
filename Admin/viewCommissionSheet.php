@@ -146,7 +146,7 @@ To change this template use Tools | Templates.
            {
             var response = pdf.responseText;
             alert(response);
-            window.open("data:application/pdf;base64," + Base64.encode(response));
+            window.open("data:application/pdf;base64," + btoa(response));
            return ;
            }
         }
