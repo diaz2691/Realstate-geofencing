@@ -53,9 +53,9 @@ $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 
-$pdf->Output("S", "CommSheet.pdf");
+$pdf->Output();
 
-$file = $pdf->Output();
+$file = $pdf->Output("S", "CommSheet.pdf");
 
 
 
