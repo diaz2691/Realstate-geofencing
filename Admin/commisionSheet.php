@@ -1,5 +1,6 @@
 <?php
 require("../databaseConnection.php");
+require("../keys/refreshKeyAdobe.php");
 session_start();
 $dbConn = getConnection();
 
@@ -54,22 +55,52 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 
 
-if(isset($_GET['hello']))
+if(isset($_POST['token']))
 {
-	echo "
-	<script>
-	var newVal = " . $_GET['hello'] . " * 2;
-	console.log(newVal);
-	setTimeout(fa(),3000);
+	echo '<script>
+	
 
-	function fa()
-	{
-		" . sleep(3) . ";
-		console.log('sleep good');
-	}
-	</script>
+		 var data = new FormData();
+         data.append("File", "guide.pdf");
+         data.append("File-Name", "guide");
 
-	";
+         var xhr = new XMLHttpRequest();
+         xhr.withCredentials = true;
+
+         xhr.onreadystatechange = function() 
+         {
+           if (this.readyState === 4) 
+           {
+           	var response = JSON.parse(xhr.responseText);
+            alert(response.transientDocumentId);
+            
+           
+            console.log(response.transientDocumentId);
+
+            sendDocument(response.transientDocumentId)
+           }
+         }
+
+         xhr.open("POST", "https://api.na1.echosign.com/api/rest/v5/transientDocuments");
+         xhr.setRequestHeader("access-token", "'.$_POST['token'].'");
+
+         xhr.send(data);
+
+
+         function sendDocument(TID)
+         {
+
+         }
+
+
+
+
+
+
+
+
+
+	</script>';
 
 	
 }

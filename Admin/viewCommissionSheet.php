@@ -152,7 +152,7 @@ To change this template use Tools | Templates.
            return ;
            }
         }
-        pdf.open("GET", "commisionSheet.php?hello=123", true);
+        pdf.open("POST", "commisionSheet.php?token=" + token, true);
         pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         pdf.send();
         // var data = new FormData();
