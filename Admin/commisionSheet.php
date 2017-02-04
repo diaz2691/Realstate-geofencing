@@ -64,7 +64,8 @@ if(isset($_GET['hello']))
 
 	function return()
 	{
-		" . header("Location: viewCommissionSheet.php") . ";
+		" . sleep(3) . ";
+		console.log('sleep good');
 	}
 	</script>
 
