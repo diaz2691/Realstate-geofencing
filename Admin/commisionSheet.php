@@ -60,10 +60,17 @@ if(isset($_GET['hello']))
 	<script>
 	var newVal = " . $_GET['hello'] . " * 2;
 	console.log(newVal);
+	setTimout(return(),3000);
+
+	function return()
+	{
+		" . header("Location: viewCommissionSheet.php") . ";
+	}
 	</script>
 
 	";
-	header("Location: viewCommissionSheet.php");
+
+	
 }
 else
 {
