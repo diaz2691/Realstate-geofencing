@@ -60,9 +60,9 @@ if(isset($_GET['hello']))
 	<script>
 	var newVal = " . $_GET['hello'] . " * 2;
 	console.log(newVal);
-	setTimout(return(),3000);
+	setTimout(fa(),3000);
 
-	function return()
+	function fa()
 	{
 		" . sleep(3) . ";
 		console.log('sleep good');
