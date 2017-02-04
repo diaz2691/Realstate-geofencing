@@ -106,6 +106,7 @@ if(isset($_POST['token']))
 }
 else
 {
-	$pdf->Output();
+	$file_contents = $pdf->Output("mypdf.pdf","S");
+	//$pdf->Output();
 }
 ?>
