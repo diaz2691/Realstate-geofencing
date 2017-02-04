@@ -63,6 +63,7 @@ if(isset($_GET['hello']))
 	</script>
 
 	";
+	header("Location: viewCommissionSheet.php");
 }
 else
 {
