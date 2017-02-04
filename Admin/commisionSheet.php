@@ -54,6 +54,12 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 $pdf->Output();
 
-
-
+if(isset($_GET['hello']))
+{
+	echo "
+	<script>
+	alert('it will work');
+	</script>
+	";
+}
 ?>
