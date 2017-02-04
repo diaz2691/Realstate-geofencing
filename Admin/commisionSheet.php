@@ -58,7 +58,7 @@ if(isset($_GET['hello']))
 {
 	echo "
 	<script>
-	var newVal = "$_GET['hello']" * 2;
+	var newVal = " . $_GET['hello'] . " * 2;
 	console.log(newVal);
 	</script>
 
