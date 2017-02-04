@@ -3,8 +3,17 @@ require("../databaseConnection.php");
 require("../keys/refreshKeyAdobe.php");
 session_start();
 $dbConn = getConnection();
+$commId;
+if(!isset($_GET['commId']))
+{
+	$commId = $_POST['id'];
+}
+else
+{
+	$commId = $_GET['commId'];
+}
 
-$sqlAgent = "SELECT * FROM commInfo  WHERE commId = '" . $_GET['commId'] . "'";
+$sqlAgent = "SELECT * FROM commInfo  WHERE commId = '" . $commId . "'";
 $stmtAgent = $dbConn -> prepare($sqlAgent);
 $stmtAgent->execute();
 $comm = $stmtAgent->fetch();

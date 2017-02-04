@@ -116,10 +116,9 @@ To change this template use Tools | Templates.
               </td> 
 
               <td>
-                <form action="commisionSheet.php">
-                  <input type="hidden" name="hello" value="123" />  
-                   <input class="option" type="submit" value="Send" name="Send"/>
-                 </form>
+                 
+                   <input class="option" type="submit" value="Send" name="Send" onclick="sendComm(<?=$result['commId']?>)"/>
+                
               </td>
 
               <td>
@@ -152,7 +151,7 @@ To change this template use Tools | Templates.
            return ;
            }
         }
-        pdf.open("POST", "commisionSheet.php?token=" + token, true);
+        pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
         pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         pdf.send();
         // var data = new FormData();
