@@ -52,7 +52,7 @@ $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 
-$pdf->Output();
+
 
 if(isset($_GET['hello']))
 {
@@ -61,5 +61,9 @@ if(isset($_GET['hello']))
 	alert('it will work');
 	</script>
 	";
+}
+else
+{
+	$pdf->Output();
 }
 ?>
