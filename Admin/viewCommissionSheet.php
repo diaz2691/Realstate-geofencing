@@ -116,8 +116,9 @@ To change this template use Tools | Templates.
               </td> 
 
               <td>
-                <form action="commisionSheet.php?hello=123"
+                <form action="commisionSheet.php?hello=123">
                    <input class="option" type="submit" value="Send" name="Send"/>
+                 </form>
               </td>
 
               <td>
