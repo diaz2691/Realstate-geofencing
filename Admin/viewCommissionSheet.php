@@ -151,7 +151,7 @@ To change this template use Tools | Templates.
            }
         }
         pdf.open("GET", "commisionSheet.php?hello=123", true);
-        pdf.setRequestHeader("Content-Type", "application/pdf");
+        //pdf.setRequestHeader("Content-Type", "application/pdf");
         pdf.send();
         // var data = new FormData();
         // data.append("File", "guide.pdf");
