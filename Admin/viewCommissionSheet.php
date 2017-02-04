@@ -144,14 +144,14 @@ To change this template use Tools | Templates.
         {
           if (this.readyState == 4) // && this.status == 401) 
            {
-            // var response = pdf.responseText;
-            // console.log(response);
+             var response = pdf.responseText;
+             alert(response);
             
            return ;
            }
         }
         pdf.open("GET", "commisionSheet.php?hello=123", true);
-        //pdf.setRequestHeader("Content-Type", "application/pdf");
+        pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         pdf.send();
         // var data = new FormData();
         // data.append("File", "guide.pdf");

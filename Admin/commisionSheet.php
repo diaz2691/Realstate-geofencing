@@ -58,8 +58,10 @@ if(isset($_GET['hello']))
 {
 	echo "
 	<script>
-	alert('it will work');
+	var newVal = $_GET['hello'] * 2;
+	console.log(newVal);
 	</script>
+
 	";
 }
 else
