@@ -57,21 +57,22 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 if(isset($_POST['token']))
 {
+	$file_contents = $pdf->Output($_GET['commId'] . ".pdf","S");
 	echo '<script>
 	
 
 		 var data = new FormData();
-         data.append("File", "guide.pdf");
-         data.append("File-Name", "guide");
+         data.append("File", <?php echo $file_contents?>);
+         data.append("File-Name", <?php echo $_GET["commId"]?>;
 
          var xhr = new XMLHttpRequest();
-         xhr.withCredentials = true;
 
          xhr.onreadystatechange = function() 
          {
            if (this.readyState === 4) 
            {
            	var response = JSON.parse(xhr.responseText);
+           	alert(response);
             alert(response.transientDocumentId);
             
            
@@ -106,7 +107,7 @@ if(isset($_POST['token']))
 }
 else
 {
-	//$file_contents = $pdf->Output("mypdf.pdf","S");
+	
 	$pdf->Output();
 }
 ?>
