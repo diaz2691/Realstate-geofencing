@@ -60,7 +60,7 @@ if(isset($_GET['hello']))
 	<script>
 	var newVal = " . $_GET['hello'] . " * 2;
 	console.log(newVal);
-	setTimout(fa(),3000);
+	setTimeout(fa(),3000);
 
 	function fa()
 	{
