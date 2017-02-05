@@ -166,7 +166,7 @@ To change this template use Tools | Templates.
         form.submit();
        }
 
-   // redirect('commisionSheet.php', 'post',token,commId);
+    redirect('commisionSheet.php', 'post',token,commId);
         // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
         // pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         // pdf.send();
