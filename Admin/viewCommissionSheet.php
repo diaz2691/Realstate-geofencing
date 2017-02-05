@@ -163,7 +163,7 @@ To change this template use Tools | Templates.
 
         var cId = document.createElement('input');
         cId.setAttribute("name", "id");
-        cId.setAttribute("value",tcomm);
+        cId.setAttribute("value",comm);
         form.appendChild(cId);
 
         form.submit();
