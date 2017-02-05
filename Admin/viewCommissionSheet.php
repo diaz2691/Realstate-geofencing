@@ -139,10 +139,24 @@ To change this template use Tools | Templates.
     <script>
       function sendComm(commId)
       {
-        refreshToken(commId);
+        var token = refreshToken();
 
         
-      
+        var form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action','commisionSheet.php');
+
+        var tInput = document.createElement('input');
+        tInput.setAttribute("name", "token");
+        tInput.setAttribute("value",token);
+        form.appendChild(tInput);
+
+        var cId = document.createElement('input');
+        cId.setAttribute("name", "id");
+        cId.setAttribute("value",commId);
+        form.appendChild(cId);
+
+        form.submit();
        
 
         // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
@@ -169,21 +183,21 @@ To change this template use Tools | Templates.
         // xhr.send(data);
       }
       
-      function refreshToken(comm)
+      function refreshToken()
       {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () 
         {
-           if (this.readyState == 4 && this.status == 200) 
+           if (this.readyState == 4 && this.status == 401) 
            {
             var response = JSON.parse(xhr.responseText);
             
-           other(response.access_token,comm);
+           return response.access_token;
            }
          
         }
 
-        xhr.open("POST", "http://api.na2.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", true);
+        xhr.open("POST", "http://api.na2.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", false);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send();
          
@@ -191,25 +205,7 @@ To change this template use Tools | Templates.
          
         
       }
-    function other(at,comm)
-    {
-
-       var form = document.createElement('form');
-        form.setAttribute('method', 'post');
-        form.setAttribute('action','commisionSheet.php');
-
-        var tInput = document.createElement('input');
-        tInput.setAttribute("name", "token");
-        tInput.setAttribute("value",at);
-        form.appendChild(tInput);
-
-        var cId = document.createElement('input');
-        cId.setAttribute("name", "id");
-        cId.setAttribute("value",comm);
-        form.appendChild(cId);
-
-        form.submit();
-    }
+    
       
 
 
