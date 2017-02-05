@@ -68,7 +68,7 @@ if(isset($_POST['token']))
 {
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 	echo '<script>
-		console.log("' . echo $_POST["token"]. '");
+		console.log("' . echo $_POST['token']. '");
 		 
 
 
