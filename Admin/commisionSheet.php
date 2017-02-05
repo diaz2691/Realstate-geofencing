@@ -98,43 +98,7 @@ if(isset($_POST['token']))
 
 
 
-         	var data = JSON.stringify({
-			  "documentCreationInfo": {
-			    "fileInfos": [
-			      {
-			        "transientDocumentId": TID
-			      }
-			    ],
-			    "name": fName ,
-			    "recipientSetInfos": [
-			      {
-			        "recipientSetMemberInfos": [
-			          {
-			            "email": "jodiaz@csumb.edu"
-			          }
-			        ],
-			        "recipientSetRole": "SIGNER"
-			      }
-			    ],
-			    "signatureType": "ESIGN",
-			    "signatureFlow": "SENDER_SIGNATURE_NOT_REQUIRED"
-			  }
-			});
-
-			var xhr = new XMLHttpRequest();
-
-			xhr.addEventListener("readystatechange", function () {
-			  if (this.readyState === 4) {
-			    console.log(this.responseText);
-			  }
-			});
-
-			xhr.open("POST", "https://api.na2.echosign.com:443/api/rest/v5/agreements");
-			xhr.setRequestHeader("access-token", At);
-			xhr.setRequestHeader("content-type", "application/json");
-			
-
-			xhr.send(data);
+         	
          }
 
 
