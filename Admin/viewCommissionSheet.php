@@ -141,20 +141,10 @@ To change this template use Tools | Templates.
       {
         var token = refreshToken();
 
-        //var pdf = new XMLHttpRequest();
-        // pdf.onreadystatechange = function()
-        // {
-        //   if (this.readyState == 4) // && this.status == 401) 
-        //    {
-             
-            
-        //    return ;
-        //    }
-        // }
-        var redirect = function(url, method,tok,comm) {
+        
         var form = document.createElement('form');
-        form.setAttribute('method', method);
-        form.setAttribute('action',url);
+        form.setAttribute('method', 'post');
+        form.setAttribute('action','commisionSheet.php');
 
         var tInput = document.createElement('input');
         tInput.setAttribute("name", "token");
@@ -163,13 +153,12 @@ To change this template use Tools | Templates.
 
         var cId = document.createElement('input');
         cId.setAttribute("name", "id");
-        cId.setAttribute("value",comm);
+        cId.setAttribute("value",commId);
         form.appendChild(cId);
 
         form.submit();
-       }
+       
 
-    redirect('commisionSheet.php', 'post',token,commId);
         // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
         // pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         // pdf.send();
