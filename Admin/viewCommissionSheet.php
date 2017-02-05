@@ -139,24 +139,10 @@ To change this template use Tools | Templates.
     <script>
       function sendComm(commId)
       {
-        var token = refreshToken();
+        refreshToken(commId);
 
         
-        var form = document.createElement('form');
-        form.setAttribute('method', 'post');
-        form.setAttribute('action','commisionSheet.php');
-
-        var tInput = document.createElement('input');
-        tInput.setAttribute("name", "token");
-        tInput.setAttribute("value",token);
-        form.appendChild(tInput);
-
-        var cId = document.createElement('input');
-        cId.setAttribute("name", "id");
-        cId.setAttribute("value",commId);
-        form.appendChild(cId);
-
-        form.submit();
+      
        
 
         // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
@@ -183,7 +169,7 @@ To change this template use Tools | Templates.
         // xhr.send(data);
       }
       
-      function refreshToken()
+      function refreshToken(comm)
       {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () 
@@ -192,7 +178,7 @@ To change this template use Tools | Templates.
            {
             var response = JSON.parse(xhr.responseText);
             
-           return response.access_token;
+           other(response.access_token,comm);
            }
          
         }
@@ -205,7 +191,25 @@ To change this template use Tools | Templates.
          
         
       }
-    
+    function other(at,comm)
+    {
+
+       var form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action','commisionSheet.php');
+
+        var tInput = document.createElement('input');
+        tInput.setAttribute("name", "token");
+        tInput.setAttribute("value",at);
+        form.appendChild(tInput);
+
+        var cId = document.createElement('input');
+        cId.setAttribute("name", "id");
+        cId.setAttribute("value",comm);
+        form.appendChild(cId);
+
+        form.submit();
+    }
       
 
 
