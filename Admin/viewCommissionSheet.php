@@ -199,7 +199,7 @@ To change this template use Tools | Templates.
            if (this.readyState == 4) // && this.status == 401) 
            {
             var response = JSON.parse(xhr.responseText);
-            alert(response.access_token);
+            console.log(response.access_token);
             
            return response.access_token;
            }
