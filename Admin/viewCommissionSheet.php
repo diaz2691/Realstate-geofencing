@@ -158,11 +158,11 @@ To change this template use Tools | Templates.
         var tInput = document.createElement('input');
         tInput.name = "token";
         tInput.value = token;
-        form.append(tInput);
+        form.appendChild(tInput);
         var cId = document.createElement('input');
         cId.name = "id";
         cId.value = comm;
-        form.append(cId);
+        form.appendChild(cId);
         form.submit();
        }
 
