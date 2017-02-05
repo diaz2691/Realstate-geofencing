@@ -68,7 +68,8 @@ if(isset($_POST['token']))
 {
 	$file_contents = $pdf->Output($_GET['commId'] . ".pdf","S");
 	echo '<script>
-	
+		
+		 var token = '.$_POST['token'].';
 
 		 var data = new FormData();
          data.append("File", <?php echo $file_contents?>);
@@ -81,25 +82,59 @@ if(isset($_POST['token']))
            if (this.readyState === 4) 
            {
            	var response = JSON.parse(xhr.responseText);
-           	alert(response);
-            alert(response.transientDocumentId);
-            
            
-            console.log(response.transientDocumentId);
-
-            sendDocument(response.transientDocumentId)
+            sendDocument(response.transientDocumentId,<?php echo $file_contents?>,aToken)
            }
          }
 
-         xhr.open("POST", "https://api.na1.echosign.com/api/rest/v5/transientDocuments");
-         xhr.setRequestHeader("access-token", "'.$_POST['token'].'");
+         xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
+         xhr.setRequestHeader("access-token", token);
 
          xhr.send(data);
 
 
-         function sendDocument(TID)
+         function sendDocument(TID,fName,aT)
          {
 
+
+
+         	var data = JSON.stringify({
+			  "documentCreationInfo": {
+			    "fileInfos": [
+			      {
+			        "transientDocumentId": TID
+			      }
+			    ],
+			    "name": fName ,
+			    "recipientSetInfos": [
+			      {
+			        "recipientSetMemberInfos": [
+			          {
+			            "email": "jodiaz@csumb.edu"
+			          }
+			        ],
+			        "recipientSetRole": "SIGNER"
+			      }
+			    ],
+			    "signatureType": "ESIGN",
+			    "signatureFlow": "SENDER_SIGNATURE_NOT_REQUIRED"
+			  }
+			});
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.addEventListener("readystatechange", function () {
+			  if (this.readyState === 4) {
+			    console.log(this.responseText);
+			  }
+			});
+
+			xhr.open("POST", "https://api.na2.echosign.com:443/api/rest/v5/agreements");
+			xhr.setRequestHeader("access-token", At);
+			xhr.setRequestHeader("content-type", "application/json");
+			
+
+			xhr.send(data);
          }
 
 
