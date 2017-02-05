@@ -151,14 +151,20 @@ To change this template use Tools | Templates.
            return ;
            }
         }
-        var redirect = function(url, method) {
+        var redirect = function(url, method,tok,comm) {
         var form = document.createElement('form');
         form.method = method;
         form.action = url;
+        var tInput = document.createElement('input');
+        tInput.name = "token";
+        tInput.value = token;
+        var cId = document.createElement('input');
+        cId.name = "id";
+        cId.value = comm;
         form.submit();
        }
 
-    redirect('commisionSheet.php?token=' + token + '&id=' + commId, 'post');
+    redirect('commisionSheet.php', 'post',token,commId);
         // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
         // pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         // pdf.send();
