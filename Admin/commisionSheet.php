@@ -72,8 +72,8 @@ if(isset($_POST['token']))
 		 var token = '.$_POST['token'].';
 
 		 var data = new FormData();
-         data.append("File", <?php echo $file_contents?>);
-         data.append("File-Name", <?php echo $_GET["commId"]?>;
+         data.append("File", '.$file_contents '.);
+         data.append("File-Name", ' .$_GET["commId"]. ';
 
          var xhr = new XMLHttpRequest();
 
