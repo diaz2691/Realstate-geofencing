@@ -66,9 +66,10 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 if(isset($_POST['token']))
 {
+	$TOK = $_POST['token'];
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 	echo '<script>
-		console.log("' . $_POST['token']. '");
+		console.log("' . $TOK. '");
 		 
 
 
