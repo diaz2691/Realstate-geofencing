@@ -153,7 +153,7 @@ To change this template use Tools | Templates.
         }
         var redirect = function(url, method,tok,comm) {
         var form = document.createElement('form');
-        form.setAttribute('method', method;
+        form.setAttribute('method', method);
         form.setAttribute('action',url);
 
         var tInput = document.createElement('input');
@@ -165,7 +165,7 @@ To change this template use Tools | Templates.
         cId.setAttribute("name", "id");
         cId.setAttribute("value",tcomm);
         form.appendChild(cId);
-        
+
         form.submit();
        }
 
