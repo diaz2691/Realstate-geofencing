@@ -151,9 +151,19 @@ To change this template use Tools | Templates.
            return ;
            }
         }
-        pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
-        pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        pdf.send();
+        var redirect = function(url, method) {
+        var form = document.createElement('form');
+        form.method = method;
+        form.action = url;
+        form.submit();
+       }
+
+    redirect('commisionSheet.php?token=' + token + '&id=' + commId, 'post');
+        // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
+        // pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        // pdf.send();
+
+
         // var data = new FormData();
         // data.append("File", "guide.pdf");
         // data.append("File-Name", "guide");
