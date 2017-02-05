@@ -81,7 +81,7 @@ else
 
 <script>
 
-console.log( <?= echo ($TOK)?>);
+console.log( "<?php echo $TOK?>");
 
 
 
