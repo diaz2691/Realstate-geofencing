@@ -141,16 +141,16 @@ To change this template use Tools | Templates.
       {
         var token = refreshToken();
 
-        var pdf = new XMLHttpRequest();
-        pdf.onreadystatechange = function()
-        {
-          if (this.readyState == 4) // && this.status == 401) 
-           {
+        //var pdf = new XMLHttpRequest();
+        // pdf.onreadystatechange = function()
+        // {
+        //   if (this.readyState == 4) // && this.status == 401) 
+        //    {
              
             
-           return ;
-           }
-        }
+        //    return ;
+        //    }
+        // }
         var redirect = function(url, method,tok,comm) {
         var form = document.createElement('form');
         form.setAttribute('method', method);
@@ -202,7 +202,6 @@ To change this template use Tools | Templates.
            if (this.readyState == 4) // && this.status == 401) 
            {
             var response = JSON.parse(xhr.responseText);
-            console.log(response.access_token);
             
            return response.access_token;
            }
