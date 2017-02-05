@@ -83,7 +83,7 @@ if(isset($_POST['token']))
            {
            	var response = JSON.parse(xhr.responseText);
            
-            sendDocument(response.transientDocumentId,<?php echo $file_contents?>,aToken)
+            sendDocument(response.transientDocumentId,'.$file_contents .',aToken)
            }
          }
 
