@@ -69,7 +69,7 @@ if(isset($_POST['token']))
 	$TOK = $_POST['token'];
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 	echo '<script>
-		console.log("' . $TOK. '");
+		console.log(" <?=json_encode($TOK)?>");
 		 
 
 
