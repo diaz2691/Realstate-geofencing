@@ -139,25 +139,27 @@ To change this template use Tools | Templates.
     <script>
       function sendComm(commId)
       {
-        var token = refreshToken();
 
         
-        var form = document.createElement('form');
-        form.setAttribute('method', 'post');
-        form.setAttribute('action','commisionSheet.php');
-
-        var tInput = document.createElement('input');
-        tInput.setAttribute("name", "token");
-        tInput.setAttribute("value",token);
-        form.appendChild(tInput);
-
-        var cId = document.createElement('input');
-        cId.setAttribute("name", "id");
-        cId.setAttribute("value",commId);
-        form.appendChild(cId);
-
-        form.submit();
+        
        
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () 
+        {
+           if (this.readyState == 4 && this.status == 401) 
+           {
+            var response = JSON.parse(xhr.responseText);
+            
+           getPdf(response.access_token, commId);
+           }
+         
+        }
+
+        xhr.open("POST", "http://api.na2.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send();
+
+
 
         // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
         // pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -183,24 +185,24 @@ To change this template use Tools | Templates.
         // xhr.send(data);
       }
       
-      function refreshToken()
+      function getPdf(token,commId)
       {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () 
-        {
-           if (this.readyState == 4 && this.status == 401) 
-           {
-            var response = JSON.parse(xhr.responseText);
-            
-           return response.access_token;
-           }
-         
-        }
+        
+        var form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action','commisionSheet.php');
 
-        xhr.open("POST", "http://api.na2.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", false);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send();
-         
+        var tInput = document.createElement('input');
+        tInput.setAttribute("name", "token");
+        tInput.setAttribute("value",token);
+        form.appendChild(tInput);
+
+        var cId = document.createElement('input');
+        cId.setAttribute("name", "id");
+        cId.setAttribute("value",commId);
+        form.appendChild(cId);
+
+        form.submit();
         //alert("hi");
          
         
