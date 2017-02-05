@@ -153,16 +153,19 @@ To change this template use Tools | Templates.
         }
         var redirect = function(url, method,tok,comm) {
         var form = document.createElement('form');
-        form.method = method;
-        form.action = url;
+        form.setAttribute('method', method;
+        form.setAttribute('action',url);
+
         var tInput = document.createElement('input');
-        tInput.name = "token";
-        tInput.value = token;
+        tInput.setAttribute("name", "token");
+        tInput.setAttribute("value",token);
         form.appendChild(tInput);
+
         var cId = document.createElement('input');
-        cId.name = "id";
-        cId.value = comm;
+        cId.setAttribute("name", "id");
+        cId.setAttribute("value",tcomm);
         form.appendChild(cId);
+        
         form.submit();
        }
 
