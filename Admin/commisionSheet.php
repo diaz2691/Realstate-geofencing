@@ -69,37 +69,7 @@ if(isset($_POST['token']))
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 	echo '<script>
 		console.log("didnt work");
-		 var token = '.$_POST['token'].';
-
-		 var data = new FormData();
-         data.append("File", '.$file_contents '.);
-         data.append("File-Name", ' .$_GET["commId"]. ';
-
-         var xhr = new XMLHttpRequest();
-
-         xhr.onreadystatechange = function() 
-         {
-           if (this.readyState === 4) 
-           {
-           	var response = JSON.parse(xhr.responseText);
-           
-            sendDocument(response.transientDocumentId,'.$file_contents .',aToken)
-           }
-         }
-
-         xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-         xhr.setRequestHeader("access-token", token);
-
-         xhr.send(data);
-
-
-         function sendDocument(TID,fName,aT)
-         {
-
-
-
-         	
-         }
+		 
 
 
 
