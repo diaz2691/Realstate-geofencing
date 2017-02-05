@@ -66,7 +66,7 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 if(isset($_POST['token']))
 {
-	$file_contents = $pdf->Output($_GET['commId'] . ".pdf","S");
+	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 	echo '<script>
 		console.log("didnt work");
 		 var token = '.$_POST['token'].';
