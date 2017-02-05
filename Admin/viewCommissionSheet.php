@@ -140,9 +140,7 @@ To change this template use Tools | Templates.
       function sendComm(commId)
       {
 
-        
-        
-       
+
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () 
         {
