@@ -74,8 +74,7 @@ if(isset($_POST['token']))
 	$request->setMethod(HTTP_METH_POST);
 
 	$request->setHeaders(array(
-	  'access-token' => $ken,
-	  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
+	  'access-token' => $ken
 	));
 
 	// $request->setBody('------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -89,11 +88,14 @@ if(isset($_POST['token']))
 
 	// ------WebKitFormBoundary7MA4YWxkTrZu0gW--');
 
-	try {
+	try 
+	{
 	  $response = $request->send();
 
 	  echo $response->getBody();
-	} catch (HttpException $ex) {
+	} 
+	catch (HttpException $ex) 
+	{
 	  echo $ex;
 	}
 
