@@ -67,9 +67,17 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$path = "../keys/".$_POST['commId'] . ".pdf";
+	$path = "../keys/". $_POST['commId'] . ".pdf";
 
 	$pdfFile = $pdf->Output($path,"F");
+
+	if (file_exists($$path)) 
+	{
+    echo "The file $filename exists";
+	} else 
+	{
+	    echo "The file $filename does not exist";
+	}
 	// echo $pdfFile;
 
 	// $file = 'path/to/PDF/file.pdf';
@@ -80,7 +88,7 @@ if(isset($_POST['token']))
 	//   header('Accept-Ranges: bytes');
 	//   @readfile($file);
 
-		echo "<iframe src=" . $path . " width=100% style=height:100%></iframe>";
+	//echo "<iframe src=" . $path . " width=100% style=height:100%></iframe>";
 
 	// $pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","F"));
 	// $encoded = base64_encode($pdfFile);
