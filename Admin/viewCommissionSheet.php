@@ -147,9 +147,9 @@ To change this template use Tools | Templates.
            if (this.readyState == 4 && this.status == 200) 
            {
             var response = JSON.parse(xhr.responseText);
-            
+            xhr.abort();
            getPdf(response.access_token, commId);
-           xhr.abort();
+           
            }
          
         }
