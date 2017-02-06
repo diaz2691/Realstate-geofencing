@@ -97,7 +97,7 @@ xhr.onreadystatechange = function()
 }
 
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-xhr.setRequestHeader("access-token", "<?php  $ken; ?>");
+xhr.setRequestHeader("Access-Token", "<?php  $ken; ?>");
 xhr.setRequestHeader("Content-Type", "multipart/form-data");
 xhr.send(data);
 
