@@ -77,13 +77,7 @@ if(isset($_POST['token']))
 	$request->setHeaders(array(
 	  'Access-Token' => $ken));
 
-	try {
-	  //$response = $request->send();
-
-	  //echo $response->getBody();
-	} catch (HttpException $ex) {
-	  //echo $ex;
-	}
+	
 
 	
 
