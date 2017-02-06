@@ -81,7 +81,7 @@ else
 
 <script>
 
-console.log( "<?php echo $ken; ?>");
+console.log( "<?php  $ken; ?>");
 
 
 
