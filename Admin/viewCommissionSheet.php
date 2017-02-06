@@ -148,8 +148,8 @@ To change this template use Tools | Templates.
            {
             var response = JSON.parse(xhr.responseText);
             xhr.abort();
-           getPdf(response.access_token, commId);
-           
+            getPdf(response.access_token, commId);
+
            }
          
         }
