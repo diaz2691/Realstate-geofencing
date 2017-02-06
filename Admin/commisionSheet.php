@@ -78,11 +78,11 @@ if(isset($_POST['token']))
 	  'Access-Token' => $ken));
 
 	try {
-	  $response = $request->send();
+	  //$response = $request->send();
 
-	  echo $response->getBody();
+	  //echo $response->getBody();
 	} catch (HttpException $ex) {
-	  echo $ex;
+	  //echo $ex;
 	}
 
 	
