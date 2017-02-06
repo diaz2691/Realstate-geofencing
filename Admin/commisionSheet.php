@@ -87,7 +87,7 @@ var data = new FormData();
 data.append("File-Name", "<?php echo $_POST['commId']?>");
 
 var xhr = new XMLHttpRequest();
-
+xhr.withCredentials = true;
 xhr.onreadystatechange = function() 
 {
   if (this.readyState === 4 && this.status == 201) 
