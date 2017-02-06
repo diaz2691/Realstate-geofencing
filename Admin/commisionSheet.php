@@ -68,7 +68,34 @@ if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
-	
+
+	$request = new HttpRequest();
+	$request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
+	$request->setMethod(HTTP_METH_POST);
+
+	$request->setHeaders(array(
+	  'access-token' => $ken,
+	  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
+	));
+
+	// $request->setBody('------WebKitFormBoundary7MA4YWxkTrZu0gW
+	// Content-Disposition: form-data; name="File-Name"
+
+	// commission Sheet
+	// ------WebKitFormBoundary7MA4YWxkTrZu0gW
+	// Content-Disposition: form-data; name="File"; filename="'. $_POST['commId'] .'.pdf"
+	// Content-Type: application/pdf
+
+
+	// ------WebKitFormBoundary7MA4YWxkTrZu0gW--');
+
+	try {
+	  $response = $request->send();
+
+	  echo $response->getBody();
+	} catch (HttpException $ex) {
+	  echo $ex;
+	}
 
 	
 }
@@ -82,25 +109,27 @@ else
 <script>
 
 //console.log( "<?php  $ken; ?>");
-var data = new FormData();
-data.append("File", "<?php $file_contents ?>");
-data.append("File-Name", "Commission Sheet");
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() 
-{
-  if (this.readyState === 4 ) 
-  {
-  	var response = JSON.parse(xhr.responseText);
-  	console.log(response);
-    console.log("TRANS" + this.transientDocumentId);
-  }
-}
 
-xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
-//xhr.setRequestHeader("Content-Type", "multipart/form-data");
-xhr.send(data);
+// var data = new FormData();
+// data.append("File", "<?php $file_contents ?>");
+// data.append("File-Name", "Commission Sheet");
+
+// var xhr = new XMLHttpRequest();
+// xhr.onreadystatechange = function() 
+// {
+//   if (this.readyState === 4 ) 
+//   {
+//   	var response = JSON.parse(xhr.responseText);
+//   	console.log(response);
+//     console.log("TRANS" + this.transientDocumentId);
+//   }
+// }
+
+// xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
+// xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
+// //xhr.setRequestHeader("Content-Type", "multipart/form-data");
+// xhr.send(data);
 
 
 
