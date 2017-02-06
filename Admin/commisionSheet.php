@@ -67,8 +67,21 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$pdfFile = $pdf->Output("../keys/" . $_POST['commId'] . ".pdf","F");
+	$path = "../keys/".$_POST['commId'] . ".pdf";
+
+	$pdfFile = $pdf->Output($path,"F");
 	echo $pdfFile;
+
+	$file = 'path/to/PDF/file.pdf';
+	  $filename = 'filename.pdf';
+	  header('Content-type: application/pdf');
+	  header('Content-Disposition: inline; filename="' . $filename . '"');
+	  header('Content-Transfer-Encoding: binary');
+	  header('Accept-Ranges: bytes');
+	  @readfile($file);
+
+		echo "<iframe src=" . $path . " width=100% style=height:100%></iframe>";
+
 	// $pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","F"));
 	// $encoded = base64_encode($pdfFile);
 	// $decoded = base64_decode($encoded);
