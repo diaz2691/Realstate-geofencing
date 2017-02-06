@@ -69,7 +69,7 @@ if(isset($_POST['token']))
 	$ken = $_POST['token'];
 	$pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","S"));
 	$encoded = base64_encode($pdfFile);
-	$decoded = base64_decode($pdfFile);
+	$decoded = base64_decode($encoded);
 	
 	$file = $encoded;
 	$filename = 'filename.pdf';
