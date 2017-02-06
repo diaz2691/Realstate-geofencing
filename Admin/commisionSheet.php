@@ -71,64 +71,8 @@ if(isset($_POST['token']))
 
 	$pdfFile = $pdf->Output($path,"F");
 
-	if (file_exists($path)) 
-	{
-    echo "The file $filename exists";
-	} else 
-	{
-	    echo "The file $filename does not exist";
-	}
-	// echo $pdfFile;
-
-	// $file = 'path/to/PDF/file.pdf';
-	//   $filename = 'filename.pdf';
-	//   header('Content-type: application/pdf');
-	//   header('Content-Disposition: inline; filename="' . $filename . '"');
-	//   header('Content-Transfer-Encoding: binary');
-	//   header('Accept-Ranges: bytes');
-	//   @readfile($file);
-
-	//echo "<iframe src=" . $path . " width=100% style=height:100%></iframe>";
-
-	// $pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","F"));
-	// $encoded = base64_encode($pdfFile);
-	// $decoded = base64_decode($encoded);
 	
-	// $file = $pdf;
-	// $filename = 'filename.pdf';
-	// header('Content-type: application/pdf');
-	// header('Content-Disposition: inline; filename="' . $filename . '"');
-	// header('Content-Transfer-Encoding: binary');
-	// header('Accept-Ranges: bytes');
-	// @readfile($file);
-
-	// $request = new HttpRequest();
-	// $request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
-	// $request->setMethod(HTTP_METH_POST);
-
-	// $request->setHeaders(array(
-	//   'access-token' => $ken,
-	//   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
-	// ));
-
-	// $request->setBody('------WebKitFormBoundary7MA4YWxkTrZu0gW
-	// Content-Disposition: form-data; name="File-Name"
-
-	// commission Sheet
-	// ------WebKitFormBoundary7MA4YWxkTrZu0gW
-	// Content-Disposition: form-data; name="File"; filename="'. $_ .'.pdf"
-	// Content-Type: application/pdf
-
-
-	// ------WebKitFormBoundary7MA4YWxkTrZu0gW--');
-
-	// try {
-	//   $response = $request->send();
-
-	//   echo $response->getBody();
-	// } catch (HttpException $ex) {
-	//   echo $ex;
-	// }
+	
 
 	
 }
@@ -144,25 +88,25 @@ else
 //console.log( "<?php  $ken; ?>");
 
 
-// var data = new FormData();
-// data.append("File", "<?php $file_contents ?>");
-// data.append("File-Name", "Commission Sheet");
+ var data = new FormData();
+ data.append("File", "<?php echo $path ?>");
+ data.append("File-Name", "Commission Sheet");
 
-// var xhr = new XMLHttpRequest();
-// xhr.onreadystatechange = function() 
-// {
-//   if (this.readyState === 4 ) 
-//   {
-//   	var response = JSON.parse(xhr.responseText);
-//   	console.log(response);
-//     console.log("TRANS" + this.transientDocumentId);
-//   }
-// }
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() 
+{
+  if (this.readyState === 4 ) 
+  {
+  	var response = JSON.parse(xhr.responseText);
+  	console.log(response);
+    console.log("TRANS" + this.transientDocumentId);
+  }
+}
 
-// xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-// xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
-// //xhr.setRequestHeader("Content-Type", "multipart/form-data");
-// xhr.send(data);
+xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
+xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
+xhr.setRequestHeader("Content-Type", "multipart/form-data");
+ xhr.send(data);
 
 
 
