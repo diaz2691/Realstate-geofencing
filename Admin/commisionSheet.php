@@ -83,7 +83,7 @@ else
 
 //console.log( "<?php  $ken; ?>");
 var data = new FormData();
-data.append("File", "<?php $file_contents ?>");
+//data.append("File", "<?php $file_contents ?>");
 data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
@@ -98,7 +98,7 @@ xhr.onreadystatechange = function()
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
 xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
 //xhr.setRequestHeader("Content-Type", "multipart/form-data");
-xhr.send();
+xhr.send(data);
 
 
 
