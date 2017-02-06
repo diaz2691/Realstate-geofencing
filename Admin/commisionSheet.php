@@ -68,7 +68,9 @@ if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
 	$pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","S"));
-	echo base64_encode($pdfFile)
+	$encoded = base64_encode($pdfFile);
+	$decoded = base64_decode($pdfFile);
+	echo $encoded;
 
 	// $request = new HttpRequest();
 	// $request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
