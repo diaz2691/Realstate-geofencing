@@ -81,9 +81,39 @@ else
 
 <script>
 
-console.log( "<?php  $ken; ?>");
+//console.log( "<?php  $ken; ?>");
+var data = new FormData();
+data.append("File", "<?php echo $file_contents ?>");
+data.append("File-Name", "<?php echo $_POST['commId']?>");
 
+var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function() 
+{
+  if (this.readyState === 4 && this.status == 201) 
+  {
+    console.log("TRANS" + this.transientDocumentId);
+  }
+}
+
+xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
+xhr.setRequestHeader("access-token", "<?php  $ken; ?>");
+
+xhr.send(data);
 
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
