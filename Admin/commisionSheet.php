@@ -89,7 +89,7 @@ else
 
 
  var data = new FormData();
- data.append("File", "<?php echo $path ?>");
+ //data.append("File", "<?php echo $path ?>");
  data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
