@@ -95,11 +95,11 @@ else
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() 
 {
-  if (this.readyState === 4 ) 
+  if (this.readyState === 4 && this.status == 201) 
   {
   	var response = JSON.parse(xhr.responseText);
   	console.log(response);
-    console.log("TRANS" + this.transientDocumentId);
+    console.log("TRANS: " + response.transientDocumentId);
   }
 }
 
