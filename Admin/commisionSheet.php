@@ -71,7 +71,7 @@ if(isset($_POST['token']))
 	$encoded = base64_encode($pdfFile);
 	$decoded = base64_decode($encoded);
 	
-	$file = $decoded;
+	$file = $pdf;
 	$filename = 'filename.pdf';
 	header('Content-type: application/pdf');
 	header('Content-Disposition: inline; filename="' . $filename . '"');
