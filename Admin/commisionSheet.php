@@ -67,7 +67,7 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","S"));
+	$pdfFile = $pdf->Output($_POST['commId'] . ".pdf","S");
 	$encoded = base64_encode($pdfFile);
 	$decoded = base64_decode($pdfFile);
 	
