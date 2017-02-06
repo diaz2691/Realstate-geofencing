@@ -69,35 +69,35 @@ if(isset($_POST['token']))
 	$ken = $_POST['token'];
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 
-	$request = new HttpRequest();
-	$request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
-	$request->setMethod(HTTP_METH_POST);
+	// $request = new HttpRequest();
+	// $request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
+	// $request->setMethod(HTTP_METH_POST);
 
-	$request->setHeaders(array(
-	  'access-token' => $ken
-	));
+	// $request->setHeaders(array(
+	//   'access-token' => $ken
+	// ));
 
-	// $request->setBody('------WebKitFormBoundary7MA4YWxkTrZu0gW
-	// Content-Disposition: form-data; name="File-Name"
+	// // $request->setBody('------WebKitFormBoundary7MA4YWxkTrZu0gW
+	// // Content-Disposition: form-data; name="File-Name"
 
-	// commission Sheet
-	// ------WebKitFormBoundary7MA4YWxkTrZu0gW
-	// Content-Disposition: form-data; name="File"; filename="'. $_POST['commId'] .'.pdf"
-	// Content-Type: application/pdf
+	// // commission Sheet
+	// // ------WebKitFormBoundary7MA4YWxkTrZu0gW
+	// // Content-Disposition: form-data; name="File"; filename="'. $_POST['commId'] .'.pdf"
+	// // Content-Type: application/pdf
 
 
-	// ------WebKitFormBoundary7MA4YWxkTrZu0gW--');
+	// // ------WebKitFormBoundary7MA4YWxkTrZu0gW--');
 
-	try 
-	{
-	  $response = $request->send();
+	// try 
+	// {
+	//   $response = $request->send();
 
-	  echo $response->getBody();
-	} 
-	catch (HttpException $ex) 
-	{
-	  echo $ex;
-	}
+	//   echo $response->getBody();
+	// } 
+	// catch (HttpException $ex) 
+	// {
+	//   echo $ex;
+	// }
 
 	
 }
