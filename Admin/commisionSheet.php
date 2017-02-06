@@ -70,7 +70,7 @@ if(isset($_POST['token']))
 	$pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","S"));
 	$encoded = base64_encode($pdfFile);
 	$decoded = base64_decode($pdfFile);
-	echo $decoded;
+	echo "<iframe src=" . $encoded . " width='100%'' style='height:100%''></iframe>";;
 
 	// $request = new HttpRequest();
 	// $request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
