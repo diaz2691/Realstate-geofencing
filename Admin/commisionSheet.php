@@ -67,17 +67,19 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","S"));
-	$encoded = base64_encode($pdfFile);
-	$decoded = base64_decode($encoded);
+	$pdfFile = $pdf->Output("../keys/" . $_POST['commId'] . ".pdf","F");
+	echo $pdfFile;
+	// $pdfFile = file_get_contents($pdf->Output($_POST['commId'] . ".pdf","F"));
+	// $encoded = base64_encode($pdfFile);
+	// $decoded = base64_decode($encoded);
 	
-	$file = $pdf;
-	$filename = 'filename.pdf';
-	header('Content-type: application/pdf');
-	header('Content-Disposition: inline; filename="' . $filename . '"');
-	header('Content-Transfer-Encoding: binary');
-	header('Accept-Ranges: bytes');
-	@readfile($file);
+	// $file = $pdf;
+	// $filename = 'filename.pdf';
+	// header('Content-type: application/pdf');
+	// header('Content-Disposition: inline; filename="' . $filename . '"');
+	// header('Content-Transfer-Encoding: binary');
+	// header('Accept-Ranges: bytes');
+	// @readfile($file);
 
 	// $request = new HttpRequest();
 	// $request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
