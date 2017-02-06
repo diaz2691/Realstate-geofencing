@@ -84,7 +84,7 @@ else
 //console.log( "<?php  $ken; ?>");
 var data = new FormData();
 //data.append("File", "<?php $file_contents ?>");
-data.append("File-Name", "<?php echo $_POST['commId']?>");
+data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() 
