@@ -70,7 +70,7 @@ if(isset($_POST['token']))
 	$file_contents = $pdf->Output($_POST['commId'] . ".pdf","S");
 
 
-	// $request = new HttpRequest();
+	 $request = new HttpRequest();
 	// $request->setUrl('https://api.na2.echosign.com/api/rest/v5/transientDocuments');
 	// $request->setMethod(HTTP_METH_POST);
 
