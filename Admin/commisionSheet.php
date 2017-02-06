@@ -71,7 +71,7 @@ if(isset($_POST['token']))
 
 	$pdfFile = $pdf->Output($path,"F");
 
-	if (file_exists($$path)) 
+	if (file_exists($path)) 
 	{
     echo "The file $filename exists";
 	} else 
