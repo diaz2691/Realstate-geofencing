@@ -87,7 +87,6 @@ var data = new FormData();
 data.append("File-Name", "<?php echo $_POST['commId']?>");
 
 var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
 xhr.onreadystatechange = function() 
 {
   if (this.readyState === 4 && this.status == 201) 
@@ -99,7 +98,7 @@ xhr.onreadystatechange = function()
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
 xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
 xhr.setRequestHeader("Content-Type", "multipart/form-data");
-xhr.send(data);
+xhr.send();
 
 
 
