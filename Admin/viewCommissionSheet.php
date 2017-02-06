@@ -149,6 +149,7 @@ To change this template use Tools | Templates.
             var response = JSON.parse(xhr.responseText);
             
            getPdf(response.access_token, commId);
+           xhr.abort();
            }
          
         }
