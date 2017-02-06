@@ -70,15 +70,15 @@ if(isset($_POST['token']))
 	$path = "../keys/".$_POST['commId'] . ".pdf";
 
 	$pdfFile = $pdf->Output($path,"F");
-	echo $pdfFile;
+	// echo $pdfFile;
 
-	$file = 'path/to/PDF/file.pdf';
-	  $filename = 'filename.pdf';
-	  header('Content-type: application/pdf');
-	  header('Content-Disposition: inline; filename="' . $filename . '"');
-	  header('Content-Transfer-Encoding: binary');
-	  header('Accept-Ranges: bytes');
-	  @readfile($file);
+	// $file = 'path/to/PDF/file.pdf';
+	//   $filename = 'filename.pdf';
+	//   header('Content-type: application/pdf');
+	//   header('Content-Disposition: inline; filename="' . $filename . '"');
+	//   header('Content-Transfer-Encoding: binary');
+	//   header('Accept-Ranges: bytes');
+	//   @readfile($file);
 
 		echo "<iframe src=" . $path . " width=100% style=height:100%></iframe>";
 
