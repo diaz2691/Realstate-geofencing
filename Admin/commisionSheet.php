@@ -83,14 +83,16 @@ else
 
 //console.log( "<?php  $ken; ?>");
 var data = new FormData();
-//data.append("File", "<?php $file_contents ?>");
+data.append("File", "<?php $file_contents ?>");
 data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() 
 {
-  if (this.readyState === 4 && this.status == 201) 
+  if (this.readyState === 4 ) 
   {
+  	var response = JSON.parse(xhr.responseText);
+  	console.log(response);
     console.log("TRANS" + this.transientDocumentId);
   }
 }
