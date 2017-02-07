@@ -67,7 +67,7 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$path = "../keys/commissionSheet.pdf";
+	$path = "commissionSheet.pdf";
 
 	$pdf->Output($path,'F');
 
