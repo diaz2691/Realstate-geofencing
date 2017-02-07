@@ -10,7 +10,7 @@
 
 //echo $ret;
 
-$check = passthru('python PQLogin.py ');
+$check = passthru('python PQLogin.py 2>&1');
 echo $check;
 
 ?>
