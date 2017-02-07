@@ -68,7 +68,7 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['id']))
 {
 	
-	$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D', );
+	$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
 	
 }
 elseif (isset($_POST['token'])) 
