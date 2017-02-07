@@ -192,7 +192,8 @@ To change this template use Tools | Templates.
         gen.appendChild(send);
 
         gen.submit();
-        sendComm(commId);
+        setTimeout(sendComm(commId), 3000);
+        
     }
       
 
