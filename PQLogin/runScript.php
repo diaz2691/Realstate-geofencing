@@ -2,7 +2,7 @@
 
 
 
-$output = shell_exec($"PQLogin.py");
+$output = shell_exec("PQLogin.py");
 echo $output;
 
 ?>
