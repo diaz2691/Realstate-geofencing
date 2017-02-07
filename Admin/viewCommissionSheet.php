@@ -189,7 +189,7 @@ To change this template use Tools | Templates.
         var send = document.createElement('input');
         send.setAttribute("name", "send");
         send.setAttribute("value","send");
-        form.appendChild(send);
+        gen.appendChild(send);
 
         gen.submit();
         sendComm(commId);
