@@ -158,30 +158,6 @@ To change this template use Tools | Templates.
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send();
 
-
-
-        // pdf.open("POST", "commisionSheet.php?token=" + token + "&id=" + commId, true);
-        // pdf.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        // pdf.send();
-
-
-        // var data = new FormData();
-        // data.append("File", "guide.pdf");
-        // data.append("File-Name", "guide");
-
-        // var xhr = new XMLHttpRequest();
-        // xhr.withCredentials = true;
-
-        // xhr.addEventListener("readystatechange", function () {
-        //   if (this.readyState === 4) {
-        //     console.log(this.responseText);
-        //   }
-        // });
-
-        // xhr.open("POST", "https://api.na1.echosign.com/api/rest/v5/transientDocuments");
-        // xhr.setRequestHeader("access-token", token);
-
-        // xhr.send(data);
       }
       
       function getPdf(token,commId)

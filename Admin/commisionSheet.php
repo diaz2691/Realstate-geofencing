@@ -87,6 +87,7 @@ else
 
 //console.log( "<?php  $ken; ?>");
 
+var token = "<?php echo $ken; ?>";
 
  var data = new FormData();
  data.append("File", "<?php echo $path ?>");
@@ -98,16 +99,55 @@ xhr.onreadystatechange = function()
   if (this.readyState === 4 && this.status == 201) 
   {
   	var response = JSON.parse(xhr.responseText);
-  	console.log(response);
-    console.log("TRANS: " + response.transientDocumentId);
+  	
+    function sendToSign(response.transientDocumentId, token);
   }
 }
 
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-xhr.setRequestHeader("Access-Token", "<?php echo $ken; ?>");
+xhr.setRequestHeader("Access-Token", token);
  xhr.send(data);
 
+function sendToSign(tId, token)
+{
+	var data = JSON.stringify({
+  	"documentCreationInfo": {
+    	"fileInfos": [
+      	{
+        "transientDocumentId": tId
+      	}
+    	],
+    "name": "Commission Sheet",
+    "recipientSetInfos": [
+      {
+        "recipientSetMemberInfos": [
+          {
+            "email": "jodiaz@csumb.edu"
+          }
+        ],
+        "recipientSetRole": "SIGNER"
+      }
+    ],
+    "signatureType": "ESIGN",
+    "signatureFlow": "SENDER_SIGNATURE_NOT_REQUIRED"
+  }
+});
+	var sendDoc = new XMLHttpRequest();
+	sendDoc.onreadystatechange = function()
+	{
+		if (this.readyState === 4 && this.status == 201) 
+		{
+		  	var response = JSON.parse(xhr.responseText);
+		  	console.log(response.agreementId);
+		    //window.location.href = "viewCommissionSheet.php";
+		}
+	}
 
+	sendDoc.open("POST", "https://api.na2.echosign.com:443/api/rest/v5/agreements");
+	sendDoc.setRequestHeader("Access-Token", token);
+	sendDoc.setRequestHeader("content-type", "application/json");	
+
+}
 
 </script>
 
