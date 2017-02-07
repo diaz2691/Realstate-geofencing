@@ -85,29 +85,32 @@ else
 
 //console.log( "<?php  $ken; ?>");
 
-var token = "<?php echo $ken; ?>";
-
- var data = new FormData();
- data.append("File", "<?php echo $save?>");
- data.append("File-Name", "Commission Sheet");
-
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() 
+//var token = "<?php echo $ken; ?>";
+function prepare()
 {
-  if (this.readyState === 4 && this.status == 201) 
-  {
-  	var response = JSON.parse(xhr.responseText);
-  	
-    sendToSign(response.transientDocumentId, token);
-  }
+	var files = fileSelect.files;
+	var file = files[0];
+	 var data = new FormData();
+	 data.append("File", file);
+	 data.append("File-Name", "Commission Sheet");
+
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() 
+	{
+	  if (this.readyState === 4 && this.status == 201) 
+	  {
+	  	var response = JSON.parse(xhr.responseText);
+	  	
+	    sendToSign(response.transientDocumentId, token);
+	  }
+	}
+
+	xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
+	xhr.setRequestHeader("Access-Token", token);
+	// xhr.setRequestHeader("Content-Disposition", "form-data; name='File'; filename='MyPDF.pdf");
+	// xhr.setRequestHeader("Content-Type", "multipart/form-data");
+	xhr.send(data);
 }
-
-xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-xhr.setRequestHeader("Access-Token", token);
-// xhr.setRequestHeader("Content-Disposition", "form-data; name='File'; filename='MyPDF.pdf");
-// xhr.setRequestHeader("Content-Type", "multipart/form-data");
-xhr.send(data);
-
 function sendToSign(tId, token)
 {
 	var data = JSON.stringify({
@@ -154,7 +157,24 @@ function sendToSign(tId, token)
 
 
 
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    
+<head>
+    <title>Send Commission Sheet</title>
+    
+    
+    
+    <meta charset = "utf-8"/>
+ 
+</head>
+    <body>
+      <input type="file" name="commSheet" size="40">
+      <br />
+      <br />
+      <input type="submit" value="Send" onClick="prepare()">
+    </body>
+</html>
 
 
 
