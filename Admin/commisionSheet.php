@@ -85,9 +85,10 @@ else
 
 //console.log( "<?php  $ken; ?>");
 
-//var token = "<?php echo $ken; ?>";
 function prepare()
 {
+	var token = "<?php echo $ken; ?>";
+
 	var file = document.getElementById("filePdf").files[0];
 	 var data = new FormData();
 	 data.append("File", file);
