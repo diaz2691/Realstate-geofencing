@@ -3,6 +3,11 @@
 
 exec("PQLogin" , $out,$ret );
 //$output = shell_exec("PQLogin.py");
-echo $out[0];
+foreach ($out as $line)
+{
+    print "$line\n";
+}
+
+echo $ret;
 
 ?>
