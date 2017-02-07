@@ -69,7 +69,7 @@ if(isset($_POST['token']))
 	$ken = $_POST['token'];
 	$path = "../keys/commissionSheet.pdf";
 
-	$pdf->Output($path,"F");
+	$pdf->Output($path,'F');
 
 	
 	
