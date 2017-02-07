@@ -147,6 +147,7 @@ function sendToSign(tId, token)
 	sendDoc.setRequestHeader("Access-Token", token);
 	sendDoc.setRequestHeader("content-type", "application/json");	
 
+	sendDoc.send(data);
 }
 
 </script>
