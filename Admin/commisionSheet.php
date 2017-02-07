@@ -67,9 +67,7 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$path = 'commissionSheet.pdf';
-
-	$pdf = $pdf->Output('','S');
+	$pdf->Output('../keys/commissionSheetTest.pdf','F');
 
 	
 	
@@ -90,7 +88,7 @@ else
 var token = "<?php echo $ken; ?>";
 
  var data = new FormData();
- data.append("File", btoa("<?php echo $pdf?>"));
+ data.append("File", "../keys/commissionSheetTest.pdf");
  data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
@@ -106,6 +104,8 @@ xhr.onreadystatechange = function()
 
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
 xhr.setRequestHeader("Access-Token", token);
+//xhr.setRequestHeader("content-", "");
+xhr.setRequestHeader("Content-Type", "multipart/form-data");
 xhr.send(data);
 
 function sendToSign(tId, token)
