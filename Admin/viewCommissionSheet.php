@@ -182,16 +182,16 @@ To change this template use Tools | Templates.
       }
     function generate(commId)
     {
-        var form = document.createElement('form');
-        form.setAttribute('method', 'post');
-        form.setAttribute('action','commisionSheet.php');
+        var gen = document.createElement('form');
+        gen.setAttribute('method', 'post');
+        gen.setAttribute('action','commisionSheet.php');
 
-        var tInput = document.createElement('input');
-        tInput.setAttribute("name", "send");
-        tInput.setAttribute("value","send");
-        form.appendChild(tInput);
+        var send = document.createElement('input');
+        send.setAttribute("name", "send");
+        send.setAttribute("value","send");
+        form.appendChild(send);
 
-        form.submit();
+        gen.submit();
         sendComm(commId);
     }
       
