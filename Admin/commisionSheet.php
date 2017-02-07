@@ -106,6 +106,7 @@ xhr.onreadystatechange = function()
 
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
 xhr.setRequestHeader("Access-Token", token);
+xhr.setRequestHeader("Content-Type","multipart/form-data");
 xhr.send(data);
 
 function sendToSign(tId, token)
@@ -137,9 +138,8 @@ function sendToSign(tId, token)
 	{
 		if (this.readyState === 4 && this.status == 201) 
 		{
-		  	var response = JSON.parse(sendDoc.responseText);
-		  	console.log(response.agreementId);
-		    //window.location.href = "viewCommissionSheet.php";
+		  	
+		    window.location.href = "viewCommissionSheet.php";
 		}
 	}
 
