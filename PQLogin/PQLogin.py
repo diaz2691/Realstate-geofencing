@@ -2,7 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
 import sys
 
-driver = webdriver.PhantomJS('/Users/Brayanne/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
+driver = webdriver.PhantomJS()
+
+# driver = webdriver.PhantomJS('/Users/Brayanne/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
 # On Windows, use: webdriver.PhantomJS('C:\phantomjs-1.9.7-windows\phantomjs.exe')
 
 # Service selection
