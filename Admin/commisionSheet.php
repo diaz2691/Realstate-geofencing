@@ -67,7 +67,7 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['token']))
 {
 	$ken = $_POST['token'];
-	$pdf->Output('../keys/commissionSheetTest.pdf','F');
+	$save = $pdf->Output('../keys/commissionSheetTest.pdf','F');
 
 	
 	
@@ -88,7 +88,7 @@ else
 var token = "<?php echo $ken; ?>";
 
  var data = new FormData();
- data.append("File", "../keys/guide.pdf");
+ data.append("File", "<?php echo $save?>");
  data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
