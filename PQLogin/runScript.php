@@ -1,8 +1,8 @@
 <?php
 
 
-
-$output = shell_exec("PQLogin.py");
-echo $output;
+exec("PQLogin" , $out,$ret );
+//$output = shell_exec("PQLogin.py");
+echo $out;
 
 ?>
