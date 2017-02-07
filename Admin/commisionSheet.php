@@ -126,7 +126,7 @@ function sendToSign(tId, token)
       {
         "recipientSetMemberInfos": [
           {
-            "email": "jodiaz@csumb.edu"
+            "email": "ibarrajkey@gmail.com"
           }
         ],
         "recipientSetRole": "SIGNER"
