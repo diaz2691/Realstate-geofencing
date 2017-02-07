@@ -16,8 +16,8 @@ driver.get("https://pqweb.parcelquest.com/#login")
 username = "baycapital"#sys.argv[2]
 password = "realestate"#sys.argv[3]
 
-driver.find_element_by_id('txtName').send_keys(username)
-driver.find_element_by_id('txtPwd').send_keys(password)
+driver.find_element_by_id('txtName')
+#driver.find_element_by_id('txtPwd').send_keys(password)
 #driver.find_element_by_id('loginPanel').submit() #figure out what to do with this
 
 # Now connected to the home page
