@@ -140,7 +140,7 @@ To change this template use Tools | Templates.
       function sendComm(commId)
       {
 
-
+        generate();
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () 
         {
@@ -182,7 +182,19 @@ To change this template use Tools | Templates.
          
         
       }
-    
+    function generate()
+    {
+        var form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action','commisionSheet.php');
+
+        var tInput = document.createElement('input');
+        tInput.setAttribute("name", "send");
+        tInput.setAttribute("value","send");
+        form.appendChild(tInput);
+
+        form.submit();
+    }
       
 
 

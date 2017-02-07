@@ -64,10 +64,10 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 
 
 
-if(isset($_POST['token']))
+if(isset($_POST['send']))
 {
 	$ken = $_POST['token'];
-	$pdf->Output('commissionSheetTest.pdf','D');
+	$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D', );
 
 	
 	
