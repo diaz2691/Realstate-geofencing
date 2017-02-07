@@ -69,7 +69,7 @@ if(isset($_POST['token']))
 	$ken = $_POST['token'];
 	$path = 'commissionSheet.pdf';
 
-	$pdf->Output($path,'F');
+	$pdf = $pdf->Output('','S');
 
 	
 	
@@ -90,7 +90,7 @@ else
 var token = "<?php echo $ken; ?>";
 
  var data = new FormData();
- data.append("File", "commissionSheet.pdf");
+ data.append("File", btoa("<?php echo $pdf?>"));
  data.append("File-Name", "Commission Sheet");
 
 var xhr = new XMLHttpRequest();
