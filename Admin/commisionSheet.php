@@ -100,7 +100,7 @@ xhr.onreadystatechange = function()
   {
   	var response = JSON.parse(xhr.responseText);
   	
-    function sendToSign(response.transientDocumentId, token);
+    function sendToSign(response.transientDocumentId, token)
   }
 }
 
