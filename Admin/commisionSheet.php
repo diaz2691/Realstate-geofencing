@@ -88,8 +88,7 @@ else
 //var token = "<?php echo $ken; ?>";
 function prepare()
 {
-	var files = fileSelect.files;
-	var file = files[0];
+	var file = document.getElementById("filePdf").files[0];
 	 var data = new FormData();
 	 data.append("File", file);
 	 data.append("File-Name", "Commission Sheet");
@@ -169,7 +168,7 @@ function sendToSign(tId, token)
  
 </head>
     <body>
-      <input type="file" name="commSheet" size="40">
+      <input type="file" id="filePdf" name="commSheet" size="40">
       <br />
       <br />
       <input type="submit" value="Send" onClick="prepare()">
