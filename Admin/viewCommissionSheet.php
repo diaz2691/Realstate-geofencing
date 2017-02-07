@@ -117,7 +117,7 @@ To change this template use Tools | Templates.
 
               <td>
                  
-                   <input class="option" type="submit" value="Send" name="Send" onclick="sendComm(<?=$result['commId']?>)"/>
+                   <input class="option" type="submit" value="Send" name="Send" onclick="generate(<?=$result['commId']?>)"/>
                 
               </td>
 
@@ -139,8 +139,6 @@ To change this template use Tools | Templates.
     <script>
       function sendComm(commId)
       {
-
-        generate();
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () 
         {
@@ -182,7 +180,7 @@ To change this template use Tools | Templates.
          
         
       }
-    function generate()
+    function generate(commId)
     {
         var form = document.createElement('form');
         form.setAttribute('method', 'post');
@@ -194,6 +192,7 @@ To change this template use Tools | Templates.
         form.appendChild(tInput);
 
         form.submit();
+        sendComm(commId);
     }
       
 

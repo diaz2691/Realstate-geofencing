@@ -63,10 +63,11 @@ $pdf->Cell(0,10,'',0,1);
 $pdf->Cell(0,10,'Agent Signature                              Date                                     Owner and/or Broker Signature                                         Date',0,1);
 
 
+$ken = $_POST['token'];
 
 if(isset($_POST['send']))
 {
-	$ken = $_POST['token'];
+	
 	$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D', );
 
 	
