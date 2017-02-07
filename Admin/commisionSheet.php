@@ -137,7 +137,7 @@ function sendToSign(tId, token)
 	{
 		if (this.readyState === 4 && this.status == 201) 
 		{
-		  	var response = JSON.parse(xhr.responseText);
+		  	var response = JSON.parse(sendDoc.responseText);
 		  	console.log(response.agreementId);
 		    //window.location.href = "viewCommissionSheet.php";
 		}
