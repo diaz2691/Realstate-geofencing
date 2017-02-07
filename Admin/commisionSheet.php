@@ -104,8 +104,8 @@ xhr.onreadystatechange = function()
 
 xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
 xhr.setRequestHeader("Access-Token", token);
-xhr.setRequestHeader("Content-Disposition", "form-data; name='File'; filename='MyPDF.pdf");
-xhr.setRequestHeader("Content-Type", "multipart/form-data");
+// xhr.setRequestHeader("Content-Disposition", "form-data; name='File'; filename='MyPDF.pdf");
+// xhr.setRequestHeader("Content-Type", "multipart/form-data");
 xhr.send(data);
 
 function sendToSign(tId, token)
