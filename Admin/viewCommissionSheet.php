@@ -137,7 +137,7 @@ To change this template use Tools | Templates.
     </body>
 
     <script>
-      function sendComm(commId)
+      function sendComm()
       {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () 
@@ -146,7 +146,7 @@ To change this template use Tools | Templates.
            {
             var response = JSON.parse(xhr.responseText);
             xhr.abort();
-            getPdf(response.access_token, commId);
+            getPdf(response.access_token);
 
            }
          
@@ -158,7 +158,7 @@ To change this template use Tools | Templates.
 
       }
       
-      function getPdf(token,commId)
+      function getPdf(token)
       {
         
         var form = document.createElement('form');
@@ -170,10 +170,7 @@ To change this template use Tools | Templates.
         tInput.setAttribute("value",token);
         form.appendChild(tInput);
 
-        var cId = document.createElement('input');
-        cId.setAttribute("name", "id");
-        cId.setAttribute("value",commId);
-        form.appendChild(cId);
+       
 
         form.submit();
         //alert("hi");
@@ -187,12 +184,12 @@ To change this template use Tools | Templates.
         gen.setAttribute('action','commisionSheet.php');
 
         var send = document.createElement('input');
-        send.setAttribute("name", "send");
-        send.setAttribute("value","send");
+        send.setAttribute("name", "id");
+        send.setAttribute("value", commId);
         gen.appendChild(send);
 
         gen.submit();
-        setTimeout(sendComm(commId), 3000);
+        sendComm();
         
     }
       
