@@ -11,8 +11,7 @@
     'echo $PWD',
     'whoami',
     'git pull',
-    
-    'git push',
+    'git status',
   );
   // Run the commands for output
   $output = '';
