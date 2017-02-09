@@ -13,10 +13,10 @@
 # 	print (page.content)
 
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
-import sys
+# from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
+# import sys
 
-driver = webdriver.PhantomJS("/usr/bin/phantomjs")
+driver = webdriver.PhantomJS()
 
 # driver = webdriver.PhantomJS('/Users/Brayanne/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
 # On Windows, use: webdriver.PhantomJS('C:\phantomjs-1.9.7-windows\phantomjs.exe')
@@ -30,8 +30,8 @@ driver.get("https://pqweb.parcelquest.com/login")
 username = "baycapital"#sys.argv[2]
 password = "realestate"#sys.argv[3]
 
-driver.find_element_by_css_selector('#txtName').send_keys(username)
-driver.find_element_by_css_selector('#txtPwd').send_keys(password)
+#driver.find_element_by_css_selector('#txtName').send_keys(username)
+#driver.find_element_by_css_selector('#txtPwd').send_keys(password)
 #driver.find_element_by_id('loginPanel').submit() #figure out what to do with this
 
 # Now connected to the home page
