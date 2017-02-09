@@ -28,7 +28,7 @@ driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 # Service selection
 # Here I had to select my school among others 
 #driver.get("https://pqweb.parcelquest.com/login")
-driver.get("www.python.com")
+driver.get("www.python.org")
 print ("hello")
 # Login page (https://cas.ensicaen.fr/cas/login?service=https%3A%2F%2Fshibboleth.ensicaen.fr%2Fidp%2FAuthn%2FRemoteUser)
 # Fill the login form and submit it
@@ -47,6 +47,7 @@ print ("hello")
 #for option in options:
 #    print(option.get_attribute("value"))
 print (driver.current_url)
+driver.quit()
 
 #print (page.text)
 
