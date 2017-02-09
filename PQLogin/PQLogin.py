@@ -33,15 +33,15 @@ time.sleep(3)
 print (driver.current_url)
 # Login page (https://cas.ensicaen.fr/cas/login?service=https%3A%2F%2Fshibboleth.ensicaen.fr%2Fidp%2FAuthn%2FRemoteUser)
 # Fill the login form and submit it
-username = "baycapital"#sys.argv[2]
-password = "realestate"#sys.argv[3]
+# username = "baycapital"#sys.argv[2]
+# password = "realestate"#sys.argv[3]
 
-driver.find_element_by_id('txtName').send_keys(username)
-driver.find_element_by_id('txtPwd').send_keys(password)
-driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
-#page = driver.find_element_by_class_name('message')
+# driver.find_element_by_id('txtName').send_keys(username)
+# driver.find_element_by_id('txtPwd').send_keys(password)
+# driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
+# #page = driver.find_element_by_class_name('message')
 
-time.sleep(3)
+# time.sleep(3)
 
 #dropdown = driver.find_element_by_id('QuickSearch_CountyId')
 #options = dropdown.find_elements_by_tag_name("option")
