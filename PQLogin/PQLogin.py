@@ -14,10 +14,11 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import os
 # from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
 # import sys
 
-driver = webdriver.PhantomJS(service_log_path='os.path.devnull')
+driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 
 # driver = webdriver.PhantomJS('/Users/Brayanne/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
 # On Windows, use: webdriver.PhantomJS('C:\phantomjs-1.9.7-windows\phantomjs.exe')
