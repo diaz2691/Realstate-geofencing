@@ -35,11 +35,15 @@ time.sleep(3)
 username = "baycapital"#sys.argv[2]
 password = "realestate"#sys.argv[3]
 
-#driver.find_element_by_css_selector('#txtName').send_keys(username)
-#driver.find_element_by_css_selector('#txtPwd').send_keys(password)
-#driver.find_element_by_xpath('//*[@id="content"]/div/input').submit() #figure out what to do with this
-page = driver.find_element_by_class_name('message')
-print (page.text)
+driver.find_element_by_id('txtName').send_keys(username)
+driver.find_element_by_id('txtPwd').send_keys(password)
+driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
+#page = driver.find_element_by_class_name('message')
+
+time.sleep(3)
+print (driver.current_url)
+
+#print (page.text)
 
 # Now connected to the home page
 # Click on 3 links in order to reach the page I want to scrape
