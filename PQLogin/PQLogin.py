@@ -36,8 +36,8 @@ password = "realestate"#sys.argv[3]
 #driver.find_element_by_css_selector('#txtName').send_keys(username)
 #driver.find_element_by_css_selector('#txtPwd').send_keys(password)
 #driver.find_element_by_xpath('//*[@id="content"]/div/input').submit() #figure out what to do with this
-
-print driver.page_source
+page = driver..find_element_by_css_selector('#txtName')
+print (page.text)
 
 # Now connected to the home page
 # Click on 3 links in order to reach the page I want to scrape
