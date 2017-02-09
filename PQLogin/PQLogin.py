@@ -10,7 +10,7 @@ with requests.Session() as c:
 	login_data = dict(UserName=user, Password=passw)
 	c.post(url, data=login_data)
 	page = c.get('https://pqweb.parcelquest.com/#home')
-	print (page.conent)
+	print (page.content)
 
 
 # from selenium import webdriver
