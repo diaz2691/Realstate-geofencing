@@ -10,7 +10,9 @@
   $commands = array(
     'echo $PWD',
     'whoami',
-    
+    'git pull',
+    'git add .',
+    'git commit -m "changes"',
     'git push',
   );
   // Run the commands for output
