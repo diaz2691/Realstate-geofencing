@@ -12,7 +12,7 @@
 # 	page = c.get('https://pqweb.parcelquest.com/#home')
 # 	print (page.content)
 
-
+from selenium import webdriver
 from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
 import sys
 
