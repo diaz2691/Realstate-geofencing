@@ -19,7 +19,7 @@ import gc
 import time
 # from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
 # import sys
-gc.collect()
+#gc.collect()
 driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 
 # driver = webdriver.PhantomJS('/Users/Brayanne/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
