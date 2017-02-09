@@ -42,11 +42,11 @@ driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out
 
 time.sleep(5)
 
-dropdown = driver.find_element_by_id('QuickSearch_CountyId')
-options = dropdown.find_elements_by_tag_name("option")
-for option in options:
-    print(option.get_attribute("value"))
-#print (driver.current_url)
+#dropdown = driver.find_element_by_id('QuickSearch_CountyId')
+#options = dropdown.find_elements_by_tag_name("option")
+#for option in options:
+#    print(option.get_attribute("value"))
+print (driver.current_url)
 
 #print (page.text)
 
