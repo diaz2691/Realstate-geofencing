@@ -23,7 +23,7 @@ driver = webdriver.PhantomJS("/usr/bin/phantomjs")
 
 # Service selection
 # Here I had to select my school among others 
-driver.get("https://pqweb.parcelquest.com/#login")
+driver.get("https://pqweb.parcelquest.com/login")
 
 # Login page (https://cas.ensicaen.fr/cas/login?service=https%3A%2F%2Fshibboleth.ensicaen.fr%2Fidp%2FAuthn%2FRemoteUser)
 # Fill the login form and submit it
