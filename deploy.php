@@ -10,7 +10,8 @@
   $commands = array(
     'echo $PWD',
     'whoami',
-    'git commit -am "Adding to gitignore"',
+    'git add .',
+    'git commit -m "changes"'
     'git push',
   );
   // Run the commands for output
