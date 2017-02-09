@@ -89,7 +89,7 @@
                   <option value="pending">pending</option>
                   <option value="sold">sold</option>
                 </select>
-                <select id="state">
+                <select id="county">
                   <option value="Alameda, CA">Alameda, CA</option>
                   <option value="Alpine, CA">Alpine, CA</option>
                   <option value="Amador, CA">Amador, CA</option>
@@ -115,7 +115,7 @@
                   <option value="Mendocino, CA">Mendocino, CA</option>
                   <option value="Merced, CA">Merced, CA</option>
                   <option value="Modoc, CA">Modoc, CA</option>
-                  <option value="Monterey, CA">Monterey, CA</option>
+                  <option value="Monterey, CA" selected>Monterey, CA</option>
                   <option value="Napa, CA">Napa, CA</option>
                   <option value="Nevada, CA">Nevada, CA</option>
                   <option value="Orange, CA">Orange, CA</option>
