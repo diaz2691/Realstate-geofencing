@@ -26,15 +26,17 @@ driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 # Service selection
 # Here I had to select my school among others 
 #driver.get("https://pqweb.parcelquest.com/login")
-driver.get("http://www.python.org")
+driver.get("https://pqweb.parcelquest.com/login")
 # Login page (https://cas.ensicaen.fr/cas/login?service=https%3A%2F%2Fshibboleth.ensicaen.fr%2Fidp%2FAuthn%2FRemoteUser)
 # Fill the login form and submit it
 username = "baycapital"#sys.argv[2]
 password = "realestate"#sys.argv[3]
+
+driver.find_element_by_css_selector('#txtName').send_keys(username)
+driver.find_element_by_css_selector('#txtPwd').send_keys(password)
+driver.find_element_by_xpath('//*[@id="content"]/div/input').submit() #figure out what to do with this
+
 print driver.page_source.encode("utf-8")
-#driver.find_element_by_css_selector('#txtName').send_keys(username)
-#driver.find_element_by_css_selector('#txtPwd').send_keys(password)
-#driver.find_element_by_id('loginPanel').submit() #figure out what to do with this
 
 # Now connected to the home page
 # Click on 3 links in order to reach the page I want to scrape
