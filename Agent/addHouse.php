@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>
-        function getCity() {  
+        /*function getCity() {  
           
          $.ajax({
                 type: "get",
@@ -32,7 +32,7 @@
                      alert(status);
                 }
              });
-         }
+         }*/
 
             $("#button").click( function(event){
                 var status = $("#status :selected").text();
@@ -91,7 +91,7 @@
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
-                City: <span id="cities"></span> <br />
+                <!-- City: <span id="cities"></span> <br /> -->
                 <input type="text" id="state" placeholder="state"><br />
                 <input type="text" id="zip" placeholder="zip"><br />
                 <input type="text" id="bedrooms" placeholder="bedrooms"><br />
@@ -103,7 +103,7 @@
         </div>
         
         <script> 
-          $("#zip").change(getCity);     
+         // $("#zip").change(getCity);     
         </script>
         
     </body>
