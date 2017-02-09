@@ -85,9 +85,67 @@
             <div type="text" class="form">
                 <h1>Enter House Information</h1>
                 <select id="status">
-                <option value="active" selected>active</option>
+                  <option value="active" selected>active</option>
                   <option value="pending">pending</option>
                   <option value="sold">sold</option>
+                </select>
+                <select id="state">
+                  <option value="Alameda, CA">Alameda, CA</option>
+                  <option value="Alpine, CA">Alpine, CA</option>
+                  <option value="Amador, CA">Amador, CA</option>
+                  <option value="Butte, CA">Butte, CA</option>
+                  <option value="Calaveras, CA">Calaveras, CA</option>
+                  <option value="Colusa, CA">Colusa, CA</option>
+                  <option value="Contra Costa, CA">Contra Costa, CA</option>
+                  <option value="Del Norte, CA">Del Norte, CA</option>
+                  <option value="El Dorado, CA">El Dorado, CA</option>
+                  <option value="Fresno, CA">Fresno, CA</option>
+                  <option value="Glenn, CA">Glenn, CA</option>
+                  <option value="Humboldt, CA">Humboldt, CA</option>
+                  <option value="Imperial, CA">Imperial, CA</option>
+                  <option value="Inyo, CA">Inyo, CA</option>
+                  <option value="Kern, CA">Kern, CA</option>
+                  <option value="Kings, CA">Kings, CA</option>
+                  <option value="Lake, CA">Lake, CA</option>
+                  <option value="Lassen, CA">Lassen, CA</option>
+                  <option value="Los Angeles, CA">Los Angeles, CA</option>
+                  <option value="Madera, CA">Madera, CA</option>
+                  <option value="Marin, CA">Marin, CA</option>
+                  <option value="Mariposa, CA">Mariposa, CA</option>
+                  <option value="Mendocino, CA">Mendocino, CA</option>
+                  <option value="Merced, CA">Merced, CA</option>
+                  <option value="Modoc, CA">Modoc, CA</option>
+                  <option value="Monterey, CA">Monterey, CA</option>
+                  <option value="Napa, CA">Napa, CA</option>
+                  <option value="Nevada, CA">Nevada, CA</option>
+                  <option value="Orange, CA">Orange, CA</option>
+                  <option value="Placer, CA">Placer, CA</option>
+                  <option value="Plumas, CA">Plumas, CA</option>
+                  <option value="Riverside, CA">Riverside, CA</option>
+                  <option value="Sacramento, CA">Sacramento, CA</option>
+                  <option value="San Benito, CA">San Benito, CA</option>
+                  <option value="San Bernardino, CA">San Bernardino, CA</option>
+                  <option value="San Diego, CA">San Diego, CA</option>
+                  <option value="San Francisco, CA">San Francisco, CA</option>
+                  <option value="San Joaquin, CA">San Joaquin, CA</option>
+                  <option value="San Luis Obispo, CA">San Luis Obispo, CA</option>
+                  <option value="San Mateo, CA">San Mateo, CA</option>
+                  <option value="Santa Barbara, CA">Santa Barbara, CA</option>
+                  <option value="San Clara, CA">San Clara, CA</option>
+                  <option value="Santa Cruz, CA">Santa Cruz, CA</option>
+                  <option value="Shasta, CA">Shasta, CA</option>
+                  <option value="Sierra, CA">Sierra, CA</option>
+                  <option value="Siskiyou, CA">Siskiyou, CA</option>
+                  <option value="Solano, CA">Solano, CA</option>
+                  <option value="Sonoma, CA">Sonoma, CA</option>
+                  <option value="Stanislaus, CA">Stanislaus, CA</option>
+                  <option value="Tehama, CA">Tehama, CA</option>
+                  <option value="Trinity, CA">Trinity, CA</option>
+                  <option value="Tulare, CA">Tulare, CA</option>
+                  <option value="Tuolumne, CA">Tuolumne, CA</option>
+                  <option value="Ventura, CA">Ventura, CA</option>
+                  <option value="Yolo, CA">Yolo, CA</option>
+                  <option value="Yuba, CA">Yuba, CA</option>
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
