@@ -38,7 +38,7 @@ password = "realestate"#sys.argv[3]
 #driver.find_element_by_css_selector('#txtName').send_keys(username)
 #driver.find_element_by_css_selector('#txtPwd').send_keys(password)
 #driver.find_element_by_xpath('//*[@id="content"]/div/input').submit() #figure out what to do with this
-page = driver.find_element_by_id('txtName')
+page = driver.find_element_by_class_name('message')
 print (page.text)
 
 # Now connected to the home page
