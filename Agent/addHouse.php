@@ -92,7 +92,7 @@
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
                 <!-- City: <span id="cities"></span> <br /> -->
-                <input type="text" id="state" placeholder="state"><br />
+                <input type="text" id="state" value="California" readonly=""><br />
                 <input type="text" id="zip" placeholder="zip"><br />
                 <input type="text" id="bedrooms" placeholder="bedrooms"><br />
                 <input type="text" id="bathrooms" placeholder="bathrooms"><br />
