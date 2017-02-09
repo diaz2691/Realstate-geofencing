@@ -16,6 +16,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import os
 import gc
+import time
 # from selenium.webdriver.support.ui import Select # for <SELECT> HTML form
 # import sys
 gc.collect()
@@ -28,6 +29,7 @@ driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 # Here I had to select my school among others 
 #driver.get("https://pqweb.parcelquest.com/login")
 driver.get("https://pqweb.parcelquest.com/#login")
+time.sleep(5)
 # Login page (https://cas.ensicaen.fr/cas/login?service=https%3A%2F%2Fshibboleth.ensicaen.fr%2Fidp%2FAuthn%2FRemoteUser)
 # Fill the login form and submit it
 username = "baycapital"#sys.argv[2]
