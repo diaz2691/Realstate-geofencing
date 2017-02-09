@@ -84,11 +84,13 @@
         
             <div type="text" class="form">
                 <h1>Enter House Information</h1>
+                Status:
                 <select id="status">
                   <option value="active" selected>active</option>
                   <option value="pending">pending</option>
                   <option value="sold">sold</option>
                 </select>
+                County:
                 <select id="county">
                   <option value="Alameda, CA">Alameda, CA</option>
                   <option value="Alpine, CA">Alpine, CA</option>
