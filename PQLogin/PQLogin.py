@@ -25,7 +25,7 @@ driver = webdriver.PhantomJS()
 # Service selection
 # Here I had to select my school among others 
 driver.get("https://pqweb.parcelquest.com/login")
-assert ("Login | ParcelQuest" in driver.title)
+assert "Login | ParcelQuest" in driver.title
 # Login page (https://cas.ensicaen.fr/cas/login?service=https%3A%2F%2Fshibboleth.ensicaen.fr%2Fidp%2FAuthn%2FRemoteUser)
 # Fill the login form and submit it
 username = "baycapital"#sys.argv[2]
