@@ -40,7 +40,7 @@ driver.find_element_by_id('txtPwd').send_keys(password)
 driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
 #page = driver.find_element_by_class_name('message')
 
-time.sleep(10)
+time.sleep(5)
 
 dropdown = driver.find_element_by_id('QuickSearch_CountyId')
 options = dropdown.find_elements_by_tag_name("option")
