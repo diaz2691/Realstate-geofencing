@@ -20,10 +20,14 @@ $county = "county";
 $script = exec('python PQLogin.py 2>&1' . $address. ' '.$county);
 
 $result = json_decode($script);
+foreach ($result as $r ) 
+{
+	echo $r . "<br/>"
+}
 
-echo "Total value : " . $result['totVal'];
-echo "Square Feet : " . $result['sqFeet'];
-echo "Bedrooms : " . $result['bedR'];
-echo "Full Baths : " . $result['fullBath'];
-echo "APN : " . $result['apn'];
+// echo "Total value : " . $result['totVal'];
+// echo "Square Feet : " . $result['sqFeet'];
+// echo "Bedrooms : " . $result['bedR'];
+// echo "Full Baths : " . $result['fullBath'];
+// echo "APN : " . $result['apn'];
 ?>
