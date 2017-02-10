@@ -98,7 +98,7 @@ print (driver.find_element_by_id('txtName').get_attribute('value'))
 
 driver.find_element_by_id('txtPwd').send_keys(password)
 driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
-
+##########     print (driver.current_url)
 time.sleep(3)
 
 county = "Monterey, CA"
@@ -110,8 +110,9 @@ for option in options:
 	if option.text == county:
 		option.click()
 		break
+
 driver.find_element_by_id('QuickSearch_StreetAddress').send_keys(streetAddress)
-driver.find_element_by_class_name('btnQuickSearch').click()
+driver.find_element_by_xpath('//*[@id="Quick"]/button[1]').click()
 time.sleep(6)
 driver.find_element_by_name('viewResults').click()
 time.sleep(3)
