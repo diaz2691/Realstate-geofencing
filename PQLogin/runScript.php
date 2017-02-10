@@ -17,7 +17,7 @@ session_start();
 $address = "address";
 $county = "county";
 
-$script = exec('python PQLogin.py 2>&1' . $address. ' '.$county)
+$script = exec('python PQLogin.py 2>&1' . $address. ' '.$county);
 
 $result = json_decode($script);
 
