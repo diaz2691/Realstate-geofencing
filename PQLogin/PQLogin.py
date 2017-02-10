@@ -91,7 +91,6 @@ driver.get("https://pqweb.parcelquest.com/#login")
 
 username = "baycapital"
 password = "realestate"
-time.sleep(5)
 driver.find_element_by_id('txtName').click()
 driver.find_element_by_id('txtName').clear()
 driver.find_element_by_id('txtName').send_keys(username)
@@ -100,7 +99,7 @@ driver.find_element_by_id('txtName').send_keys(username)
 driver.find_element_by_id('txtPwd').send_keys(password)
 driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
 
-time.sleep(5)
+time.sleep(3)
 county = "Monterey, CA"
 streetAddress = "1131 carson st"
 
@@ -114,11 +113,10 @@ for option in options:
 driver.find_element_by_id('QuickSearch_StreetAddress').send_keys(streetAddress)
 driver.find_element_by_xpath('//*[@id="Quick"]/button[1]').click()
 
-time.sleep(5)
+time.sleep(6)
 
 driver.find_element_by_name('viewResults').click()
 
-driver.implicitly_wait(5)
 
 listView = driver.find_element_by_id('displaytypeOptions')
 listOption = dropdown.find_elements_by_tag_name("option")
