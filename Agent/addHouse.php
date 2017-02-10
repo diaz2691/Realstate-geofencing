@@ -26,8 +26,8 @@
                 data: {"county": $("#county").val(),
                         "address": $("#address").val() },
                 success: function(data,status) {
-                    alert(status);
-                     $("#bedrooms").html("4");
+                    //alert(status);
+                    document.getElementById('bedrooms').value = data; //added for testing purposes on how the items will be added to form later on
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
                      alert(status);
