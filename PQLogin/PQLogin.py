@@ -88,7 +88,7 @@ import time
 driver = webdriver.PhantomJS('/usr/bin/phantomjs')
 
 driver.get("https://pqweb.parcelquest.com/#login")
-
+time.sleep(2)
 username = "baycapital"
 password = "realestate"
 driver.find_element_by_id('txtName').click()
