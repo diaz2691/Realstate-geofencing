@@ -22,7 +22,7 @@
          $.ajax({
                 type: "get",
                 url: "../PQLogin/runScript.php",
-                dataType: "json",
+                //dataType: "json",
                 data: {"county": $("#county").val(),
                         "address": $("#address").val() },
                 success: function(data,status) {
