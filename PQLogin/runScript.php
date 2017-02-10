@@ -20,7 +20,7 @@ $county = "county";
 
 $result = json_decode(exec('python PQLogin.py 2>&1' . $address. ' '.$county), true);
 
-echo "Total value : " . $result['totVale'];
+echo "Total value : " . $result['totVal'];
 echo "Square Feet : " . $result['sqFeet'];
 echo "Bedrooms : " . $result['bedR'];
 echo "Full Baths : " . $result['fullBath'];
