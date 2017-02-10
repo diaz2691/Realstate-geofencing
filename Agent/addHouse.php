@@ -147,7 +147,7 @@
                   <option value="Tuolumne, CA">Tuolumne, CA</option>
                   <option value="Ventura, CA">Ventura, CA</option>
                   <option value="Yolo, CA">Yolo, CA</option>
-                  <option value="Yuba, CA">Yuba, CA</option>
+                  <option value="Yuba, CA" disabled="">Yuba, CA</option>
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
@@ -163,7 +163,8 @@
         </div>
         
         <script> 
-         // $("#zip").change(getCity);     
+         // $("#zip").change(getCity);  
+            $("#county").change(getCity());   
         </script>
         
     </body>
