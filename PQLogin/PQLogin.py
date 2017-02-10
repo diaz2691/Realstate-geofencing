@@ -114,7 +114,7 @@ for option in options:
 driver.find_element_by_id('QuickSearch_StreetAddress').send_keys(streetAddress)
 driver.find_element_by_xpath('//*[@id="Quick"]/button[1]').click()
 
-driver.implicitly_wait(5)
+driver.implicitly_wait(8)
 
 driver.find_element_by_name('viewResults').click()
 
