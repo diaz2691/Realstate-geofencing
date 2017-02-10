@@ -18,7 +18,7 @@ $address = "address";
 $county = "county";
 
 
-$result = json_decode(passthru('python PQLogin.py 2>&1' . $address. ' '.$county);, true);
+$result = json_decode(passthru('python PQLogin.py 2>&1' . $address. ' '.$county), true);
 
 echo "Total value : " . $result['totVale'];
 echo "Square Feet : " . $result['sqFeet'];
