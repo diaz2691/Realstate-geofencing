@@ -84,6 +84,11 @@ from selenium.webdriver.common.keys import Keys
 import os
 import gc
 import time
+import json
+
+
+print(sys.argv[1])
+print sys.argv[2]
 
 driver = webdriver.PhantomJS('/usr/bin/phantomjs')
 
@@ -100,6 +105,10 @@ driver.find_element_by_id('txtPwd').send_keys(password)
 driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
 
 time.sleep(3)
+
+# streetAddress = sys.argv[1]
+# county = sys.argv[2]
+
 county = "Monterey, CA"
 streetAddress = "1131 carson st"
 
@@ -133,11 +142,9 @@ bedrooms = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/d
 fullBaths = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[2]/td[2]/span')
 apn = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[2]/table/tbody/tr[3]/td[2]')
 
-print(totalValue[1].get_attribute('innerHTML'))
-print(squareFeet[1].get_attribute('innerHTML'))
-print(bedrooms[1].get_attribute('innerHTML'))
-print(fullBaths[1].get_attribute('innerHTML'))
-print(apn[1].get_attribute('innerHTML'))
+D = {'totVal':totalValue[1].get_attribute('innerHTML'), 'sqFeet': squareFeet[1].get_attribute('innerHTML'), 'bedR': bedrooms[1].get_attribute('innerHTML'), 'fullBath': fullBaths[1].get_attribute('innerHTML'), 'apn': apn[1].get_attribute('innerHTML')}
+
+print json.dumps(D)
 
 driver.quit() 
 
