@@ -100,7 +100,7 @@ print (driver.find_element_by_id('txtName').get_attribute('value'))
 driver.find_element_by_id('txtPwd').send_keys(password)
 driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
 
-
+time.sleep(5)
 county = "Monterey, CA"
 streetAddress = "1131 carson st"
 
