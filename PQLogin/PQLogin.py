@@ -95,7 +95,7 @@ time.sleep(5)
 driver.find_element_by_id('txtName').click()
 driver.find_element_by_id('txtName').clear()
 driver.find_element_by_id('txtName').send_keys(username)
-print (driver.find_element_by_id('txtName').get_attribute('value'))
+#print (driver.find_element_by_id('txtName').get_attribute('value'))
 
 driver.find_element_by_id('txtPwd').send_keys(password)
 driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
@@ -114,7 +114,7 @@ for option in options:
 driver.find_element_by_id('QuickSearch_StreetAddress').send_keys(streetAddress)
 driver.find_element_by_xpath('//*[@id="Quick"]/button[1]').click()
 
-driver.implicitly_wait(8)
+time.sleep(5)
 
 driver.find_element_by_name('viewResults').click()
 
