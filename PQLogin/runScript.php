@@ -10,6 +10,10 @@
 
 //echo $ret;
 
+session_start();
+$address = $_GET['address'];
+$county = $_GET['county'];
+
 $check = passthru('python PQLogin.py 2>&1');
 echo $check;
 

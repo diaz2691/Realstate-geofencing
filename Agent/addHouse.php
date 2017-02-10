@@ -17,22 +17,23 @@
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>
-        /*function getCity() {  
+        function sendAddressCounty() {  
           
          $.ajax({
                 type: "get",
-                url: "http://maps.googleapis.com/maps/api/geocode/json",
+                url: "../PQLogin/runScript.php",
                 dataType: "json",
-                data: {"address": $("#zip").val() },
+                data: {"county": $("#county").val(),
+                        "address": $("#address").val() },
                 success: function(data,status) {
-                    alert(data.results.formatted_address);
-                     $("#city").html(data);
+                    alert(status);
+                     $("#bedrooms").html("4");
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
                      alert(status);
                 }
              });
-         }*/
+         }
 
             $("#button").click( function(event){
                 var status = $("#status :selected").text();
@@ -147,7 +148,7 @@
                   <option value="Tuolumne, CA">Tuolumne, CA</option>
                   <option value="Ventura, CA">Ventura, CA</option>
                   <option value="Yolo, CA">Yolo, CA</option>
-                  <option value="Yuba, CA" disabled="">Yuba, CA</option>
+                  <option value="Yuba, CA">Yuba, CA</option>
                 </select>
                 <input type="text" id="address" placeholder="address"> <br />
                 <input type="text" id="city" placeholder="city"><br />
@@ -163,8 +164,7 @@
         </div>
         
         <script> 
-         // $("#zip").change(getCity);  
-            $("#county").change(getCity());   
+            $("#address").change(sendAddressCounty());   
         </script>
         
     </body>
