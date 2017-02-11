@@ -17,7 +17,7 @@ session_start();
 $address = "address";
 $county = "county";
 
-$script = popen('python PQLogin.py 2>&1 ' . $address. ' '.$county, 'r');
+$script = passthru('python PQLogin.py 2>&1 ' . $address. ' '.$county);
 
 $result = json_decode($script);
 // foreach ($result as $r ) 
@@ -26,11 +26,10 @@ $result = json_decode($script);
 // }
 
  
-echo "Total value : " . $result['totVal'];
-echo "Square Feet : " . $result['sqFeet'];
-echo "Bedrooms : " . $result['bedR'];
-echo "Full Baths : " . $result['fullBath'];
-echo "APN : " . $result['apn'];
-pclose($script);
+echo "Total value : " . $result['totVal'] . "<br/>";
+echo "Square Feet : " . $result['sqFeet'] . "<br/>";
+echo "Bedrooms : " . $result['bedR'] . "<br/>";
+echo "Full Baths : " . $result['fullBath'] . "<br/>";
+echo "APN : " . $result['apn'] . "<br/>";
 
 ?>
