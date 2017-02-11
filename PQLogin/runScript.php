@@ -17,7 +17,7 @@ session_start();
 $address = "address";
 $county = "county";
 
-$script = passthru('python PQLogin.py 2>&1' . $address. ' '.$county);
+$script = passthru('python PQLogin.py 2>&1 ' . $address. ' '.$county);
 
 echo $script;
 
