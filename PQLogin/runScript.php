@@ -19,11 +19,7 @@ $county = "county";
 
 $script = passthru('python PQLogin.py 2>&1' . $address. ' '.$county);
 
-$result = json_decode($script);
-foreach ($result as $r ) 
-{
-	echo $r . "<br/>";
-}
+echo $script[0];
 
 
 // echo "Total value : " . $result['totVal'];
