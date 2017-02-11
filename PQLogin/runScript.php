@@ -18,7 +18,7 @@ $address = "1131 carson st.";
 $county = "Monterey, CA";
 
 $script = shell_exec('python PQLogin.py 2>&1 ' . $address. ' '.$county);
-
+echo $script;
 $result = json_decode($script, true);
 // foreach ($result as $r ) 
 // {
