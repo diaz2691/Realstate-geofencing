@@ -25,10 +25,19 @@ $result = json_decode($script, true);
 // }
 
  
-echo "<br/> Total value : " . $result['totVal'] . "<br/>";
+/*echo "<br/> Total value : " . $result['totVal'] . "<br/>";
 echo "Square Feet : " . $result['sqFeet'] . "<br/>";
 echo "Bedrooms : " . $result['bedR'] . "<br/>";
 echo "Full Baths : " . $result['fullBath'] . "<br/>";
 echo "APN : " . $result['apn'] . "<br/>";
+*/
+
+//print_r($result); 
+$houseData = array(); 
+$houseData['price'] = $result['totVal']; 
+$houseData['Bedrooms'] = $result['bedR'];
+$houseData['bathrooms'] = $result['fullBath']; 
+
+echo json_encode($checkUsername); 
 
 ?>

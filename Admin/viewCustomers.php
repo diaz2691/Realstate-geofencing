@@ -24,8 +24,28 @@ To change this template use Tools | Templates.
 <html>
     
 <head>
-    <title>Visitors</title>
-    
+    <title>Customers</title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script>
+            function searchTable() {  
+              
+             $.ajax({
+                    type: "get",
+                    url: "../PQLogin/runScript.php",
+                    //dataType: "json",
+                    data: {"county": $("#county").val(),
+                            "address": $("#address").val() },
+                    success: function(data,status) {
+                        //alert(status);
+                        document.getElementById('bedrooms').value = data; //added for testing purposes on how the items will be added to form later on
+                    },
+                    complete: function(data,status) { //optional, used for debugging purposes
+                         alert(status);
+                    }
+                 });
+             }
+    </script>
+
     <script>
         
             function confirmDelete(record) {
@@ -82,7 +102,7 @@ To change this template use Tools | Templates.
         ?> 
         <br/><br/><h2 id="header2">Customers &#x2713</h2> 
        
-        <input type="text" name="search" placeholder="search customer name...">
+        <input type="text" id="search" name="search" placeholder="search customer name...">
 
         <table class="tftable" border="1">
        
@@ -120,6 +140,9 @@ To change this template use Tools | Templates.
                } //closes foreach
              ?>         
         </table>
-    <br/><br/><br/><br/><br/><br/>
+        
+        <script>
+            $("#search").change(searchTable());
+        </script>
     </body>
 </html>
