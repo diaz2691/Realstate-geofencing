@@ -38,6 +38,6 @@ $houseData['price'] = $result['totVal'];
 $houseData['Bedrooms'] = $result['bedR'];
 $houseData['bathrooms'] = $result['fullBath']; 
 
-echo json_encode($checkUsername); 
+echo json_encode($houseData); 
 
 ?>
