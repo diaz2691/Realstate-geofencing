@@ -19,7 +19,7 @@ $county = "county";
 
 $script = passthru('python PQLogin.py 2>&1 ' . $address. ' '.$county);
 
-$result = json_decode($script, true);
+$result = var_dump(json_decode($script, true));
 // foreach ($result as $r ) 
 // {
 // 	echo $r . "<br/>";
