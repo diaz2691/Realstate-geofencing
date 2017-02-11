@@ -26,8 +26,8 @@ $result = json_decode($script, true);
 // }
 
  
-echo "<br/> Total value : " . $result[0] . "<br/>";
-echo "Square Feet : " . $result[1] . "<br/>";
+echo "<br/> Total value : " . $result['totVal'] . "<br/>";
+echo "Square Feet : " . $result['sqFeet'] . "<br/>";
 echo "Bedrooms : " . $result['bedR'] . "<br/>";
 echo "Full Baths : " . $result['fullBath'] . "<br/>";
 echo "APN : " . $result['apn'] . "<br/>";
