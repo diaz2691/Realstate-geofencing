@@ -106,11 +106,11 @@ driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out
 
 time.sleep(3)
 
-# streetAddress = sys.argv[1]
-# county = sys.argv[2]
-
-county = sys.argv[2]
 streetAddress = sys.argv[1]
+county = sys.argv[2]
+
+# county = "Monterey, CA"
+# streetAddress = "1131 carson st"
 
 dropdown = driver.find_element_by_id('QuickSearch_CountyId')
 options = dropdown.find_elements_by_tag_name("option")
