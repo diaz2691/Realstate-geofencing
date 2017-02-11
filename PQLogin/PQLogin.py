@@ -87,68 +87,69 @@ import time
 import json
 import sys
 
-print sys.argv[1]
-print sys.argv[2] 
-print sys.argv[3]
-print "echo"
-print sys.argv[4] 
-print sys.argv[5]
-# driver = webdriver.PhantomJS('/usr/bin/phantomjs')
+# print sys.argv[1]
+# print sys.argv[2] 
+# print sys.argv[3]
+# print "echo"
+# print sys.argv[4] 
+# print sys.argv[5]
 
-# driver.get("https://pqweb.parcelquest.com/#login")
-# time.sleep(2)
-# username = "baycapital"
-# password = "realestate"
-# driver.find_element_by_id('txtName').click()
-# driver.find_element_by_id('txtName').clear()
-# driver.find_element_by_id('txtName').send_keys(username)
+driver = webdriver.PhantomJS('/usr/bin/phantomjs')
 
-# driver.find_element_by_id('txtPwd').send_keys(password)
-# driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
+driver.get("https://pqweb.parcelquest.com/#login")
+time.sleep(2)
+username = "baycapital"
+password = "realestate"
+driver.find_element_by_id('txtName').click()
+driver.find_element_by_id('txtName').clear()
+driver.find_element_by_id('txtName').send_keys(username)
 
-# time.sleep(3)
+driver.find_element_by_id('txtPwd').send_keys(password)
+driver.find_element_by_xpath('//*[@id="content"]/div/input').click() #figure out what to do with this
 
-# streetAddress = sys.argv[2]
-# county = sys.argv[3]
+time.sleep(3)
 
-# # county = "Monterey, CA"
-# # streetAddress = "1131 carson st"
+streetAddress = sys.argv[1] + " " + sys.argv[2] + " " + sys.argv[3]
+county = sys.argv[4] + " " + sys.argv[5]
 
-# dropdown = driver.find_element_by_id('QuickSearch_CountyId')
-# options = dropdown.find_elements_by_tag_name("option")
-# for option in options:
-# 	if option.text == county:
-# 		option.click()
-# 		break
+# county = "Monterey, CA"
+# streetAddress = "1131 carson st"
 
-# driver.find_element_by_id('QuickSearch_StreetAddress').send_keys(streetAddress)
-# driver.find_element_by_xpath('//*[@id="Quick"]/button[1]').click()
+dropdown = driver.find_element_by_id('QuickSearch_CountyId')
+options = dropdown.find_elements_by_tag_name("option")
+for option in options:
+	if option.text == county:
+		option.click()
+		break
 
-# time.sleep(6)
+driver.find_element_by_id('QuickSearch_StreetAddress').send_keys(streetAddress)
+driver.find_element_by_xpath('//*[@id="Quick"]/button[1]').click()
 
-# driver.find_element_by_name('viewResults').click()
+time.sleep(6)
+
+driver.find_element_by_name('viewResults').click()
 
 
-# listView = driver.find_element_by_id('displaytypeOptions')
-# listOption = dropdown.find_elements_by_tag_name("option")
-# for opt in listOption:
-# 	if opt.text == "Detail View":
-# 		opt.click()
-# 		break
+listView = driver.find_element_by_id('displaytypeOptions')
+listOption = dropdown.find_elements_by_tag_name("option")
+for opt in listOption:
+	if opt.text == "Detail View":
+		opt.click()
+		break
 
-# driver.implicitly_wait(5)
+driver.implicitly_wait(5)
 
-# totalValue = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[4]/table/tbody/tr[1]/td[2]/span')
-# squareFeet = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[7]/td[2]/span')
-# bedrooms = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[1]/td[2]/span')
-# fullBaths = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[2]/td[2]/span')
-# apn = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[2]/table/tbody/tr[3]/td[2]')
+totalValue = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[4]/table/tbody/tr[1]/td[2]/span')
+squareFeet = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[7]/td[2]/span')
+bedrooms = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[1]/td[2]/span')
+fullBaths = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[2]/td[2]/span')
+apn = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[2]/table/tbody/tr[3]/td[2]')
 
-# D = {"totVal":totalValue[1].get_attribute('innerHTML'), "sqFeet": squareFeet[1].get_attribute('innerHTML'), "bedR": bedrooms[1].get_attribute('innerHTML'), "fullBath": fullBaths[1].get_attribute('innerHTML'), "apn": apn[1].get_attribute('innerHTML')}
+D = {"totVal":totalValue[1].get_attribute('innerHTML'), "sqFeet": squareFeet[1].get_attribute('innerHTML'), "bedR": bedrooms[1].get_attribute('innerHTML'), "fullBath": fullBaths[1].get_attribute('innerHTML'), "apn": apn[1].get_attribute('innerHTML')}
 
-# print json.dumps(D)
+print json.dumps(D)
 
-# driver.quit() 
+driver.quit() 
 
 
 
