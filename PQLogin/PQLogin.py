@@ -142,7 +142,7 @@ bedrooms = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/d
 fullBaths = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[8]/table/tbody/tr[2]/td[2]/span')
 apn = driver.find_elements_by_xpath('//*[@id="assessor-container"]/div[2]/div[2]/table/tbody/tr[3]/td[2]')
 
-D = {'totVal':totalValue[1].get_attribute('innerHTML'), 'sqFeet': squareFeet[1].get_attribute('innerHTML'), 'bedR': bedrooms[1].get_attribute('innerHTML'), 'fullBath': fullBaths[1].get_attribute('innerHTML'), 'apn': apn[1].get_attribute('innerHTML')}
+D = {"totVal":totalValue[1].get_attribute('innerHTML'), "sqFeet": squareFeet[1].get_attribute('innerHTML'), "bedR": bedrooms[1].get_attribute('innerHTML'), "fullBath": fullBaths[1].get_attribute('innerHTML'), "apn": apn[1].get_attribute('innerHTML')}
 
 print json.dumps(D)
 
