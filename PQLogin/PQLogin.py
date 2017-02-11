@@ -87,8 +87,8 @@ import time
 import json
 import sys
 
- print sys.argv[1] 
- print sys.argv[2]
+ print sys.argv[2] 
+ print sys.argv[3]
 
 # driver = webdriver.PhantomJS('/usr/bin/phantomjs')
 
