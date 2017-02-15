@@ -32,7 +32,7 @@
                     document.getElementById('price').value = data['price'];
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
-                     alert(data);
+                     alert(JSON.stringify(data));
                 }
              });
          }
