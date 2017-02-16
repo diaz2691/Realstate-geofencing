@@ -55,11 +55,10 @@
                     xhr.abort();
                     //console.log(response.name);
                     var firstN = response.name.split(" ");
-                    var cleanFirstN = firstN[0].split(",");
-                    console.log(firstN[0]);
-                    console.log(firstN[1]);
-                    document.getElementById("firstName").value = cleanFirstN;
-                    document.getElementById("lastName").value = firstN[1];
+                    var cleanlastN = firstN[0].split(",");
+                    
+                    document.getElementById("firstName").value = firstN[1];
+                    document.getElementById("lastName").value = cleanlastN[0];
 
                     }
          
