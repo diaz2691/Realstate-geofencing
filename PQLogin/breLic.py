@@ -15,7 +15,6 @@ expirationDate = ""
 driver = webdriver.PhantomJS('/usr/bin/phantomjs')
 
 driver.get("http://www2.dre.ca.gov/PublicASP/pplinfo.asp")
-time.sleep(1)
 driver.find_element_by_name('LICENSE_ID').send_keys(license)
 
 driver.find_element_by_xpath('//*[@id="main_content"]/div/form/table/tbody/tr[6]/td[2]/input[1]').click()
@@ -25,9 +24,7 @@ name = driver.find_element_by_xpath('/html/body/table/tbody/tr[2]/td[2]/font')
 licIssued = driver.find_element_by_xpath('/html/body/table/tbody/tr[8]/td[2]/font')
 expirationDate = driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td[2]/font')
 
-print (name.text)
-print (licIssued.text)
-print (expirationDate.text)
+
 
 
 
