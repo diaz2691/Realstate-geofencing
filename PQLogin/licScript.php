@@ -5,7 +5,7 @@ $result = json_decode($script, true);
 
 echo $result['name'];
 echo $result['lic'];
-echo $result['expirationDate']
+echo $result['expirationDate'];
 
 echo json_encode($houseData);
 
