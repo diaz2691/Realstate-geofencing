@@ -7,6 +7,6 @@ echo $result['name'];
 echo $result['lic'];
 echo $result['expirationDate'];
 
-echo json_encode($houseData);
+echo json_encode($result);
 
 ?>
