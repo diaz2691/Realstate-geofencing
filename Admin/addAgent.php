@@ -55,7 +55,7 @@
                     xhr.abort();
                     //console.log(response.name);
                     var firstN = response.name.split(" ");
-                    var cleanFirstN = firstN.split(",");
+                    var cleanFirstN = firstN[0].split(",");
                     console.log(firstN[0]);
                     console.log(firstN[1]);
                     document.getElementById("firstName").value = cleanFirstN;
