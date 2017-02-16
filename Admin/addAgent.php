@@ -53,7 +53,12 @@
                    {
                     var response = JSON.parse(xhr.responseText);
                     xhr.abort();
-                    console.log(response.name);
+                    //console.log(response.name);
+                    var firstN = response.name.split();
+                    console.log(firstN[0]);
+                    document.getElementById("username").
+                    document.getElementById("p1").
+                    document.getElementById("p1").
 
                     }
          
