@@ -31,9 +31,9 @@ print (expirationDate.text)
 
 
 
-# D = {"totVal":totalValue[1].get_attribute('innerHTML'), "sqFeet": squareFeet[1].get_attribute('innerHTML'), "bedR": bedrooms[1].get_attribute('innerHTML'), "fullBath": fullBaths[1].get_attribute('innerHTML'), "apn": apn[1].get_attribute('innerHTML')}
+D = {"name":name.text, "lic": licIssued.text, "expirationDate": expirationDate.text}
 
-# print json.dumps(D)
+print json.dumps(D)
 
 driver.quit() 
 
