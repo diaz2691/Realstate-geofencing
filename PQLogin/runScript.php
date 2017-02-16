@@ -33,14 +33,9 @@ echo "APN : " . $result['apn'] . "<br/>";
 */
 
 //print_r($result); 
-/*$houseData = array(); 
-$houseData['price'] = "245,000";//$result['totVal']; 
-$houseData['bedrooms'] = "2";//$result['bedR'];
-$houseData['bathrooms'] = "1";//$result['fullBath']; 
-*/
+$checkUsername = array(); 
+$checkUsername['exists'] = false; 
 
-$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
-
-echo $age; 
+echo json_encode($checkUsername);
 
 ?>

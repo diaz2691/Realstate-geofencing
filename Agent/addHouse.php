@@ -22,12 +22,12 @@
          $.ajax({
                 type: "get",
                 url: "../PQLogin/runScript.php",
-                //dataType: "json",
+                dataType: "json",
                 data: {"county": $("#county").val(),
                         "address": $("#address").val() },
                 success: function(data,status) {
                     //alert(status);
-                    document.getElementById('bedrooms').value = data['Peter']; //added for testing purposes on how the items will be added to form later on
+                    document.getElementById('bedrooms').value = data['exists']; //added for testing purposes on how the items will be added to form later on
                     document.getElementById('bathrooms').value = data['bathrooms'];
                     document.getElementById('price').value = data['price'];
                 },
