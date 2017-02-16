@@ -12,7 +12,7 @@ licIssued = ""
 expirationDate = ""
 
 
-# driver = webdriver.PhantomJS('/usr/bin/phantomjs')
+driver = webdriver.PhantomJS('/usr/bin/phantomjs')
 
 driver.get("http://www2.dre.ca.gov/PublicASP/pplinfo.asp")
 time.sleep(1)
