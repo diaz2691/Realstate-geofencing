@@ -34,9 +34,9 @@ echo "APN : " . $result['apn'] . "<br/>";
 
 //print_r($result); 
 $houseData = array(); 
-$houseData['bedrooms'] = "5";//$result['bedR']; 
-$houseData['bathrooms'] = "3";//$result['fullBath'];
-$houseData['price'] = "550000";//$result['totVal'];
+$houseData['bedrooms'] = $result['bedR']; 
+$houseData['bathrooms'] = $result['fullBath'];
+$houseData['price'] = $result['totVal'];
 
 echo json_encode($houseData);
 
