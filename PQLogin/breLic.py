@@ -26,7 +26,7 @@ licIssued = driver.find_element_by_xpath('/html/body/table/tbody/tr[8]/td[2]/fon
 expirationDate = driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td[2]/font')
 
 print (name.text)
-print (licIssued.text))
+print (licIssued.text)
 print (expirationDate.get_attribute('innerHTML'))
 
 
