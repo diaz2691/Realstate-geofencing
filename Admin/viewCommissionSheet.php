@@ -170,7 +170,7 @@ To change this template use Tools | Templates.
         tInput.setAttribute("value",token);
         form.appendChild(tInput);
 
-       
+       document.body.appendChild(form);
 
         form.submit();
         //alert("hi");
@@ -187,6 +187,8 @@ To change this template use Tools | Templates.
         send.setAttribute("name", "id");
         send.setAttribute("value", commId);
         gen.appendChild(send);
+
+        document.body.appendChild(gen);
 
         gen.submit();
         sendComm();
