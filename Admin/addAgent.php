@@ -38,13 +38,30 @@
                 <input type="text" id="lastName" placeholder="last name"><br />
                 <input type="text" id="email" placeholder="email"><br />
                 <input type="text" id="phone" placeholder="phone"><br />
-                <input type="text" id="license" placeholder="license"><br /> 
+                <input type="text" id="license" placeholder="license" onchange="getLicense()"><br /> 
                 <input type="button" value="enter" id="button">  
                 
             </div>x
         
         <script>
+            function getLicense()
+            {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () 
+                {
+                   if (this.readyState == 4 && this.status == 200) 
+                   {
+                    var response = JSON.parse(xhr.responseText);
+                    xhr.abort();
+                    console.log(response.name);
 
+                    }
+         
+                 }
+
+                xhr.open("GET", "../PQLogin/licScript.php", true);
+                xhr.send();
+            }
 
             $("#button").click( function(event){
                 var username = $("#username").val();
