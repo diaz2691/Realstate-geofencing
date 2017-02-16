@@ -27,7 +27,7 @@
                         "address": $("#address").val() },
                 success: function(data,status) {
                     //alert(status);
-                    document.getElementById('bedrooms').value = data['exists']; //added for testing purposes on how the items will be added to form later on
+                    document.getElementById('bedrooms').value = data['bedrooms']; //added for testing purposes on how the items will be added to form later on
                     document.getElementById('bathrooms').value = data['bathrooms'];
                     document.getElementById('price').value = data['price'];
                 },
