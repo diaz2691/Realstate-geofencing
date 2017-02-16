@@ -116,9 +116,9 @@ To change this template use Tools | Templates.
               </td> 
 
               <td>
-                 
+                 <form >
                    <input class="option" type="button" value="Send" name="Send" onclick="generate(<?=$result['commId']?>)"/>
-                
+                </form?
               </td>
 
               <td>
