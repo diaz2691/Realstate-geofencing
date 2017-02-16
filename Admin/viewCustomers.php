@@ -102,7 +102,7 @@ To change this template use Tools | Templates.
         ?> 
         <br/><br/><h2 id="header2">Customers &#x2713</h2> 
        
-        <input type="text" id="search" name="search" placeholder="search customer name...">
+        <!--<input type="text" id="search" name="search" placeholder="search customer name...">-->
 
         <table class="tftable" border="1">
        
