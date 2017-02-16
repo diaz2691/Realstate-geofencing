@@ -117,7 +117,7 @@ To change this template use Tools | Templates.
 
               <td>
                  
-                   <input class="option"  value="Send" name="Send" onclick="generate(<?=$result['commId']?>)"/>
+                   <input class="option" type="submit" value="Send" name="Send" onclick="generate(<?=$result['commId']?>)"/>
                 
               </td>
 
