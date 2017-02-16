@@ -56,6 +56,7 @@
                     //console.log(response.name);
                     var firstN = response.name.split(" ");
                     console.log(firstN[0]);
+                    console.log(firstN[1]);
                     // document.getElementById("username").
                     // document.getElementById("p1").
                     // document.getElementById("p1").
