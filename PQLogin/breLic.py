@@ -27,7 +27,7 @@ expirationDate = driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td[2
 
 print (name.text)
 print (licIssued.text)
-print (expirationDate.get_attribute('innerHTML'))
+print (expirationDate.text)
 
 
 
