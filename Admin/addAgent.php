@@ -35,13 +35,13 @@
                 <input type="text" id="license" placeholder="license" onchange="getLicense()"><br />
                 <input type="text" id="username" placeholder="username"> <br />
                 <input type="text" id="password" placeholder="temporary password"><br />
-                <input type="text" id="firstName" placeholder="first name"><br />
-                <input type="text" id="lastName" placeholder="last name"><br />
+                <input type="text" id="firstName" placeholder="first name" readonly><br />
+                <input type="text" id="lastName" placeholder="last name" readonly><br />
                 <input type="text" id="email" placeholder="email"><br />
                 <input type="text" id="phone" placeholder="phone"><br />
 
-                <input type="text" id="issued" placeholder="Issued License Date"><br />
-                <input type="text" id="expiration" placeholder="License Expiration Date"><br />
+                <input type="text" id="issued" placeholder="Issued License Date" readonly><br />
+                <input type="text" id="expiration" placeholder="License Expiration Date" readonly><br />
                  
                 <input type="button" value="enter" id="button">  
                 
