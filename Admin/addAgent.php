@@ -32,13 +32,17 @@
             <div class="form">
                 <h1>Enter Agent Information</h1>
 
+                <input type="text" id="license" placeholder="license" onchange="getLicense()"><br />
                 <input type="text" id="username" placeholder="username"> <br />
                 <input type="text" id="password" placeholder="temporary password"><br />
                 <input type="text" id="firstName" placeholder="first name"><br />
                 <input type="text" id="lastName" placeholder="last name"><br />
                 <input type="text" id="email" placeholder="email"><br />
                 <input type="text" id="phone" placeholder="phone"><br />
-                <input type="text" id="license" placeholder="license" onchange="getLicense()"><br /> 
+
+                <input type="text" id="issued" placeholder="Issued License Date"><br />
+                <input type="text" id="expiration" placeholder="License Expiration Date"><br />
+                 
                 <input type="button" value="enter" id="button">  
                 
             </div>x
@@ -59,7 +63,8 @@
                     
                     document.getElementById("firstName").value = firstN[1];
                     document.getElementById("lastName").value = cleanlastN[0];
-
+                    document.getElementById("issued").value = response.lic;
+                    document.getElementById("expiration").value = response.expirationDate;
                     }
          
                  }
