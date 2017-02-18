@@ -7,13 +7,11 @@
 	    header("Location: ../index.html?error=wrong username or password");
     } 
 
-    if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-        $sql = "DELETE FROM BuyerInfo 
-                 WHERE buyerID = '".$_GET['buyerID']."'";
-        $stmt = $dbConn -> prepare($sql);
-        $stmt->execute();
-
+    $search = false;
+    if (isset ($_GET['q'])){  //checking whether we have clicked on the "Delete" button
+        $search = true;
     }
+
  ?>
 
         
@@ -179,7 +177,12 @@ To change this template use Tools | Templates.
             }
 
             $dbConn = getConnection();
-            $sql = "SELECT * FROM BuyerInfo";
+            if($search){
+                $sql = "SELECT * FROM BuyerInfo WHERE lastName = $_GET['q']";
+            }
+            else{
+                $sql = "SELECT * FROM BuyerInfo";
+            }
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute();
             //$stmt->execute();
