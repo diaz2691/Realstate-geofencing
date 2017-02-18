@@ -159,7 +159,7 @@ To change this template use Tools | Templates.
              ?>  
            <td>
 
-                     <form action="BuyerForm.php">
+                     <form action="BuyerForm.php" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
                          <input class="option" type="submit" value="Open Form" name="VisitorForm"/>
                      </form> 
