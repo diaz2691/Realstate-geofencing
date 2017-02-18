@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="addOrEditInfo.css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>
-        function sendAddressCounty() {  
+        /*function sendAddressCounty() {  
           
          $.ajax({
                 type: "get",
@@ -35,7 +35,7 @@
                      //alert(JSON.stringify(data));
                 }
              });
-         }
+         }*/
 
             $("#button").click( function(event){
                 var status = $("#status :selected").text();
