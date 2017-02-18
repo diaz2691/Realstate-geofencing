@@ -159,7 +159,7 @@ To change this template use Tools | Templates.
              ?>  
            <td>
 
-                     <form action="BuyerForm.php" >
+                     <form action="BuyerForm.php" target="_blank">
                          <input type="hidden" name="houseId" value="<?=$result['houseId']?>" />    
                          <input class="option" type="submit" value="Open Form" name="VisitorForm"/>
                      </form> 
