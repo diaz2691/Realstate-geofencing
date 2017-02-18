@@ -135,13 +135,13 @@
                 <input type="text" id="bathrooms" placeholder="bathrooms"><br />
                 <input type="text" id="price" placeholder="price"><br />
                 <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
-                <input id="button" type="button" value="Enter"> 
+                <input id="button" type="button" value="Enter" onclick="enterInfo()"> 
                 
         </div>
         
         <script> 
             $("#address").change(sendAddressCounty());
-            $("#button").click( function(event){
+            function enterInfo(){
               alert("test");
                 var status = $("#status :selected").text();
                 var address = $("#address").val();
@@ -166,7 +166,7 @@
                         userId: userId}
                 }); 
                 window.location.href = "AgentHome.php";
-            });    
+            };    
         </script>
         
     </body>
