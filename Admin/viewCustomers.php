@@ -96,7 +96,7 @@ To change this template use Tools | Templates.
     <!-- CSS styles for standard search box -->
     <style type="text/css">
         #tfheader{
-            background-color:#c3dfef;
+            background-color:#808080;
         }
         #tfnewsearch{
             float:right;
