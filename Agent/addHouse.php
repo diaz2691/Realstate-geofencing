@@ -36,32 +36,6 @@
                 }
              });
          }*/
-
-            $("#button").click( function(event){
-                var status = $("#status :selected").text();
-                var address = $("#address").val();
-                var city = $("#city").val();
-                var state = $("#state").val();
-                var zip = $("#zip").val();
-                var bedrooms = $("#bedrooms").val();
-                var bathrooms = $("#bathrooms").val();
-                var price = $("#price").val();
-                var userId = $("#userId").val();  
-                $.ajax({
-                    type: "POST",
-                    url: "http://52.11.24.75/Agent/submitHouseInfo.php",
-                    data: {status: status,
-                          address: address,
-                          city: city,
-                          state: state,
-                          zip: zip,
-                          bedrooms: bedrooms,
-                        bathrooms: bathrooms,
-                        price: price,
-                        userId: userId}
-                }); 
-                window.location.href = "AgentHome.php";
-            }); 
     </script><!-- importing jQuery library-->
     <style type="text/css">
         .form select {
@@ -166,7 +140,32 @@
         </div>
         
         <script> 
-            $("#address").change(sendAddressCounty());   
+            $("#address").change(sendAddressCounty());
+            $("#button").click( function(event){
+                var status = $("#status :selected").text();
+                var address = $("#address").val();
+                var city = $("#city").val();
+                var state = $("#state").val();
+                var zip = $("#zip").val();
+                var bedrooms = $("#bedrooms").val();
+                var bathrooms = $("#bathrooms").val();
+                var price = $("#price").val();
+                var userId = $("#userId").val();  
+                $.ajax({
+                    type: "POST",
+                    url: "jjp2017.org/Agent/submitHouseInfo.php",
+                    data: {status: status,
+                          address: address,
+                          city: city,
+                          state: state,
+                          zip: zip,
+                          bedrooms: bedrooms,
+                        bathrooms: bathrooms,
+                        price: price,
+                        userId: userId}
+                }); 
+                window.location.href = "AgentHome.php";
+            });    
         </script>
         
     </body>
