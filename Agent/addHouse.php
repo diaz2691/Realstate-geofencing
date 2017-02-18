@@ -135,13 +135,14 @@
                 <input type="text" id="bathrooms" placeholder="bathrooms"><br />
                 <input type="text" id="price" placeholder="price"><br />
                 <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
-                <input id="button" type="button" value="Enter" > 
+                <input id="button" type="button" value="Enter"> 
                 
         </div>
         
         <script> 
             $("#address").change(sendAddressCounty());
             $("#button").click( function(event){
+              alert("test");
                 var status = $("#status :selected").text();
                 var address = $("#address").val();
                 var city = $("#city").val();
@@ -153,7 +154,7 @@
                 var userId = $("#userId").val();  
                 $.ajax({
                     type: "POST",
-                    url: "jjp2017.org/Agent/submitHouseInfo.php",
+                    url: "http://52.11.24.75/Agent/submitHouseInfo.php",
                     data: {status: status,
                           address: address,
                           city: city,
