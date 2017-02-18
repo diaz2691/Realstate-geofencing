@@ -55,7 +55,7 @@
                         </li>
                         <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Houses <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="AgentProfile.php">View Houses</a></li>
+                                <li><a href="AgentHome.php">View Houses</a></li>
                                 <li><a href="addHouse.php">Add New</a></li>
                             </ul>
                         </li>
