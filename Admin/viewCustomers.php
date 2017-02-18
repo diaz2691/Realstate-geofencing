@@ -155,13 +155,13 @@ To change this template use Tools | Templates.
        
         <!--<input type="text" id="search" name="search" placeholder="search customer name...">-->
 
-        <!-- HTML for SEARCH BAR -->
+        <!-- HTML for SEARCH BAR 
           <div id="tfheader">
             <form id="tfnewsearch" method="get" action="viewCustomers.php">
                     <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
             </form>
           <div class="tfclear"></div>
-          </div>
+          </div>-->
 
         <table class="tftable" border="1">
        
