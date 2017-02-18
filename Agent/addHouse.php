@@ -165,7 +165,7 @@
                         price: price,
                         userId: userId}
                 }); 
-                //window.location.href = "AgentHome.php";
+                window.location.href = "AgentHome.php";
             };    
         </script>
         
