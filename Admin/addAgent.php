@@ -59,11 +59,16 @@
                     var response = JSON.parse(xhr.responseText);
                     xhr.abort();
                     //console.log(response.name);
-                    var firstN = response.name.split(" ");
-                    var cleanlastN = firstN[0].split(",");
+                    // var firstN = response.name.split(" ");
+                    // var cleanlastN = firstN[0].split(",");
                     
-                    document.getElementById("firstName").value = firstN[1];
-                    document.getElementById("lastName").value = cleanlastN[0];
+                    // document.getElementById("firstName").value = firstN[1];
+                    // document.getElementById("lastName").value = cleanlastN[0];
+
+
+                    var firstName = response.split(",");
+                    document.getElementById("firstName").value = firstName[1];
+                    document.getElementById("lastName").value = firstName[0];
                     document.getElementById("issued").value = response.lic;
                     document.getElementById("expiration").value = response.expirationDate;
                     }
