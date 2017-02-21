@@ -71,7 +71,7 @@
                     var dateExpireFormat = "20"+dateExpireSplit[2]+"-"+dateExpireSplit[0]+"-"+dateExpireSplit[1];
                     var today = new Date();
                     today.setHours(0,0,0,0);
-                    if( Date.parse(dateExpireFormat) >= today)
+                    if( Date.parse(dateExpireFormat) <= today)
                     {
                         alert("Invalid license");
                     }
