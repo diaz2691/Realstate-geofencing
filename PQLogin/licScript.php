@@ -1,6 +1,10 @@
 <?php
 
-$script = shell_exec('python breLic.py 2>&1');
+session_start();
+
+$license = $_GET['license'];
+
+$script = shell_exec('python breLic.py 2>&1 ' . $license);
 $result = json_decode($script, true);
 
 // echo $result['name'];

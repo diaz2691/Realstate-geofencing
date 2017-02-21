@@ -6,7 +6,7 @@ import time
 import json
 import sys
 
-license = '01864213'
+license = sys.argv[1]
 name = ""
 licIssued = ""
 expirationDate = ""

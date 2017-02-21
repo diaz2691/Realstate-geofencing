@@ -50,6 +50,7 @@
         <script>
             function getLicense()
             {
+                lic = document.getElementById("license").value;
                 var xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function () 
                 {
@@ -69,7 +70,7 @@
          
                  }
 
-                xhr.open("GET", "../PQLogin/licScript.php", true);
+                xhr.open("GET", "../PQLogin/licScript.php?license=" + lic, true);
                 xhr.send();
             }
 
