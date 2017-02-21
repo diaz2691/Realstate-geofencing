@@ -66,7 +66,7 @@
                     // document.getElementById("lastName").value = cleanlastN[0];
 
 
-                    var firstName = response.split(",");
+                    var firstName = response.name.split(",");
                     document.getElementById("firstName").value = firstName[1];
                     document.getElementById("lastName").value = firstName[0];
                     document.getElementById("issued").value = response.lic;
