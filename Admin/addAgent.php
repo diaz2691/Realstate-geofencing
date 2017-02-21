@@ -65,12 +65,27 @@
                     // document.getElementById("firstName").value = firstN[1];
                     // document.getElementById("lastName").value = cleanlastN[0];
 
-
+                    var dateIssued = response.lic;
+                    var dateExpire = response.expirationDate;
+                    var dateExpireSplit = dateExpire.split("/");
+                    var dateExpireFormat = "20"+dateExpireSplit[2]+"-"+dateExpireSplit[0]+"-"+dateExpireSplit[1];
+                    var today = new Date();
+                    today.setHours(0,0,0,0);
+                    if( Date.parse(dateExpireFormat) >= today)
+                    {
+                        alert("Invalid license");
+                    }
+                    else
+                    {
+                        alert("Valid license");
+                    }
                     var firstName = response.name.split(",");
                     document.getElementById("firstName").value = firstName[1];
                     document.getElementById("lastName").value = firstName[0];
-                    document.getElementById("issued").value = response.lic;
-                    document.getElementById("expiration").value = response.expirationDate;
+                    document.getElementById("issued").value = dateIssued;
+                    document.getElementById("expiration").value = dateExpire;
+
+
                     }
          
                  }
