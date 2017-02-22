@@ -82,7 +82,7 @@ To change this template use Tools | Templates.
 
         <table class="tftable" border="1">
        
-      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
+      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Payment Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
             
             <?php
             $dbConn = getConnection();
