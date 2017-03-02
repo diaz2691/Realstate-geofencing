@@ -124,13 +124,7 @@ ini_set('display_errors', 1);
                     success: function(data, status) 
                     {
                         successmessage = 'Data was succesfully captured';
-                        alert(successmessage);
-                    },
-
-                    error: function(jqXHR, textStatus, errorThrown) {
-                    alert(jqXHR.status);
-                    alert(textStatus);
-                    alert(errorThrown);
+                        alert(data);
                     }
                 });
                 window.location.href = "viewCommissionSheet.php";
