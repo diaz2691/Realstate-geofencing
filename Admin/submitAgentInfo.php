@@ -27,7 +27,7 @@
     $_POST['phone'],
     array(
     "From" => $twilio_phone_number,
-    "Body" => "Your password is " . $_POST['password'],
+    "Body" => "Your password is " . $_POST['password'] . ". Visit www.jjp2017.org to log in.",
     )
     );
 

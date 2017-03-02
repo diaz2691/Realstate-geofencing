@@ -24,110 +24,118 @@
     $commResults = $stmtAgent->fetch();
 
     
-      $TYGross = $commResults['TYGross'];
-      $FYGross = $commResults['FYGross'];
+    $TYGross = $commResults['TYGross'];
+    $FYGross = $commResults['FYGross'];
     
  
     $commission = $_POST['commission'];
     $brokerFee = 0;
     $finalComm = 0;
 
+    $percent = $_POST['percent'];
 
-
-    if($TYGross <= 80000)
+    if(empty($percent))
     {
-      $difference =  80000 - $TYGross;
+      if($TYGross <= 80000)
+      {
+        $difference =  80000 - $TYGross;
 
-      //$total = $TYGross + $commission;
-      if($commission <= $difference)
-      {
-        $brokerFee += $commission * .20;
-      }
-      else
-      {
-        $brokerFee += $difference * .20;
-        $commission = $commission - $difference;
-        if($commission > 0)
+        //$total = $TYGross + $commission;
+        if($commission <= $difference)
         {
-          //$difference = 49999 - $commission;
-          if($commission <= 49999)
+          $brokerFee += $commission * .20;
+        }
+        else
+        {
+          $brokerFee += $difference * .20;
+          $commission = $commission - $difference;
+          if($commission > 0)
           {
-            $brokerFee += $commission * .15;
-          }
-          else
-          {
-            $brokerFee += 49999 * .15;
-            $commission = $commission - 49999;
-            if($commission > 0)
+            //$difference = 49999 - $commission;
+            if($commission <= 49999)
             {
-              //$difference = 49999 - $commission;
-              if($commission <= 49999)
+              $brokerFee += $commission * .15;
+            }
+            else
+            {
+              $brokerFee += 49999 * .15;
+              $commission = $commission - 49999;
+              if($commission > 0)
               {
-                $brokerFee += $commission * .10;
-              }
-              else
-              {
-                $brokerFee += 49999 * .10;
-                $commission = $commission - 49999;
-                if($commission > 0)
+                //$difference = 49999 - $commission;
+                if($commission <= 49999)
                 {
-                  $brokerFee += $commission * .5;
+                  $brokerFee += $commission * .10;
+                }
+                else
+                {
+                  $brokerFee += 49999 * .10;
+                  $commission = $commission - 49999;
+                  if($commission > 0)
+                  {
+                    $brokerFee += $commission * .5;
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-    else if ($TYGross <= 130000)
-    {
-      $difference =  130000 - $TYGross; 
-      if($commission <= $difference)
+      else if ($TYGross <= 130000)
       {
-        $brokerFee += $commission * .15;
-      }
-      else
-      {
-        $brokerFee += $difference * .15;
-        $commission = $commission - $difference;
-        if($commission > 0)
+        $difference =  130000 - $TYGross; 
+        if($commission <= $difference)
         {
-          if($commission <= 49999)
+          $brokerFee += $commission * .15;
+        }
+        else
+        {
+          $brokerFee += $difference * .15;
+          $commission = $commission - $difference;
+          if($commission > 0)
           {
-            $brokerFee += $commission * .10;
-          }
-          else
-          {
-            $brokerFee += 49999 * .10;
-            $commission = $commission - 49999;
-            if($commission > 0)
+            if($commission <= 49999)
             {
-              $brokerFee += $commission * .5;
+              $brokerFee += $commission * .10;
+            }
+            else
+            {
+              $brokerFee += 49999 * .10;
+              $commission = $commission - 49999;
+              if($commission > 0)
+              {
+                $brokerFee += $commission * .5;
+              }
             }
           }
         }
       }
-    }
-    else if($TYGross <= 180000)
-    {
-      $difference =  180000 - $TYGross; 
-      if($commission <= $difference)
+      else if($TYGross <= 180000)
       {
-        $brokerFee += $commission * .15;
+        $difference =  180000 - $TYGross; 
+        if($commission <= $difference)
+        {
+          $brokerFee += $commission * .15;
+        }
+        else
+        {
+          $brokerFee += 49999 * .10;
+          $commission = $commission - 49999;
+          if($commission > 0)
+          {
+            $brokerFee += $commission * .5;
+          }
+        }
       }
       else
       {
-        $brokerFee += 49999 * .10;
-        $commission = $commission - 49999;
-        if($commission > 0)
-        {
-          $brokerFee += $commission * .5;
-        }
+        $brokerFee += $commission * .5;
       }
     }
     else
     {
-      $brokerFee += $commission * .5;
+      $brokerFee = $commission * percent;
+      echo "console.log(" . $brokerFee . ")";
     }
 
     $message = "wrong answer";
@@ -159,8 +167,8 @@
           $namedParameters[":brokerFee"] = $brokerFee;
           $namedParameters[":finalComm"] =  floatval($_POST['commission']) - $brokerFee - 349;   
 
-          $stmt = $dbConn -> prepare($sql);
-          $stmt->execute($namedParameters); 
+          // $stmt = $dbConn -> prepare($sql);
+          // $stmt->execute($namedParameters); 
 
         
 

@@ -82,7 +82,7 @@ ini_set('display_errors', 1);
                             echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] . "</option>";
                         }
                         echo "</select>";
-
+                        echo "Percentage: <input type='number' id='percent' step='0.01' min=0> (optional)";
                     ?>
                     <br/>
                     <br/>
@@ -107,6 +107,7 @@ ini_set('display_errors', 1);
                 var commission = $("#commission").val();
                 var checkNum = $("#checkNum").val();
                 var houseId = $("#houseId").val();
+                var percent = $("#percent").val();
                 $.ajax({
                     type: "POST",
                     url: "http://52.11.24.75/Admin/submitCommInfo.php",
@@ -117,7 +118,8 @@ ini_set('display_errors', 1);
                         settlementDate: settlementDate,
                         commission: commission,
                         checkNum: checkNum,
-                        houseId: houseId
+                        houseId: houseId,
+                        percent: percent
                     },
                     success: function(data, status) 
                     {
