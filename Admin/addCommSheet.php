@@ -125,6 +125,13 @@ ini_set('display_errors', 1);
                     {
                         successmessage = 'Data was succesfully captured';
                         alert(data);
+                    },
+
+                    error: function(jqXHR, textStatus, errorThrown) 
+                    {
+                    alert(jqXHR.status);
+                    alert(textStatus);
+                    alert(errorThrown);
                     }
                 });
                 window.location.href = "viewCommissionSheet.php";
