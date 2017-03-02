@@ -110,7 +110,7 @@ ini_set('display_errors', 1);
                 var percent = $("#percent").val();
                 $.ajax({
                     type: "POST",
-                    url: "http://52.11.24.75/Admin/submitCommInfo.php",
+                    url: "submitCommInfo.php",
                     data: 
                     {
                         license: license,
