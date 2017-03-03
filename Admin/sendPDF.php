@@ -7,7 +7,7 @@
     $twilio_phone_number = "+18315851661";
 
     $client = new Client($account_sid, $auth_token);
-    $client->account->messages->create(
+    $client->messages->create(
     "8312934153",
     array(
     "From" => $twilio_phone_number,
