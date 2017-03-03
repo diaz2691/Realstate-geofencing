@@ -135,12 +135,12 @@
     else
     {
       $brokerFee = $commission * $percent;
-      echo $brokerFee;
+      // echo $brokerFee;
     }
 
     $message = "wrong answer";
 
-
+    echo $brokerFee;
 
      $sql = "INSERT INTO commInfo
                   (houseId, license, firstName, lastName, date, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
