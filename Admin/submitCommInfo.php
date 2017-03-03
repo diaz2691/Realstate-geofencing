@@ -140,7 +140,7 @@
 
     $message = "wrong answer";
 
-    echo $brokerFee;
+    // echo $brokerFee;
 
      $sql = "INSERT INTO commInfo
                   (houseId, license, firstName, lastName, date, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
@@ -167,8 +167,8 @@
           $namedParameters[":brokerFee"] = $brokerFee;
           $namedParameters[":finalComm"] =  floatval($_POST['commission']) - $brokerFee - 349;   
 
-          // $stmt = $dbConn -> prepare($sql);
-          // $stmt->execute($namedParameters); 
+          $stmt = $dbConn -> prepare($sql);
+          $stmt->execute($namedParameters); 
 
         
 
