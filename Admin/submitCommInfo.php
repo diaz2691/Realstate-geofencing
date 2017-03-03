@@ -135,7 +135,7 @@
     else
     {
       $brokerFee = $commission * $percent;
-      echo "console.log(" . $brokerFee . ")";
+      echo $brokerFee;
     }
 
     $message = "wrong answer";
