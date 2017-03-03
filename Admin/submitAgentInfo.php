@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../keys/tKey.php');
     require('../databaseConnection.php');
     require('../twilio-php-master/Twilio/autoload.php');
     use Twilio\Rest\Client;
@@ -18,8 +19,7 @@
           $namedParameters[":license"] = $_POST['license'];   
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters);
-    $account_sid = "AC4991f00911beb00578efd8b8355fdc7d";
-    $auth_token = "b605b8121c246b4b64fe407255f50528";
+    
     $twilio_phone_number = "+18315851661";
 
     $client = new Client($account_sid, $auth_token);
