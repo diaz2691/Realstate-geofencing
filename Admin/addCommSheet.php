@@ -82,7 +82,7 @@ ini_set('display_errors', 1);
                             echo "<option value='". $house['houseId']."'>". $house['address'] . " " . $house['city'] . " " . $house['state'] . " " . $house['zip'] . "</option>";
                         }
                         echo "</select>";
-                        echo "<br/>";
+                        echo "<br/><br/>";
                         echo "Percentage: <input type='number' id='percent' step='0.01' min=0>";
                     ?>
                     <br/>
