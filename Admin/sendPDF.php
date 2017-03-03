@@ -12,7 +12,7 @@
     array(
     "From" => $twilio_phone_number,
     "Body" => "Flyer",
-    'mediaUrl' => "http://52.11.24.75/keys/1331_Sonoma_Seaside_Ca%20Flyer.pdf",
+    'mediaUrl' => "https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg",
     )
     );
 ?>
