@@ -170,6 +170,11 @@ To change this template use Tools | Templates.
         tInput.setAttribute("value",token);
         form.appendChild(tInput);
 
+        var send = document.createElement('input');
+        send.setAttribute("name", "commID");
+        send.setAttribute("value", commId);
+        gen.appendChild(send);
+
        document.body.appendChild(form);
 
         form.submit();
