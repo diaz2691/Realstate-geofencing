@@ -136,9 +136,10 @@ ini_set('display_errors', 1);
                     complete: function (data) 
                     {
                         console.log(data);
+                        window.location.href = "viewCommissionSheet.php";
                     }
                 });
-                window.location.href = "viewCommissionSheet.php";
+                
             }); 
 
             function getLicense()
