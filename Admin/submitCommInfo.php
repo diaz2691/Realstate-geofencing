@@ -143,15 +143,15 @@
     // echo $brokerFee;
 
      $sql = "INSERT INTO commInfo
-                  (houseId, license, firstName, lastName, date, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
-                  VALUES (:houseId, :license, :firstName, :lastName, :date, :settlementDate, :checkNum, :address, :city, :state, :zip, :TYGross, :FYGross, :InitialGross, :brokerFee, :finalComm)";
+                  (houseId, license, firstName, lastName, settlementDate, checkNum, address, city, state, zip, TYGross, FYGross, InitialGross, brokerFee, finalComm)
+                  VALUES (:houseId, :license, :firstName, :lastName, :settlementDate, :checkNum, :address, :city, :state, :zip, :TYGross, :FYGross, :InitialGross, :brokerFee, :finalComm)";
            $namedParameters = array();
 
           $namedParameters[":houseId"] = $houseId;
           $namedParameters[":license"] = $license;
           $namedParameters[":firstName"] = $userResults['firstName'];
           $namedParameters[":lastName"] = $userResults['lastName'];     
-          $namedParameters[":date"] = $_POST['date'];     
+          // $namedParameters[":date"] = $_POST['date'];     
           $namedParameters[":settlementDate"] = $_POST['settlementDate'];     
           $namedParameters[":checkNum"] = $_POST['checkNum'];   
 
