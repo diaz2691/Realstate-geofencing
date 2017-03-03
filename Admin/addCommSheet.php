@@ -71,7 +71,7 @@ ini_set('display_errors', 1);
 
                         echo "<br />";
                         echo "License: <input type='text' value='F34255G7' id='agentLicense' readonly> <br />";
-                        echo "Date: <input type='date' id='date' value='2014-02-09'> <br/>" ;
+                        // echo "Date: <input type='date' id='date' value='2014-02-09'> <br/>" ;
                         echo "Settlement date: <input type='date' id='settlementDate' value='2014-02-09'> <br/>" ;
                         echo "Commission: <input type='number' id='commission' name='commission' min='349'><br>";
                         echo "Check Number: <input type='text' id='checkNum' name='checkNum'><br>";
