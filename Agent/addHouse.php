@@ -49,7 +49,6 @@
           box-sizing: border-box;
           font-size: 14px;
           text-align: center;
-          width: 50%;
         }
     </style>
 
