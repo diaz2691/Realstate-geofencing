@@ -49,10 +49,10 @@
           box-sizing: border-box;
           font-size: 14px;
           text-align: center;
+          width: 50%;
         }
         .body { overflow: hidden; }
         .column { float: left; }
-        .half { width: 50%; }
         .last { float: none; width: auto; }
     </style>
 
@@ -64,7 +64,7 @@
                 require("agentNav.php");
             ?>  
             
-                <div type="text" class="column half">
+                <div type="text" class="column form">
                     <h1>Enter House Information</h1>
                     Status:
                     <select id="status">
