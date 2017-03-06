@@ -64,7 +64,7 @@
                 require("agentNav.php");
             ?>  
             
-                <div type="text" class="column form" style="float:left; width:20%;">
+                <div type="text" class="column form" style="float:left; width:50%;">
                     <h1>Enter House Information</h1>
                     Status:
                     <select id="status">
@@ -174,8 +174,8 @@
                         };    
                     </script>
             </div>
-            <div class="column last" style="float:right; width:80%; ">
-                <object data=http://remax.idxhome.com/homesearch/59157> <embed src=http://remax.idxhome.com/homesearch/59157 > </embed> Error: Embedded data could not be displayed. </object>
+            <div class="column last" >
+                <object data=http://remax.idxhome.com/homesearch/59157 style="float:right; width:50%; "> <embed src=http://remax.idxhome.com/homesearch/59157 style="float:right; width:50%; "> </embed> Error: Embedded data could not be displayed. </object>
             </div>
         </div>
     </body>
