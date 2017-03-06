@@ -32,7 +32,7 @@ To change this template use Tools | Templates.
             require("agentNav.php");
         ?>
 
-        <object data=http://remax.idxhome.com/homesearch/59157 width="600" height="900"> <embed src=http://remax.idxhome.com/homesearch/59157 width="600" height="900"> </embed> Error: Embedded data could not be displayed. </object>
+        <object data=http://remax.idxhome.com/homesearch/59157 width="50%" height="900"> <embed src=http://remax.idxhome.com/homesearch/59157 width="50%" height="900"> </embed> Error: Embedded data could not be displayed. </object>
         
         
     </body>
