@@ -51,9 +51,6 @@
           text-align: center;
           width: 50%;
         }
-        .body { overflow: hidden; }
-        .column { float: left; }
-        .last { float: none; width: auto; }
     </style>
 
 </head>
