@@ -170,7 +170,7 @@
                     </script>
             </div>
                 <div style="float:right;">
-                    <object data=http://remax.idxhome.com/homesearch/59157 width="50%" height="900"> <embed src=http://remax.idxhome.com/homesearch/59157 width="50%" height="900"> </embed> Error: Embedded data could not be displayed. </object>
+                    <object data=http://remax.idxhome.com/homesearch/59157  height="900"> <embed src=http://remax.idxhome.com/homesearch/59157  height="900"> </embed> Error: Embedded data could not be displayed. </object>
                 </div>
     </body>
 </html>
