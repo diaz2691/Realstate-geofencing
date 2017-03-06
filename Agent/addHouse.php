@@ -175,7 +175,7 @@
                     </script>
             </div>
             <div class="column last">
-                <object data=http://remax.idxhome.com/homesearch/59157 width="600" height="100vh"> <embed src=http://remax.idxhome.com/homesearch/59157 > </embed> Error: Embedded data could not be displayed. </object>
+                <object data=http://remax.idxhome.com/homesearch/59157 width="600" height="100%"> <embed src=http://remax.idxhome.com/homesearch/59157 > </embed> Error: Embedded data could not be displayed. </object>
             </div>
         </div>
     </body>
