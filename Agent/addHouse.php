@@ -171,7 +171,7 @@
             </div>
                 <div style="float:right;">
                     <div style="text-align: center;">
-                        <object data=http://remax.idxhome.com/homesearch/59157  height="900"> <embed src=http://remax.idxhome.com/homesearch/59157  height="900"> </embed> Error: Embedded data could not be displayed. </object>
+                        <object data=http://remax.idxhome.com/homesearch/59157 width="600" height="900"> <embed src=http://remax.idxhome.com/homesearch/59157 width="600" height="900"> </embed> Error: Embedded data could not be displayed. </object>
                     </div>
                 </div>
     </body>
