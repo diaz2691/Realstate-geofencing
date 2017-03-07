@@ -47,9 +47,7 @@
                         <li class=" dropdown">
                             <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class=" dropdown">
-                                    <a href="viewMyClients.php" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View my clients</a>
-                                </li>
+                                <li><a href="viewMyClients.php">View my clients</a></li>
                                 <li><a href="viewAllClients.php">View all clients</a></li>
                             </ul>
                         </li>
