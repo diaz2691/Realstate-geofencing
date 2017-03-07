@@ -77,7 +77,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Agent Name</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Edit</th><th>Delete</th></tr>    
+        <tr><th>Agent Name</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th></tr>    
             
             <?php
 
@@ -101,25 +101,12 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                //echo "<td>" . $getAgentName($result['userId']) . "</td>";
+                echo "<td>" . getAgentName($result['userId']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bedrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['price']) . "</td>";
 
-             ?>  
-
-             <td>
-                     <form action="editBuyerInfo.php">
-                         <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
-                         <input class="option" type="submit" value="Edit" name="editForm"/>
-                     </form>   
-                </td> 
-                <td>
-                     <form onsubmit="return confirmDelete('<?=$result['firstName']?>')">
-                         <input type="hidden" name="buyerID" value="<?=$result['buyerID']?>" />    
-                         <input class="option" type="submit" value="Delete" name="deleteForm"/>
-                     </form>   
-                </td>
+             ?> 
                </tr>
 
              <?php    
