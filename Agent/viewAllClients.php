@@ -83,11 +83,9 @@ To change this template use Tools | Templates.
 
             function getAgentName($id){
                 $dbConn = getConnection();
-                $sqls = "SELECT * FROM UsersInfo WHERE userId = $id";
+                $sqls = "SELECT firstName, lastName FROM UsersInfo WHERE userId = $id";
                 $stmts = $dbConn -> prepare($sqls);
-                $stmts->execute();              
-                //echo "<script type='text/javascript'>alert('lol');</script>";
-
+                $stmts->execute();       
                 $counter = $stmts->fetch();
                 return $counter['firstName'] . " " . $counter['lastName'];
             }
@@ -96,7 +94,6 @@ To change this template use Tools | Templates.
             $sql = "SELECT * FROM BuyerInfo";
             $stmt = $dbConn -> prepare($sql);
             $stmt->execute();
-            //$stmt->execute();
             $results = $stmt->fetchAll();
 
             foreach($results as $result){
