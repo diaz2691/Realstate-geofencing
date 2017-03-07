@@ -101,7 +101,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . $getAgentName($result['userId']) . "</td>";
+                //echo "<td>" . $getAgentName($result['userId']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bedrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['price']) . "</td>";
