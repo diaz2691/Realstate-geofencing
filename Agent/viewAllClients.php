@@ -77,9 +77,21 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Edit</th><th>Delete</th></tr>    
+        <tr><th>Agent Name</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Edit</th><th>Delete</th></tr>    
             
             <?php
+
+            function getAgentName($id){
+                $dbConn = getConnection();
+                $sqls = "SELECT * FROM UsersInfo WHERE userId = $id";
+                $stmts = $dbConn -> prepare($sqls);
+                $stmts->execute();              
+                //echo "<script type='text/javascript'>alert('lol');</script>";
+
+                $counter = $stmts->fetch();
+                return $counter['firstName'] . " " . $counter['lastName'];
+            }
+
             $dbConn = getConnection();
             $sql = "SELECT * FROM BuyerInfo";
             $stmt = $dbConn -> prepare($sql);
@@ -89,10 +101,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . $result['firstName'] . "</td>";
-                echo "<td>" . $result['lastName'] . "</td>";
-                echo "<td>" . htmlspecialchars($result['email']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
+                echo "<td>" . $getAgentName($result['userId']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bedrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['price']) . "</td>";
