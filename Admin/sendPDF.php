@@ -8,7 +8,7 @@
 
     $client = new Client($account_sid, $auth_token);
     $client->messages->create(
-    "8312934153",
+    "8318092424",
     array(
     "From" => $twilio_phone_number,
     "Body" => "Flyer",
