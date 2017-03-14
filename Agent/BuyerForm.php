@@ -61,29 +61,56 @@
     <form method="post" action="addToDatabase.php">
     <table>
         <tr>
-            <td colspan="2"><img align="bottom" alt="Interesting Image" border="0" class="simage float_center" height="151" src="https://d1yoaun8syyxxt.cloudfront.net/dh307-4c1ce6ae-ef18-4d63-ae22-952804c98fc4-v2" style="margin-left: 0px; margin-right: 0px;" title="Interesting Image" width="385" />
+            <td colspan="3"><img align="bottom" alt="Interesting Image" border="0" class="simage float_center" height="151" src="https://d1yoaun8syyxxt.cloudfront.net/dh307-4c1ce6ae-ef18-4d63-ae22-952804c98fc4-v2" style="margin-left: 0px; margin-right: 0px;" title="Interesting Image" width="385" />
             </td>
         </tr>
         <tr>
-          <td>First Name *</td>  <td class=><input type="text" name="firstName" /> <br /></td>
+          <td>First Name *</td>  <td colspan="2"><input type="text" name="firstName" /> <br /></td>
         </tr>
         <tr>
-          <td>Last Name *</td>   <td><input type="text" name="lastName" /> <br /></td>
+          <td>Last Name *</td>   <td colspan="2"><input type="text" name="lastName" /> <br /></td>
         </tr>
         <tr>
-          <td>Email *</td>       <td><input type="email" name="email" /> <br /></td>
+          <td>Email *</td>       <td colspan="2"><input type="email" name="email" /> <br /></td>
         </tr>
         <tr>
-          <td>Phone</td>       <td><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
+          <td>Phone</td>       <td colspan="2"><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
         </tr>
         <tr>
-          <td>Bedrooms</td>       <td><input type = "text" name="bedrooms" /> </td> <br />
+          <td>Bedrooms Range</td>       
+                <td>
+                    <select name="bedroomsMin">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select></td> 
+                <td>
+                    <select name="bedroomsMax">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                </td>  <br />
         </tr>
         <tr>
-          <td>Bathrooms</td>       <td><input type = "text" name="bathrooms" /> </td> <br />
+          <td>Bathrooms Range</td>       <td><input type = "text" name="bathrooms" /> </td> <br />
         </tr>
         <tr>
-          <td>Price</td>       <td><input type = "text" name="price" /> </td> <br />
+          <td>Price Range</td>       <td><input type = "text" name="price" /> </td> <br />
         </tr>
         <input type="hidden" name="houseId" value="<?=$houseId?>"> 
 
