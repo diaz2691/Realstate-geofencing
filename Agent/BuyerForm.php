@@ -65,16 +65,16 @@
             </td>
         </tr>
         <tr>
-          <td>First Name *</td>  <td colspan="2"><input type="text" name="firstName" /> <br /></td>
+          <td>First Name *</td>  <td><input type="text" name="firstName" /> <br /></td>
         </tr>
         <tr>
-          <td>Last Name *</td>   <td colspan="2"><input type="text" name="lastName" /> <br /></td>
+          <td>Last Name *</td>   <td><input type="text" name="lastName" /> <br /></td>
         </tr>
         <tr>
-          <td>Email *</td>       <td colspan="2"><input type="email" name="email" /> <br /></td>
+          <td>Email *</td>       <td><input type="email" name="email" /> <br /></td>
         </tr>
         <tr>
-          <td>Phone</td>       <td colspan="2"><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
+          <td>Phone</td>       <td><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
         </tr>
         <tr>
           <td>Bedrooms Range</td>       
