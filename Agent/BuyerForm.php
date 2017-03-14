@@ -79,7 +79,7 @@
         <tr>
           <td>Bedrooms Range</td>       
                 <td>
-                    <select name="bedroomsMin">
+                    <input type="number" step="0.5" name="bedroomsMin"/><!--<select name="bedroomsMin">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -103,7 +103,7 @@
                       <option value="8">8</option>
                       <option value="9">9</option>
                       <option value="10">10</option>
-                    </select>
+                    </select>-->
                 </td>  <br />
         </tr>
         <tr>
