@@ -79,7 +79,6 @@
         <tr>
           <td>Bedrooms Range</td>       
                 <td>
-                <center>
                     <select name="bedroomsMin">
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -105,7 +104,6 @@
                       <option value="9">9</option>
                       <option value="10">10</option>
                     </select>
-                </center>
                 </td>  <br />
         </tr>
         <tr>
