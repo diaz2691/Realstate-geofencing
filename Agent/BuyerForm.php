@@ -91,11 +91,14 @@
                     -
                     <input type="number" name="bathroomsMax" min="0" placeholder="max" step="0.5" />
                 </td>  <br />
-
-                <td><input type = "text" name="bathrooms" /> </td> <br />
         </tr>
         <tr>
-          <td>Price Range</td>       <td><input type = "text" name="price" /> </td> <br />
+          <td>Price Range</td>      
+                <td>
+                    <input type="number" name="priceMin" min="0" placeholder="min." step="1000" />
+                    -
+                    <input type="number" name="priceMax" min="0" placeholder="max" step="1000" />
+                </td>  <br />
         </tr>
         <input type="hidden" name="houseId" value="<?=$houseId?>"> 
 
