@@ -80,37 +80,19 @@
           <td>Bedrooms Range</td>       
                 <td>
                     <input type="number" name="bedroomsMin" min="0" placeholder="min."/>
-                    <!--<select name="bedroomsMin">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                    -
-                    <select name="bedroomsMax">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>-->
                     -
                     <input type="number" name="bedroomsMax" min="0" placeholder="max"/>
                 </td>  <br />
         </tr>
         <tr>
-          <td>Bathrooms Range</td>       <td><input type = "text" name="bathrooms" /> </td> <br />
+          <td>Bathrooms Range</td> 
+                <td>
+                    <input type="number" name="bathroomsMin" min="0" placeholder="min." step="0.5" />
+                    -
+                    <input type="number" name="bathroomsMax" min="0" placeholder="max" step="0.5" />
+                </td>  <br />
+
+                <td><input type = "text" name="bathrooms" /> </td> <br />
         </tr>
         <tr>
           <td>Price Range</td>       <td><input type = "text" name="price" /> </td> <br />
