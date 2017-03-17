@@ -79,7 +79,8 @@
         <tr>
           <td>Bedrooms Range</td>       
                 <td>
-                    <input type="number" name="bedroomsMin"/><!--<select name="bedroomsMin">
+                    <input type="number" name="bedroomsMin" min="0" placeholder="min."/>
+                    <!--<select name="bedroomsMin">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -105,7 +106,7 @@
                       <option value="10">10</option>
                     </select>-->
                     -
-                    <input type="number" name="bedroomsMax" />
+                    <input type="number" name="bedroomsMax" min="0" placeholder="max"/>
                 </td>  <br />
         </tr>
         <tr>
