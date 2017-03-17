@@ -18,7 +18,7 @@ $houseId = $_POST['houseId'];
 $userId = $_SESSION['userId'];
 
 $sql = "INSERT INTO BuyerInfo 
-		(firstName, lastName, email, phone, bedroomsMax, bedroomsMin, bathroomsMax, bathroomsMin, priceMax, priceMin houseId, userId)
+		(firstName, lastName, email, phone, bedroomsMax, bedroomsMin, bathroomsMax, bathroomsMin, priceMax, priceMin, houseId, userId)
 		VALUES (:firstName, :lastName, :email, :phone, :bedroomsMax, :bedroomsMin, :bathroomsMax, :bathroomsMin, :priceMax, :priceMin, :houseId, :userId)";
 $namedParameters = array();
 $namedParameters[':firstName'] = $firstName;
