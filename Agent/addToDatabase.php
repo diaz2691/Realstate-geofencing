@@ -8,23 +8,29 @@ $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$bedrooms = $_POST['bedrooms'];
-$bathrooms = $_POST['bathrooms'];
-$price = $_POST['price'];
+$bedroomsMax = $_POST['bedroomsMax'];
+$bedroomsMin = $_POST['bedroomsMin'];
+$bathroomsMax = $_POST['bathroomsMax'];
+$bathroomsMin = $_POST['bathroomsMin'];
+$priceMax = $_POST['priceMax'];
+$priceMin = $_POST['priceMin'];
 $houseId = $_POST['houseId'];
 $userId = $_SESSION['userId'];
 
 $sql = "INSERT INTO BuyerInfo 
-		(firstName, lastName, email, phone, bedrooms, bathrooms, price, houseId, userId)
-		VALUES (:firstName, :lastName, :email, :phone, :bedrooms, :bathrooms, :price, :houseId, :userId)";
+		(firstName, lastName, email, phone, bedroomsMax, bedroomsMin, bathroomsMax, bathroomsMin, priceMax, priceMin houseId, userId)
+		VALUES (:firstName, :lastName, :email, :phone, :bedroomsMax, :bedroomsMin, :bathroomsMax, :bedroomsMin, :priceMax, :priceMin, :houseId, :userId)";
 $namedParameters = array();
 $namedParameters[':firstName'] = $firstName;
 $namedParameters[':lastName'] = $lastName;
 $namedParameters[':email'] = $email;
 $namedParameters[':phone'] = $phone;
-$namedParameters[':bedrooms'] = $bedrooms;
-$namedParameters[':bathrooms'] = $bathrooms;
-$namedParameters[':price'] = $price;
+$namedParameters[':bedroomsMax'] = $bedroomsMax;
+$namedParameters[':bedroomsMin'] = $bedroomsMin;
+$namedParameters[':bathroomsMax'] = $bathroomsMax;
+$namedParameters[':bathroomsMin'] = $bathroomsMin;
+$namedParameters[':priceMax'] = $priceMax;
+$namedParameters[':priceMin'] = $priceMin;
 $namedParameters[':houseId'] = $houseId;
 $namedParameters[':userId'] = $userId;
 $stmt = $dbConn -> prepare($sql);
