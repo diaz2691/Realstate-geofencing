@@ -4,11 +4,35 @@
     use Twilio\Rest\Client;
     
 
+    require("../databaseConnection.php");
+
+    $dbConn = getConnection();
+
+    $getDown = "SELECT downloads FROM flyerInfo WHERE houseId = '1'";
+    $down = $dbConn -> prepare($getDown);
+    $down->execute();
+    $downResult = $down->fetch();
+
+    $sql = "INSERT INTO flyerInfo
+                 (houseId, date, phoneNum, downloads)
+                 VALUES (:houseId, :date, :phoneNum, :downloads)";
+
+          $namedParameters = array();
+          $namedParameters[":houseId"] = "1";
+          $namedParameters[":date"] = date("Y-m-d");
+          $namedParameters[":phoneNum"] = "8318092424";
+          $namedParameters[":downloads"] = $downResult['downloads'] + 1;     
+           
+          $stmt = $dbConn -> prepare($sql);
+          $stmt->execute($namedParameters);
+
+
+
     $twilio_phone_number = "+18315851661";
 
     $client = new Client($account_sid, $auth_token);
     $client->messages->create(
-    "8318092424",
+    "8312934153",
     array(
     "From" => $twilio_phone_number,
     "Body" => "Flyer",

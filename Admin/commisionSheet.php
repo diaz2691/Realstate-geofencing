@@ -76,6 +76,7 @@ elseif (isset($_POST['token']))
 	$ken = $_POST['token'];
 
 	$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
+	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
 	$namedParameters[":date"] = date("Y-m-d");
 
 	$stmt = $dbConn -> prepare($sqlAddDate);
