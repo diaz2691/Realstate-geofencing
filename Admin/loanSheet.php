@@ -27,6 +27,6 @@ $pdf->Cell(0,10,'other:',0,1);
 $pdf->Cell(0,10,'other:',0,1);
 $pdf->Cell(0,10,'Agent Net Commission:',0,1);
 
-
+$pdf->Output();
 
 ?>
