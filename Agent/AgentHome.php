@@ -154,7 +154,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . htmlspecialchars($result['zip']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bedrooms']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['price']) . "</td>";
+                echo "<td>" . htmlspecialchars(number_format($result['price'])) . "</td>";
 
              ?>  
            <td>
