@@ -101,7 +101,7 @@ To change this template use Tools | Templates.
                 echo "<td>" . getAgentName($result['userId']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['bedroomsMin']) . " - " . htmlspecialchars($result['bedroomsMax']) ."</td>";
                 echo "<td>" . htmlspecialchars($result['bathroomsMin']) . " - " . htmlspecialchars($result['bathroomsMax']) . "</td>";
-                echo "<td>$" . htmlspecialchars(number_format($result['priceMin'])) . " - $" . htmlspecialchars($result['priceMax']) .  "</td>";
+                echo "<td>$" . htmlspecialchars(number_format($result['priceMin'])) . " - $" . htmlspecialchars(number_format($result['priceMax'])) .  "</td>";
 
              ?> 
                </tr>
