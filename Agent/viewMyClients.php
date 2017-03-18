@@ -95,9 +95,9 @@ To change this template use Tools | Templates.
                 echo "<td>" . $result['lastName'] . "</td>";
                 echo "<td>" . htmlspecialchars($result['email']) . "</td>";
                 echo "<td>" . htmlspecialchars($result['phone']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['bedrooms']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['bathrooms']) . "</td>";
-                echo "<td>" . htmlspecialchars($result['price']) . "</td>";
+                echo "<td>" . htmlspecialchars($result['bedroomsMin']) . "-" . htmlspecialchars($result['bedroomsMax']) ."</td>";
+                echo "<td>" . htmlspecialchars($result['bathroomsMin']) . "-" . htmlspecialchars($result['bathroomsMax']) . "</td>";
+                echo "<td>" . htmlspecialchars($result['priceMin']) . "-" . htmlspecialchars($result['priceMax']) .  "</td>";
 
              ?>  
 
