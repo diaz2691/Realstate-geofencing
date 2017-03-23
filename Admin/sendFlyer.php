@@ -13,7 +13,7 @@ else if( $body == 'bye' )
 {
     $response->message('Entered incorrect phrase');
 }
-//print $response;
+print $response;
 
 
 
