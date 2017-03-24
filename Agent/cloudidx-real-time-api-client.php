@@ -133,6 +133,8 @@ foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
           $stmt->execute($namedParameters);
 }
 
+header("Location: AgentHome.php");
+
 
 // Get listing details for the first listing from the search results
 if (! isset($responseArray['cloudIdxListingSummaryList'][0])) exit;
