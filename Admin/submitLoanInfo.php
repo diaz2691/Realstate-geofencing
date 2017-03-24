@@ -5,18 +5,18 @@ $sql = "INSERT INTO LoanInfo
                   VALUES (:clients, :settlementDate, :checkNum, :address, :grossComm, :percentage, :netComm)";
            $namedParameters = array();
 
-          $namedParameters[":clients"] = $$_POST['clients'];
+          $namedParameters[":clients"] = " ";
               
           $namedParameters[":settlementDate"] = $_POST['settlementDate'];     
           $namedParameters[":checkNum"] = $_POST['checkNum'];   
 
-          $namedParameters[":address"] = $houseResults['address'];     
+          $namedParameters[":address"] = $_POST['houseId'];     
           
 
-          $namedParameters[":grossComm"] =  $_POST['grossComm'];   
-          $namedParameters[":percentage"] = $_POST['precentage'];
+          $namedParameters[":grossComm"] =  $_POST['commission'];   
+          $namedParameters[":percentage"] = $_POST['precent'];
 
-          $namedParameters[":netComm"] =  $_POST['netComm'];   
+          $namedParameters[":netComm"] =  1000;   
           
           $stmt = $dbConn -> prepare($sql);
           $stmt->execute($namedParameters); 
