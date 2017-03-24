@@ -10,8 +10,8 @@
  */
 
 // Credentials for demo iHomefinder API account
-$clientId = '65912'; //  5-digit iHomefinder demo client ID
-$password = 'cloudidx'; // account password
+$clientId = '59157'; //  5-digit iHomefinder demo client ID
+$password = '01864213'; // account password
 
 // Provide query parameters
 $cityName = 'Cameron Park,El Dorado Hills';
