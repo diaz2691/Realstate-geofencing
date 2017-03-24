@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
 /**
  * @abstract Example client code for CloudIDX Real-Time API. 
@@ -112,6 +113,25 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
     //echo $home['address']['street'];
     echo $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " . $home['status'] . "<br>";
+
+    require('../databaseConnection.php');
+    $dbConn = getConnection();
+
+    $sql = "INSERT INTO HouseInfo
+                 (userId, status, address, city, state, zip, bedrooms, bathrooms, price)
+                 VALUES (:userId, :status, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
+          $namedParameters = array();
+          $namedParameters[":userId"] = $_SESSION['userId'];
+          $namedParameters[":status"] = $home['status'];
+          $namedParameters[":address"] = $home['address']['streetNumber'] . " " . $home['address']['street'];
+          $namedParameters[":city"] = $home['address']['city'];
+          $namedParameters[":state"] = $home['address']['state'];     
+          $namedParameters[":zip"] = $home['address']['postalCode'];     
+          $namedParameters[":bedrooms"] = $home['bedrooms'];     
+          $namedParameters[":bathrooms"] = $home['fullBaths'];     
+          $namedParameters[":price"] = $home['listPrice'];     
+          $stmt = $dbConn -> prepare($sql);
+          $stmt->execute($namedParameters);
 }
 
 
@@ -172,5 +192,6 @@ function cloudIDXCall($url, $method, $data = array()) {
 
 }
 
+header("Location: AgentHome.php");
 
 ?>
