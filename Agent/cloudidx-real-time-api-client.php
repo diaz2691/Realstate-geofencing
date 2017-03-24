@@ -110,7 +110,7 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 }
 
 foreach ($responseArray as $person_name => $person_a) {
-    echo $person_a['address'];
+    echo $person_a;
 }
 
 
