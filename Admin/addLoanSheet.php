@@ -103,7 +103,7 @@ ini_set('display_errors', 1);
                 // var phone = $("#phone").val();
                 // var license = $("#license").val();
                 var license = $("#agentLicense").val();
-                var date = $("#date").val();
+                // var date = $("#date").val();
                 var settlementDate = $("#settlementDate").val();
                 var commission = $("#commission").val();
                 var checkNum = $("#checkNum").val();
@@ -115,7 +115,6 @@ ini_set('display_errors', 1);
                     data: 
                     {
                         license: license,
-                        date: date,
                         settlementDate: settlementDate,
                         commission: commission,
                         checkNum: checkNum,
