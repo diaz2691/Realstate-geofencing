@@ -109,8 +109,8 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	exit;
 }
 
-foreach ($responseArray as $person_name => $person_a) {
-    echo $person_a;
+foreach ($responseArray['listingSummaryDtoList'] as $person_name => $person_a) {
+    echo $person_a['address']['street'];
 }
 
 
