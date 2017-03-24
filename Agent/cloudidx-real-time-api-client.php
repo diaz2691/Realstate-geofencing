@@ -39,7 +39,7 @@ $urlParams = array(
 					);
 
 $responseArray = cloudIDXCall($url, 'post', $urlParams); // Make the login call
-print_r($responseArray);
+//print_r($responseArray);
 if (empty($responseArray) or isset($responseArray['failure']) or trim($responseArray['message']) == 'Client authentication failed.') {
 	print_r("Login failed!");
 	exit;
@@ -50,7 +50,7 @@ $links = array();
 foreach ($responseArray['links'] as $resource) {
 	$links[$resource['rel']] = $resource['href'];
 }
-print_r($links);
+//print_r($links);
 
 
 // Get a list of cities that are available for this account
