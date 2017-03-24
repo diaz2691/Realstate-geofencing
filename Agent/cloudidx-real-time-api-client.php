@@ -17,7 +17,7 @@ $password = 'cloudidx'; // account password
 // Provide query parameters
 $cityName = 'Cameron Park,El Dorado Hills';
 $minListPrice = '500000';
-$maxListPrice = '600000';
+$maxListPrice = '510000';
 $bedrooms = '3';
 $fullBaths = '2';
 
@@ -109,13 +109,12 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("search method call failed!");
 	exit;
 }
+require('../databaseConnection.php');
+$dbConn = getConnection();
 
 foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
-    //echo $home['address']['street'];
-    echo $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " . $home['status'] . "<br>";
-
-    require('../databaseConnection.php');
-    $dbConn = getConnection();
+    /*echo $home['address']['street'];
+    echo $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " . $home['status'] . "<br>";*/
 
     $sql = "INSERT INTO HouseInfo
                  (userId, status, address, city, state, zip, bedrooms, bathrooms, price)
