@@ -101,7 +101,7 @@ To change this template use Tools | Templates.
 
              ?>   
               <td>
-                <form action="LoanSheet.php">
+                <form action="loanSheet.php">
                    <input type="hidden" name="loanId" value="<?=$result['loanId']?>" />    
                    <input class="option" type="submit" value="View" name="viewLoanSheet"/>
                 </form>   
