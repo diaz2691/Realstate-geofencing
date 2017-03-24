@@ -16,8 +16,8 @@ $password = 'cloudidx'; // account password
 
 // Provide query parameters
 $cityName = 'Cameron Park,El Dorado Hills';
-$minListPrice = '520000';
-$maxListPrice = '530000';
+$minListPrice = '530000';
+$maxListPrice = '540000';
 $bedrooms = '3';
 $fullBaths = '2';
 
@@ -121,7 +121,7 @@ foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
                  VALUES (:userId, :status, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
           $namedParameters = array();
           $namedParameters[":userId"] = $_SESSION['userId'];
-          $namedParameters[":status"] = $home['status'];
+          $namedParameters[":status"] = strtolower($home['status']);
           $namedParameters[":address"] = $home['address']['streetNumber'] . " " . $home['address']['street'];
           $namedParameters[":city"] = $home['address']['city'];
           $namedParameters[":state"] = $home['address']['state'];     
