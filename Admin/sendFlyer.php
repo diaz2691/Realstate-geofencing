@@ -8,7 +8,7 @@ $body = $_REQUEST['Body'];
 if( $body == "My home" )
 {
     $response->message('Thank you! Below is a link to the property information, PDF, and video:
-    	https://vimeo.com/magoneproductions/review/209323421/fe1ec8a3ba');
+    https://vimeo.com/magoneproductions/review/209323421/fe1ec8a3ba');
 }
 else if( $body == 'bye' )
 {

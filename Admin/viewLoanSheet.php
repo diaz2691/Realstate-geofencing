@@ -9,7 +9,7 @@
     } 
 
     if (isset ($_GET['deleteForm'])){  //checking whether we have clicked on the "Delete" button
-        $sql = "DELETE FROM commInfo 
+        $sql = "DELETE FROM LoanInfo 
                  WHERE commId = '".$_GET['commId']."'";
         $stmt = $dbConn -> prepare($sql);
         $stmt->execute();
@@ -74,7 +74,7 @@ To change this template use Tools | Templates.
         <?php
             require("adminNav.php");
         ?> 
-        <br/><br/><h2 id="header2">Commission Sheets &#x2713</h2> 
+        <br/><br/><h2 id="header2">Loan Sheets &#x2713</h2> 
 
         <form action="addLoanSheet.php">  
             <input type="submit" value="Add New Loan Sheet" name="addForm"/>
@@ -82,7 +82,7 @@ To change this template use Tools | Templates.
 
         <table class="tftable" border="1">
        
-      <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Payment Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Send</th><th>Delete</th></tr>    
+      <tr><th>Clients</th><th>Address</th><th>Loan Date</th><th>Settlement Date</th><th>View</th><th>Edit</th><th>Archive</th></tr>    
             
             <?php
             $dbConn = getConnection();
@@ -93,16 +93,20 @@ To change this template use Tools | Templates.
             $results = $stmt->fetchAll();
 
             foreach($results as $result){
-                // echo "<tr>";
-                // echo "<td>" . $result['firstName'] . "</td>";
-                // echo "<td>" . $result['lastName'] . "</td>";
-                // echo "<td>" . htmlspecialchars($result['address'])." ".$result['city'].", ".$result['state']." ".$result['zip']."</td>";
-                // echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['date']))) . "</td>";
-                // echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['settlementDate']))) . "</td>";
+                echo "<tr>";
+                echo "<td>" . $result['clients'] . "</td>";
+                echo "<td>" . $result['address'] . "</td>";
+                echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['date']))) . "</td>";
+                echo "<td>" . htmlspecialchars(date("d-m-Y", strtotime($result['settlementDate']))) . "</td>";
 
              ?>   
-             
-
+              <td>
+                <form action="LoanSheet.php">
+                   <input type="hidden" name="loanId" value="<?=$result['loanId']?>" />    
+                   <input class="option" type="submit" value="View" name="viewLoanSheet"/>
+                </form>   
+              </td> 
+            </tr>
              <?php    
                } //closes foreach
              ?>         

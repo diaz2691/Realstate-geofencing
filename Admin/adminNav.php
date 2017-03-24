@@ -40,6 +40,9 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="active"><a href="viewLoanSheet.php" class="">Loan Sheet</a></li>
+
                         <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agents <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="viewAgents.php">View Agents</a></li>
