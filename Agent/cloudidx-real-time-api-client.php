@@ -109,8 +109,8 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	exit;
 }
 
-foreach ($responseArray['listingSummaryDtoList'] as $person_name => $person_a) {
-    echo $person_a['address']['street'];
+foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
+    $newHome = "" . $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " $home['status'];
 }
 
 
