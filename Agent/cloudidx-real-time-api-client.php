@@ -109,12 +109,8 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	exit;
 }
 
-foreach ($responseArray as $key => $val) {
-    if(is_array($val)) {
-        echo "$key:\n";
-    } else {
-        echo "$key => $val\n";
-    }
+foreach ($responseArray as $person_name => $person_a) {
+    echo $person_a['address'];
 }
 
 
