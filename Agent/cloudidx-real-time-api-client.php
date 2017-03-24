@@ -103,14 +103,15 @@ $searchProfile = array(	'cityId' => $cityString,
 					);
 $url = $links['search'];
 $responseArray = cloudIDXCall($url, 'get', $searchProfile); // Make the search method call
-print_r($responseArray);
+//print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("search method call failed!");
 	exit;
 }
 
 foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
-    echo $home['address']['street'];
+    //echo $home['address']['street'];
+    echo $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " $home['status'];
 }
 
 
