@@ -37,6 +37,11 @@ To change this template use Tools | Templates.
                    return true;
                }
             }
+
+            function text()
+            {
+              
+            }
         
         </script>
     
