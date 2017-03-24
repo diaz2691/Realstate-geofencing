@@ -98,7 +98,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . getAgentName($result['userId']) . "<button onclick='text()''>Text</button></td>";
+                echo "<td>" . getAgentName($result['userId']) ."       " . "<button onclick='text()''>Text</button></td>";
                 echo "<td>" . htmlspecialchars($result['bedroomsMin']) . " - " . htmlspecialchars($result['bedroomsMax']) ."</td>";
                 echo "<td>" . htmlspecialchars($result['bathroomsMin']) . " - " . htmlspecialchars($result['bathroomsMax']) . "</td>";
                 echo "<td>$" . htmlspecialchars(number_format($result['priceMin'])) . " - $" . htmlspecialchars(number_format($result['priceMax'])) .  "</td>";
