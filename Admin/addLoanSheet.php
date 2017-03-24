@@ -27,7 +27,7 @@ ini_set('display_errors', 1);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add New Agent Information</title>
+    <title>Add New Loan Information</title>
     <meta charset = "utf-8"/><!--
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> importing jQuery library-->
     <link type="text/css" rel="stylesheet" href="editAgentInfo.css">
@@ -45,7 +45,7 @@ ini_set('display_errors', 1);
             require("adminNav.php");
         ?> 
             <div class="form">
-                <h1>Enter Commission Information</h1>
+                <h1>Enter Loan Information</h1>
 
                <!--  
                 <input type="text" id="password" placeholder="temporary password"><br />
