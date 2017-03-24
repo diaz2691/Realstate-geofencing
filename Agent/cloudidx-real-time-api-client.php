@@ -111,7 +111,7 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 
 foreach ($responseArray['listingSummaryDtoList'] as $homes => $home) {
     //echo $home['address']['street'];
-    echo $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " . $home['status'] . "\t";
+    echo $home['address']['streetNumber'] . " " . $home['address']['street'] . " " . $home['address']['city'] . " " . $home['address']['state'] . " " . $home['address']['postalCode'] . " " . $home['listPrice'] . " " . $home['bedrooms'] . " " . $home['fullBaths'] . " " . $home['halfBaths'] . " " . $home['status'] . "<br>";
 }
 
 
