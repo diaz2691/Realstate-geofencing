@@ -117,7 +117,7 @@ $boardId = $responseArray['cloudIdxListingSummaryList'][0]['boardId']; // need t
 $listingParam = array('listingNumber' => $listingNumber, 'boardId' => $boardId);
 $url = $links['detail'];
 $responseArray = cloudIDXCall($url, 'get', $listingParam); // Make the search method call
-print_r($responseArray);
+//print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("detail method call failed!");
 	exit;
