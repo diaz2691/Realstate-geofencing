@@ -56,7 +56,7 @@ foreach ($responseArray['links'] as $resource) {
 // Get a list of cities that are available for this account
 $url = $links['cities'];
 $responseArray = cloudIDXCall($url, 'get'); 
-print_r($responseArray);
+//print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("cities method call failed!");
 	exit;
@@ -81,7 +81,7 @@ $cityString = implode(',', $cityIdArray); // convert array of city IDs to comma-
 // Get a list of zips that are available for this account
 $url = $links['zips'];
 $responseArray = cloudIDXCall($url, 'get'); // Make the zips method call
-print_r($responseArray);
+//print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("zips method call failed!");
 	exit;
