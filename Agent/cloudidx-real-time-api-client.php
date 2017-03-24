@@ -14,10 +14,10 @@ $clientId = '65912'; //  5-digit iHomefinder demo client ID
 $password = 'cloudidx'; // account password
 
 // Provide query parameters
-$cityName = 'Salinas, Monterey';
-$minListPrice = '500000';
-$maxListPrice = '600000';
-$bedrooms = '4';
+$cityName = 'Cameron Park,El Dorado Hills';
+$minListPrice = '900000';
+$maxListPrice = '1200000';
+$bedrooms = '3';
 $fullBaths = '2';
 
 /* Other search parameters you can additionally use */
