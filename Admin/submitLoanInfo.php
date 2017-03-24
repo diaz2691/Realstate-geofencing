@@ -1,4 +1,6 @@
 <?php
+require('../databaseConnection.php');
+$dbConn = getConnection();
 
 $sql = "INSERT INTO LoanInfo
                   (clients, settlementDate, checkNum, address, grossComm, percentage, netComm)
