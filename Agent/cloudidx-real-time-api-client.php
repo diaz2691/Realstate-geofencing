@@ -10,7 +10,7 @@
  */
 
 // Credentials for demo iHomefinder API account
-$clientId = '01864213'; //  5-digit iHomefinder demo client ID
+$clientId = '018642139'; //  5-digit iHomefinder demo client ID
 $password = '01864213'; // account password
 
 // Provide query parameters
