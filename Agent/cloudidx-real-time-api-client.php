@@ -103,10 +103,18 @@ $searchProfile = array(	'cityId' => $cityString,
 					);
 $url = $links['search'];
 $responseArray = cloudIDXCall($url, 'get', $searchProfile); // Make the search method call
-print_r($responseArray);
+//print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("search method call failed!");
 	exit;
+}
+
+foreach ($responseArray as $key => $val) {
+    if(is_array($val)) {
+        echo "$key:\n";
+    } else {
+        echo "$key => $val\n";
+    }
 }
 
 
