@@ -12,14 +12,14 @@ $stmts = $dbConn -> prepare($sqls);
 $stmts->execute();       
 $counter = $stmts->fetch();
 
-$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" $counter['userId'];
+$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
 $stmt = $dbConn -> prepare($sqls);
 $stmt->execute();       
 $agent = $stmt->fetch();
 
 
 
-$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" $_POST['agentId'];
+$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
 $stmt = $dbConn -> prepare($sql);
 $stmt->execute();       
 $curAgent = $stmt->fetch();
