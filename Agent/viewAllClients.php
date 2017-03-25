@@ -55,7 +55,7 @@ To change this template use Tools | Templates.
                 }
               }
 
-              xhr.open("POST", "/textAgent.php/houseId=" + houseId + "&agentId=" + agentId, true);
+              xhr.open("POST", "textAgent.php/houseId=" + houseId + "&agentId=" + agentId, true);
               xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
               xhr.send();
             }

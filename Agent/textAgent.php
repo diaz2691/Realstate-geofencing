@@ -11,19 +11,19 @@ $dbConn = getConnection();
 $sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE userId =" . $_POST['houseId'];
 $stmts = $dbConn -> prepare($sqls);
 $stmts->execute();       
-$counter = $stmts->fetch();
+$counter = $stmts->fetchAll();
 
 $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
 $stmt = $dbConn -> prepare($sql);
 $stmt->execute();       
-$agent = $stmt->fetch();
+$agent = $stmt->fetchAll();
 
 
 
 $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
 $stmt = $dbConn -> prepare($sql);
 $stmt->execute();       
-$curAgent = $stmt->fetch();
+$curAgent = $stmt->fetchAll();
 
 
 $twilio_phone_number = "+18315851661";
