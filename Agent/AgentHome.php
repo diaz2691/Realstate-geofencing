@@ -118,28 +118,28 @@ To change this template use Tools | Templates.
 
         $dbConn = getConnection();
             
-        /*if(isset($_GET['searchForm'])){
+        if(isset($_GET['searchForm'])){
             if($sortByDate){
                 if($ascending){
                     if($_GET['field'] == "address"){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND address = ".$_GET['field']."
+                        AND address = $_GET['field']
                         ORDER BY dateTimes ASC";
                     }
                     elseif ($_GET['field'] == "city") {
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND city = ".$_GET['field']."
+                        AND city = $_GET['field']
                         ORDER BY dateTimes ASC";
                     }
                     else{
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND zip = ".$_GET['field']."
+                        AND zip = $_GET['field']
                         ORDER BY dateTimes ASC";  
                     }
                 }
@@ -148,21 +148,21 @@ To change this template use Tools | Templates.
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND address = ".$_GET['field']."
+                        AND address = $_GET['field']
                         ORDER BY dateTimes DESC";
                     }
                     elseif ($_GET['field'] == "city") {
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND city = ".$_GET['field']."
+                        AND city = $_GET['field']
                         ORDER BY dateTimes DESC";
                     }
                     else{
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND zip = ".$_GET['field']."
+                        AND zip = $_GET['field']
                         ORDER BY dateTimes DESC";  
                     }
                 }
@@ -216,7 +216,7 @@ To change this template use Tools | Templates.
                 }
             }
         }
-        else{*/
+        else{
 
             if($sortByDate){
                 if($ascending){
@@ -246,7 +246,7 @@ To change this template use Tools | Templates.
                         ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
                 }
             }
-        //}
+        }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
