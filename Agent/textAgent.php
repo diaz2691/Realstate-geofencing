@@ -7,13 +7,14 @@ use Twilio\Rest\Client;
 
 
 $dbConn = getConnection();
+
 $sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE userId =" . $_POST['houseId'];
 $stmts = $dbConn -> prepare($sqls);
 $stmts->execute();       
 $counter = $stmts->fetch();
 
 $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
-$stmt = $dbConn -> prepare($sqls);
+$stmt = $dbConn -> prepare($sql);
 $stmt->execute();       
 $agent = $stmt->fetch();
 
