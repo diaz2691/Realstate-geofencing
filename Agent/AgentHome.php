@@ -97,12 +97,13 @@ To change this template use Tools | Templates.
         <br/>
         <br/><h2 id="header2">Houses &#x2713</h2>
 
-
-        <input type="text" name="search" placeholder="Search for " size=67/><br>
-        <input type="radio" name="field" value="address" checked> Address<br>
-        <input type="radio" name="field" value="city"> City<br>
-        <input type="radio" name="field" value="zip"> Zip 
-        <input type="submit" value="submit" name="searchForm"/>
+        <form action="AgentHome.php">
+            <input type="text" name="search" placeholder="Search for " size=67/><br>
+            <input type="radio" name="field" value="address" checked> Address<br>
+            <input type="radio" name="field" value="city"> City<br>
+            <input type="radio" name="field" value="zip"> Zip <br>
+            <input type="submit" value="submit" name="searchForm"/>
+        </form>
 
         <form action="addHouse.php">
             <input type="hidden" name="houseId" />    
