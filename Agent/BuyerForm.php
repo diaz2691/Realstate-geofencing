@@ -40,7 +40,7 @@
       function checkPhone(){
           if(!/^\(\d{3}\)\s*\d{3}\-\d{4}$/.test($("#phone").val()))
               {
-              displayError("#phone", "Phone must sbe be (XXX)XXX-XXXX format!");
+              displayError("#phone", "Phone must be (XXX)XXX-XXXX format");
               return false;      
               }
           else
@@ -95,8 +95,8 @@
         <tr>
           <td>Price Range</td>      
                 <td>
-                    <input type="number" name="priceMin" min="0" placeholder="min." step="1000" />
-                    -
+                    $<input type="number" name="priceMin" min="0" placeholder="min." step="1000" />
+                    -$
                     <input type="number" name="priceMax" min="0" placeholder="max" step="1000" />
                 </td>  <br />
         </tr>
