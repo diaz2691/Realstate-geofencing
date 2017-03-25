@@ -16,8 +16,8 @@ $password = 'cloudidx'; // account password
 
 // Provide query parameters
 $cityName = 'Cameron Park,El Dorado Hills';
-$minListPrice = '520000';
-$maxListPrice = '530000';
+$minListPrice = '530000';
+$maxListPrice = '540000';
 
 /* Other search parameters you can additionally use 
 $bedrooms = '3';
