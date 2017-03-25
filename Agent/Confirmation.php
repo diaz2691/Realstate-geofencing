@@ -5,7 +5,7 @@
 <html>
 	<body>
 	<center>
-		<h1>Your information has been added.</h1>
+		<h1>Your information has been recorded.</h1>
 
 		<h2>Thank you!</h2>
 
