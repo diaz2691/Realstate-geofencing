@@ -74,7 +74,7 @@
           <td>Email *</td>       <td><input type="email" name="email" /> <br /></td>
         </tr>
         <tr>
-          <td>Phone</td>       <td><input type = "text" name="phone" id="phone"/> <span id="phoneError"></span></td> <br />
+          <td>Phone</td>       <td><input type = "text" name="phone" id="phone" required="" /> <span id="phoneError"></span></td> <br />
         </tr>
         <tr>
           <td>Bedrooms Range</td>       
