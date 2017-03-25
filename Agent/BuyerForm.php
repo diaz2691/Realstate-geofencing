@@ -95,8 +95,8 @@
         <tr>
           <td>Price Range</td>      
                 <td>
-                    $<input type="number" name="priceMin" min="0" placeholder="min." step="1000" />
-                    -$
+                    <input type="number" name="priceMin" min="0" placeholder="min." step="1000" />
+                    -
                     <input type="number" name="priceMax" min="0" placeholder="max" step="1000" />
                 </td>  <br />
         </tr>
