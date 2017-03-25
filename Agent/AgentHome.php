@@ -117,7 +117,7 @@ To change this template use Tools | Templates.
 
         $dbConn = getConnection();
             
-        if(isset($_GET['searchForm']))
+        /*if(isset($_GET['searchForm']))
         {
 
             if($sortByDate){
@@ -216,7 +216,7 @@ To change this template use Tools | Templates.
                     }
                 }
             }
-        else{
+        else{*/
 
             if($sortByDate){
                 if($ascending){
@@ -245,7 +245,7 @@ To change this template use Tools | Templates.
                         WHERE userId = :userId
                         ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
                 }
-            }
+            //}
         }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
