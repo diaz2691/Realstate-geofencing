@@ -15,7 +15,7 @@ $clientId = '01864213'; //  5-digit iHomefinder demo client ID
 $password = 'kaylee1'; // account password
 
 // Provide query parameters
-$cityName = 'Cameron Park,El Dorado Hills';
+$cityName = 'Salinas, Monterey';
 $minListPrice = '540000';
 $maxListPrice = '545000';
 
