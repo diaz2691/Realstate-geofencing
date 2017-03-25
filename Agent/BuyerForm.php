@@ -40,7 +40,7 @@
       function checkPhone(){
           if(!/^\d{3}\s*\d{3}\d{4}$/.test($("#phone").val())) 
               {
-              displayError("#phone", "Phone must be (XXX)XXX-XXXX format");
+              displayError("#phone", "Please enter a 10-digit phone number");
               return false;      
               }
           else
