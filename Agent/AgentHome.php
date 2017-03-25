@@ -98,7 +98,7 @@ To change this template use Tools | Templates.
         <br/><h2 id="header2">Houses &#x2713</h2>
 
 
-        <input type="text" name="search" placeholder="Search for " size=67/>
+        <input type="text" name="search" placeholder="Search for " size=67/><br>
         <input type="radio" name="field" value="address" checked> Address<br>
         <input type="radio" name="field" value="city"> City<br>
         <input type="radio" name="field" value="zip"> Zip 
