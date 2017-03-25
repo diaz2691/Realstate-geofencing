@@ -28,12 +28,16 @@ To change this template use Tools | Templates.
     
     <script>
         
-            function confirmDelete(record) {
+            function confirmDelete(record) 
+            {
                // alert("hi"); // for testing
                var deleteRecord = confirm("Are you sure you want to delete " + record + "?");
-               if(!deleteRecord){
+               if(!deleteRecord)
+               {
                    return false
-               } else {
+               } 
+               else 
+               {
                    return true;
                }
             }
@@ -44,11 +48,10 @@ To change this template use Tools | Templates.
               var xhr = new XMLHttpRequest();
               xhr.onreadystatechange = function () 
               {
-                 if (this.readyState == 4 && this.status == 200) 
-                 {
+               if (this.readyState == 4 && this.status == 200) 
+               {
                   var response = JSON.parse(xhr.responseText);
                   xhr.abort();
-
                 }
               }
 
@@ -122,7 +125,7 @@ To change this template use Tools | Templates.
 
             foreach($results as $result){
                 echo "<tr>";
-                echo "<td>" . getAgentName($result['userId']) . "<button class='button' onclick='text(" . $result['houseId'] . "," . $_SESSION['userId'] . ")' >Text</button></td>";
+                echo "<td>" . getAgentName($result['userId']) . "<button class='button' onclick=text(" . $result['houseId'] . "," . $_SESSION['userId'] . ") >Text</button></td>";
                 echo "<td>" . htmlspecialchars($result['bedroomsMin']) . " - " . htmlspecialchars($result['bedroomsMax']) ."</td>";
                 echo "<td>" . htmlspecialchars($result['bathroomsMin']) . " - " . htmlspecialchars($result['bathroomsMax']) . "</td>";
                 echo "<td>$" . htmlspecialchars(number_format($result['priceMin'])) . " - $" . htmlspecialchars(number_format($result['priceMax'])) .  "</td>";
