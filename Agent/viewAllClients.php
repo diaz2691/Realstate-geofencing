@@ -57,7 +57,9 @@ To change this template use Tools | Templates.
 
               xhr.open("POST", "textAgent.php", true);
               xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-              xhr.send(data);
+              xhr.setRequestHeader("houseId", houseId);
+              xhr..setRequestHeader("agentId", agentId);
+              xhr.send();
             }
         
         </script>
