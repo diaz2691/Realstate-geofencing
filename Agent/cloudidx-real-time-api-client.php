@@ -16,12 +16,12 @@ $password = 'cloudidx'; // account password
 
 // Provide query parameters
 $cityName = 'Cameron Park,El Dorado Hills';
-$minListPrice = '530000';
-$maxListPrice = '540000';
-$bedrooms = '3';
-$fullBaths = '2';
+$minListPrice = '540000';
+$maxListPrice = '550000';
 
-/* Other search parameters you can additionally use */
+/* Other search parameters you can additionally use 
+$bedrooms = '3';
+$fullBaths = '2';*/
 //$propertyType = 'SFR'; // Single Family Residence (SFR), Condominium (CND), Lots & Land (LL), Rental (RNT), 
                            // Residential Income (RI), Commercial (COM), Mobile/Manufactured Home (MH), Farm (FRM)
 //$newConstructionYn = false;
