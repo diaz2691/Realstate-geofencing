@@ -11,11 +11,11 @@
  */
 
 // Credentials for demo iHomefinder API account
-$clientId = '01864213'; //  5-digit iHomefinder demo client ID
-$password = 'kaylee1'; // account password
+$clientId = '65912'; //  5-digit iHomefinder demo client ID
+$password = 'cloudidx'; // account password
 
 // Provide query parameters
-$cityName = 'Salinas, Monterey';
+$cityName = 'Cameron Park,El Dorado Hills';
 $minListPrice = '540000';
 $maxListPrice = '545000';
 
@@ -55,13 +55,13 @@ foreach ($responseArray['links'] as $resource) {
 
 
 // Get a list of cities that are available for this account
-/*$url = $links['cities'];
+$url = $links['cities'];
 $responseArray = cloudIDXCall($url, 'get'); 
 //print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("cities method call failed!");
 	exit;
-}*/
+}
 
 
 // Find ID for cities set above
