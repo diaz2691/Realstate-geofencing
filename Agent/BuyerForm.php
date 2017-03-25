@@ -71,7 +71,7 @@
           <td>Last Name *</td>   <td><input type="text" name="lastName" /> <br /></td>
         </tr>
         <tr>
-          <td>Email *</td>       <td><input type="email" name="email" required="" /> <br /></td>
+          <td>Email *</td>       <td><input type="email" name="email" /> <br /></td>
         </tr>
         <tr>
           <td>Phone</td>       <td><input type = "text" name="phone" id="phone" required="" /> <span id="phoneError"></span></td> <br />
