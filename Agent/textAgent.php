@@ -13,17 +13,17 @@ $stmts = $dbConn -> prepare($sqls);
 $stmts->execute();       
 $counter = $stmts->fetchAll();
 
-// $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
-// $stmt = $dbConn -> prepare($sql);
-// $stmt->execute();       
-//$agent = $stmt->fetchAll();
+$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
+$stmt = $dbConn -> prepare($sql);
+$stmt->execute();       
+$agent = $stmt->fetchAll();
 
 
 
-// $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
-// $stmt = $dbConn -> prepare($sql);
-// $stmt->execute();       
-//$curAgent = $stmt->fetchAll();
+$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
+$stmt = $dbConn -> prepare($sql);
+$stmt->execute();       
+$curAgent = $stmt->fetchAll();
 
 
 // $twilio_phone_number = "+18315851661";
