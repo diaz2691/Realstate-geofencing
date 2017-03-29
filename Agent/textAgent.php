@@ -8,25 +8,25 @@
 
 // $dbConn = getConnection();
 
-$sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE houseId =" . $_POST['houseId'];
-$stmts = $dbConn -> prepare($sqls);
-$stmts->execute();       
+// $sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE houseId =" . $_POST['houseId'];
+// $stmts = $dbConn -> prepare($sqls);
+// $stmts->execute();       
 //$counter = $stmts->fetchAll();
 
-$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
-$stmt = $dbConn -> prepare($sql);
-$stmt->execute();       
+// $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
+// $stmt = $dbConn -> prepare($sql);
+// $stmt->execute();       
 //$agent = $stmt->fetchAll();
 
 
 
-$sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
-$stmt = $dbConn -> prepare($sql);
-$stmt->execute();       
+// $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
+// $stmt = $dbConn -> prepare($sql);
+// $stmt->execute();       
 //$curAgent = $stmt->fetchAll();
 
 
-$twilio_phone_number = "+18315851661";
+// $twilio_phone_number = "+18315851661";
 
 // $client = new Client($account_sid, $auth_token);
 // $client->account->messages->create(
