@@ -150,7 +150,7 @@ To change this template use Tools | Templates.
         </form>  
 
         <div id="noteBox">
-            <textarea> </textarea>
+            <textarea style="width: 272px; height: 189px;"> </textarea>
             <div class="message"></div>
             <span class="button save">Save</span>
             <span class="button cancel">Cancel</span>
