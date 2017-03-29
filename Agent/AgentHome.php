@@ -112,7 +112,7 @@ To change this template use Tools | Templates.
 
             #noteBox
             {
-               display:none;
+               display:block;
                 background-color: #eee;
                 border-radius: 5px;
                 border: 1px solid #aaa;
