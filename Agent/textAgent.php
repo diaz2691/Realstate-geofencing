@@ -6,12 +6,12 @@ require('../twilio-php-master/Twilio/autoload.php');
 use Twilio\Rest\Client;
 
 
-// $dbConn = getConnection();
+$dbConn = getConnection();
 
-// $sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE houseId =" . $_POST['houseId'];
-// $stmts = $dbConn -> prepare($sqls);
-// $stmts->execute();       
-//$counter = $stmts->fetchAll();
+$sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE houseId =" . $_POST['houseId'];
+$stmts = $dbConn -> prepare($sqls);
+$stmts->execute();       
+$counter = $stmts->fetchAll();
 
 // $sql = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
 // $stmt = $dbConn -> prepare($sql);
