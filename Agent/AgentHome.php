@@ -62,6 +62,11 @@ To change this template use Tools | Templates.
             {
                 document.getElementById('noteBox').style.display = "none";
             }
+
+            function saveNote()
+            {
+
+            }
         
         </script>
     
@@ -156,7 +161,7 @@ To change this template use Tools | Templates.
         <div id="noteBox">
             <textarea style="width: 272px; height: 189px;"> </textarea>
             <div class="message"></div>
-            <button >Save</button>
+            <button onClick="saveNote">Save</button>
             <button onClick="hideNoteBox()">Cancel</button>
         </div>
         
