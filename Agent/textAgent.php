@@ -1,12 +1,12 @@
 <?php
-require("../databaseConnection.php");
+// require("../databaseConnection.php");
 
-require('../keys/tKey.php');
-require('../twilio-php-master/Twilio/autoload.php');
-use Twilio\Rest\Client;
+// require('../keys/tKey.php');
+// require('../twilio-php-master/Twilio/autoload.php');
+// use Twilio\Rest\Client;
 
 
-$dbConn = getConnection();
+// $dbConn = getConnection();
 
 $sqls = "SELECT userId, firstName, lastName, phone FROM BuyerInfo WHERE houseId =" . $_POST['houseId'];
 $stmts = $dbConn -> prepare($sqls);
