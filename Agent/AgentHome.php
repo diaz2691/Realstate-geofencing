@@ -39,6 +39,7 @@ To change this template use Tools | Templates.
     
 <head>
     <title>Agent Home</title>
+    <scriptsrc="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     
     <script>
         
@@ -50,6 +51,30 @@ To change this template use Tools | Templates.
                } else {
                    return true;
                }
+            }
+
+            function displayNote()
+            {
+                var form = this;
+                doConfirm("Are you sure?", 
+                    function yes() 
+                    {
+                        form.submit();
+                    }, 
+                    function no() 
+                    {
+
+                    });
+            }
+            function doConfirm(msg, yesFn, noFn) {
+                var confirmBox = $("#noteBox");
+                confirmBox.find(".message").text(msg);
+                confirmBox.find(".save,.cancel").unbind().click(function () {
+                    confirmBox.hide();
+                });
+                confirmBox.find(".save").click(yesFn);
+                confirmBox.find(".cancel").click(noFn);
+                confirmBox.show();
             }
         
         </script>
@@ -83,6 +108,37 @@ To change this template use Tools | Templates.
                 display: block;
                 text-decoration: none !important;
                 color: inherit;
+            }
+
+            #noteBox
+            {
+               display:none;
+                background-color: #eee;
+                border-radius: 5px;
+                border: 1px solid #aaa;
+                position: fixed;
+                width: 300px;
+                left: 50%;
+                margin-left: -150px;
+                padding: 6px 8px 8px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            #noteBox .button {
+                background-color: #ccc;
+                display: inline-block;
+                border-radius: 3px;
+                border: 1px solid #aaa;
+                padding: 2px;
+                text-align: center;
+                width: 80px;
+                cursor: pointer;
+            }
+
+            #noteBox .message
+            {
+                text-align: left;
+                margin-bottom: 8px;
             }
     </style>
 </head>
@@ -281,7 +337,7 @@ To change this template use Tools | Templates.
                 </td> 
 
                 <td>
-                    <button class="option" onclick="displayNote()">Click me</button>
+                    <button class="option" onclick="displayNote()">Note</button>
                 </td>
 
              <td>
@@ -302,6 +358,14 @@ To change this template use Tools | Templates.
                } //closes foreach
              ?>         
         </table>
+
+        <div id="noteBox">
+            <textarea> </textarea>
+            <div class="message"></div>
+            <span class="button save">Save</span>
+            <span class="button cancel">Cancel</span>
+        </div>
+
     <br/><br/><br/><br/><br/><br/>
     </body>
 </html>
