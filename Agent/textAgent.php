@@ -1,9 +1,9 @@
 <?php
-// require("../databaseConnection.php");
+require("../databaseConnection.php");
 
-// require('../keys/tKey.php');
-// require('../twilio-php-master/Twilio/autoload.php');
-// use Twilio\Rest\Client;
+require('../keys/tKey.php');
+require('../twilio-php-master/Twilio/autoload.php');
+use Twilio\Rest\Client;
 
 
 // $dbConn = getConnection();
