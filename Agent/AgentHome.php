@@ -112,7 +112,7 @@ To change this template use Tools | Templates.
         
         <table class="tftable" border="1">
        
-        <tr><th>Status</th><th><a href=<?php echo "AgentHome.php?sortType=date&changeOrder=" . $ascending ; ?> >Date Added<span class="caret"></a></th><th><a href=<?php echo "AgentHome.php?sortType=address&changeOrder=" . $ascending ; ?> >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Update</th><th>Delete</th></tr>    
+        <tr><th>Status</th><th><a href=<?php echo "AgentHome.php?sortType=date&changeOrder=" . $ascending ; ?> >Date Added<span class="caret"></a></th><th><a href=<?php echo "AgentHome.php?sortType=address&changeOrder=" . $ascending ; ?> >Address<span class="caret"></a></th><th>City</th><th>State</th><th>Zip Code</th><th>Bedrooms</th><th>Bathrooms</th><th>Price</th><th>Visitors</th><th>Notes</th><th>Update</th><th>Delete</th></tr>    
             
         <?php
 
@@ -279,6 +279,10 @@ To change this template use Tools | Templates.
                          <input class="option" type="submit" value="View" name="ViewForm"/>
                      </form>   
                 </td> 
+
+                <td>
+                    <button onclick="displayNote()">Click me</button>
+                </td>
 
              <td>
                      <form action="editHouseInfo.php">
