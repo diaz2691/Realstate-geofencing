@@ -35,7 +35,7 @@ array(
 "From" => $twilio_phone_number,
 "Body" => "Hey " . $agent['firstName'] . " " . $agent['lastName'] . " This is " . $curAgent['firstName'] . " " . $curAgent['lastName'] . 
 ". I have a house that " . $counter['firstName'] . " " . $counter['lastName'] . " might be interested in. 
-Call me at: " . $curAgent['phone'] ,
+Call me at: " . $curAgent['phone'] 
 ));
 
 
