@@ -122,7 +122,6 @@ To change this template use Tools | Templates.
                 margin-left: -150px;
                 margin-top: -200px;
                 padding: 6px 8px 8px;
-                box-sizing: border-box;
                 text-align: center;
             }
             #noteBox .button {
