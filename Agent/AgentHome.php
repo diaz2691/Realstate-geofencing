@@ -55,27 +55,9 @@ To change this template use Tools | Templates.
 
             function displayNote()
             {
-                var form = this;
-                doConfirm("Are you sure?", 
-                    function yes() 
-                    {
-                        form.submit();
-                    }, 
-                    function no() 
-                    {
+                
+            }
 
-                    });
-            }
-            function doConfirm(msg, yesFn, noFn) {
-                var noteBox = $("#noteBox");
-                noteBox.find(".message").text(msg);
-                noteBox.find(".save,.cancel").unbind().click(function () {
-                    noteBox.hide();
-                });
-                noteBox.find(".save").click(yesFn);
-                noteBox.find(".cancel").click(noFn);
-                noteBox.show();
-            }
         
         </script>
     
