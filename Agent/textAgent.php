@@ -15,8 +15,8 @@ $counter = $stmts->fetchAll();
 
 $agentOne = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
 $stmt = $dbConn -> prepare($agentOne);
-// $stmt->execute();       
-// $agent = $stmt->fetchAll();
+$stmt->execute();       
+$agent = $stmt->fetchAll();
 
 
 
