@@ -55,7 +55,7 @@ To change this template use Tools | Templates.
 
             function displayNote()
             {
-                
+                document.getElementById('noteBox').style.display = "block";
             }
 
         
@@ -94,7 +94,7 @@ To change this template use Tools | Templates.
 
             #noteBox
             {
-               display:block;
+               display:none;
                 background-color: #eee;
                 border-radius: 5px;
                 border: 1px solid #aaa;
