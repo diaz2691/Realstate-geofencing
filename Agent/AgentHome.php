@@ -102,9 +102,9 @@ To change this template use Tools | Templates.
                 width: 300px;
                 height: 300px;
                 left: 50%;
-                /*margin-left: -150px;*/
+                margin-left: -150px;
                 margin-top: -100px;
-                /*padding: 6px 8px 8px;*/
+                padding: 6px 8px 8px;
                 text-align: center;
             }
             #noteBox .button {
