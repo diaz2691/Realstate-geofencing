@@ -148,6 +148,13 @@ To change this template use Tools | Templates.
             <input type="hidden" name="houseId" />    
             <input type="submit" value="Add New House" name="addForm"/>
         </form>  
+
+        <div id="noteBox">
+            <textarea> </textarea>
+            <div class="message"></div>
+            <span class="button save">Save</span>
+            <span class="button cancel">Cancel</span>
+        </div>
         
         <table class="tftable" border="1">
        
@@ -342,12 +349,7 @@ To change this template use Tools | Templates.
              ?>         
         </table>
 
-        <div id="noteBox">
-            <textarea> </textarea>
-            <div class="message"></div>
-            <span class="button save">Save</span>
-            <span class="button cancel">Cancel</span>
-        </div>
+        
 
     <br/><br/><br/><br/><br/><br/>
     </body>
