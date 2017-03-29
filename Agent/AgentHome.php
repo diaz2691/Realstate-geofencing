@@ -58,6 +58,10 @@ To change this template use Tools | Templates.
                 document.getElementById('noteBox').style.display = "block";
             }
 
+            function hideNoteBox()
+            {
+                document.getElementById('noteBox').style.display = "none";
+            }
         
         </script>
     
@@ -153,7 +157,7 @@ To change this template use Tools | Templates.
             <textarea style="width: 272px; height: 189px;"> </textarea>
             <div class="message"></div>
             <button >Save</button>
-            <button >Cancel</button>
+            <button onClick="hideNoteBox()">Cancel</button>
         </div>
         
         <table class="tftable" border="1">
