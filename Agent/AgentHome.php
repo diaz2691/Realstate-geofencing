@@ -103,7 +103,7 @@ To change this template use Tools | Templates.
                 height: 300px;
                 left: 50%;
                 /*margin-left: -150px;*/
-                margin-top: -200px;
+                margin-top: -300px;
                 /*padding: 6px 8px 8px;*/
                 text-align: center;
             }
