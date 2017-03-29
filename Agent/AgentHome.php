@@ -281,7 +281,7 @@ To change this template use Tools | Templates.
                 </td> 
 
                 <td>
-                    <button onclick="displayNote()">Click me</button>
+                    <button class="option" onclick="displayNote()">Click me</button>
                 </td>
 
              <td>
