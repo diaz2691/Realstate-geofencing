@@ -67,14 +67,14 @@ To change this template use Tools | Templates.
                     });
             }
             function doConfirm(msg, yesFn, noFn) {
-                var confirmBox = $("#noteBox");
-                confirmBox.find(".message").text(msg);
-                confirmBox.find(".save,.cancel").unbind().click(function () {
-                    confirmBox.hide();
+                var noteBox = $("#noteBox");
+                noteBox.find(".message").text(msg);
+                noteBox.find(".save,.cancel").unbind().click(function () {
+                    noteBox.hide();
                 });
-                confirmBox.find(".save").click(yesFn);
-                confirmBox.find(".cancel").click(noFn);
-                confirmBox.show();
+                noteBox.find(".save").click(yesFn);
+                noteBox.find(".cancel").click(noFn);
+                noteBox.show();
             }
         
         </script>
