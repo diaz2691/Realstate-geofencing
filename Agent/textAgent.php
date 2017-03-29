@@ -15,15 +15,15 @@ $counter = $stmts->fetchAll();
 
 $agentOne = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $counter['userId'];
 $stmt = $dbConn -> prepare($agentOne);
- $stmt->execute();       
+// $stmt->execute();       
 // $agent = $stmt->fetchAll();
 
 
 
-// $agentTwo = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
-// $stmt = $dbConn -> prepare($agentTwo);
-// $stmt->execute();       
-// $curAgent = $stmt->fetchAll();
+$agentTwo = "SELECT firstName, lastName FROM UsersInfo WHERE userId =" . $_POST['agentId'];
+$stmt = $dbConn -> prepare($agentTwo);
+$stmt->execute();       
+$curAgent = $stmt->fetchAll();
 
 
 // $twilio_phone_number = "+18315851661";
