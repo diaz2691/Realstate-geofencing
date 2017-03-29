@@ -50,6 +50,7 @@ To change this template use Tools | Templates.
               {
                if (this.readyState == 4 && this.status == 200) 
                {
+                console.log("works");
                   xhr.abort();
                 }
               }
