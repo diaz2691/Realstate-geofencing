@@ -152,8 +152,8 @@ To change this template use Tools | Templates.
         <div id="noteBox">
             <textarea style="width: 272px; height: 189px;"> </textarea>
             <div class="message"></div>
-            <span class="save">Save</span>
-            <span class="cancel">Cancel</span>
+            <button >Save</button>
+            <button >Cancel</button>
         </div>
         
         <table class="tftable" border="1">
