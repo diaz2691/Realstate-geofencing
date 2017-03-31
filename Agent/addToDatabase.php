@@ -47,15 +47,19 @@ $stmt->execute($namedParameters);
 
 $twilio_phone_number = "+18317038053 ";
 
-$client = new Client($sid, $token);
-$client->messages->create(
-$phone,
-array(
-"From" => $twilio_phone_number,
-"Body" => "Flyer",
-'mediaUrl' => "http://52.11.24.75/keys/moro.jpg",
-)
-);
+if($houseId == "89")
+{
+	$client = new Client($sid, $token);
+	$client->messages->create(
+	$phone,
+	array(
+	"From" => $twilio_phone_number,
+	"Body" => "Flyer",
+	'mediaUrl' => "http://52.11.24.75/keys/moro.jpg",
+	)
+	);
+}
+
 
 
 //if (empty($result)) {
