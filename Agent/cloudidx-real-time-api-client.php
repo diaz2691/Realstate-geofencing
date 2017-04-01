@@ -11,11 +11,11 @@
  */
 
 // Credentials for demo iHomefinder API account
-$clientId = '01864213'; //  5-digit iHomefinder demo client ID
-$password = 'kaylee1'; // account password
+$clientId = '65912'; //  5-digit iHomefinder demo client ID
+$password = 'cloudidx'; // account password
 
 // Provide query parameters
-$cityName = 'Seaside';
+$cityName = 'El Dorado Hills';
 $minListPrice = '550000';
 $maxListPrice = '550000';
 
@@ -55,17 +55,17 @@ foreach ($responseArray['links'] as $resource) {
 
 
 // Get a list of cities that are available for this account
-/*$url = $links['cities'];
+$url = $links['cities'];
 $responseArray = cloudIDXCall($url, 'get'); 
-print_r($responseArray);
+//print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("cities method call failed!");
 	exit;
-}*/
+}
 
 
 // Find ID for cities set above
-/*$cityNameArray = str_getcsv($cityName); // convert comma-separated list of city names to array
+$cityNameArray = str_getcsv($cityName); // convert comma-separated list of city names to array
 $cityIdArray = array();
 foreach ($responseArray['cities'] as $city) {
 	if (in_array (trim($city['label']), $cityNameArray)) {
@@ -87,7 +87,7 @@ if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("zips method call failed!");
 	exit;
 }
-*/
+
 
 // Do a search on the city, property type, min/max price, etc.
 $searchProfile = array(	'cityId' => $cityString, 
