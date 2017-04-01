@@ -57,7 +57,7 @@ foreach ($responseArray['links'] as $resource) {
 // Get a list of cities that are available for this account
 $url = $links['cities'];
 $responseArray = cloudIDXCall($url, 'get'); 
-//print_r($responseArray);
+print_r($responseArray);
 if (isset($responseArray['failure']) or isset($responseArray['message'])) {
 	print_r("cities method call failed!");
 	exit;
