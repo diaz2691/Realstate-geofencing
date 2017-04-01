@@ -15,7 +15,7 @@ $clientId = '65912'; //  5-digit iHomefinder demo client ID
 $password = 'cloudidx'; // account password
 
 // Provide query parameters
-$cityName = 'Salinas, El Dorado Hills';
+$cityName = 'El Dorado Hills';
 $minListPrice = '540000';
 $maxListPrice = '550000';
 
