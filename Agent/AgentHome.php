@@ -172,106 +172,107 @@ To change this template use Tools | Templates.
         <?php
 
         $dbConn = getConnection();
-            
-        /*if(isset($_GET['searchForm'])){
+        
+        $searchField = $_GET['field'];
+        if(isset($_GET['searchForm'])){
             if($sortByDate){
                 if($ascending){
-                    if(strcmp($_GET['field'], "address") == 0){
+                    if(strcmp($searchField, "address") == 0){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND address = $_GET['field']
+                        AND address = $searchField
                         ORDER BY dateTimes ASC";
                     }
-                    elseif (strcmp($_GET['field'], "city") == 0) {
+                    elseif ($searchField, "city") == 0) {
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND city = $_GET['field']
+                        AND city = $searchField
                         ORDER BY dateTimes ASC";
                     }
                     else{
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND zip = $_GET['field']
+                        AND zip = $searchField
                         ORDER BY dateTimes ASC";  
                     }
                 }
                 else{
-                    if(strcmp($_GET['field'], "address") == 0){
+                    if(strcmp($searchField, "address") == 0){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND address = $_GET['field']
+                        AND address = $searchField
                         ORDER BY dateTimes DESC";
                     }
-                    elseif(strcmp($_GET['field'], "city") == 0) {
+                    elseif(strcmp($searchField, "city") == 0) {
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND city = $_GET['field']
+                        AND city = $searchField
                         ORDER BY dateTimes DESC";
                     }
                     else{
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                         FROM HouseInfo
                         WHERE userId = :userId 
-                        AND zip = $_GET['field']
+                        AND zip = $searchField
                         ORDER BY dateTimes DESC";  
                     }
                 }
             }
             else{
                 if($ascending){
-                    if(strcmp($_GET['field'], "address") == 0){
+                    if(strcmp($searchField, "address") == 0){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                             FROM HouseInfo
                             WHERE userId = :userId
-                            AND address = $_GET['field']
+                            AND address = $searchField
                             ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) ASC";
                     }
-                    elseif(strcmp($_GET['field'], "city") == 0){
+                    elseif(strcmp($searchField, "city") == 0){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                             FROM HouseInfo
                             WHERE userId = :userId
-                            AND city = $_GET['field']
+                            AND city = $searchField
                             ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) ASC";
                     }
                     else{
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                             FROM HouseInfo
                             WHERE userId = :userId
-                            AND zip = $_GET['field']
+                            AND zip = $searchField
                             ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) ASC";                        
                     }
                 }
                 else{
-                    if(strcmp($_GET['field'], "address") == 0){
+                    if(strcmp($searchField, "address") == 0){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                             FROM HouseInfo
                             WHERE userId = :userId
-                            AND address = $_GET['field']
+                            AND address = $searchField
                             ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
                     }
-                    elseif(strcmp($_GET['field'], "city") == 0){
+                    elseif(strcmp($searchField, "city") == 0){
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                             FROM HouseInfo
                             WHERE userId = :userId
-                            AND city = $_GET['field']
+                            AND city = $searchField
                             ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
                     }
                     else{
                         $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
                             FROM HouseInfo
                             WHERE userId = :userId
-                            AND zip = $_GET['field']
+                            AND zip = $searchField
                             ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";                        
                     }
                 }
             }
         }
-        else{*/
+        else{
             if($sortByDate){
                 if($ascending){
                     $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
@@ -300,7 +301,7 @@ To change this template use Tools | Templates.
                         ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
                 }
             }
-        //}
+        }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
