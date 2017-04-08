@@ -273,7 +273,7 @@ To change this template use Tools | Templates.
             }
         }*/
         $word = false;
-        if(word){
+        if($word){
             echo "your mum";
         }
         else{
