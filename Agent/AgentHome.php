@@ -271,8 +271,12 @@ To change this template use Tools | Templates.
                     }
                 }
             }
+        }*/
+        $word = false;
+        if(word){
+            echo "your mum";
         }
-        else{*/
+        else{
             if($sortByDate){
                 if($ascending){
                     $sql = "SELECT status, houseId, date(dateTimes) as dateTimes, address, city, state, zip, bedrooms, bathrooms, price
@@ -301,7 +305,7 @@ To change this template use Tools | Templates.
                         ORDER BY SUBSTR(LTRIM(address), LOCATE(' ', LTRIM(address))) DESC";
                 }
             }
-        //}
+        }
             $namedParameters = array();
             $namedParameters[':userId'] = $_SESSION['userId'];
             $stmt = $dbConn -> prepare($sql);
