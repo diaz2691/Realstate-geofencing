@@ -26,7 +26,7 @@ To change this template use Tools | Templates.
     
 <head>
     <title>Commission Sheet</title>
-    
+    <script src="../pass.js" type="text/javascript"></script>
     <script>
         
             function confirmDelete(record) {
@@ -42,6 +42,7 @@ To change this template use Tools | Templates.
         </script>
     
     <meta charset = "utf-8"/>
+
  <style type="text/css">
                /* .tableHeader {
                     text-align:center;
@@ -210,8 +211,9 @@ To change this template use Tools | Templates.
            {
             var response = JSON.stringify(xhr.responseText);
             xhr.abort();
-            console.log(response.substring(5,response.length - 12));
-
+            // console.log(response.substring(5,response.length - 12));
+            var pdf = response.substring(5,response.length - 12);
+            sendDoc(pdf);
            }
          
         }
@@ -221,7 +223,10 @@ To change this template use Tools | Templates.
         xhr.send(data);
         
     }
-
+    function sendDoc(pdf)
+    {
+      var xhr = new XMLHttpRequest();
+    }
 
     </script>
 
