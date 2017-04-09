@@ -210,7 +210,7 @@ To change this template use Tools | Templates.
            {
             var response = JSON.stringify(xhr.responseText);
             xhr.abort();
-            console.log(response.substring(4,response.length - 11));
+            console.log(response.substring(5,response.length - 12));
 
            }
          
