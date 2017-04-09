@@ -71,7 +71,7 @@ if(isset($_POST['id']))
 	//$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
 
 	$base = $pdf->Output('S');
-	$json = json_encode($base);
+	$json = json_encode("45");
 
 	echo $json;
 
