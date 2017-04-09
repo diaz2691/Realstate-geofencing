@@ -223,9 +223,43 @@ To change this template use Tools | Templates.
         xhr.send(data);
         
     }
+
     function sendDoc(pdf)
     {
       var xhr = new XMLHttpRequest();
+      var data = JSON.stringify({
+          "emailSubject": "DocuSign REST API Quickstart Sample",
+          "emailBlurb": "Shows how to create and send an envelope from a document.",
+          "recipients": {
+            "signers": [{
+              "email": "jodiaz@csumb.edu",
+              "name": "Jose Diaz",
+              "recipientId": "1",
+              "routingOrder": "1"
+            }]
+          },
+          "documents": [{
+            "documentId": "1",
+            "name": "test.pdf",
+            "documentBase64": pdf
+          }],
+          "status": "sent"
+        });
+
+      xhr.onreadystatechange = function () 
+      {
+         if (this.readyState == 4) 
+         {
+          
+         }
+       
+      }
+      xhr.open("POST", "commisionSheet.php", true);
+      xhr.setRequestHeader("x-docusign-authentication", "{ Username:" + username + ",Password:" + password + ",IntegratorKey:" + intKey + " }");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("accept", "application/json");
+      xhr.send(data);
+
     }
 
     </script>
