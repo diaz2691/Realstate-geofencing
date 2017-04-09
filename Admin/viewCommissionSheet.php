@@ -211,7 +211,7 @@ To change this template use Tools | Templates.
             var response = JSON.stringify(xhr.responseText);
             xhr.abort();
             response.replace(/\r?\n/g, '');
-            console.log(response);
+            console.log(response.substring(3,response.length - 10));
 
            }
          
