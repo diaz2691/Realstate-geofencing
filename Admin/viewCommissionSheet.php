@@ -227,6 +227,7 @@ To change this template use Tools | Templates.
     function sendDoc(pdf)
     {
       var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
       var data = JSON.stringify({
           "emailSubject": "DocuSign REST API Quickstart Sample",
           "emailBlurb": "Shows how to create and send an envelope from a document.",
