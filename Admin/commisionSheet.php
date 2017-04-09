@@ -71,8 +71,9 @@ if(isset($_POST['id']))
 	//$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
 
 	$base = $pdf->Output('S');
+	$json = json_encode(45);
 
-	echo json_encode(45);
+	echo $json;
 
 	//$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
  	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
