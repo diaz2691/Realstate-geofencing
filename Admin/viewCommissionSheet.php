@@ -137,70 +137,90 @@ To change this template use Tools | Templates.
     </body>
 
     <script>
-      function sendComm()
-      {
+      // function sendComm()
+      // {
+      //   var xhr = new XMLHttpRequest();
+      //   xhr.onreadystatechange = function () 
+      //   {
+      //      if (this.readyState == 4 && this.status == 200) 
+      //      {
+      //       var response = JSON.parse(xhr.responseText);
+      //       xhr.abort();
+      //       getPdf(response.access_token);
+
+      //      }
+         
+      //   }
+
+      //   xhr.open("POST", "http://api.na2.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", true);
+      //   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      //   xhr.send();
+
+      // }
+      
+      // function getPdf(token)
+      // {
+        
+      //   var form = document.createElement('form');
+      //   form.setAttribute('method', 'post');
+      //   form.setAttribute('action','commisionSheet.php');
+
+      //   var tInput = document.createElement('input');
+      //   tInput.setAttribute("name", "token");
+      //   tInput.setAttribute("value",token);
+      //   form.appendChild(tInput);
+
+      //   var send = document.createElement('input');
+      //   send.setAttribute("name", "commID");
+      //   send.setAttribute("value", commId);
+      //   gen.appendChild(send);
+
+      //  document.body.appendChild(form);
+
+      //   form.submit();
+      //   //alert("hi");
+         
+        
+      // }
+    // function generate(commId)
+    // {
+    //     var gen = document.createElement('form');
+    //     gen.setAttribute('method', 'post');
+    //     gen.setAttribute('action','commisionSheet.php');
+
+    //     var send = document.createElement('input');
+    //     send.setAttribute("name", "id");
+    //     send.setAttribute("value", commId);
+    //     gen.appendChild(send);
+
+    //     document.body.appendChild(gen);
+
+    //     gen.submit();
+    //     sendComm();
+        
+    // }
+      
+    function generate(commId)
+    {
         var xhr = new XMLHttpRequest();
+        var data= "id=" + commId;
         xhr.onreadystatechange = function () 
         {
-           if (this.readyState == 4 && this.status == 200) 
+           if (this.readyState == 4) // && this.status == 200) 
            {
             var response = JSON.parse(xhr.responseText);
             xhr.abort();
-            getPdf(response.access_token);
+            alert(response.access_token);
 
            }
          
         }
 
-        xhr.open("POST", "http://api.na2.echosign.com/oauth/refresh?refresh_token=<?php echo $rToken?>&client_id=<?php echo $cId?>&client_secret=<?php echo $cSe?>&grant_type=refresh_token", true);
+        xhr.open("POST", "commisionSheet.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send();
-
-      }
-      
-      function getPdf(token)
-      {
-        
-        var form = document.createElement('form');
-        form.setAttribute('method', 'post');
-        form.setAttribute('action','commisionSheet.php');
-
-        var tInput = document.createElement('input');
-        tInput.setAttribute("name", "token");
-        tInput.setAttribute("value",token);
-        form.appendChild(tInput);
-
-        var send = document.createElement('input');
-        send.setAttribute("name", "commID");
-        send.setAttribute("value", commId);
-        gen.appendChild(send);
-
-       document.body.appendChild(form);
-
-        form.submit();
-        //alert("hi");
-         
-        
-      }
-    function generate(commId)
-    {
-        var gen = document.createElement('form');
-        gen.setAttribute('method', 'post');
-        gen.setAttribute('action','commisionSheet.php');
-
-        var send = document.createElement('input');
-        send.setAttribute("name", "id");
-        send.setAttribute("value", commId);
-        gen.appendChild(send);
-
-        document.body.appendChild(gen);
-
-        gen.submit();
-        sendComm();
+        xhr.send(data);
         
     }
-      
-
 
 
     </script>

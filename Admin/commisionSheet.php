@@ -68,20 +68,31 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['id']))
 {
 	
-	$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
+	//$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
+
+	$base = $pdf->Output('S');
+
+	echo json_encode($base);
+
+	//$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
+ 	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
+    //$namedParameters[":date"] = date("Y-m-d");
+
+// 	$stmt = $dbConn -> prepare($sqlAddDate);
+//     $stmt->ex
 	
 }
-elseif (isset($_POST['token'])) 
-{
-	$ken = $_POST['token'];
+// elseif (isset($_POST['token'])) 
+// {
+// 	$ken = $_POST['token'];
 
-	$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
-	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
-	$namedParameters[":date"] = date("Y-m-d");
+// 	$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
+// 	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
+// 	$namedParameters[":date"] = date("Y-m-d");
 
-	$stmt = $dbConn -> prepare($sqlAddDate);
-    $stmt->execute($namedParameters);  
-}
+// 	$stmt = $dbConn -> prepare($sqlAddDate);
+//     $stmt->execute($namedParameters);  
+// }
 else
 {
 	
@@ -89,83 +100,83 @@ else
 }
 ?>
 
-<script>
+  <script>
 
-//console.log( "<?php  $ken; ?>");
+// //console.log( "<?php  $ken; ?>");
 
-function prepare()
-{
-	var token = "<?php echo $ken; ?>";
+// function prepare()
+// {
+// 	var token = "<?php echo $ken; ?>";
 
-	var file = document.getElementById("filePdf").files[0];
-	 var data = new FormData();
-	 data.append("File", file);
-	 data.append("File-Name", "Commission Sheet");
+// 	var file = document.getElementById("filePdf").files[0];
+// 	 var data = new FormData();
+// 	 data.append("File", file);
+// 	 data.append("File-Name", "Commission Sheet");
 
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() 
-	{
-	  if (this.readyState === 4 && this.status == 201) 
-	  {
-	  	var response = JSON.parse(xhr.responseText);
+// 	var xhr = new XMLHttpRequest();
+// 	xhr.onreadystatechange = function() 
+// 	{
+// 	  if (this.readyState === 4 && this.status == 201) 
+// 	  {
+// 	  	var response = JSON.parse(xhr.responseText);
 	  	
-	    sendToSign(response.transientDocumentId, token);
-	  }
-	}
+// 	    sendToSign(response.transientDocumentId, token);
+// 	  }
+// 	}
 
-	xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
-	xhr.setRequestHeader("Access-Token", token);
-	// xhr.setRequestHeader("Content-Disposition", "form-data; name='File'; filename='MyPDF.pdf");
-	// xhr.setRequestHeader("Content-Type", "multipart/form-data");
-	xhr.send(data);
-}
-function sendToSign(tId, token)
-{
-	var data = JSON.stringify({
-  	"documentCreationInfo": {
-    	"fileInfos": [
-      	{
-        "transientDocumentId": tId
-      	}
-    	],
-    "name": "Commission Sheet",
-    "recipientSetInfos": [
-      {
-        "recipientSetMemberInfos": [
-          {
-            "email": "ibarrajkey@gmail.com"
-          }
-        ],
-        "recipientSetRole": "SIGNER"
-      }
-    ],
-    "signatureType": "ESIGN",
-    "signatureFlow": "SENDER_SIGNATURE_NOT_REQUIRED"
-  }
-});
-	var sendDoc = new XMLHttpRequest();
-	sendDoc.onreadystatechange = function()
-	{
-		if (this.readyState === 4 && this.status == 201) 
-		{
+// 	xhr.open("POST", "https://api.na2.echosign.com/api/rest/v5/transientDocuments");
+// 	xhr.setRequestHeader("Access-Token", token);
+// 	// xhr.setRequestHeader("Content-Disposition", "form-data; name='File'; filename='MyPDF.pdf");
+// 	// xhr.setRequestHeader("Content-Type", "multipart/form-data");
+// 	xhr.send(data);
+// }
+// function sendToSign(tId, token)
+// {
+// 	var data = JSON.stringify({
+//   	"documentCreationInfo": {
+//     	"fileInfos": [
+//       	{
+//         "transientDocumentId": tId
+//       	}
+//     	],
+//     "name": "Commission Sheet",
+//     "recipientSetInfos": [
+//       {
+//         "recipientSetMemberInfos": [
+//           {
+//             "email": "ibarrajkey@gmail.com"
+//           }
+//         ],
+//         "recipientSetRole": "SIGNER"
+//       }
+//     ],
+//     "signatureType": "ESIGN",
+//     "signatureFlow": "SENDER_SIGNATURE_NOT_REQUIRED"
+//   }
+// });
+// 	var sendDoc = new XMLHttpRequest();
+// 	sendDoc.onreadystatechange = function()
+// 	{
+// 		if (this.readyState === 4 && this.status == 201) 
+// 		{
 		  	
-		    window.location.href = "viewCommissionSheet.php";
-		}
-	}
+// 		    window.location.href = "viewCommissionSheet.php";
+// 		}
+// 	}
 
-	sendDoc.open("POST", "https://api.na2.echosign.com:443/api/rest/v5/agreements");
-	sendDoc.setRequestHeader("Access-Token", token);
-	sendDoc.setRequestHeader("content-type", "application/json");	
+// 	sendDoc.open("POST", "https://api.na2.echosign.com:443/api/rest/v5/agreements");
+// 	sendDoc.setRequestHeader("Access-Token", token);
+// 	sendDoc.setRequestHeader("content-type", "application/json");	
 
-	sendDoc.send(data);
-}
+// 	sendDoc.send(data);
+// }
 
-</script>
-
-
+€ </script>
 
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     
 <head>
@@ -183,7 +194,7 @@ function sendToSign(tId, token)
       <input type="submit" value="Send" onClick="prepare()">
     </body>
 </html>
-
+ -->
 
 
 
