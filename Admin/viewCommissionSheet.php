@@ -210,7 +210,7 @@ To change this template use Tools | Templates.
            {
             var response = JSON.stringify(xhr.responseText);
             xhr.abort();
-            response.replace("\\n", '');
+            response.replace(/\r?\n/g, '');
             console.log(response);
 
            }
