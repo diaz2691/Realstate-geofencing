@@ -26,7 +26,7 @@ To change this template use Tools | Templates.
     
 <head>
     <title>Commission Sheet</title>
-    <script src="../pass.js" type="text/javascript"></script>
+    <script src="../keys/pass.js" type="text/javascript"></script>
     <script>
         
             function confirmDelete(record) {
