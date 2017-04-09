@@ -217,7 +217,7 @@ To change this template use Tools | Templates.
         }
 
         xhr.open("POST", "commisionSheet.php", true);
-        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send(data);
         
     }
