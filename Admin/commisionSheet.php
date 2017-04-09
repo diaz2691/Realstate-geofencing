@@ -72,7 +72,7 @@ if(isset($_POST['id']))
 
 	$base = $pdf->Output('S');
 
-	echo json_encode(5);
+	echo json_encode($base);
 
 	//$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
  	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
