@@ -255,7 +255,7 @@ To change this template use Tools | Templates.
          }
        
       }
-      xhr.open("POST", "commisionSheet.php", true);
+      xhr.open("POST", "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes", true);
       xhr.setRequestHeader("x-docusign-authentication", "{ Username:" + username + ",Password:" + password + ",IntegratorKey:" + intKey + " }");
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.setRequestHeader("accept", "application/json");
