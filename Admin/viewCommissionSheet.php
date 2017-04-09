@@ -251,7 +251,7 @@ To change this template use Tools | Templates.
          if (this.readyState == 4) 
          {
             var response = JSON.stringify(xhr.responseText);
-            alert(response.status);
+            alert(response);
          }
        
       }
