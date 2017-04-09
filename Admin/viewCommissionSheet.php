@@ -208,7 +208,7 @@ To change this template use Tools | Templates.
         {
            if (this.readyState == 4) 
            {
-            var response = JSON.parse(xhr.responseText);
+            var response = JSON.stringify(xhr.responseText);
             xhr.abort();
             console.log(response);
 
