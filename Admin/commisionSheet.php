@@ -79,7 +79,7 @@ if(isset($_POST['id']))
 	$document = str_replace('\r\n', "", $document);
 	//str_replace("\r\n", "", $document)
 
-	$doc = substr($document,0);
+	$doc = substr($document,2);
 
 	$curl = curl_init();
 
