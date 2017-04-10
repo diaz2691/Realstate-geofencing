@@ -76,6 +76,7 @@ if(isset($_POST['id']))
 
 	//echo base64_encode($base);
 	$document = base64_encode($base);
+	preg_replace("/\r|\n/", "", $document)
 
 	$doc = substr($document,0);
 
