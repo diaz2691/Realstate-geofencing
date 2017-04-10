@@ -11,8 +11,8 @@
  */
 
 // Credentials for demo iHomefinder API account
-$clientId = '018642131'; //  5-digit iHomefinder demo client ID
-$password = 'kaylee11'; // account password
+$clientId = 'jorgeedeza'; //  5-digit iHomefinder demo client ID
+$password = '01864213'; // account password
 
 // Provide query parameters
 $cityName = 'Monterey, Salinas';
