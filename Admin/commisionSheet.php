@@ -142,8 +142,36 @@ else if(isset($_FILES['pdf']))
 	
 	$contents = file_get_contents($_FILES['pdf']['tmp_name']);
 	$data = base64_encode($contents);
-	echo $data;
+	//echo $data;
 	//echo "5";
+
+	$curl = curl_init();
+
+
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes",
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_ENCODING => "",
+	  CURLOPT_MAXREDIRS => 10,
+	  CURLOPT_TIMEOUT => 30,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => "POST",
+	  CURLOPT_POSTFIELDS => "{\"emailSubject\":\"DocuSign REST API Quickstart Sample\",\"emailBlurb\": \"Shows how to create and send an envelope from a document.\",\"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",\"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",\"name\": \"test.pdf\",\"documentBase64\": " . $data ."}],\"status\": \"sent\"}",
+	  CURLOPT_HTTPHEADER => array(
+    "accept: application/json",
+    "content-type: application/json",
+    "x-docusign-authentication: { \"Username\":" . $username . ",\"Password\":" . $password .",\"IntegratorKey\":" . $intKey . " }"
+  	),
+	));
+
+	$response = curl_exec($curl);
+	$err = curl_error($curl);
+	curl_close($curl);
+		if ($err) {
+	  echo "cURL Error #:" . $err;
+	} else {
+	  echo $response;
+	}
 }
 ?>
 
