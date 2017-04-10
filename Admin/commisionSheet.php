@@ -158,7 +158,7 @@ else if(isset($_FILES['pdf']))
     
 
     <body>
-        <form action="index.php" method="post" enctype="multipart/form-data"> 
+        <form action="" method="post" enctype="multipart/form-data"> 
  			<div><label id="upload">Select file to upload: 
     		<input type="file" id="pdf" name="pdf"/></label></div> 
  			<div> 
