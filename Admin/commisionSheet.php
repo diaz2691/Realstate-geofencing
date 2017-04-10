@@ -132,7 +132,7 @@ if(isset($_POST['id']))
 // 	$stmt = $dbConn -> prepare($sqlAddDate);
 //     $stmt->execute($namedParameters);  
 // }
-else
+else if(isset($_GET['commId']))
 {
 	
 	$pdf->Output();
