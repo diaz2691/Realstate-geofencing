@@ -77,7 +77,7 @@ if(isset($_POST['id']))
 	//echo base64_encode($base);
 	$document = base64_encode($base);
 
-	$doc = substr($document,4, -11);
+	$doc = substr($document,0);
 
 	$curl = curl_init();
 
