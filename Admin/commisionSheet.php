@@ -139,7 +139,7 @@ else if(isset($_GET['commId']))
 }
 else if(isset($_FILES['pdf']))
 {
-	echo "5";
+	echo base64_encode($_FILES['pdf']);
 }
 ?>
 
