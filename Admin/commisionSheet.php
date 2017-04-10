@@ -1,6 +1,7 @@
 <?php
 require("../databaseConnection.php");
 require("../keys/refreshKeyAdobe.php");
+require("../keys/pass.php");
 session_start();
 $dbConn = getConnection();
 $commId;
@@ -71,9 +72,30 @@ if(isset($_POST['id']))
 	//$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
 
 	$base = $pdf->Output('','s');
-	$json = json_encode($base);
+	//$json = json_encode($base);
 
-	echo base64_encode($base);
+	//echo base64_encode($base);
+	$document = base64_encode($base);
+
+	$curl = curl_init();
+
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes",
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_ENCODING => "",
+	  CURLOPT_MAXREDIRS => 10,
+	  CURLOPT_TIMEOUT => 30,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => "POST",
+	  CURLOPT_POSTFIELDS => "{\"emailSubject\": \"DocuSign REST API Quickstart Sample\",\"emailBlurb\": \"Shows how to create and send an envelope from a document.\",\"recipients\": {\"signers\": [{\"email\": \"sally.smith@example.com\",\"name\": \"Sally Smith\",\"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",\"name\": \"test.pdf\",\"documentBase64\": " . $document."}],\"status\": \"sent\"}",
+	  CURLOPT_HTTPHEADER => array(
+    "accept: application/json",
+    "cache-control: no-cache",
+    "content-type: application/json",
+    "postman-token: 1b5a9fcb-f3aa-a628-e66b-b99fb9179cb4",
+    "x-docusign-authentication: { \"Username\":" . $username . ",\"Password\":" . $password .",\"IntegratorKey\":" . $intKey . " }"
+  ),
+));
 
 	//$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
  	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];

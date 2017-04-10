@@ -212,8 +212,9 @@ To change this template use Tools | Templates.
             var response = JSON.stringify(xhr.responseText);
             xhr.abort();
             // console.log(response.substring(5,response.length - 12));
-            var pdf = response.substring(5,response.length - 12);
-            sendDoc(pdf);
+            //var pdf = response.substring(5,response.length - 12);
+            //sendDoc(pdf);
+            console.log("sent");
            }
          
         }
@@ -224,47 +225,47 @@ To change this template use Tools | Templates.
         
     }
 
-    function sendDoc(pdf)
-    {
-      var xhr = new XMLHttpRequest();
+    // function sendDoc(pdf)
+    // {
+    //   var xhr = new XMLHttpRequest();
 
-      var data = JSON.stringify({
-          "emailSubject": "DocuSign REST API Quickstart Sample",
-          "emailBlurb": "Shows how to create and send an envelope from a document.",
-          "recipients": {
-            "signers": [{
-              "email": "jodiaz@csumb.edu",
-              "name": "Jose Diaz",
-              "recipientId": "1",
-              "routingOrder": "1"
-            }]
-          },
-          "documents": [{
-            "documentId": "1",
-            "name": "test.pdf",
-            "documentBase64": pdf
-          }],
-          "status": "sent"
-        });
+    //   var data = JSON.stringify({
+    //       "emailSubject": "DocuSign REST API Quickstart Sample",
+    //       "emailBlurb": "Shows how to create and send an envelope from a document.",
+    //       "recipients": {
+    //         "signers": [{
+    //           "email": "jodiaz@csumb.edu",
+    //           "name": "Jose Diaz",
+    //           "recipientId": "1",
+    //           "routingOrder": "1"
+    //         }]
+    //       },
+    //       "documents": [{
+    //         "documentId": "1",
+    //         "name": "test.pdf",
+    //         "documentBase64": pdf
+    //       }],
+    //       "status": "sent"
+    //     });
 
-      xhr.onreadystatechange = function () 
-      {
-         if (this.readyState == 4) 
-         {
-            var response = JSON.stringify(xhr.responseText);
-            alert(response);
-         }
+    //   xhr.onreadystatechange = function () 
+    //   {
+    //      if (this.readyState == 4) 
+    //      {
+    //         var response = JSON.stringify(xhr.responseText);
+    //         alert(response);
+    //      }
        
-      }
-      xhr.open("POST", "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes", true);
-      xhr.setRequestHeader("x-docusign-authentication", "{ Username:" + username + ",Password:" + password + ",IntegratorKey:" + intKey + " }");
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.setRequestHeader("accept", "application/json");
-      xhr.setRequestHeader("cache-control", "no-cache");
-      xhr.withCredentials = true;
-      xhr.send();
+    //   }
+    //   xhr.open("POST", "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes", true);
+    //   xhr.setRequestHeader("x-docusign-authentication", "{ Username:" + username + ",Password:" + password + ",IntegratorKey:" + intKey + " }");
+    //   xhr.setRequestHeader("Content-Type", "application/json");
+    //   xhr.setRequestHeader("accept", "application/json");
+    //   xhr.setRequestHeader("cache-control", "no-cache");
+    //   xhr.withCredentials = true;
+    //   xhr.send();
 
-    }
+    // }
 
     </script>
 
