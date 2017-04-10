@@ -91,7 +91,7 @@ if(isset($_POST['id']))
 	  CURLOPT_HTTPHEADER => array(
     "accept: application/json",
     "content-type: application/json",
-    "x-docusign-authentication: { Username:" . $username . ",Password:" . $password .",IntegratorKey:" . $intKey . " }"
+    "x-docusign-authentication: { \"Username\":" . $username . ",\"Password\": . $password .",\"IntegratorKey\":" . $intKey . " }"
   ),
 ));
 
