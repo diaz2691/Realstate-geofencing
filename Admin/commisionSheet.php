@@ -71,15 +71,15 @@ if(isset($_POST['id']))
 	
 	//$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
 
-	$base = $pdf->Output('doscusing.pdf','D');
+	$pdf->Output('doscusing.pdf','D');
 	//$json = json_encode($base);
 
 	//echo base64_encode($base);
-	$document = base64_encode($base);
+	///////$document = base64_encode($base);
 	//$document = preg_replace('\n', "", $document);
 	//str_replace("\r\n", "", $document)
 
-	$doc = substr($document,0);
+	////////$doc = substr($document,0);
 
 	$curl = curl_init();
 
@@ -105,7 +105,7 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-echo $doc;
+////////echo $doc;
 
 // if ($err) {
 //   echo "cURL Error #:" . $err;
