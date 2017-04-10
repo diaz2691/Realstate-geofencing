@@ -200,6 +200,26 @@ To change this template use Tools | Templates.
         sendComm();
         
     }
+    function sendComm()
+    {
+        var form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action','commisionSheet.php');
+
+        // var tInput = document.createElement('input');
+        // tInput.setAttribute("name", "token");
+        // tInput.setAttribute("value",token);
+        // form.appendChild(tInput);
+
+        // var send = document.createElement('input');
+        // send.setAttribute("name", "commID");
+        // send.setAttribute("value", commId);
+        // gen.appendChild(send);
+
+       document.body.appendChild(form);
+
+        form.submit();
+    }
       
     // function generate(commId)
     // {
