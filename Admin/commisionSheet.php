@@ -140,6 +140,7 @@ else if(isset($_GET['commId']))
 else if(isset($_FILES['pdf']))
 {
 	echo base64_encode($_FILES['pdf']);
+	echo "5";
 }
 ?>
 
