@@ -76,10 +76,10 @@ if(isset($_POST['id']))
 
 	//echo base64_encode($base);
 	$document = base64_encode($base);
-	$document = str_replace('\r\n', "", $document);
+	$document = preg_replace('\r\n', "", $document);
 	//str_replace("\r\n", "", $document)
 
-	$doc = substr($document,0,-1);
+	$doc = substr($document,0);
 
 	$curl = curl_init();
 
