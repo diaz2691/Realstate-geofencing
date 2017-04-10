@@ -87,13 +87,13 @@ if(isset($_POST['id']))
 	  CURLOPT_TIMEOUT => 30,
 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	  CURLOPT_CUSTOMREQUEST => "POST",
-	  CURLOPT_POSTFIELDS => "{\"emailSubject\": \"DocuSign REST API Quickstart Sample\",\"emailBlurb\": \"Shows how to create and send an envelope from a document.\",\"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",\"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",\"name\": \"test.pdf\",\"documentBase64\": " . $document."}],\"status\": \"sent\"}",
+	  CURLOPT_POSTFIELDS => "{emailSubject:DocuSign REST API Quickstart Sample,emailBlurb: Shows how to create and send an envelope from a document.,recipients: {signers: [{email: jodiaz@csumb.edu,name: Jose Diaz,recipientId: 1,routingOrder: 1}]},documents\: [{documentId: 1,name: test.pdf,documentBase64: " . $document."}],status: sent}",
 	  CURLOPT_HTTPHEADER => array(
     "accept: application/json",
     "cache-control: no-cache",
     "content-type: application/json",
     "postman-token: 1b5a9fcb-f3aa-a628-e66b-b99fb9179cb4",
-    "x-docusign-authentication: { \"Username\":" . $username . ",\"Password\":" . $password .",\"IntegratorKey\":" . $intKey . " }"
+    "x-docusign-authentication: { Username:" . $username . ",Password:" . $password .",IntegratorKey:" . $intKey . " }"
   ),
 ));
 
