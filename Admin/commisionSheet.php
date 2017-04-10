@@ -139,8 +139,11 @@ else if(isset($_GET['commId']))
 }
 else if(isset($_FILES['pdf']))
 {
-	echo base64_encode($_FILES['pdf']);
-	echo "5";
+	
+	$contents = file_get_contents($_FILES['pdf']['tmp_name']);
+	$data = base64_encode($contents);
+	echo $data;
+	//echo "5";
 }
 ?>
 
