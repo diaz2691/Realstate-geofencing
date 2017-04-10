@@ -11,11 +11,11 @@
  */
 
 // Credentials for demo iHomefinder API account
-$clientId = 'jorgeedeza'; //  5-digit iHomefinder demo client ID
-$password = '01864213'; // account password
+$clientId = '65912'; //  5-digit iHomefinder demo client ID
+$password = 'cloudidx'; // account password
 
 // Provide query parameters
-$cityName = 'Monterey, Salinas';
+$cityName = 'El Dorado Hills';
 $minListPrice = '550000';
 $maxListPrice = '550000';
 
