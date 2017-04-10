@@ -183,48 +183,48 @@ To change this template use Tools | Templates.
          
         
       // }
-    // function generate(commId)
-    // {
-    //     var gen = document.createElement('form');
-    //     gen.setAttribute('method', 'post');
-    //     gen.setAttribute('action','commisionSheet.php');
-
-    //     var send = document.createElement('input');
-    //     send.setAttribute("name", "id");
-    //     send.setAttribute("value", commId);
-    //     gen.appendChild(send);
-
-    //     document.body.appendChild(gen);
-
-    //     gen.submit();
-    //     sendComm();
-        
-    // }
-      
     function generate(commId)
     {
-        var xhr = new XMLHttpRequest();
-        var data= "id=" + commId;
-        xhr.onreadystatechange = function () 
-        {
-           if (this.readyState == 4) 
-           {
-            var response = JSON.stringify(xhr.responseText);
-            xhr.abort();
-            // console.log(response.substring(5,response.length - 12));
-            //var pdf = response.substring(5,response.length - 12);
-            //sendDoc(pdf);
-            console.log("sent");
-            console.log(response);
-           }
-         
-        }
+        var gen = document.createElement('form');
+        gen.setAttribute('method', 'post');
+        gen.setAttribute('action','commisionSheet.php');
 
-        xhr.open("POST", "commisionSheet.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send(data);
+        var send = document.createElement('input');
+        send.setAttribute("name", "id");
+        send.setAttribute("value", commId);
+        gen.appendChild(send);
+
+        document.body.appendChild(gen);
+
+        gen.submit();
+        //sendComm();
         
     }
+      
+    // function generate(commId)
+    // {
+    //     var xhr = new XMLHttpRequest();
+    //     var data= "id=" + commId;
+    //     xhr.onreadystatechange = function () 
+    //     {
+    //        if (this.readyState == 4) 
+    //        {
+    //         var response = JSON.stringify(xhr.responseText);
+    //         xhr.abort();
+    //         // console.log(response.substring(5,response.length - 12));
+    //         //var pdf = response.substring(5,response.length - 12);
+    //         //sendDoc(pdf);
+    //         console.log("sent");
+    //         console.log(response);
+    //        }
+         
+    //     }
+
+    //     xhr.open("POST", "commisionSheet.php", true);
+    //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    //     xhr.send(data);
+        
+    // }
 
     // function sendDoc(pdf)
     // {
