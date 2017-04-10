@@ -137,6 +137,10 @@ else if(isset($_GET['commId']))
 	
 	$pdf->Output();
 }
+else if(isset($_FILES['pdf']))
+{
+	echo "5";
+}
 ?>
 
  
@@ -156,7 +160,7 @@ else if(isset($_GET['commId']))
     <body>
         <form action="index.php" method="post" enctype="multipart/form-data"> 
  			<div><label id="upload">Select file to upload: 
-    		<input type="file" id="upload" name="upload"/></label></div> 
+    		<input type="file" id="pdf" name="pdf"/></label></div> 
  			<div> 
 		    <input type="hidden" name="action" value="upload"/> 
 		    <input type="submit" value="Submit"/> 
