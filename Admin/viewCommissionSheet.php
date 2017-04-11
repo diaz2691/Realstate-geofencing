@@ -197,7 +197,7 @@ To change this template use Tools | Templates.
         document.body.appendChild(gen);
 
         gen.submit();
-        sendComm();
+       // sendComm();
         
     }
     function sendComm()
