@@ -102,7 +102,7 @@ if(isset($_POST['id']))
 	} else {
 	  echo $response;
 	}
-	header("Location: http://www.yourwebsite.com/user.php");
+	header("Location: viewCommissionSheet.php");
 	//$json = json_encode($base);
 
 	//echo base64_encode($base);
