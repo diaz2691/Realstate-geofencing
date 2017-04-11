@@ -85,11 +85,30 @@ if(isset($_POST['id']))
 	  CURLOPT_TIMEOUT => 30,
 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	  CURLOPT_CUSTOMREQUEST => "POST",
-	  CURLOPT_POSTFIELDS => "{\"emailSubject\":\"DocuSign REST API Quickstart Sample\",
+	  CURLOPT_POSTFIELDS => "{
+	  \"emailSubject\":\"DocuSign REST API Quickstart Sample\",
 	  \"emailBlurb\": \"Shows how to create and send an envelope from a document.\",
-	  \"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",
-	  \"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",
-	  \"name\": \"test.pdf\",\"documentBase64\": \"" . $doc ."\"}],\"status\": \"sent\"}",
+	  \"recipients\": {
+	  	\"signers\": [
+	  		{
+	  			\"email\": \"jodiaz@csumb.edu\",
+		  		\"name\": \"Jose Diaz\",
+		  		\"recipientId\": \"1\",
+		  		\"routingOrder\": \"1\"
+		  	},
+		  	{
+		  		\"email\": \"michael50974@gmail.com\",
+		  		\"name\": \"Jose \",
+		  		\"recipientId\": \"2\",
+		  		\"routingOrder\": \"2\"	
+		  	}]},
+	  		\"documents\": [
+	  		{
+	  			\"documentId\": \"1\",
+		  		\"name\": \"test.pdf\",
+		  		\"documentBase64\": \"" . $doc ."\"
+		  	}],
+		  	\"status\": \"sent\"}",
 	  CURLOPT_HTTPHEADER => array(
     "accept: application/json",
     "content-type: application/json",
