@@ -209,7 +209,7 @@ To change this template use Tools | Templates.
             // console.log(response.substring(5,response.length - 12));
             //var pdf = response.substring(5,response.length - 12);
             //sendDoc(pdf);
-            console.log("sent");
+            alert.log("sent");
            }
          
         }
