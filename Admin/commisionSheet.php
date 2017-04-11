@@ -69,7 +69,6 @@ $pdf->Cell(0,10,'Agent Signature                              Date              
 if(isset($_POST['id']))
 {
 	
-	//$pdf->Output('commissionSheetTest'.$_POST['id'].'.pdf','D' );
 
 	$base = $pdf->Output('','s');
 
@@ -86,7 +85,11 @@ if(isset($_POST['id']))
 	  CURLOPT_TIMEOUT => 30,
 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	  CURLOPT_CUSTOMREQUEST => "POST",
-	  CURLOPT_POSTFIELDS => "{\"emailSubject\":\"DocuSign REST API Quickstart Sample\",\"emailBlurb\": \"Shows how to create and send an envelope from a document.\",\"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",\"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",\"name\": \"test.pdf\",\"documentBase64\": \"" . $doc ."\"}],\"status\": \"sent\"}",
+	  CURLOPT_POSTFIELDS => "{\"emailSubject\":\"DocuSign REST API Quickstart Sample\",
+	  \"emailBlurb\": \"Shows how to create and send an envelope from a document.\",
+	  \"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",
+	  \"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",
+	  \"name\": \"test.pdf\",\"documentBase64\": \"" . $doc ."\"}],\"status\": \"sent\"}",
 	  CURLOPT_HTTPHEADER => array(
     "accept: application/json",
     "content-type: application/json",
@@ -103,107 +106,16 @@ if(isset($_POST['id']))
 	  echo $response;
 	}
 	header("Location: viewCommissionSheet.php");
-	//$json = json_encode($base);
-
-	//echo base64_encode($base);
-	///////$document = base64_encode($base);
-	//$document = preg_replace('\n', "", $document);
-	//str_replace("\r\n", "", $document)
-
-	////////$doc = substr($document,0);
-
-// 	$curl = curl_init();
-
-
-// 	curl_setopt_array($curl, array(
-// 	  CURLOPT_URL => "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes",
-// 	  CURLOPT_RETURNTRANSFER => true,
-// 	  CURLOPT_ENCODING => "",
-// 	  CURLOPT_MAXREDIRS => 10,
-// 	  CURLOPT_TIMEOUT => 30,
-// 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-// 	  CURLOPT_CUSTOMREQUEST => "POST",
-// 	  CURLOPT_POSTFIELDS => "{\"emailSubject\":\"DocuSign REST API Quickstart Sample\",\"emailBlurb\": \"Shows how to create and send an envelope from a document.\",\"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",\"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",\"name\": \"test.pdf\",\"documentBase64\": " . $doc ."}],\"status\": \"sent\"}",
-// 	  CURLOPT_HTTPHEADER => array(
-//     "accept: application/json",
-//     "content-type: application/json",
-//     "x-docusign-authentication: { \"Username\":" . $username . ",\"Password\":" . $password .",\"IntegratorKey\":" . $intKey . " }"
-//   ),
-// ));
-
-// $response = curl_exec($curl);
-// $err = curl_error($curl);
-
-// curl_close($curl);
-
-////////echo $doc;
-
-// if ($err) {
-//   echo "cURL Error #:" . $err;
-// } else {
-//   echo $response;
-// }
-
-	//$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
- 	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
-    //$namedParameters[":date"] = date("Y-m-d");
-
-// 	$stmt = $dbConn -> prepare($sqlAddDate);
-//     $stmt->ex
+	
 	
 }
-// elseif (isset($_POST['token'])) 
-// {
-// 	$ken = $_POST['token'];
 
-// 	$sqlAddDate = "INSERT INTO commInfo (date) VALUES (:date) WHERE commId =" . $_POST['commID'];
-// 	//$sqlAddDate = "UPDATE commInfo SET date = :date WHERE commId =" . $_POST['commID'];
-// 	$namedParameters[":date"] = date("Y-m-d");
-
-// 	$stmt = $dbConn -> prepare($sqlAddDate);
-//     $stmt->execute($namedParameters);  
-// }
 else if(isset($_GET['commId']))
 {
 	
 	$pdf->Output();
 }
-else if(isset($_FILES['pdf']))
-{
-	
-	// $contents = file_get_contents($_FILES['pdf']['tmp_name']);
-	// $data = base64_encode($contents);
-	// //echo $data;
-	// //echo "5";
 
-	// $curl = curl_init();
-
-
-	// curl_setopt_array($curl, array(
-	//   CURLOPT_URL => "https://demo.docusign.net/restapi/v2/accounts/2837693/envelopes",
-	//   CURLOPT_RETURNTRANSFER => true,
-	//   CURLOPT_ENCODING => "",
-	//   CURLOPT_MAXREDIRS => 10,
-	//   CURLOPT_TIMEOUT => 30,
-	//   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	//   CURLOPT_CUSTOMREQUEST => "POST",
-	//   CURLOPT_POSTFIELDS => "{\"emailSubject\":\"DocuSign REST API Quickstart Sample\",\"emailBlurb\": \"Shows how to create and send an envelope from a document.\",\"recipients\": {\"signers\": [{\"email\": \"jodiaz@csumb.edu\",\"name\": \"Jose Diaz\",\"recipientId\": \"1\",\"routingOrder\": \"1\"}]},\"documents\": [{\"documentId\": \"1\",\"name\": \"test.pdf\",\"documentBase64\": \"" . $data ."\"}],\"status\": \"sent\"}",
-	//   CURLOPT_HTTPHEADER => array(
- //    "accept: application/json",
- //    "content-type: application/json",
- //    "x-docusign-authentication: { \"Username\":" . $username . ",\"Password\":" . $password .",\"IntegratorKey\":" . $intKey . " }"
- //  	),
-	// ));
-
-	// $response = curl_exec($curl);
-	// $err = curl_error($curl);
-	// curl_close($curl);
-	// 	if ($err) {
-	//   echo "cURL Error #:" . $err;
-	// } else {
-	//   echo $response;
-	// }
-}
 ?>
 
  
@@ -221,14 +133,7 @@ else if(isset($_FILES['pdf']))
     
 
     <body>
-        <form action="" method="post" enctype="multipart/form-data"> 
- 			<div><label id="upload">Select file to upload: 
-    		<input type="file" id="pdf" name="pdf"/></label></div> 
- 			<div> 
-		    <input type="hidden" name="action" value="upload"/> 
-		    <input type="submit" value="Submit"/> 
-  			</div> 
-		</form>
+       
     </body>
 
 </html>
