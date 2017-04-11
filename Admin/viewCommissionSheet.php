@@ -210,7 +210,6 @@ To change this template use Tools | Templates.
             //var pdf = response.substring(5,response.length - 12);
             //sendDoc(pdf);
             console.log("sent");
-            console.log(response);
            }
          
         }
