@@ -65,7 +65,7 @@ function post_request($url, $data, $referer='') {
 
 // Submit those variables to the server
 $post_data = array(
-    'j_username' => 'brayanne',
+    'username' => 'brayanne',
     'password' => 'secret'
 );
  
