@@ -8,8 +8,8 @@ function post_request($url, $data, $referer='') {
     // parse the given URL
     $url = parse_url($url);
  
-    if ($url['scheme'] != 'https') { 
-        die('Error: Only HTTPS request are supported !');
+    if ($url['scheme'] != 'http') { 
+        die('Error: Only HTTP request are supported !');
     }
  
     // extract host and path:
@@ -65,12 +65,12 @@ function post_request($url, $data, $referer='') {
 
 // Submit those variables to the server
 $post_data = array(
-    'j_username' => '01864213',
-    'password' => 'Kaylee1'
+    'j_username' => 'brayanne',
+    'password' => 'secret'
 );
  
 // Send a request to example.com 
-$result = post_request('https://idp.mlslistings.com/idp/Authn/UserPassword', $post_data);
+$result = post_request('http://jjp2017.org/', $post_data);
  
 if ($result['status'] == 'ok'){
  
