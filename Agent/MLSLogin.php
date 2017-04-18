@@ -8,8 +8,8 @@ function post_request($url, $data, $referer='') {
     // parse the given URL
     $url = parse_url($url);
  
-    if ($url['scheme'] != 'http') { 
-        die('Error: Only HTTP request are supported !');
+    if ($url['scheme'] != 'https') { 
+        die('Error: Only HTTPS request are supported !');
     }
  
     // extract host and path:
