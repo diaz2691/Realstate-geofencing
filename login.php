@@ -5,7 +5,7 @@ require 'databaseConnection.php';
 $dbConn = getConnection();
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = sha1($_POST['password']);
 
 $sql = "SELECT * FROM UsersInfo WHERE username = :username AND password = :password";
 $namedParameters = array();
