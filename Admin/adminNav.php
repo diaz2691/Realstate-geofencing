@@ -36,7 +36,7 @@
                                     <a href="viewCommissionSheet.php">View Commission Sheets</a>
                                 </li>
                                 <li>
-                                    <a href="viewCommissionSheet.php">Add New</a>
+                                    <a href="addCommSheet.php">Add New</a>
                                 </li>
                             </ul>
                         </li>
