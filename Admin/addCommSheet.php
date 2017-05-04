@@ -73,6 +73,7 @@ ini_set('display_errors', 1);
                         echo "License: <input type='text' value='F34255G7' id='agentLicense' readonly> <br />";
                         // echo "Date: <input type='date' id='date' value='2014-02-09'> <br/>" ;
                         echo "Settlement date: <input type='date' id='settlementDate' value='2014-02-09'> <br/>" ;
+                        echo "Final Price of house: <input type='number' id='housePrice' name='commission' min='349'><br/>";
                         echo "Commission: <input type='number' id='commission' name='commission' min='349'><br/>";
                         echo "Check Number: <input type='text' id='checkNum' name='checkNum'><br/>";
 
@@ -84,6 +85,10 @@ ini_set('display_errors', 1);
                         echo "</select>";
                         echo "<br/><br/>";
                         echo "Percentage: <input type='number' id='percent' step='0.01' min=0>";
+                        echo "Amount from percentage: <input type='number' id='amountFromPercent' step='0.01' min=0>";
+                        echo "Mis. One: <input type='number' id='misOne' step='0.01' min=0>";
+                        echo "Mis.: Two <input type='number' id='misOne' step='0.01' min=0>";
+                        echo "Mis.: Three <input type='number' id='misOne' step='0.01' min=0>";
                     ?>
                     <br/>
                     <br/>
