@@ -71,7 +71,7 @@
                             </ul>
                         </li>
                         <li class=""><a href="../logout.php">Logout</a></li>
-                        <img src="https://d1yoaun8syyxxt.cloudfront.net/dh307-4c1ce6ae-ef18-4d63-ae22-952804c98fc4-v2" alt="HTML5 Icon" style="width:60px;height:40px;">
+                        <img src="https://d1yoaun8syyxxt.cloudfront.net/dh307-4c1ce6ae-ef18-4d63-ae22-952804c98fc4-v2" alt="HTML5 Icon" style="width:70px;height:50px;">
                     </ul>
                 </div>
             </div>
