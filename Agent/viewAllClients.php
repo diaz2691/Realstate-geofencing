@@ -137,6 +137,6 @@ To change this template use Tools | Templates.
                } //closes foreach
              ?>         
         </table>
-    <br/><br/><br/><br/><br/><br/>
     </body>
+    <?php include('../footer.php'); ?>
 </html>

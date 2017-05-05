@@ -204,4 +204,5 @@ To change this template use Tools | Templates.
             $("#search").change(searchTable());
         </script>
     </body>
+    <?php include('../footer.php'); ?>
 </html>

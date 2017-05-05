@@ -15,4 +15,5 @@
         <meta http-equiv="refresh" content="3;url=BuyerForm.php" />
 	</center>
 	</body>
+	<?php include('../footer.php'); ?>
 </html>

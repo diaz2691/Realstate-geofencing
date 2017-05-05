@@ -70,4 +70,5 @@
           <div class="position">Agent</div>
         </figure></center>
   </body>
+  <?php include('../footer.php'); ?>
 </html>
