@@ -136,6 +136,7 @@
                     <input type="text" id="price" placeholder="price"><br />
                     <input type="hidden" id="userId" value="<?=$_SESSION['userId']?>"> 
                     <input id="button" type="button" value="Enter" onclick="enterInfo()"> 
+                    <?php include('../footer.php'); ?>
                     
             
             
@@ -175,5 +176,5 @@
                     </div>
                 </div>
     </body>
-    <?php include('../footer.php'); ?>
+    
 </html>
