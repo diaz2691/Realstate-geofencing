@@ -11,7 +11,7 @@
                  VALUES (1, :username, :password, :firstName, :lastName, :email, :phone, :license)";
           $namedParameters = array();
           $namedParameters[":username"] = $_POST['username'];
-          $namedParameters[":password"] = $_POST['password'];
+          $namedParameters[":password"] = sha1($_POST['password']);
           $namedParameters[":firstName"] = $_POST['firstName'];
           $namedParameters[":lastName"] = $_POST['lastName'];     
           $namedParameters[":email"] = $_POST['email'];     
