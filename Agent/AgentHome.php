@@ -365,9 +365,6 @@ To change this template use Tools | Templates.
              ?>         
         </table>
 
-        
-
-    <br/><br/><br/><br/><br/><br/>
     </body>
     <?php include('footer.php'); ?>
 </html>
