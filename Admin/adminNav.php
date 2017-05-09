@@ -54,11 +54,11 @@
                                 <li><a href="viewHouses.php">View Houses</a></li>
                             </ul>
                         </li>
-                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients<span class="caret"></span></a>
+                        <!--<li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="viewCustomers.php">View Clients</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"></span></a>
