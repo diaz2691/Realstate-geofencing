@@ -30,12 +30,10 @@
 	    $error = $code;
 	} 
 
-	print_r($response);
-
-	echo "TEST";
-
 	$keys = array_keys($response);
 
+	require('../databaseConnection.php');
+	$dbConn = getConnection();
 
 	for($i = 0; $i < sizeof($keys); $i++){
 
