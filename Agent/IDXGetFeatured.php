@@ -1,6 +1,6 @@
 <?php
 
-$url = 'https://api.idxbroker.com/clients/featured'
+$url = 'https://api.idxbroker.com/clients/featured';
 
 $method = 'GET';
 
