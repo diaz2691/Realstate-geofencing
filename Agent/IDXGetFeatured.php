@@ -31,6 +31,8 @@ if ($code >= 200 || $code < 300) {
 
 print_r($response);
 
+echo "TEST";
+
 $keys = array_keys($response);
 
 foreach ($keys as $key => $value) {
