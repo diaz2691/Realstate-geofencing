@@ -35,7 +35,7 @@ echo "TEST";
 
 $keys = array_keys($response);
 
-print_r($response['b011!%ML81649097']);
+print_r($response['b011!%ML81649097']['address']);
 
 ?>
 
