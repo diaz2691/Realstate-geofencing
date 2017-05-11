@@ -31,6 +31,8 @@ if ($code >= 200 || $code < 300) {
 
 print_r($response);
 
+echo "TEST";
+
 echo $response[0]['address'];
 
 ?>
