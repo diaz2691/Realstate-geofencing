@@ -33,7 +33,7 @@ print_r($response);
 
 echo "/nTEST";
 
-echo $response['address'];
+echo $response[0][response];
 
 foreach ($response->items as $item) {
    var_dump($item);
