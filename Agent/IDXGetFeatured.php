@@ -31,14 +31,6 @@ if ($code >= 200 || $code < 300) {
 
 print_r($response);
 
-echo "/nTEST";
-
-echo $response[0][response];
-
-foreach ($response->items as $item) {
-   var_dump($item);
-}
-
 ?>
 
 
