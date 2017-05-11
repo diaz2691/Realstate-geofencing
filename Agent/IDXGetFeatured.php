@@ -33,7 +33,7 @@ print_r($response);
 
 echo "/nTEST";
 
-echo $response[0]['address'];
+echo $response[0];
 
 ?>
 
