@@ -27,7 +27,7 @@ else {
     //$_SESSION['userName'] = $result['firstName'] . " " . $result['lastName'];
     //$_SESSION['userId'] = $result['userId'];
     if($result['userType'] == 1){
-    	header("Location: Agent/cloudidx-real-time-api-client.php");
+    	header("Location: Agent/IDXGetFeatured.php");
 	}
 
 	else if($result['userType'] == 0){
