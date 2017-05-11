@@ -38,7 +38,7 @@ $keys = array_keys($response);
 print_r($keys);
 
 
-for($i = 0; $i < $keys.sizeof(); $i++){
+for($i = 0; $i < sizeof($keys); $i++){
 	print_r($response[$keys[$i]]['address']);
 }
 ?>
