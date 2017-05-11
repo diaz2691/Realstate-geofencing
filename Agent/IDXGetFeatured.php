@@ -35,11 +35,9 @@ echo "TEST";
 
 $keys = array_keys($response);
 
-print_r($keys);
-
 
 for($i = 0; $i < sizeof($keys); $i++){
-	print_r($response[$keys[$i]]['address']);
+	echo $response[$keys[$i]]['address'] . "<br>";
 }
 ?>
 
