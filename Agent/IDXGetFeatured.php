@@ -29,7 +29,7 @@ if ($code >= 200 || $code < 300) {
     $error = $code;
 }  
 
-echo $response;
+print_r($response);
 echo $code;
 
 ?>
