@@ -23,11 +23,11 @@ curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($handle);
 $code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
-/*if ($code >= 200 || $code < 300) {
+if ($code >= 200 || $code < 300) {
     $response = json_decode($response,true);
 } else {
     $error = $code;
-} */ 
+} 
 
 print_r($response);
 
