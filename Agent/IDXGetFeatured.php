@@ -7,8 +7,7 @@ $method = 'GET';
 // headers (required and optional)
 $headers = array(
     'Content-Type: application/x-www-form-urlencoded', // required
-    'accesskey: e1Br0B5DcgaZ3@JXI9qib5
-', // required - replace with your own
+    'accesskey: e1Br0B5DcgaZ3@JXI9qib5', // required - replace with your own
     'outputtype: json' // optional - overrides the preferences in our API control page
 );
 
