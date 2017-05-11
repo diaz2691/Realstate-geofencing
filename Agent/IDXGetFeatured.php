@@ -35,6 +35,10 @@ echo "/nTEST";
 
 echo $response['address'];
 
+foreach ($response->items as $item) {
+   var_dump($item);
+}
+
 ?>
 
 
