@@ -37,7 +37,7 @@ $keys = array_keys($response);
 
 
 for($i = 0; $i < sizeof($keys); $i++){
-	echo $response[$keys[$i]]['address'] . "<br>";
+	echo $response[$keys[$i]]['address'] . "/n";
 }
 ?>
 
