@@ -29,4 +29,6 @@ if ($code >= 200 || $code < 300) {
     $error = $code;
 }  
 
+echo $response;
+
 ?>
