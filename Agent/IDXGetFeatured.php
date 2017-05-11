@@ -35,9 +35,7 @@ echo "TEST";
 
 $keys = array_keys($response);
 
-foreach ($keys as $key => $value) {
-	echo $response[$key];
-}
+print_r($response['b011!%ML81649097']);
 
 ?>
 
