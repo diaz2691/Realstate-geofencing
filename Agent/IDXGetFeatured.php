@@ -1,6 +1,30 @@
 <?php
 	session_start();
 
+	require('../databaseConnection.php');
+	$dbConn = getConnection();
+
+	$sql = "SELECT address
+            FROM HouseInfo
+            WHERE userId = :userId";
+           
+    $namedParameters = array();
+    $namedParameters[':userId'] = $_SESSION['userId'];
+    $stmt = $dbConn -> prepare($sql);
+    $stmt->execute($namedParameters);
+    //$stmt->execute();
+    $results = $stmt->fetchAll();
+
+            
+
+	function inDatabase($address, $results){
+		foreach($results as $result){
+			if($result['address'] === $address){
+				return true;
+			}
+		}
+	}
+
 	$url = 'https://api.idxbroker.com/clients/featured';
 
 	$method = 'GET';
@@ -32,28 +56,26 @@
 
 	$keys = array_keys($response);
 
-	require('../databaseConnection.php');
-	$dbConn = getConnection();
-
 	for($i = 0; $i < sizeof($keys); $i++){
-
-		$sql = "INSERT INTO HouseInfo
-                 (userId, status, address, city, state, zip, bedrooms, bathrooms, price)
-                 VALUES (:userId, :status, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
-          $namedParameters = array();
-          $namedParameters[":userId"] = $_SESSION['userId'];
-          $namedParameters[":status"] = strtolower($response[$keys[$i]]['idxStatus']);
-          $namedParameters[":address"] = $response[$keys[$i]]['address'];
-          $namedParameters[":city"] = $response[$keys[$i]]['cityName'];
-          $namedParameters[":state"] = $response[$keys[$i]]['state'];     
-          $namedParameters[":zip"] = $response[$keys[$i]]['zipcode'];     
-          $namedParameters[":bedrooms"] = $response[$keys[$i]]['bedrooms'];     
-          $namedParameters[":bathrooms"] = $response[$keys[$i]]['totalBaths'];
-          $value = preg_replace('/[\$,]/', '', $response[$keys[$i]]['listingPrice']);
-		  $value = intval($value);     
-          $namedParameters[":price"] = $value;  
-          $stmt = $dbConn -> prepare($sql);
-          $stmt->execute($namedParameters);
+		if(!inDatabase($response[$keys[$i]]['address'], $results)){
+			$sql = "INSERT INTO HouseInfo
+	                 (userId, status, address, city, state, zip, bedrooms, bathrooms, price)
+	                 VALUES (:userId, :status, :address, :city, :state, :zip, :bedrooms, :bathrooms, :price)";
+	          $namedParameters = array();
+	          $namedParameters[":userId"] = $_SESSION['userId'];
+	          $namedParameters[":status"] = strtolower($response[$keys[$i]]['idxStatus']);
+	          $namedParameters[":address"] = $response[$keys[$i]]['address'];
+	          $namedParameters[":city"] = $response[$keys[$i]]['cityName'];
+	          $namedParameters[":state"] = $response[$keys[$i]]['state'];     
+	          $namedParameters[":zip"] = $response[$keys[$i]]['zipcode'];     
+	          $namedParameters[":bedrooms"] = $response[$keys[$i]]['bedrooms'];     
+	          $namedParameters[":bathrooms"] = $response[$keys[$i]]['totalBaths'];
+	          $value = preg_replace('/[\$,]/', '', $response[$keys[$i]]['listingPrice']);
+			  $value = intval($value);     
+	          $namedParameters[":price"] = $value;  
+	          $stmt = $dbConn -> prepare($sql);
+	          $stmt->execute($namedParameters);
+      }
 	}
 
 	header("Location: AgentHome.php");
