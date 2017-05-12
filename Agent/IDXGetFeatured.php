@@ -19,7 +19,7 @@
 
 	function inDatabase($address, $results){
 		foreach($results as $result){
-			echo $result['address'] . ' ' . $address . "\n";
+			echo $result['address'] . ' ' . $address . "<br>";
 			if($result['address'] === $address){
 				return true;
 			}
