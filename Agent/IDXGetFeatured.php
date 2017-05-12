@@ -78,7 +78,7 @@
       }
 	}
 
-	//header("Location: AgentHome.php");
+	header("Location: AgentHome.php");
 
 ?>
 
