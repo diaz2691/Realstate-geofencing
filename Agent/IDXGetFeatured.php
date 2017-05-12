@@ -53,7 +53,7 @@
 	} else {
 	    $error = $code;
 	} 
-	print_r($response);
+
 	$keys = array_keys($response);
 
 	for($i = 0; $i < sizeof($keys); $i++){
@@ -78,7 +78,7 @@
       }
 	}
 
-	//header("Location: AgentHome.php");
+	header("Location: AgentHome.php");
 
 ?>
 
