@@ -19,6 +19,7 @@
 
 	function inDatabase($address, $results){
 		foreach($results as $result){
+			echo $result['address'] . ' ' . $address . "\n";
 			if($result['address'] === $address){
 				return true;
 			}
@@ -78,7 +79,7 @@
       }
 	}
 
-	header("Location: AgentHome.php");
+	//header("Location: AgentHome.php");
 
 ?>
 
