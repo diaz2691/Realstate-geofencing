@@ -65,7 +65,7 @@
 	          $namedParameters[":userId"] = $_SESSION['userId'];
 	          $namedParameters[":status"] = strtolower($response[$keys[$i]]['idxStatus']);
 	          $namedParameters[":address"] = $response[$keys[$i]]['address'];
-	          $namedParameters[":city"] = $response[$keys[$i]]['cityName'];
+	          $namedParameters[":city"] = ucfirst(strtolower($response[$keys[$i]]['cityName']));
 	          $namedParameters[":state"] = $response[$keys[$i]]['state'];     
 	          $namedParameters[":zip"] = $response[$keys[$i]]['zipcode'];     
 	          $namedParameters[":bedrooms"] = $response[$keys[$i]]['bedrooms'];     
