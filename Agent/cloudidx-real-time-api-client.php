@@ -1,4 +1,9 @@
 <?php
+
+/*
+File to be ignored as this API seemed to not work for the Central Coast
+*/
+
     session_start();
 
 /**
