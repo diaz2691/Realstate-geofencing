@@ -277,7 +277,7 @@ To change this template use Tools | Templates.
         }*/
         $word = false;
         if($word){
-            echo "your mum";
+            echo "FIX THIS";
         }
         else{
             if($sortByDate){
